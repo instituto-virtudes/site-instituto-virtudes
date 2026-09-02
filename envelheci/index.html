@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Envelheci, e Daí? | Livro de Ari Nicolosi e Eduardo Casarotto</title>
+<meta name="description" content="Um olhar positivo e prático sobre o envelhecer. 241 páginas sobre os pilares do bem envelhecer: saúde física, mental e social.">
+<link rel="canonical" href="https://institutovirtudes.com.br/envelheci/">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Instituto Virtudes">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:url" content="https://institutovirtudes.com.br/envelheci/">
+<meta property="og:title" content="Envelheci, e Daí?">
+<meta property="og:description" content="Um olhar positivo e prático sobre o envelhecer.">
+<meta property="og:image" content="https://institutovirtudes.com.br/img/og-padrao.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Instituto Virtudes">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Envelheci, e Daí?">
+<meta name="twitter:description" content="Um olhar positivo e prático sobre o envelhecer.">
+<meta name="twitter:image" content="https://institutovirtudes.com.br/img/og-padrao.jpg">
+
+<link rel="icon" href="../img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/estilo.css">
+<style>
+.ficha{display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--borda);border-radius:var(--raio-card);
+  margin:32px 0 24px;overflow:hidden}
+.ficha div{flex:1 1 150px;padding:18px 20px;border-right:1px solid var(--borda)}
+.ficha div:last-child{border-right:0}
+.ficha dt{font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--apoio);margin-bottom:6px}
+.ficha dd{font-family:'Lora',Georgia,serif;font-size:19px;font-weight:600;margin:0;line-height:1.3}
+
+.precos{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:28px 0}
+.precos.preco-unico{grid-template-columns:1fr;max-width:400px}
+.precos > div{border:1px solid var(--borda);border-radius:var(--raio-card);padding:26px 24px}
+.precos .rot{font-family:'Inter',sans-serif;font-size:12px;font-weight:600;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--apoio);margin:0 0 10px}
+.precos .valor{font-family:'Lora',Georgia,serif;font-size:34px;font-weight:700;
+  color:var(--texto);margin:0 0 4px;line-height:1}
+.precos .obs{font-size:14px;color:var(--apoio);margin:0 0 18px}
+.precos .btn{margin:0;width:100%;text-align:center}
+
+.duas{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:32px 0}
+.duas > div{background:var(--claro);border:1px solid var(--borda);border-radius:var(--raio-card);padding:26px 24px}
+.duas h3{font-size:20px;color:var(--azul);margin-bottom:12px;line-height:1.3}
+.duas p{font-size:15.5px;line-height:1.6;margin-bottom:14px}
+.duas p:last-child{margin-bottom:0}
+
+.sumario{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:32px 0}
+.sumario > div{border-top:2px solid var(--azul);padding-top:14px}
+.sumario h4{font-size:16px;color:var(--azul);margin-bottom:8px}
+.sumario p{font-size:14.5px;line-height:1.65;margin:0;color:var(--texto)}
+
+.hero-livro{display:grid;grid-template-columns:260px 1fr;gap:48px;align-items:center;margin:8px 0 16px;background:transparent}
+.capa{margin:0}
+.capa img{width:100%;height:auto;display:block;background:transparent;border:0;border-radius:0}
+.hero-txt .kicker{margin-bottom:8px}
+.hero-txt h1{margin-bottom:14px}
+.hero-txt .lead{margin-bottom:0}
+.hero-txt .ficha{margin:26px 0 0}
+
+.inclui{border:1px solid var(--borda);border-radius:var(--raio-card);padding:26px 24px;margin:28px 0}
+.inclui-rot{font-family:'Inter',sans-serif;font-size:12px;font-weight:600;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--azul);margin:0 0 18px}
+.inclui > div{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.inclui h4{font-size:17px;margin-bottom:8px;line-height:1.3}
+.inclui p{font-size:14.5px;line-height:1.6;margin:0;color:var(--apoio)}
+
+.capitulos{margin:32px 0}
+.capitulos > div{padding:18px 0;border-bottom:1px solid var(--claro)}
+.capitulos > div:first-child{border-top:1px solid var(--claro)}
+.capitulos .cap-n{font-family:'Inter',sans-serif;font-size:12px;font-weight:600;
+  color:var(--apoio);display:inline-block;min-width:26px}
+.capitulos h4{display:inline;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:600;
+  color:var(--azul);line-height:1.35}
+.capitulos p{font-size:15px;line-height:1.6;margin:6px 0 0 26px;color:var(--texto)}
+
+.cadeia{margin:32px 0;list-style:none;padding:0}
+.cadeia li{display:flex;align-items:flex-start;gap:18px;margin:0;padding:22px 0;border-bottom:1px solid var(--borda)}
+.cadeia li:first-child{border-top:1px solid var(--borda)}
+.cadeia .num{flex:0 0 34px;width:34px;height:34px;border-radius:50%;background:var(--azul);color:#fff;
+  font-family:'Inter',sans-serif;font-size:15px;font-weight:600;display:flex;align-items:center;justify-content:center;line-height:1}
+.cadeia .conteudo{flex:1;min-width:0}
+.cadeia h4{font-size:18px;margin:0 0 8px;line-height:1.3}
+.cadeia p{font-size:16px;line-height:1.6;margin:0}
+
+.objecao{border-left:3px solid var(--azul);padding:4px 0 4px 22px;margin:34px 0}
+.objecao h3{font-family:'Lora',Georgia,serif;font-size:20px;font-weight:600;color:var(--azul);margin-bottom:12px}
+.objecao p{font-size:16px;margin-bottom:14px}
+.objecao p:last-child{margin-bottom:0}
+
+@media (max-width:640px){
+  .ficha div{flex:1 1 100%;border-right:0;border-bottom:1px solid var(--borda);padding:14px 18px}
+  .ficha div:last-child{border-bottom:0}
+  .precos,.duas,.sumario{grid-template-columns:1fr;gap:14px}
+  .inclui > div{grid-template-columns:1fr;gap:18px}
+  .inclui{padding:22px 20px}
+  .hero-livro{grid-template-columns:1fr;gap:22px;text-align:center}
+  .capa{max-width:180px;margin:0 auto}
+  .hero-txt{text-align:left}
+  .capitulos h4{font-size:17px}
+  .capitulos p{font-size:14.5px;margin-left:0}
+  .cadeia li{flex-direction:column;align-items:flex-start;gap:10px;padding:20px 0}
+  .cadeia .num{flex:0 0 auto;width:30px;height:30px;font-size:14px}
+  .cadeia .conteudo{width:100%}
+  .precos > div,.duas > div{padding:22px 20px}
+  .objecao{padding-left:16px}.objecao h3{font-size:18px}
+}
+</style>
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '386437925348155');
+fbq('track', 'PageView');
+fbq('track', 'ViewContent', {content_name: 'Envelheci, e Dai?', content_category: 'livro'});
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
+/></noscript>
+<!-- Fim Meta Pixel -->
+</head>
+<body>
+
+<header class="topo">
+  <div class="topo-int">
+    <a href="../" class="marca">Instituto Virtudes</a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Menu">&#8801;</button>
+    <nav>
+      <ul class="menu" id="menu">
+        <li><a href="../virtologia/">Virtologia</a></li>
+        <li><a href="../sistemas/">Humanização 2.0</a></li>
+        <li class="tem-sub">
+          <button class="menu-sub-btn" aria-expanded="false" aria-haspopup="true">Formações <span class="seta-sub" aria-hidden="true">&#9662;</span></button>
+          <ul class="submenu">
+            <li><a href="../formacao/">Formação em Virtologia</a></li>
+            <li><a href="../pos-sistemas/">Pós-graduação em Sistemas Humanizados</a></li>
+            <li><a href="../formacoes/">Todas as formações</a></li>
+          </ul>
+        </li>
+        <!-- <li><a href="../noticias/">Notícias</a></li> ATIVAR quando a página existir -->
+        <li><a href="../futuro/">Trazemos o Futuro</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section>
+  <div class="wrap">
+    <div class="hero-livro">
+      <figure class="capa">
+        <img src="../img/livros/envelheci-e-dai.png" alt="Capa do livro Envelheci, e Daí?, de Ari Nicolosi e Eduardo Casarotto." width="369" height="640">
+      </figure>
+
+      <div class="hero-txt">
+        <p class="kicker">Livro · Ari Nicolosi e Eduardo Casarotto</p>
+        <h1>Envelheci, e Daí?</h1>
+        <p class="lead">Ninguém ensina a envelhecer. A gente aprende sozinho, tarde, e quase sempre do jeito difícil. <strong>Este livro é a conversa que deveria ter acontecido antes.</strong></p>
+
+        <div class="ficha">
+          <div><dt>Páginas</dt><dd>241</dd></div>
+          <div><dt>Formato</dt><dd>Livro físico</dd></div>
+          <div><dt>Leitura</dt><dd>Direta, sem termo técnico</dd></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="precos preco-unico">
+      <div>
+        <p class="rot">Livro físico</p>
+        <p class="valor">R$ 78</p>
+        <p class="obs">frete incluso</p>
+        <a class="btn" href="https://payfast.greenn.com.br/130739/offer/hJtyHo" target="_blank" rel="noopener">Adquirir o livro</a>
+      </div>
+    </div>
+
+    <nav class="indice" aria-label="Conteúdo desta página">
+      <p class="indice-titulo">Nesta página</p>
+      <ol>
+        <li><a href="#sobre">Sobre o livro</a></li>
+        <li><a href="#rogerio">Tio Rogério e Clarice</a></li>
+        <li><a href="#pilares">Os pilares do bem envelhecer</a></li>
+        <li><a href="#temas">O que o livro discute</a></li>
+        <li><a href="#para-quem">Público indicado</a></li>
+        <li><a href="#autores">Quem escreveu</a></li>
+        <li><a href="#duvidas">O que costumam perguntar</a></li>
+      </ol>
+    </nav>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="wrap">
+    <h2>Sobre o livro</h2>
+
+    <p>A sociedade convenceu quase todo mundo de que envelhecer é ruim. Este livro discorda, e não por otimismo: por observação.</p>
+
+    <p class="destaque">Cada fase da vida é especial e fundamental. Em todas temos desafios, e cada uma tem seus altos e baixos. Isso é viver.</p>
+
+    <p>O livro nasceu de uma dupla incomum. <strong>Ari Nicolosi é velho, e diz isso sem rodeio</strong> - está no RG dele. Roteirista, ilustrador e diretor de animação, com formação em psicanálise, ele escreve a partir do que a própria vida ensinou.</p>
+
+    <p><strong>Eduardo Casarotto ainda não é velho</strong>, mas quem o conhece diz que tem alma velha. Entra com o que a Virtologia descobriu sobre o funcionamento humano nessa fase.</p>
+
+    <p>O resultado não é livro de autoajuda nem tratado de gerontologia. <strong>É uma conversa sobre como se preparar para envelhecer, e o que fazer se você já chegou lá sem ter se preparado.</strong></p>
+
+    <div class="caixa">
+      <h3>Uma pergunta que o livro faz logo no começo</h3>
+      <p>Qual o dia mais importante da sua vida? Qual o melhor momento? Qual o instante melhor para ser vivido?</p>
+      <p><strong>A resposta do livro é uma só: é hoje.</strong> E o capítulo inteiro existe para mostrar por que essa não é uma frase bonita, e sim a única postura que sustenta o envelhecer.</p>
+    </div>
+  </div>
+</section>
+
+<section id="rogerio">
+  <div class="wrap">
+    <h2>Tio Rogério e Clarice</h2>
+
+    <p>Para não transformar o assunto em teoria, os autores criaram dois personagens, baseados em pessoas e situações reais. <strong>Eles atravessam o livro inteiro.</strong></p>
+
+    <div class="duas">
+      <div>
+        <h3>Tio Rogério, 89 anos</h3>
+        <p>Foi taxista quando taxista precisava conhecer a cidade de cor. Tocou bateria numa banda, depois trabalhou em banco. Viúvo, sem filhos, mora sozinho.</p>
+        <p>Sai pouco. Não tem iniciativa para fazer amigos nem para arrumar companhia. <strong>Não tem mais propósito nenhum, e vive uma rotina que não empolga.</strong></p>
+        <p>Ele se vangloria da idade e ao mesmo tempo luta contra ela, às vezes de um jeito meio ridículo.</p>
+      </div>
+      <div>
+        <h3>Clarice</h3>
+        <p>A contraparte dele. Vem de uma época em que ser desquitada custava caro, e carregou o preconceito que a sociedade reservava para isso.</p>
+        <p><strong>É por ela que o livro entra nas questões de vínculo</strong>, de solidão e do que ainda é possível numa relação depois de certa idade.</p>
+      </div>
+    </div>
+
+    <p class="destaque">Observe se não tem nada de tio Rogério em você.</p>
+
+    <p>É essa a proposta: os personagens não são exemplo do que fazer. <strong>São espelho.</strong></p>
+  </div>
+</section>
+
+<section id="pilares">
+  <div class="wrap">
+    <h2>Os pilares do bem envelhecer</h2>
+
+    <p>A parte central do livro se organiza em três, e cada um tem seus capítulos:</p>
+
+    <ol class="cadeia">
+      <li>
+        <span class="num">1</span>
+        <div class="conteudo">
+          <h4>Saúde física</h4>
+          <p>O que dá para fazer, e a partir de onde. <strong>Caminhar já é alguma coisa</strong>, e o livro parte daí em vez de propor rotina que ninguém sustenta.</p>
+        </div>
+      </li>
+      <li>
+        <span class="num">2</span>
+        <div class="conteudo">
+          <h4>Saúde mental</h4>
+          <p>A frustração, a mania de querer controlar os fatos, o hábito de se antecipar ao futuro. E a diferença entre pensar e ruminar, que quase ninguém faz.</p>
+        </div>
+      </li>
+      <li>
+        <span class="num">3</span>
+        <div class="conteudo">
+          <h4>Saúde social</h4>
+          <p>As relações com os outros, e por que a distância que a pessoa cria acaba cobrando caro. <strong>É o pilar mais negligenciado dos três.</strong></p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section id="temas">
+  <div class="wrap">
+    <h2>O que o livro discute</h2>
+
+    <div class="capitulos">
+      <div><h4>É hoje</h4><p>Qual o dia mais importante da sua vida, e por que a resposta muda tudo o que vem depois.</p></div>
+      <div><h4>Uma linha do tempo</h4><p>Cada fase da vida com seus desafios próprios. Por que a velhice não é pior que as outras, só diferente.</p></div>
+      <div><h4>Os pilares do bem envelhecer</h4><p>Saúde física, mental e social. O que sustenta cada um e o que derruba.</p></div>
+      <div><h4>Frustração</h4><p>Querer controlar os fatos e se antecipar ao futuro. O caminho mais rápido para adoecer nessa fase.</p></div>
+      <div><h4>Pensar é diferente</h4><p>A distinção entre usar a cabeça e ficar remoendo. Uma capacidade humana que precisa ser treinada.</p></div>
+      <div><h4>Relacionamento maduro</h4><p>O que muda nas questões afetivas com a idade, e o que continua igual.</p></div>
+      <div><h4>Tio Rogério e Clarice se encontram</h4><p>O capítulo em que os dois personagens se cruzam, e o que isso revela sobre solidão e escolha.</p></div>
+      <div><h4>Trabalhar é preciso, e viver também</h4><p>O que acontece com quem para de trabalhar, e por que tanta gente adoece na aposentadoria.</p></div>
+      <div><h4>Tudo o que nasce, morre</h4><p>O capítulo sobre a morte, tratado sem rodeio e sem drama.</p></div>
+      <div><h4>O que o universo está gritando</h4><p>Sobre a ideia de que o mundo é injusto. A resposta dos autores acrescenta uma palavra à frase, e ela muda o sentido inteiro.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="para-quem">
+  <div class="wrap">
+    <h2>Público indicado</h2>
+
+    <div class="duas">
+      <div>
+        <h3>Para quem já chegou lá</h3>
+        <p>Quem está na maturidade e quer viver essa fase sem a sensação de que o melhor já passou.</p>
+        <p>O livro não promete rejuvenescimento. <strong>Promete outra relação com o que está acontecendo.</strong></p>
+      </div>
+      <div>
+        <h3>Para quem vai chegar</h3>
+        <p>Ou seja, todo mundo. O livro sustenta que envelhecer bem é algo para o qual a pessoa se prepara, e que preparar-se cedo muda o resultado.</p>
+        <p><strong>E se você já chegou sem ter se preparado, ainda há tempo.</strong></p>
+      </div>
+    </div>
+
+    <p>Também serve a <strong>quem cuida de alguém idoso</strong> e quer entender o que está acontecendo do outro lado. Boa parte do que parece teimosia tem explicação, e o livro dá a explicação.</p>
+  </div>
+</section>
+
+<section id="autores">
+  <div class="wrap">
+    <h2>Quem escreveu</h2>
+
+    <div class="duas">
+      <div>
+        <h3>Ari Nicolosi</h3>
+        <p>Roteirista, ilustrador e diretor de animação, com formação em psicanálise. Estudou psicanálise para desenvolver melhor os personagens das próprias histórias, e acabou ficando pelos mistérios da mente humana.</p>
+        <p>Escreve a partir do que viveu. <strong>Segundo ele mesmo, aprendeu a respeitar, a se respeitar e a se poupar.</strong></p>
+      </div>
+      <div>
+        <h3>Eduardo Casarotto</h3>
+        <p>Pesquisador, professor, psicanalista e criador da Virtologia. Formou mais de 2.000 terapeutas e supervisionou milhares de casos clínicos.</p>
+        <p>Entra no livro com o que a Virtologia descobriu sobre o funcionamento humano: as faixas de evolução, o cálculo familiar e o aparelho psíquico.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="duvidas">
+  <div class="wrap">
+    <h2>O que costumam perguntar</h2>
+
+    <details>
+      <summary>Preciso conhecer a Virtologia para ler?</summary>
+      <p>Não. Este é o mais acessível dos livros do Instituto. É escrito para qualquer pessoa, sem vocabulário técnico e sem exigir leitura anterior.</p>
+    </details>
+
+    <details>
+      <summary>É um livro só para idosos?</summary>
+      <p>Não. Ele sustenta justamente o contrário: envelhecer bem se prepara antes, e quanto mais cedo a pessoa entende isso, melhor o resultado.</p>
+    </details>
+
+    <details>
+      <summary>É livro de autoajuda?</summary>
+      <p>Não no sentido de fórmulas e frases de efeito. É uma conversa sobre o que muda com a idade, com personagens que ilustram o que dá certo e o que não dá.</p>
+    </details>
+
+    <details>
+      <summary>Substitui acompanhamento médico?</summary>
+      <p>Não. Nos quadros com determinação biológica, a Virtologia soma-se ao tratamento médico e não fica no lugar dele. Se você está em sofrimento, procure ajuda profissional.</p>
+    </details>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="precos preco-unico">
+      <div>
+        <p class="rot">Livro físico</p>
+        <p class="valor">R$ 78</p>
+        <p class="obs">frete incluso</p>
+        <a class="btn" href="https://payfast.greenn.com.br/130739/offer/hJtyHo" target="_blank" rel="noopener">Adquirir o livro</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="rodape">
+  <div class="wrap-largo">
+    <div class="rodape-cols">
+      <div>
+        <h4><a href="../virtologia/">Virtologia</a></h4>
+        <ul>
+          <li><a href="../teorias/">Diante de outras grandes teorias</a></li>
+          <li><a href="../aula1/">Aula aberta</a></li>
+          <!-- <li><a href="../depoimentos/">Depoimentos</a></li> ATIVAR quando a página existir -->
+        </ul>
+      </div>
+      <div>
+        <h4><a href="../sistemas/">Humanização 2.0</a></h4>
+        <ul>
+          <li><a href="../ondas/">As Três Ondas do Trabalho</a></li>
+          <li><a href="../aula2/">Aula aberta sobre a NR-1</a></li>
+          <!-- <li><a href="../filtros/">Os Cinco Filtros</a></li> ATIVAR quando a página existir -->
+          <!-- <li><a href="../nr1/">Saúde mental e a NR-1</a></li> ATIVAR quando a página existir -->
+        </ul>
+      </div>
+      <div>
+        <h4><a href="../formacoes/">Formações</a></h4>
+        <ul>
+          <li><a href="../formacao/">Formação em Virtologia</a></li>
+          <li><a href="../pos-sistemas/">Pós-graduação em Sistemas Humanizados</a></li>
+          <li><a href="../fundamentos/">Fundamentos da Virtologia</a></li>
+          <li><a href="../manual/">Manual de Desenvolvimento Humano</a></li>
+          <li><a href="../livros/">Todos os livros</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Eduardo Casarotto</h4>
+        <ul>
+          <!-- <li><a href="../palestras/">Palestras e eventos</a></li> ATIVAR quando a página existir -->
+          <!-- <li><a href="../noticias/">Notícias</a></li> ATIVAR quando a página existir -->
+          <!-- <li><a href="../contato/">Contato</a></li> ATIVAR quando a página existir -->
+        </ul>
+      </div>
+      <div>
+        <h4><a href="../futuro/">Trazemos o Futuro</a></h4>
+        <div class="redes">
+          <a href="https://www.instagram.com/eduardocasarottooficial/" target="_blank" rel="noopener" aria-label="Instagram"><img src="../img/icone-instagram.svg" alt=""></a>
+          <a href="https://linktw.in/qrGGUW" target="_blank" rel="noopener" aria-label="YouTube"><img src="../img/icone-youtube.svg" alt=""></a>
+          <a href="https://www.tiktok.com/@eduardocasarottooficial" target="_blank" rel="noopener" aria-label="TikTok"><img src="../img/icone-tiktok.svg" alt=""></a>
+        </div>
+      </div>
+    </div>
+    <p class="ressalva">Nos quadros com determinação biológica, a Virtologia soma-se ao tratamento médico e não o substitui. Se você está em sofrimento, procure ajuda profissional.<br>Instituto Virtudes · Editora Virtudes</p>
+  </div>
+</footer>
+
+<script src="../js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Fundamentos da Virtologia | Livro de Eduardo Casarotto</title>
+<meta name="description" content="660 páginas com a base inteira da Virtologia, mais aulas em vídeo e os exercícios de neuroplasticidade das virtudes. Versão impressa e digital.">
+<link rel="canonical" href="https://institutovirtudes.com.br/fundamentos/">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Instituto Virtudes">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:url" content="https://institutovirtudes.com.br/fundamentos/">
+<meta property="og:title" content="Fundamentos da Virtologia">
+<meta property="og:description" content="660 páginas com a base inteira da Virtologia, mais aulas em vídeo e os exercícios de neuroplasticidade.">
+<meta property="og:image" content="https://institutovirtudes.com.br/img/og-padrao.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Instituto Virtudes">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fundamentos da Virtologia">
+<meta name="twitter:description" content="660 páginas com a base inteira da Virtologia, mais aulas em vídeo e os exercícios de neuroplasticidade.">
+<meta name="twitter:image" content="https://institutovirtudes.com.br/img/og-padrao.jpg">
+
+<link rel="icon" href="../img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/estilo.css">
+<style>
+.ficha{display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--borda);border-radius:var(--raio-card);
+  margin:32px 0 24px;overflow:hidden}
+.ficha div{flex:1 1 150px;padding:18px 20px;border-right:1px solid var(--borda)}
+.ficha div:last-child{border-right:0}
+.ficha dt{font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--apoio);margin-bottom:6px}
+.ficha dd{font-family:'Lora',Georgia,serif;font-size:19px;font-weight:600;margin:0;line-height:1.3}
+
+.precos{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:28px 0}
+.precos > div{border:1px solid var(--borda);border-radius:var(--raio-card);padding:26px 24px}
+.precos .rot{font-family:'Inter',sans-serif;font-size:12px;font-weight:600;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--apoio);margin:0 0 10px}
+.precos .valor{font-family:'Lora',Georgia,serif;font-size:34px;font-weight:700;
+  color:var(--texto);margin:0 0 4px;line-height:1}
+.precos .obs{font-size:14px;color:var(--apoio);margin:0 0 18px}
+.precos .btn{margin:0;width:100%;text-align:center}
+
+.duas{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:32px 0}
+.duas > div{background:var(--claro);border:1px solid var(--borda);border-radius:var(--raio-card);padding:26px 24px}
+.duas h3{font-size:20px;color:var(--azul);margin-bottom:12px;line-height:1.3}
+.duas p{font-size:15.5px;line-height:1.6;margin-bottom:14px}
+.duas p:last-child{margin-bottom:0}
+
+.sumario{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:32px 0}
+.sumario > div{border-top:2px solid var(--azul);padding-top:14px}
+.sumario h4{font-size:16px;color:var(--azul);margin-bottom:8px}
+.sumario p{font-size:14.5px;line-height:1.65;margin:0;color:var(--texto)}
+
+.hero-livro{display:grid;grid-template-columns:260px 1fr;gap:48px;align-items:center;margin:8px 0 16px;background:transparent}
+.capa{margin:0}
+.capa img{width:100%;height:auto;display:block;background:transparent;border:0;border-radius:0}
+.hero-txt .kicker{margin-bottom:8px}
+.hero-txt h1{margin-bottom:14px}
+.hero-txt .lead{margin-bottom:0}
+.hero-txt .ficha{margin:26px 0 0}
+
+.inclui{border:1px solid var(--borda);border-radius:var(--raio-card);padding:26px 24px;margin:28px 0}
+.inclui-rot{font-family:'Inter',sans-serif;font-size:12px;font-weight:600;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--azul);margin:0 0 18px}
+.inclui > div{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.inclui h4{font-size:17px;margin-bottom:8px;line-height:1.3}
+.inclui p{font-size:14.5px;line-height:1.6;margin:0;color:var(--apoio)}
+
+.capitulos{margin:32px 0}
+.capitulos > div{padding:18px 0;border-bottom:1px solid var(--claro)}
+.capitulos > div:first-child{border-top:1px solid var(--claro)}
+.capitulos .cap-n{font-family:'Inter',sans-serif;font-size:12px;font-weight:600;
+  color:var(--apoio);display:inline-block;min-width:26px}
+.capitulos h4{display:inline;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:600;
+  color:var(--azul);line-height:1.35}
+.capitulos p{font-size:15px;line-height:1.6;margin:6px 0 0 26px;color:var(--texto)}
+
+.objecao{border-left:3px solid var(--azul);padding:4px 0 4px 22px;margin:34px 0}
+.objecao h3{font-family:'Lora',Georgia,serif;font-size:20px;font-weight:600;color:var(--azul);margin-bottom:12px}
+.objecao p{font-size:16px;margin-bottom:14px}
+.objecao p:last-child{margin-bottom:0}
+
+@media (max-width:640px){
+  .ficha div{flex:1 1 100%;border-right:0;border-bottom:1px solid var(--borda);padding:14px 18px}
+  .ficha div:last-child{border-bottom:0}
+  .precos,.duas,.sumario{grid-template-columns:1fr;gap:14px}
+  .inclui > div{grid-template-columns:1fr;gap:18px}
+  .inclui{padding:22px 20px}
+  .hero-livro{grid-template-columns:1fr;gap:22px;text-align:center}
+  .capa{max-width:180px;margin:0 auto}
+  .hero-txt{text-align:left}
+  .capitulos h4{font-size:17px}
+  .capitulos p{font-size:14.5px;margin-left:0}
+  .precos > div,.duas > div{padding:22px 20px}
+  .objecao{padding-left:16px}.objecao h3{font-size:18px}
+}
+</style>
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '386437925348155');
+fbq('track', 'PageView');
+fbq('track', 'ViewContent', {content_name: 'Fundamentos da Virtologia', content_category: 'livro'});
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
+/></noscript>
+<!-- Fim Meta Pixel -->
+</head>
+<body>
+
+<header class="topo">
+  <div class="topo-int">
+    <a href="../" class="marca">Instituto Virtudes</a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Menu">&#8801;</button>
+    <nav>
+      <ul class="menu" id="menu">
+        <li><a href="../virtologia/">Virtologia</a></li>
+        <li><a href="../sistemas/">Humanização 2.0</a></li>
+        <li class="tem-sub">
+          <button class="menu-sub-btn" aria-expanded="false" aria-haspopup="true">Formações <span class="seta-sub" aria-hidden="true">&#9662;</span></button>
+          <ul class="submenu">
+            <li><a href="../formacao/">Formação em Virtologia</a></li>
+            <li><a href="../pos-sistemas/">Pós-graduação em Sistemas Humanizados</a></li>
+            <li><a href="../formacoes/">Todas as formações</a></li>
+          </ul>
+        </li>
+        <!-- <li><a href="../noticias/">Notícias</a></li> ATIVAR quando a página existir -->
+        <li><a href="../futuro/">Trazemos o Futuro</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section>
+  <div class="wrap">
+    <div class="hero-livro">
+      <figure class="capa">
+        <img src="../img/livros/fundamentos-da-virtologia.png" alt="Capa do livro Fundamentos da Virtologia, de Eduardo Casarotto." width="369" height="640">
+      </figure>
+
+      <div class="hero-txt">
+        <p class="kicker">Livro · Eduardo Casarotto</p>
+        <h1>Fundamentos da Virtologia</h1>
+        <p class="lead">A base inteira da escola em 660 páginas. <strong>Com aulas em vídeo e os exercícios de neuroplasticidade das virtudes incluídos.</strong></p>
+
+        <div class="ficha">
+          <div><dt>Páginas</dt><dd>660</dd></div>
+          <div><dt>Capítulos</dt><dd>50</dd></div>
+          <div><dt>Formatos</dt><dd>Físico e digital</dd></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="inclui">
+      <p class="inclui-rot">As duas versões incluem</p>
+      <div>
+        <div>
+          <h4>Aulas em vídeo sobre a base da Virtologia</h4>
+          <p>Eduardo Casarotto apresentando o método do começo ao fim, em linguagem simples: as faixas de evolução, as 51 necessidades humanas, o aparelho psíquico, as virtudes, o inconsciente e os mecanismos de defesa. Com casos reais explicados um a um.</p>
+        </div>
+        <div>
+          <h4>Os 33 exercícios de neuroplasticidade</h4>
+          <p>Um exercício para cada uma das 33 virtudes, com o passo a passo de aplicação. É por onde a pessoa começa a usar a Virtologia em si mesma.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="precos">
+      <div>
+        <p class="rot">Versão física + vídeo aulas</p>
+        <p class="valor">R$ 287</p>
+        <p class="obs">mais R$ 28 de frete</p>
+        <a class="btn" href="https://payfast.greenn.com.br/125295" target="_blank" rel="noopener">Adquirir a versão física</a>
+      </div>
+      <div>
+        <p class="rot">Versão digital + vídeo aulas</p>
+        <p class="valor">R$ 160</p>
+        <p class="obs">acesso imediato</p>
+        <a class="btn" href="https://payfast.greenn.com.br/125521" target="_blank" rel="noopener">Adquirir a versão digital</a>
+      </div>
+    </div>
+
+    <nav class="indice" aria-label="Conteúdo desta página">
+      <p class="indice-titulo">Nesta página</p>
+      <ol>
+        <li><a href="#sumario">Os 50 capítulos</a></li>
+        <li><a href="#bonus">As aulas e os 33 exercícios</a></li>
+        <li><a href="#para-quem">Público indicado</a></li>
+        <li><a href="#autor">Quem escreveu</a></li>
+        <li><a href="#duvidas">O que costumam perguntar</a></li>
+      </ol>
+    </nav>
+  </div>
+</section>
+
+<section id="sumario">
+  <div class="wrap">
+    <h2>Os 50 capítulos</h2>
+
+    <p>Do funcionamento do aparelho psíquico ao manejo de casos específicos. <strong>Cada quadro clínico tem o seu próprio capítulo</strong>, com a leitura da Virtologia sobre o que sustenta aquilo e o caminho de tratamento.</p>
+
+    <div class="capitulos">
+      <div><span class="cap-n">1</span><h4>Faixas de Evolução</h4><p>Os graus em que o cérebro humano opera, do mais primitivo ao mais desenvolvido. É o que determina o que uma pessoa consegue fazer com o que ela sabe.</p></div>
+      <div><span class="cap-n">2</span><h4>Grupo de Necessidades Humanas</h4><p>As 51 necessidades, organizadas em cinco grupos. Cada uma com uma reserva que não pode secar nem transbordar, porque os dois extremos geram sintoma.</p></div>
+      <div><span class="cap-n">3</span><h4>Processo Civilizador e a Quarta Revolução Industrial</h4><p>Como a humanidade chegou até aqui, e o que a tecnologia mudou no funcionamento das pessoas.</p></div>
+      <div><span class="cap-n">4</span><h4>A Falta</h4><p>O buraco deixado por algo que não aconteceu. É a origem de quase todo movimento humano, e o que a pessoa passa a vida tentando cobrir.</p></div>
+      <div><span class="cap-n">5</span><h4>O Desejo</h4><p>Por que o desejo nasce da falta, e por que realizá-lo nunca a preenche. A raiz da compulsão explicada.</p></div>
+      <div><span class="cap-n">6</span><h4>As 33 Virtudes</h4><p>Cada virtude, o que ela constrói no cérebro, e a ordem de dependência entre elas.</p></div>
+      <div><span class="cap-n">7</span><h4>Estruturas Preexistentes</h4><p>O que já vem montado antes de qualquer experiência, e o que é construído depois.</p></div>
+      <div><span class="cap-n">8</span><h4>O Inconsciente Booleano</h4><p>O inconsciente descrito como um sistema de cálculo que não entra em contradição lógica. Não é um depósito de conteúdos escondidos: é uma conta que dá para nomear.</p></div>
+      <div><span class="cap-n">9</span><h4>Redes Neurais Biológicas e o Inconsciente Booleano</h4><p>Como esse cálculo acontece fisicamente nas redes de neurônios.</p></div>
+      <div><span class="cap-n">10</span><h4>Virtudes e Neuroplasticidade</h4><p>O mecanismo pelo qual uma virtude vira estrutura permanente no cérebro.</p></div>
+      <div><span class="cap-n">11</span><h4>As 3 Estruturas</h4><p>Neurose, psicose e perversão na leitura da Virtologia, e como diferenciá-las na prática.</p></div>
+      <div><span class="cap-n">12</span><h4>O Orgulho e o Egoísmo</h4><p>Os dois sistemas neurofuncionais que estão por trás da maior parte do sofrimento psíquico. O capítulo que sustenta a escola inteira.</p></div>
+      <div><span class="cap-n">13</span><h4>Associações, Representações e Simbólico</h4><p>Como o cérebro liga uma coisa à outra, e por que uma palavra qualquer pode disparar uma reação desproporcional.</p></div>
+      <div><span class="cap-n">14</span><h4>Mecanismo de Defesa e Inconsciente Booleano</h4><p>Os mecanismos de defesa um a um, e a lógica de cálculo que os sustenta.</p></div>
+      <div><span class="cap-n">15</span><h4>Transferência</h4><p>O fenômeno descrito pela psicanálise, relido pela lógica do inconsciente booleano e da falta primordial.</p></div>
+      <div><span class="cap-n">16</span><h4>A Vida Psíquica</h4><p>Como as peças internas funcionam juntas no dia a dia de uma pessoa.</p></div>
+      <div><span class="cap-n">17</span><h4>A Não Ressignificação de Memória</h4><p>Por que a mudança não se produz reescrevendo o passado. Um dos pontos em que a Virtologia mais se afasta da clínica tradicional.</p></div>
+      <div><span class="cap-n">18</span><h4>Aparelho Psíquico da Virtologia</h4><p>O mapa completo das peças internas: ego, Self, superego, complexos, holofote e tanque. Cada uma com correspondência descrita no cérebro.</p></div>
+      <div><span class="cap-n">19</span><h4>Funções do Ego</h4><p>O que o ego faz, quando ele consegue fazer, e o que acontece quando não consegue.</p></div>
+      <div><span class="cap-n">20</span><h4>Consciência</h4><p>O que é estar consciente, e por que a consciência plena é mais rara do que se imagina.</p></div>
+      <div><span class="cap-n">21</span><h4>Valores, Crenças e Princípios</h4><p>Como se formam, como governam a decisão, e o que é preciso para mudá-los.</p></div>
+      <div><span class="cap-n">22</span><h4>Teoria da Neutralidade</h4><p>A proposta da Virtologia sobre o ponto a partir do qual se lê alguém sem projetar a própria história.</p></div>
+      <div><span class="cap-n">23</span><h4>Leis do Universo</h4><p>Movimento, caos e servir. As regras que valem para qualquer pessoa, queira ela ou não.</p></div>
+      <div><span class="cap-n">24</span><h4>Personalidade</h4><p>Temperamento, caráter, identidade e couraça. O capítulo mais longo do livro, e a base de toda a leitura clínica.</p></div>
+      <div><span class="cap-n">25</span><h4>Transtornos Psiquiátricos e Traumas Graves</h4><p>Onde termina o alcance do trabalho com virtudes e onde começa a necessidade do cuidado médico.</p></div>
+      <div><span class="cap-n">26</span><h4>Transtorno de Personalidade Orgulhosa</h4><p>Os quadros que se organizam em torno da defesa da própria posição.</p></div>
+      <div><span class="cap-n">27</span><h4>Transtorno de Personalidade Egoísta</h4><p>Os quadros que se organizam em torno da própria vantagem.</p></div>
+      <div><span class="cap-n">28</span><h4>Self</h4><p>O eu profundo, e a distância entre ele e o papel que a pessoa representa.</p></div>
+      <div><span class="cap-n">29</span><h4>Pensamentos Positivos e Negativos</h4><p>O que a Virtologia diz sobre a ideia de trocar pensamento ruim por bom, e por que isso não sustenta mudança.</p></div>
+      <div><span class="cap-n">30</span><h4>Sexualidade</h4><p>A leitura da Virtologia sobre o tema, ligada à personalidade e às necessidades.</p></div>
+      <div><span class="cap-n">31</span><h4>Inveja e Ciúmes</h4><p>Duas expressões diretas do orgulho, explicadas pelo cálculo de posição.</p></div>
+      <div><span class="cap-n">32</span><h4>Crítica</h4><p>Por que a crítica dói tanto, e o que muda quando a humildade fica gravada.</p></div>
+      <div><span class="cap-n">33</span><h4>Fibromialgia e Síndrome do Pânico</h4><p>Dois destinos diferentes da mesma tensão acumulada, e o manejo de cada um.</p></div>
+      <div><span class="cap-n">34</span><h4>O Brinquedo e o Brincar</h4><p>Como o brincar molda valores e identidade na infância, e o que mudou entre as gerações.</p></div>
+      <div><span class="cap-n">35</span><h4>Outro-Realidade</h4><p>A capacidade de enxergar o outro sem projetar nele a própria história. Uma competência que se constrói.</p></div>
+      <div><span class="cap-n">36</span><h4>Suicídio</h4><p>A leitura virtológica da ideação suicida e o manejo desses casos.</p></div>
+      <div><span class="cap-n">37</span><h4>TOC</h4><p>O transtorno obsessivo compulsivo lido pela lógica do controle.</p></div>
+      <div><span class="cap-n">38</span><h4>TOC Inverso</h4><p>Um conceito novo da Virtologia: a compulsão pela desorganização e a recusa do controle. O contrário do TOC clássico.</p></div>
+      <div><span class="cap-n">39</span><h4>Transtorno Bipolar de Humor</h4><p>O que é determinação biológica, o que não é, e onde o trabalho com virtudes ajuda.</p></div>
+      <div><span class="cap-n">40</span><h4>Longevidade</h4><p>A relação entre neuroplasticidade, caridade e expectativa de vida.</p></div>
+      <div><span class="cap-n">41</span><h4>Criminalidade</h4><p>O crime lido pelo orgulho e pelo egoísmo. A base do trabalho em unidades prisionais.</p></div>
+      <div><span class="cap-n">42</span><h4>Vício de Adrenalina no Aposentado</h4><p>Por que tanta gente adoece ao parar de trabalhar, e o que sustenta isso.</p></div>
+      <div><span class="cap-n">43</span><h4>Vingança</h4><p>O orgulho ferido e a necessidade de devolver ao outro a dor que se sentiu.</p></div>
+      <div><span class="cap-n">44</span><h4>Família do Futuro</h4><p>O que muda na estrutura familiar conforme as pessoas evoluem de faixa.</p></div>
+      <div><span class="cap-n">45</span><h4>Cálculo de Familiar</h4><p>A conta silenciosa que organiza os papéis dentro de uma família.</p></div>
+      <div><span class="cap-n">46</span><h4>As Fases de Desenvolvimento da Personalidade</h4><p>As experiências que constroem cada fase da vida, do período intrauterino à longevidade, e os três desfechos possíveis de cada mandato. Mais de oitenta páginas.</p></div>
+      <div><span class="cap-n">47</span><h4>Sintoma</h4><p>O sintoma como a forma que a pessoa encontrou de evitar situações em que o ego dela é frágil.</p></div>
+      <div><span class="cap-n">48</span><h4>Manejos e Técnicas</h4><p>Como conduzir a sessão, o que perguntar, o que nunca dizer, e como montar o plano de trabalho. O capítulo que transforma teoria em consultório.</p></div>
+      <div><span class="cap-n">49</span><h4>Mapa de Identificação</h4><p>O instrumento para ler um caso inteiro e localizar onde intervir.</p></div>
+      <div><span class="cap-n">50</span><h4>Círculo das Relações</h4><p>Como as relações se organizam em camadas, e o que cada camada exige da pessoa.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="bonus">
+  <div class="wrap">
+    <h2>Vem com aulas e com 33 exercícios de neuroplasticidade</h2>
+
+    <p>Comprar o livro dá acesso a duas coisas que não estão nas páginas.</p>
+
+    <div class="duas">
+      <div>
+        <h3>As aulas em vídeo</h3>
+        <p>Eduardo Casarotto apresentando a Virtologia inteira, em linguagem simples: as faixas de evolução, as necessidades humanas, o aparelho psíquico, as virtudes, o inconsciente e os mecanismos de defesa.</p>
+        <p><strong>É a explicação falada de quem escreveu o livro</strong>, com exemplos de casos reais.</p>
+      </div>
+      <div>
+        <h3>Os 33 exercícios de neuroplasticidade</h3>
+        <p>Um exercício para cada uma das 33 virtudes, com o passo a passo de aplicação, o tempo de repetição e o critério para saber se ficou gravada.</p>
+        <p><strong>É por onde a pessoa começa a usar a Virtologia em si mesma</strong>, antes de qualquer outra coisa.</p>
+      </div>
+    </div>
+
+    <p class="destaque">Ler o livro explica. Os exercícios são o que constrói.</p>
+
+    <p>Porque a Virtologia parte de um ponto que a neurociência já estabeleceu: <strong>conhecer não é a mesma coisa que aprender.</strong> O que a pessoa entende fica numa memória curta. O que muda o comportamento é o que vira memória de longo prazo, e isso só acontece com repetição.</p>
+  </div>
+</section>
+
+<section id="para-quem">
+  <div class="wrap">
+    <h2>Público indicado</h2>
+
+    <div class="duas">
+      <div>
+        <h3>Para quem atende</h3>
+        <p>Psicólogos, psicanalistas, psiquiatras, terapeutas de outras linhas e profissionais que trabalham com desenvolvimento humano.</p>
+        <p>É o livro que sustenta a Formação em Virtologia, e todo o conteúdo dela vem daqui.</p>
+      </div>
+      <div>
+        <h3>Para quem quer entender a si mesmo</h3>
+        <p>Não é preciso ser da área. O livro é escrito de um jeito que qualquer pessoa acompanha, e os exercícios de neuroplasticidade podem ser aplicados na própria vida.</p>
+      </div>
+    </div>
+
+    <div class="objecao">
+      <h3>Qual é a diferença entre o livro e a Formação?</h3>
+      <p>São coisas diferentes, e a maioria dos alunos entra na Formação sem ter lido o livro antes.</p>
+      <p>O livro entrega a <strong>teoria completa</strong>, e é a melhor forma de examinar a Virtologia com profundidade antes de decidir qualquer coisa.</p>
+      <p><strong>A Formação aprofunda cada um dos assuntos que estão no livro.</strong> Cada capítulo que aqui ocupa algumas páginas vira aula inteira, com desdobramento, exemplos e as perguntas que só aparecem quando alguém está aplicando de verdade.</p>
+      <p>E ela entrega o que nenhum livro entrega: <strong>supervisão de casos reais toda semana, correção do seu manejo por um supervisor, e o estágio com paciente.</strong> É a diferença entre saber a teoria e saber conduzir alguém.</p>
+      <p>Muita gente faz o caminho inverso: entra na Formação e lê o livro ao longo do curso, porque as aulas seguem a ordem dele.</p>
+    </div>
+  </div>
+</section>
+
+<section id="autor">
+  <div class="wrap">
+    <h2>Quem escreveu</h2>
+
+    <p>Eduardo Casarotto é pesquisador, autor, consultor, filantropo, fundador do Instituto Virtudes e criador da Virtologia e da Humanização 2.0. Condecorado com o título de Comendador Cavaleiro pela Câmara de Justiça de São Paulo.</p>
+
+    <p>Com mais de 25 anos de atuação como terapeuta e consultor organizacional, formou mais de 2.000 terapeutas e dedicou sua trajetória ao estudo do funcionamento humano e da relação entre ambiente, comportamento e adoecimento.</p>
+
+    <p>Ao longo de sua atuação, desenvolveu trabalhos de formação e orientação metodológica para empresas, instituições públicas, organizações, hospitais, escolas e unidades prisionais, levando sua abordagem para contextos onde o funcionamento humano precisa ser compreendido não apenas no indivíduo, mas também nos sistemas em que ele vive e trabalha.</p>
+
+    <p>É autor de mais de 20 livros e de artigos publicados em periódicos científicos. Sua metodologia já foi apresentada no Plenário do Senado Federal, discutida em ambientes institucionais e aplicada em diferentes realidades humanas, organizacionais e sociais.</p>
+
+  </div>
+</section>
+
+<section id="duvidas">
+  <div class="wrap">
+    <h2>O que costumam perguntar</h2>
+
+    <details>
+      <summary>As aulas vêm nas duas versões?</summary>
+      <p>Sim. Tanto a versão física quanto a digital dão acesso às aulas em vídeo e aos exercícios de neuroplasticidade.</p>
+    </details>
+
+    <details>
+      <summary>Preciso ser da área da saúde para entender?</summary>
+      <p>Não. O livro é denso, mas é escrito em linguagem acessível, e cada conceito próprio é explicado quando aparece.</p>
+    </details>
+
+    <details>
+      <summary>Dá para aplicar os exercícios em mim mesmo?</summary>
+      <p>Sim. Os exercícios de neuroplasticidade das virtudes estão incluídos justamente para isso. Aplicar em outra pessoa, em contexto clínico, é outra coisa: depende da sua formação e do que o seu conselho de classe permite.</p>
+    </details>
+
+    <details>
+      <summary>Este livro substitui tratamento?</summary>
+      <p>Não. Nos quadros com determinação biológica, a Virtologia soma-se ao tratamento médico e não fica no lugar dele. Se você está em sofrimento, procure ajuda profissional.</p>
+    </details>
+
+    <details>
+      <summary>Qual a diferença entre esta e a próxima edição?</summary>
+      <p>A obra é revisada e ampliada periodicamente. A edição em circulação é sempre a mais recente disponível.</p>
+    </details>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="precos">
+      <div>
+        <p class="rot">Versão física + vídeo aulas</p>
+        <p class="valor">R$ 287</p>
+        <p class="obs">mais R$ 28 de frete</p>
+        <a class="btn" href="https://payfast.greenn.com.br/125295" target="_blank" rel="noopener">Adquirir a versão física</a>
+      </div>
+      <div>
+        <p class="rot">Versão digital + vídeo aulas</p>
+        <p class="valor">R$ 160</p>
+        <p class="obs">acesso imediato</p>
+        <a class="btn" href="https://payfast.greenn.com.br/125521" target="_blank" rel="noopener">Adquirir a versão digital</a>
+      </div>
+    </div>
+
+    <div class="ponte">
+      <p>Se você quer aplicar a Virtologia com pacientes, o caminho é a Formação, que tem supervisão de casos reais e estágio supervisionado:</p>
+      <a class="btn" href="../formacao/">Conhecer a Formação em Virtologia</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="rodape">
+  <div class="wrap-largo">
+    <div class="rodape-cols">
+      <div>
+        <h4><a href="../virtologia/">Virtologia</a></h4>
+        <ul>
+          <li><a href="../teorias/">Diante de outras grandes teorias</a></li>
+          <li><a href="../aula1/">Aula aberta</a></li>
+          <!-- <li><a href="../depoimentos/">Depoimentos</a></li> ATIVAR quando a página existir -->
+        </ul>
+      </div>
+      <div>
+        <h4><a href="../sistemas/">Humanização 2.0</a></h4>
+        <ul>
+          <li><a href="../ondas/">As Três Ondas do Trabalho</a></li>
+          <li><a href="../aula2/">Aula aberta sobre a NR-1</a></li>
+          <!-- <li><a href="../filtros/">Os Cinco Filtros</a></li> ATIVAR quando a página existir -->
+          <!-- <li><a href="../nr1/">Saúde mental e a NR-1</a></li> ATIVAR quando a página existir -->
+        </ul>
+      </div>
+      <div>
+        <h4><a href="../formacoes/">Formações</a></h4>
+        <ul>
+          <li><a href="../formacao/">Formação em Virtologia</a></li>
+          <li><a href="../pos-sistemas/">Pós-graduação em Sistemas Humanizados</a></li>
+          <li><a href="../fundamentos/">Fundamentos da Virtologia</a></li>
+          <li><a href="../manual/">Manual de Desenvolvimento Humano</a></li>
+          <li><a href="../livros/">Todos os livros</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Eduardo Casarotto</h4>
+        <ul>
+          <!-- <li><a href="../palestras/">Palestras e eventos</a></li> ATIVAR quando a página existir -->
+          <!-- <li><a href="../noticias/">Notícias</a></li> ATIVAR quando a página existir -->
+          <!-- <li><a href="../contato/">Contato</a></li> ATIVAR quando a página existir -->
+        </ul>
+      </div>
+      <div>
+        <h4><a href="../futuro/">Trazemos o Futuro</a></h4>
+        <div class="redes">
+          <a href="https://www.instagram.com/eduardocasarottooficial/" target="_blank" rel="noopener" aria-label="Instagram"><img src="../img/icone-instagram.svg" alt=""></a>
+          <a href="https://linktw.in/qrGGUW" target="_blank" rel="noopener" aria-label="YouTube"><img src="../img/icone-youtube.svg" alt=""></a>
+          <a href="https://www.tiktok.com/@eduardocasarottooficial" target="_blank" rel="noopener" aria-label="TikTok"><img src="../img/icone-tiktok.svg" alt=""></a>
+        </div>
+      </div>
+    </div>
+    <p class="ressalva">Nos quadros com determinação biológica, a Virtologia soma-se ao tratamento médico e não o substitui. Se você está em sofrimento, procure ajuda profissional.<br>Instituto Virtudes · Editora Virtudes</p>
+  </div>
+</footer>
+
+<script src="../js/site.js"></script>
+</body>
+</html>

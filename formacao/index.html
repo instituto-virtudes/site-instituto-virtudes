@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Formação em Virtologia | Instituto Virtudes</title>
+<meta name="description" content="Formação teórica e prática em Virtologia: 60 horas de aulas, 14 horários de supervisão por semana, estágio supervisionado e certificado de virtólogo.">
+<link rel="canonical" href="https://institutovirtudes.com.br/formacao/">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Instituto Virtudes">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:url" content="https://institutovirtudes.com.br/formacao/">
+<meta property="og:title" content="Formação em Virtologia">
+<meta property="og:description" content="Aprenda a tratar transtornos construindo, no cérebro do paciente, a estrutura que o torna funcional.">
+<meta property="og:image" content="https://institutovirtudes.com.br/img/og-padrao.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Instituto Virtudes">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Formação em Virtologia">
+<meta name="twitter:description" content="Aprenda a tratar transtornos construindo, no cérebro do paciente, a estrutura que o torna funcional.">
+<meta name="twitter:image" content="https://institutovirtudes.com.br/img/og-padrao.jpg">
+
+<link rel="icon" href="../img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/estilo.css">
+<style>
+.ficha{display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--borda);border-radius:var(--raio-card);
+  margin:32px 0 28px;overflow:hidden}
+.ficha div{flex:1 1 160px;padding:18px 20px;border-right:1px solid var(--borda)}
+.ficha div:last-child{border-right:0}
+.ficha dt{font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--apoio);margin-bottom:6px}
+.ficha dd{font-family:'Lora',Georgia,serif;font-size:19px;font-weight:600;margin:0;line-height:1.3}
+
+.duas{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:32px 0}
+.duas > div{background:var(--claro);border:1px solid var(--borda);border-radius:var(--raio-card);padding:26px 24px}
+.duas h3{font-size:20px;color:var(--azul);margin-bottom:12px;line-height:1.3}
+.duas p{font-size:15.5px;line-height:1.6;margin-bottom:14px}
+.duas p:last-child{margin-bottom:0}
+
+.cards2{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:32px 0}
+.cards2 > div{border:1px solid var(--borda);border-radius:var(--raio-card);padding:24px 22px}
+.cards2 h4{font-size:18px;color:var(--azul);margin-bottom:10px;line-height:1.3}
+.cards2 p{font-size:15px;line-height:1.6;margin:0}
+
+.cadeia{margin:32px 0;list-style:none;padding:0}
+.cadeia li{display:flex;align-items:flex-start;gap:18px;margin:0;
+  padding:24px 0;border-bottom:1px solid var(--borda)}
+.cadeia li:first-child{border-top:1px solid var(--borda)}
+.cadeia .num{flex:0 0 34px;width:34px;height:34px;border-radius:50%;background:var(--azul);color:#fff;
+  font-family:'Inter',sans-serif;font-size:15px;font-weight:600;
+  display:flex;align-items:center;justify-content:center;line-height:1}
+.cadeia .conteudo{flex:1;min-width:0}
+.cadeia h4{font-size:18px;margin:0 0 8px;line-height:1.3}
+.cadeia p{font-size:16px;line-height:1.6;margin:0 0 10px}
+.cadeia p:last-child{margin-bottom:0}
+.cadeia .ex{font-size:14.5px;color:var(--apoio);background:var(--claro);
+  border-radius:var(--raio);padding:12px 14px}
+
+
+.depoimentos{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin:32px 0}
+.depoimentos figure{margin:0}
+.depoimentos .video{margin-bottom:14px}
+.depoimentos .dep-fala{font-family:'Lora',Georgia,serif;font-size:17px;line-height:1.45;
+  margin:0 0 10px;color:var(--texto)}
+.depoimentos .dep-nome{font-size:13.5px;color:var(--apoio);margin:0;line-height:1.4}
+
+.objecao{border-left:3px solid var(--azul);padding:4px 0 4px 22px;margin:34px 0}
+.objecao h3{font-family:'Lora',Georgia,serif;font-size:20px;font-weight:600;color:var(--azul);margin-bottom:12px}
+.objecao p{font-size:16px;margin-bottom:14px}
+.objecao p:last-child{margin-bottom:0}
+
+@media (max-width:640px){
+  .ficha div{flex:1 1 100%;border-right:0;border-bottom:1px solid var(--borda);padding:14px 18px}
+  .ficha div:last-child{border-bottom:0}
+  .duas,.cards2,.numeros,.depoimentos{grid-template-columns:1fr;gap:14px}
+  .depoimentos{gap:28px}
+  .duas > div,.cards2 > div{padding:20px 18px}
+      .cadeia li{flex-direction:column;align-items:flex-start;gap:10px;padding:20px 0}
+  .cadeia .num{flex:0 0 auto;width:30px;height:30px;font-size:14px}
+  .cadeia .conteudo{width:100%}
+  .objecao{padding-left:16px}.objecao h3{font-size:18px}
+}
+</style>
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '386437925348155');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
+/></noscript>
+<!-- Fim Meta Pixel -->
+</head>
+<body>
+
+<header class="topo">
+  <div class="topo-int">
+    <a href="../" class="marca">Instituto Virtudes</a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Menu">&#8801;</button>
+    <nav>
+      <ul class="menu" id="menu">
+        <li><a href="../virtologia/">Virtologia</a></li>
+        <li><a href="../sistemas/">Humanização 2.0</a></li>
+        <li class="tem-sub">
+          <button class="menu-sub-btn" aria-expanded="false" aria-haspopup="true" aria-current="page">Formações <span class="seta-sub" aria-hidden="true">&#9662;</span></button>
+          <ul class="submenu">
+            <li><a href="../formacao/">Formação em Virtologia</a></li>
+            <li><a href="../pos-sistemas/">Pós-graduação em Sistemas Humanizados</a></li>
+            <li><a href="../formacoes/">Todas as formações</a></li>
+          </ul>
+        </li>
+        <!-- <li><a href="../noticias/">Notícias</a></li> ATIVAR quando a página existir -->
+        <li><a href="../futuro/">Trazemos o Futuro</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section>
+  <div class="wrap">
+    <p class="kicker">Formação em Virtologia</p>
+    <h1>Aprenda a tratar transtornos e sofrimento psíquico construindo, no cérebro do paciente, a estrutura que faz ele voltar a funcionar de maneira saudável</h1>
+    <p class="lead">Formação teórica e prática, com <strong>estágio supervisionado</strong> e certificado de virtólogo para quem quiser atuar clinicamente.</p>
+
+    <div class="ficha">
+      <div><dt>Aulas</dt><dd>60 horas</dd></div>
+      <div><dt>Acesso</dt><dd>1 ano</dd></div>
+      <div><dt>Supervisões</dt><dd>14 por semana</dd></div>
+    </div>
+
+    <a class="btn" href="https://wa.me/5511965419449?text=Ol%C3%A1%21%20Vim%20do%20site%20e%20quero%20saber%20mais%20sobre%20a%20Forma%C3%A7%C3%A3o%20em%20Virtologia" target="_blank" rel="noopener">Quero me matricular</a>
+
+    <nav class="indice" aria-label="Conteúdo desta página">
+      <p class="indice-titulo">Nesta página</p>
+      <ol>
+        <li><a href="#funcional">O que é fazer alguém voltar a funcionar</a></li>
+        <li><a href="#para-quem">Para quem é</a></li>
+        <li><a href="#aprender">O que você vai aprender</a></li>
+        <li><a href="#outras">Diante de outras linhas</a></li>
+        <li><a href="#supervisao">As supervisões</a></li>
+        <li><a href="#estagio">O estágio e o certificado</a></li>
+        <li><a href="#como-funciona">Como funciona na prática</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#alem">O que isso significa além do consultório</a></li>
+        <li><a href="#outros-caminhos">Pós-graduação e curso livre</a></li>
+        <li><a href="#duvidas">O que costumam perguntar</a></li>
+      </ol>
+    </nav>
+  </div>
+</section>
+
+<section id="funcional">
+  <div class="wrap">
+    <h2>O que significa fazer alguém voltar a funcionar de maneira saudável</h2>
+
+    <p>Um paciente pode entender perfeitamente de onde vem a própria ansiedade e continuar ansioso. Pode saber que precisa perdoar e continuar com o ódio fervendo. Pode ter feito anos de terapia, explicar a própria história com precisão, e reagir na segunda-feira exatamente como reagia antes.</p>
+
+    <p>Isso acontece porque <strong>entender e funcionar são coisas diferentes, e ficam em lugares diferentes do cérebro.</strong></p>
+
+    <p class="destaque">Quem se controla ainda sente. Quem voltou a funcionar já nem sente.</p>
+
+    <p>Alguém que segura a raiva por regra continua com a raiva por dentro, e o corpo paga o preço. Alguém em quem a aceitação foi construída simplesmente não gera mais a raiva.</p>
+
+    <p><strong>Fazer a pessoa voltar a funcionar é isso:</strong> fazer a resposta saudável acontecer sozinha, sem esforço e sem precisar se vigiar. E isso não se consegue explicando. Só construindo, com exercícios de neuroplasticidade, até virar memória de longo prazo.</p>
+
+    <p>Você aprende a trabalhar com <strong>ansiedade, depressão, transtornos de personalidade, borderline, TOC, compulsões, automutilação, pensamento suicida, pânico e fibromialgia</strong>, entre outros casos, com um método que vai na causa e não só no sintoma.</p>
+
+    <a class="btn" href="https://wa.me/5511965419449?text=Ol%C3%A1%21%20Vim%20do%20site%20e%20quero%20saber%20mais%20sobre%20a%20Forma%C3%A7%C3%A3o%20em%20Virtologia" target="_blank" rel="noopener">Quero me matricular</a>
+  </div>
+</section>
+
+<section id="para-quem">
+  <div class="wrap">
+    <h2>Para quem é</h2>
+
+    <div class="duas">
+      <div>
+        <h3>Para quem já atende</h3>
+        <p>Psicólogos, psicanalistas, psiquiatras, terapeutas holísticos e integrativos, nutricionistas e outros profissionais que cuidam de gente e querem um método para o que já fazem.</p>
+        <p>A maioria dos alunos vem daqui, e chega pelo mesmo motivo: <strong>entende o paciente e não consegue mudar ele.</strong></p>
+      </div>
+      <div>
+        <h3>Para quem vai começar</h3>
+        <p>Gente que está mudando de carreira e quer virar terapeuta.</p>
+        <p>A Formação começa do zero e monta toda a base, <strong>incluindo a parte prática, que é justamente onde a maioria dos cursos larga o aluno sozinho.</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="aprender">
+  <div class="wrap">
+    <h2>O que você vai aprender, na ordem em que se aprende</h2>
+
+    <p>A Virtologia não é uma técnica solta. É um sistema inteiro, e cada parte só faz sentido depois da anterior. <strong>A Formação segue essa ordem.</strong></p>
+
+    <ol class="cadeia">
+      <li>
+        <span class="num">1</span>
+        <div class="conteudo">
+          <h4>Como o ser humano funciona</h4>
+          <p>A Lei do Fluxo, que junta num lugar só tudo o que faz alguém enxergar e reagir de um jeito. E o Aparelho Psíquico: ego, Self, superego, complexos, holofote e tanque.</p>
+          <p class="ex"><strong>Freud, Jung e Lacan construíram cada um o seu aparelho psíquico.</strong> A Virtologia construiu o dela, com uma diferença: cada peça tem um lugar descrito no cérebro.</p>
+        </div>
+      </li>
+      <li>
+        <span class="num">2</span>
+        <div class="conteudo">
+          <h4>O que move uma pessoa</h4>
+          <p>Os cinco propulsores: as 51 necessidades humanas, a falta, o propósito, os mandatos de cada fase da vida e as convocações.</p>
+          <p class="ex"><strong>É aqui que boa parte da clínica erra:</strong> confunde doença com necessidade em falta, e trata como transtorno aquilo que era só carência.</p>
+        </div>
+      </li>
+      <li>
+        <span class="num">3</span>
+        <div class="conteudo">
+          <h4>Em que grau o cérebro dessa pessoa opera</h4>
+          <p>As Faixas de Evolução descrevem quem está no comando: as partes primitivas, que existem para sobreviver e reagir na hora, ou o lobo frontal, que planeja, espera e pensa no outro.</p>
+          <p class="ex"><strong>O mesmo conselho que ajuda um paciente destrói o outro.</strong> Você aprende a ler a faixa e a ajustar a condução a ela.</p>
+        </div>
+      </li>
+      <li>
+        <span class="num">4</span>
+        <div class="conteudo">
+          <h4>O que está desregulado</h4>
+          <p>Os dois sistemas que estão por trás da maior parte do sofrimento psíquico: o orgulho, que faz a pessoa viver defendendo a própria posição, e o egoísmo, que faz tudo virar conta de quanto eu ganho.</p>
+          <p>Mais as defesas, os hábitos automáticos e o inconsciente operacional.</p>
+        </div>
+      </li>
+      <li>
+        <span class="num">5</span>
+        <div class="conteudo">
+          <h4>Como se lê e se conduz cada quadro</h4>
+          <p>Ansiedade e depressão. Transtornos de personalidade, incluindo borderline e narcisismo. TOC e compulsões. Automutilação e pensamento suicida. Pânico e fibromialgia.</p>
+          <p class="ex"><strong>Para cada quadro, o que se ensina não é apenas o diagnóstico. É o caminho de tratamento.</strong></p>
+        </div>
+      </li>
+      <li>
+        <span class="num">6</span>
+        <div class="conteudo">
+          <h4>Como se transforma uma pessoa</h4>
+          <p>As 33 virtudes e a Pirâmide que organiza a ordem entre elas. Os exercícios de neuroplasticidade que constroem cada uma, quanto tempo levam e com que frequência aplicar.</p>
+          <p class="ex"><strong>Sem humildade gravada, nenhuma das outras para de pé.</strong> E você aprende a saber se ficou gravado de verdade ou se o paciente só aprendeu a falar bonito sobre o assunto.</p>
+        </div>
+      </li>
+      <li>
+        <span class="num">7</span>
+        <div class="conteudo">
+          <h4>Como se conduz o atendimento</h4>
+          <p>Como conduzir a sessão, o que perguntar, o que nunca dizer, e como montar o plano de trabalho apontando as três coisas para o mesmo lado: a faixa em que a pessoa está, a necessidade que precisa ser alimentada agora, e a virtude que precisa ser construída junto.</p>
+          <p class="ex"><strong>É a hora em que a teoria vira consultório.</strong></p>
+        </div>
+      </li>
+    </ol>
+
+    <a class="btn" href="https://wa.me/5511965419449?text=Ol%C3%A1%21%20Vim%20do%20site%20e%20quero%20saber%20mais%20sobre%20a%20Forma%C3%A7%C3%A3o%20em%20Virtologia" target="_blank" rel="noopener">Quero me matricular</a>
+  </div>
+</section>
+
+<section id="outras">
+  <div class="wrap">
+    <h2>A Virtologia diante de outras linhas</h2>
+
+    <p>A Virtologia não nasceu contra ninguém. Ela se apoia em quem veio antes e acrescenta o que ficou faltando.</p>
+
+    <div class="cards2">
+      <div>
+        <h4>Psicanálise</h4>
+        <p>Descreveu o inconsciente e mostrou que muito do que fazemos não passa pela nossa decisão. <strong>A Virtologia acrescenta um método para construir estrutura nova</strong>, em vez de só trazer para a consciência o que estava escondido.</p>
+      </div>
+      <div>
+        <h4>Terapia cognitivo-comportamental</h4>
+        <p>Mostrou que o pensamento pode ser examinado e corrigido, e criou técnicas que funcionam para diminuir sintoma. <strong>A Virtologia faz a pergunta seguinte: qual estrutura construir?</strong></p>
+      </div>
+      <div>
+        <h4>Terapias holísticas e integrativas</h4>
+        <p>Trouxeram de volta a ideia de que a pessoa é uma coisa só, corpo e história juntos. <strong>A Virtologia acrescenta a explicação do que acontece no cérebro</strong>, escrita de um jeito que pode ser testada.</p>
+      </div>
+      <div>
+        <h4>Neurociência aplicada à terapia</h4>
+        <p>Mostrou que compreender não basta. <strong>A Virtologia parte disso e vai adiante:</strong> neuroplasticidade é neutra, constrói tanto o que faz bem quanto o que adoece.</p>
+      </div>
+    </div>
+
+    <p>Se quiser ver a comparação completa, a Virtologia foi julgada pelas mesmas seis perguntas que um manual internacional usa para julgar as dezoito maiores teorias da personalidade. <a href="../teorias/">Clique aqui</a>.</p>
+  </div>
+</section>
+
+<section id="supervisao">
+  <div class="wrap">
+    <h2>As supervisões</h2>
+
+    <p>Esta é a parte que os alunos costumam descobrir depois e considerar o maior diferencial da Formação.</p>
+
+    <div class="numeros">
+      <div><strong>14</strong><span>horários de supervisão por semana</span></div>
+      <div><strong>30h</strong><span>de casos reais para assistir toda semana</span></div>
+    </div>
+
+    <p>São horários variados ao longo da semana, de manhã, à tarde e à noite. <strong>O aluno entra no que couber na agenda dele e assiste a quantas quiser.</strong></p>
+
+    <h3>Por que em grupo</h3>
+
+    <p>O modelo nasceu de uma necessidade real: dar conta de um monte de pacientes atendidos de graça em favelas e no CAPS de São Caetano, onde os alunos faziam a parte prática.</p>
+
+    <p>No formato tradicional, a supervisão é individual: o aluno leva um caso, o dele, e discute aquele caso. A experiência cresce um paciente por vez, e é por isso que leva anos para um terapeuta ficar bom.</p>
+
+    <p><strong>Na supervisão em grupo, o aluno assiste a dezenas de casos reais por semana.</strong> Cada caso apresentado por um colega traz três coisas que ficam com quem escuta: a história que o paciente conta, a vida que ele teve e o conjunto de sintomas.</p>
+
+    <p>Depois de ouvir a mesma combinação de história e sintoma dezenas de vezes, <strong>o cérebro do terapeuta grava o padrão.</strong> Quando um paciente parecido chega ao consultório, ele já sabe o que investigar e por onde começar.</p>
+
+    <p class="destaque">É exatamente o mesmo mecanismo que a Virtologia descreve para as virtudes: repetir constrói estrutura.</p>
+
+    <a class="btn" href="https://wa.me/5511965419449?text=Ol%C3%A1%21%20Vim%20do%20site%20e%20quero%20saber%20mais%20sobre%20a%20Forma%C3%A7%C3%A3o%20em%20Virtologia" target="_blank" rel="noopener">Quero me matricular</a>
+  </div>
+</section>
+
+<section id="estagio">
+  <div class="wrap">
+    <h2>O estágio supervisionado e o certificado</h2>
+
+    <p>Aqui está o que separa a Formação de um curso gravado.</p>
+
+    <p>Depois de assistir a todas as aulas, <strong>quem quiser o certificado de virtólogo faz um estágio supervisionado</strong>, ainda dentro do ano de acesso.</p>
+
+    <ol class="cadeia">
+      <li>
+        <span class="num">1</span>
+        <div class="conteudo">
+          <h4>Atender cinco pessoas</h4>
+          <p>Quem ainda não atua como terapeuta faz esses atendimentos gratuitamente.</p>
+        </div>
+      </li>
+      <li>
+        <span class="num">2</span>
+        <div class="conteudo">
+          <h4>Levar cada caso três vezes à supervisão</h4>
+          <p>São <strong>15 supervisões apresentando caso</strong> ao longo do estágio: cinco pacientes, três apresentações cada.</p>
+        </div>
+      </li>
+      <li>
+        <span class="num">3</span>
+        <div class="conteudo">
+          <h4>Ser orientado e avaliado a cada uma</h4>
+          <p>Os supervisores do Instituto acompanham a condução de cada caso, corrigem o manejo e avaliam a evolução do aluno.</p>
+        </div>
+      </li>
+      <li>
+        <span class="num">4</span>
+        <div class="conteudo">
+          <h4>Receber o certificado de virtólogo</h4>
+          <p>Terapeuta que trabalha com a Virtologia.</p>
+        </div>
+      </li>
+    </ol>
+
+    <div class="objecao">
+      <h3>Ah, mas e se eu quiser só o conteúdo teórico?</h3>
+      <p>Basta assistir a todas as aulas. <strong>O estágio é para quem quer o certificado de virtólogo e vai atuar clinicamente.</strong></p>
+      <p>Muita gente faz a Formação para aplicar o que aprendeu dentro da própria abordagem, sem pretender mudar de linha. Nesse caso, o estágio não é obrigatório.</p>
+    </div>
+  </div>
+</section>
+
+<section id="como-funciona">
+  <div class="wrap">
+    <h2>Como funciona na prática</h2>
+
+    <table>
+      <tr><th>Aulas</th><td>60 horas de aulas gravadas, do fundamento à técnica</td></tr>
+      <tr><th>Acesso</th><td>1 ano à plataforma, para assistir no seu ritmo</td></tr>
+      <tr><th>Tira-dúvidas</th><td>Ao vivo toda semana, com os virtólogos do Instituto. Sem tira-dúvidas em julho, dezembro e janeiro</td></tr>
+      <tr><th>Com Eduardo Casarotto</th><td>Um encontro ao vivo por mês</td></tr>
+      <tr><th>Supervisões</th><td>14 horários por semana, com casos reais</td></tr>
+      <tr><th>Estágio</th><td>5 pacientes, 15 supervisões apresentando caso, dentro do ano de acesso</td></tr>
+      <tr><th>Certificado</th><td>Virtólogo, para quem conclui as aulas e o estágio</td></tr>
+      <tr><th>Conteúdo</th><td>Todo o livro <em>Fundamentos da Virtologia</em>, desenvolvido em aula</td></tr>
+    </table>
+
+    <a class="btn" href="https://wa.me/5511965419449?text=Ol%C3%A1%21%20Vim%20do%20site%20e%20quero%20saber%20mais%20sobre%20a%20Forma%C3%A7%C3%A3o%20em%20Virtologia" target="_blank" rel="noopener">Quero me matricular</a>
+  </div>
+</section>
+
+<section id="depoimentos">
+  <div class="wrap">
+    <h2>O que dizem profissionais que já atendiam</h2>
+
+    <p>Psicólogos, psicanalistas e terapeutas de outras linhas estudaram a Virtologia e passaram a trabalhar com ela:</p>
+
+    <div class="depoimentos">
+      <figure>
+        <div class="video">[ vídeo · Dâmaris ]</div>
+        <figcaption>
+          <p class="dep-fala">"Melhorou o pânico e a ansiedade da minha paciente em apenas 14 dias."</p>
+          <p class="dep-nome">Dâmaris · Psicóloga clínica</p>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="video">[ vídeo · Carina ]</div>
+        <figcaption>
+          <p class="dep-fala">"Não tem como não falar que é revolucionário. Depois que você conhece, não tem como não trabalhar com isso."</p>
+          <p class="dep-nome">Carina · Neuropsicopedagoga, psicanalista e terapeuta ABA</p>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="video">[ vídeo · Fernanda ]</div>
+        <figcaption>
+          <p class="dep-fala">"É libertador. Para consultório, foi uma revolução e tanto."</p>
+          <p class="dep-nome">Fernanda · Psicóloga clínica (TCC)</p>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="video">[ vídeo · Grace Campos ]</div>
+        <figcaption>
+          <p class="dep-fala">"A Virtologia é o 'como' de todas as terapias. Linguagem fácil, compreensível, onde qualquer um pode fazer."</p>
+          <p class="dep-nome">Grace Campos · Psicanalista</p>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="video">[ vídeo · Dinorá ]</div>
+        <figcaption>
+          <p class="dep-fala">"Quando você vai percebendo, você vê que aquela não é mais a mesma pessoa que comecei a atender."</p>
+          <p class="dep-nome">Dinorá · Psicóloga especialista em autismo</p>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="video">[ vídeo · Rosa ]</div>
+        <figcaption>
+          <p class="dep-fala">"Quando você vê, você já está agindo. Muito mais rápido e pontual do que outras terapias."</p>
+          <p class="dep-nome">Rosa · Psicóloga</p>
+        </figcaption>
+      </figure>
+    </div>
+
+    <a class="btn" href="https://wa.me/5511965419449?text=Ol%C3%A1%21%20Vim%20do%20site%20e%20quero%20saber%20mais%20sobre%20a%20Forma%C3%A7%C3%A3o%20em%20Virtologia" target="_blank" rel="noopener">Quero me matricular</a>
+  </div>
+</section>
+
+<section id="alem">
+  <div class="wrap">
+    <div class="caixa-pastel">
+      <h2>O que isso significa além do consultório</h2>
+
+      <p>As virtudes são elaboradas pelo lobo frontal, a parte da frente do cérebro. <strong>É a última que se desenvolveu na história da espécie e a última que amadurece em cada pessoa.</strong> Já o orgulho e o egoísmo operam a partir das partes mais primitivas.</p>
+
+      <p>Existe ainda uma rede no cérebro que liga toda vez que a pessoa pensa em si mesma. Quando alguém treina humildade e compaixão de verdade, os estudos mostram essa rede ficando menos ativa. <strong>Menos cérebro ocupado com você mesmo, mais cérebro sobrando para o mundo.</strong></p>
+
+      <p class="destaque">Ficar menos egoísta não é uma conquista moral. É o cérebro se desenvolvendo.</p>
+
+      <p>É por isso que quem se forma em Virtologia não aprende apenas a reduzir sintoma. <strong>O mesmo trabalho que trata a ansiedade de um paciente torna essa pessoa mais empática, menos presa ao próprio status, mais capaz de se dedicar a algo que serve aos outros.</strong> Não são dois resultados. É um só.</p>
+
+      <p class="destaque">O que trata uma pessoa é o mesmo que a torna melhor para as outras.</p>
+
+      <p>Cada terapeuta formado carrega isso para dentro de dezenas de vidas. É essa a conta que o Instituto faz.</p>
+    </div>
+  </div>
+</section>
+
+<section id="outros-caminhos">
+  <div class="wrap">
+    <h2>Pós-graduação e curso livre</h2>
+
+    <p>Além da Formação, o Instituto oferece o mesmo campo de estudo em outros formatos:</p>
+
+    <div class="cards2">
+      <div>
+        <h4>Pós-graduação em Virtologia</h4>
+        <p>Virtologia, Neurociência e Neuroplasticidade na Construção da Personalidade. <strong>Especialização lato sensu, credenciada pelo MEC.</strong> Exige graduação completa em qualquer área.</p>
+      </div>
+      <div>
+        <h4>Versão em curso livre</h4>
+        <p><strong>O conteúdo é o mesmo da pós-graduação</strong>, na modalidade de curso livre, para quem ainda não tem graduação e quer estudar do mesmo jeito.</p>
+      </div>
+    </div>
+
+    <p>Os três caminhos partem da mesma base. O que muda é a titulação ao final e o pré-requisito de entrada.</p>
+  </div>
+</section>
+
+<section id="duvidas">
+  <div class="wrap">
+    <h2>O que costumam perguntar</h2>
+
+    <details>
+      <summary>Preciso ter formação na área da saúde?</summary>
+      <p>Não. A Formação parte do zero e atende tanto quem está em transição de carreira quanto profissionais já formados. Atender em consultório, isso sim, depende do que o conselho da sua profissão permite.</p>
+    </details>
+
+    <details>
+      <summary>Que certificado eu recebo?</summary>
+      <p>Quem assiste a todas as aulas e conclui o estágio supervisionado recebe o certificado de virtólogo, que é o terapeuta que trabalha com a Virtologia. Quem quer só o conteúdo teórico assiste às aulas e não precisa fazer o estágio.</p>
+    </details>
+
+    <details>
+      <summary>Como funciona o estágio se eu ainda não atendo ninguém?</summary>
+      <p>Você atende cinco pessoas gratuitamente e leva cada caso três vezes à supervisão, num total de 15 apresentações. Os supervisores orientam a condução caso a caso.</p>
+    </details>
+
+    <details>
+      <summary>A Virtologia substitui a minha linha?</summary>
+      <p>Não é preciso abandonar nada. Profissionais de diversas linhas estudam a Virtologia e decidem, a partir do que observam na prática, se integram ou se adotam. Muitos passaram a trabalhar só com ela, por escolha própria.</p>
+    </details>
+
+    <details>
+      <summary>Quais quadros a Formação cobre?</summary>
+      <p>Ansiedade, depressão, transtornos de personalidade, borderline, narcisismo, TOC, compulsões, automutilação, pensamento suicida, pânico e fibromialgia, entre outros. Para cada um, a leitura da Virtologia sobre o que sustenta aquilo, e o caminho de tratamento.</p>
+    </details>
+
+    <details>
+      <summary>As supervisões são obrigatórias?</summary>
+      <p>Assistir, não. Você entra nas que quiser, no horário que couber na sua agenda. Apresentar caso passa a ser necessário quando você começa o estágio.</p>
+    </details>
+
+    <details>
+      <summary>Isso é uma coisa científica?</summary>
+      <p>A Virtologia é uma escola clínico-filosófica com base científica. Ela escreve o que afirma de um jeito que pode ser testado, dizendo o que confirmaria e o que derrubaria cada ideia, conversa com a neurociência e publica artigos em revistas científicas.</p>
+    </details>
+
+    <details>
+      <summary>A Virtologia substitui acompanhamento médico?</summary>
+      <p>Depende do quadro, e a Virtologia é explícita sobre isso.</p>
+      <p>Onde existe determinação biológica, como na psicose, no transtorno bipolar e no autismo, o trabalho é somado ao tratamento médico e nunca fica no lugar dele. É co-manejo, com o virtólogo trabalhando junto do psiquiatra.</p>
+      <p>Onde o sofrimento vem de defesa construída ao longo da vida, que é a maior parte dos casos, o trabalho virtológico é o próprio tratamento.</p>
+    </details>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Conhecer a Formação</h2>
+    <p>O programa completo, o formato e os valores são apresentados em conversa direta pelo WhatsApp:</p>
+    <a class="btn" href="https://wa.me/5511965419449?text=Ol%C3%A1%21%20Vim%20do%20site%20e%20quero%20saber%20mais%20sobre%20a%20Forma%C3%A7%C3%A3o%20em%20Virtologia" target="_blank" rel="noopener">Quero me matricular</a>
+    <p class="apoio">Para quem prefere examinar a tese antes, o livro <em>Fundamentos da Virtologia</em> reúne a base inteira da escola, e é o mesmo conteúdo desenvolvido nas aulas.</p>
+
+    <div class="ponte">
+      <p>A aula aberta sobre a Lei do Fluxo é uma aula real da Formação, disponibilizada por inteiro:</p>
+      <a class="btn" href="../aula1/">Assistir à aula aberta</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="rodape">
+  <div class="wrap-largo">
+    <div class="rodape-cols">
+      <div>
+        <h4><a href="../virtologia/">Virtologia</a></h4>
+        <ul>
+          <li><a href="../teorias/">Diante de outras grandes teorias</a></li>
+          <li><a href="../aula1/">Aula aberta</a></li>
+          <!-- <li><a href="../depoimentos/">Depoimentos</a></li> ATIVAR quando a página existir -->
+        </ul>
+      </div>
+      <div>
+        <h4><a href="../sistemas/">Humanização 2.0</a></h4>
+        <ul>
+          <li><a href="../ondas/">As Três Ondas do Trabalho</a></li>
+          <li><a href="../aula2/">Aula aberta sobre a NR-1</a></li>
+          <!-- <li><a href="../filtros/">Os Cinco Filtros</a></li> ATIVAR quando a página existir -->
+          <!-- <li><a href="../nr1/">Saúde mental e a NR-1</a></li> ATIVAR quando a página existir -->
+        </ul>
+      </div>
+      <div>
+        <h4><a href="../formacoes/">Formações</a></h4>
+        <ul>
+          <li><a href="../formacao/">Formação em Virtologia</a></li>
+          <li><a href="../pos-sistemas/">Pós-graduação em Sistemas Humanizados</a></li>
+          <li><a href="../fundamentos/">Fundamentos da Virtologia</a></li>
+          <li><a href="../manual/">Manual de Desenvolvimento Humano</a></li>
+          <li><a href="../livros/">Todos os livros</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Eduardo Casarotto</h4>
+        <ul>
+          <!-- <li><a href="../palestras/">Palestras e eventos</a></li> ATIVAR quando a página existir -->
+          <!-- <li><a href="../noticias/">Notícias</a></li> ATIVAR quando a página existir -->
+          <!-- <li><a href="../contato/">Contato</a></li> ATIVAR quando a página existir -->
+        </ul>
+      </div>
+      <div>
+        <h4><a href="../futuro/">Trazemos o Futuro</a></h4>
+        <div class="redes">
+          <a href="https://www.instagram.com/eduardocasarottooficial/" target="_blank" rel="noopener" aria-label="Instagram"><img src="../img/icone-instagram.svg" alt=""></a>
+          <a href="https://linktw.in/qrGGUW" target="_blank" rel="noopener" aria-label="YouTube"><img src="../img/icone-youtube.svg" alt=""></a>
+          <a href="https://www.tiktok.com/@eduardocasarottooficial" target="_blank" rel="noopener" aria-label="TikTok"><img src="../img/icone-tiktok.svg" alt=""></a>
+        </div>
+      </div>
+    </div>
+    <p class="ressalva">Nos quadros com determinação biológica, a Virtologia soma-se ao tratamento médico e não o substitui. Se você está em sofrimento, procure ajuda profissional.<br>Instituto Virtudes · Editora Virtudes</p>
+  </div>
+</footer>
+
+<script src="../js/site.js"></script>
+</body>
+</html>

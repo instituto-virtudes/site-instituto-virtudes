@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sistemas Humanizados · Humanização 2.0 | Eduardo Casarotto</title>
+<meta name="description" content="A metodologia completa dos Sistemas Humanizados: 27 capítulos com os manuais prontos e 3 horas de aulas bônus gravadas sobre a NR-1 e a gestão de riscos psicossociais. Catalogado na Biblioteca do Senado Federal.">
+<link rel="canonical" href="https://institutovirtudes.com.br/sistemas-humanizados/">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Instituto Virtudes">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:url" content="https://institutovirtudes.com.br/sistemas-humanizados/">
+<meta property="og:title" content="Sistemas Humanizados · Humanização 2.0">
+<meta property="og:description" content="A metodologia completa, com manuais prontos e 3 horas de aulas bônus sobre a NR-1. Catalogado na Biblioteca do Senado Federal.">
+<meta property="og:image" content="https://institutovirtudes.com.br/img/og-padrao.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Instituto Virtudes">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sistemas Humanizados · Humanização 2.0">
+<meta name="twitter:description" content="A metodologia completa, com manuais prontos e 3 horas de aulas bônus sobre a NR-1. Catalogado na Biblioteca do Senado Federal.">
+<meta name="twitter:image" content="https://institutovirtudes.com.br/img/og-padrao.jpg">
+
+<link rel="icon" href="../img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/estilo.css">
+<style>
+.ficha{display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--borda);border-radius:var(--raio-card);
+  margin:32px 0 24px;overflow:hidden}
+.ficha div{flex:1 1 150px;padding:18px 20px;border-right:1px solid var(--borda);display:flex;flex-direction:column}
+.ficha div:last-child{border-right:0}
+.ficha dt{font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--apoio);margin-bottom:6px}
+.ficha dd{font-family:'Lora',Georgia,serif;font-size:19px;font-weight:600;margin:auto 0 0;line-height:1.3}
+
+.precos{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:28px 0}
+.precos > div{border:1px solid var(--borda);border-radius:var(--raio-card);padding:26px 24px}
+.precos .rot{font-family:'Inter',sans-serif;font-size:12px;font-weight:600;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--apoio);margin:0 0 10px}
+.precos .valor{font-family:'Lora',Georgia,serif;font-size:34px;font-weight:700;
+  color:var(--texto);margin:0 0 4px;line-height:1}
+.precos .obs{font-size:14px;color:var(--apoio);margin:0 0 18px}
+.precos .btn{margin:0;width:100%;text-align:center}
+.precos.preco-unico{grid-template-columns:1fr;max-width:420px}
+.autoridade{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:36px 0 0}
+.autoridade figure{margin:0}
+@media (max-width:760px){.autoridade{grid-template-columns:1fr}}
+
+.duas{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:32px 0}
+.duas > div{background:var(--claro);border:1px solid var(--borda);border-radius:var(--raio-card);padding:26px 24px}
+.duas h3{font-size:20px;color:var(--azul);margin-bottom:12px;line-height:1.3}
+.duas p{font-size:15.5px;line-height:1.6;margin-bottom:14px}
+.duas p:last-child{margin-bottom:0}
+
+.sumario{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:32px 0}
+.sumario > div{border-top:2px solid var(--azul);padding-top:14px}
+.sumario h4{font-size:16px;color:var(--azul);margin-bottom:8px}
+.sumario p{font-size:14.5px;line-height:1.65;margin:0;color:var(--texto)}
+
+.hero-livro{display:grid;grid-template-columns:260px 1fr;gap:48px;align-items:center;margin:8px 0 16px;background:transparent}
+.capa{margin:0}
+.capa img{width:100%;height:auto;display:block;background:transparent;border:0;border-radius:0}
+.hero-txt .kicker{margin-bottom:8px}
+.hero-txt h1{margin-bottom:14px}
+.hero-txt .lead{margin-bottom:0}
+.hero-txt .ficha{margin:26px 0 0}
+.hero-livro.hero-sistemas{grid-template-columns:1fr;gap:0}
+.hero-foto{margin:30px auto 8px;max-width:720px}
+.hero-lista{margin:12px 0 0;padding-left:24px}
+.hero-lista li{font-size:17px;line-height:1.6;margin:5px 0}
+.sublead{font-size:16.5px;line-height:1.6;color:var(--apoio);margin:14px 0 0}
+
+.inclui{border:1px solid var(--borda);border-radius:var(--raio-card);padding:26px 24px;margin:28px 0}
+.inclui-rot{font-family:'Inter',sans-serif;font-size:12px;font-weight:600;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--azul);margin:0 0 18px}
+.inclui > div{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.inclui .tres{grid-template-columns:repeat(3,1fr);gap:26px}
+.inclui h4{font-size:17px;margin-bottom:8px;line-height:1.3}
+.inclui p{font-size:14.5px;line-height:1.6;margin:0;color:var(--apoio)}
+
+.capitulos{margin:32px 0}
+.capitulos > div{padding:22px 0;border-bottom:1px solid var(--claro)}
+.capitulos > div:first-child{border-top:1px solid var(--claro)}
+.capitulos .cap-n{font-family:'Inter',sans-serif;font-size:12px;font-weight:600;
+  color:var(--apoio);display:inline-block;min-width:26px}
+.capitulos h4{display:inline;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:600;
+  color:var(--azul);line-height:1.35}
+.capitulos p{font-size:15.5px;line-height:1.65;margin:8px 0 0 26px;color:var(--texto);max-width:70ch}
+
+.cadeia{margin:32px 0;list-style:none;padding:0}
+.cadeia li{display:flex;align-items:flex-start;gap:18px;margin:0;padding:22px 0;border-bottom:1px solid var(--borda)}
+.cadeia li:first-child{border-top:1px solid var(--borda)}
+.cadeia .num{flex:0 0 34px;width:34px;height:34px;border-radius:50%;background:var(--azul);color:#fff;
+  font-family:'Inter',sans-serif;font-size:15px;font-weight:600;display:flex;align-items:center;justify-content:center;line-height:1}
+.cadeia .conteudo{flex:1;min-width:0}
+.cadeia h4{font-size:18px;margin:0 0 8px;line-height:1.3}
+.cadeia p{font-size:16px;line-height:1.6;margin:0 0 10px}
+.cadeia p:last-child{margin-bottom:0}
+.cadeia .ex{font-size:14.5px;color:var(--apoio);background:var(--claro);border-radius:var(--raio);padding:12px 14px}
+
+.objecao{border-left:3px solid var(--azul);padding:4px 0 4px 22px;margin:34px 0}
+#virtude h3,#metodo h3{font-family:'Lora',Georgia,serif;font-size:22px;font-weight:600;margin:38px 0 14px}
+.objecao h3{font-family:'Lora',Georgia,serif;font-size:20px;font-weight:600;color:var(--azul);margin-bottom:12px}
+.objecao p{font-size:16px;margin-bottom:14px}
+.objecao p:last-child{margin-bottom:0}
+
+@media (max-width:640px){
+  .ficha div{flex:1 1 100%;border-right:0;border-bottom:1px solid var(--borda);padding:14px 18px}
+  .ficha div:last-child{border-bottom:0}
+  .precos,.duas,.sumario{grid-template-columns:1fr;gap:14px}
+  .inclui > div,.inclui .tres{grid-template-columns:1fr;gap:18px}
+  .inclui{padding:22px 20px}
+  .hero-livro{grid-template-columns:1fr;gap:22px;text-align:center}
+  .capa{max-width:180px;margin:0 auto}
+  .hero-txt{text-align:left}
+  .capitulos h4{font-size:17px}
+  .capitulos p{font-size:14.5px;margin-left:0}
+  .cadeia li{flex-direction:column;align-items:flex-start;gap:10px;padding:20px 0}
+  .cadeia .num{flex:0 0 auto;width:30px;height:30px;font-size:14px}
+  .cadeia .conteudo{width:100%}
+  .precos > div,.duas > div{padding:22px 20px}
+  .objecao{padding-left:16px}.objecao h3{font-size:18px}
+}
+</style>
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '386437925348155');
+fbq('track', 'PageView');
+fbq('track', 'ViewContent', {content_name: 'Sistemas Humanizados - Humanizacao 2.0', content_category: 'livro'});
+
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
+/></noscript>
+<!-- Fim Meta Pixel -->
+</head>
+<body>
+
+<header class="topo">
+  <div class="topo-int">
+    <a href="../" class="marca">Instituto Virtudes</a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Menu">&#8801;</button>
+    <nav>
+      <ul class="menu" id="menu">
+        <li><a href="../virtologia/">Virtologia</a></li>
+        <li><a href="../sistemas/">Humanização 2.0</a></li>
+        <li class="tem-sub">
+          <button class="menu-sub-btn" aria-expanded="false" aria-haspopup="true">Formações <span class="seta-sub" aria-hidden="true">&#9662;</span></button>
+          <ul class="submenu">
+            <li><a href="../formacao/">Formação em Virtologia</a></li>
+            <li><a href="../pos-sistemas/">Pós-graduação em Sistemas Humanizados</a></li>
+            <li><a href="../formacoes/">Todas as formações</a></li>
+          </ul>
+        </li>
+        <!-- <li><a href="../noticias/">Notícias</a></li> ATIVAR quando a página existir -->
+        <li><a href="../futuro/">Trazemos o Futuro</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section>
+  <div class="wrap">
+    <div class="hero-livro hero-sistemas">
+      <div class="hero-txt">
+        <p class="kicker">Livro + aulas bônus · Eduardo Casarotto</p>
+        <h1>Sistemas Humanizados · Humanização 2.0</h1>
+        <p class="lead">A metodologia completa para alinhar o funcionamento organizacional com o funcionamento humano. <strong>Não é um livro de sensibilização: é o manual de construção do sistema:</strong></p>
+        <ul class="hero-lista">
+          <li>Gestão;</li>
+          <li>Fluxogramas de processo;</li>
+          <li>Manuais;</li>
+          <li>Políticas internas...</li>
+        </ul>
+        <p class="sublead">Tudo desenhado em torno do funcionamento psicológico humano, <strong>tornando a humanização auditável.</strong></p>
+
+      </div>
+    </div>
+
+    <figure class="hero-foto">
+      <img src="../img/hero-sistemas-livro.jpg" alt="Eduardo Casarotto com o livro Sistemas Humanizados e a plataforma com 3 horas de aulas bônus gravadas sobre NR-1, riscos psicossociais e Sistemas Humanizados." width="1200" height="1200">
+    </figure>
+
+    <div class="ficha">
+      <div><dt>Páginas</dt><dd>449</dd></div>
+      <div><dt>Capítulos</dt><dd>27</dd></div>
+      <div><dt>Aulas bônus sobre a NR-1</dt><dd>3 horas</dd></div>
+      <div><dt>Catalogado na</dt><dd>Biblioteca do Senado Federal</dd></div>
+    </div>
+
+    <div class="inclui">
+      <p class="inclui-rot">O que vem junto</p>
+      <div>
+        <div>
+          <h4>O livro, com os manuais prontos</h4>
+          <p>Como humanizar uma empresa de ponta a ponta, incluindo os manuais que a organização adapta e aplica: políticas internas, ética, feedbacks, atendimento, personalidade e a comissão interna de humanização. <strong>Documentos de trabalho, não conceitos soltos.</strong></p>
+        </div>
+        <div>
+          <h4>3 horas de aulas bônus gravadas sobre a NR-1</h4>
+          <p>Aulas online com Eduardo Casarotto sobre a relação entre a exigência de gestão de riscos psicossociais da NR-1 e os Sistemas Humanizados: <strong>o que a norma passou a cobrar, e como o sistema responde.</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="precos">
+      <div>
+        <p class="rot">Versão física</p>
+        <p class="valor">R$ 279</p>
+        <p class="obs">frete incluso · aulas bônus incluídas</p>
+        <a class="btn" href="https://payfast.greenn.com.br/125356" target="_blank" rel="noopener">Adquirir a versão física</a>
+      </div>
+      <div>
+        <p class="rot">Versão digital</p>
+        <p class="valor">R$ 147</p>
+        <p class="obs">acesso imediato · aulas bônus incluídas</p>
+        <a class="btn" href="https://payfast.greenn.com.br/154084" target="_blank" rel="noopener">Adquirir a versão digital</a>
+      </div>
+    </div>
+
+    <nav class="indice" aria-label="Conteúdo desta página">
+      <p class="indice-titulo">Nesta página</p>
+      <ol>
+        <li><a href="#tese">O que este livro é</a></li>
+        <li><a href="#dentro">O que está dentro</a></li>
+        <li><a href="#manuais">Os manuais prontos</a></li>
+        <li><a href="#nr1">As bônus aulas sobre a NR-1</a></li>
+        <li><a href="#para-quem">Público indicado</a></li>
+        <li><a href="#autor">Quem escreveu</a></li>
+        <li><a href="#duvidas">O que costumam perguntar</a></li>
+      </ol>
+    </nav>
+  </div>
+</section>
+
+<section id="tese">
+  <div class="wrap">
+    <h2>O que este livro é</h2>
+
+    <p>Quase tudo o que se publica sobre humanização fala da relação: do olhar, da escuta, do modo como uma pessoa trata a outra. Isso é necessário, e tem um limite conhecido: <strong>depende de quem está no cargo.</strong> Troca o gestor, e a prática vai embora com ele.</p>
+
+    <p class="destaque">Este livro trabalha na outra camada: a que fica quando as pessoas mudam. As regras, as políticas, os fluxos e os manuais escritos da organização.</p>
+
+    <p>A pergunta que atravessa os 27 capítulos é sempre a mesma: <strong>o que está escrito bate com o modo como o ser humano funciona?</strong> Onde bate, mantém-se. Onde não bate, o livro mostra como reescrever, com critério que qualquer um confere: os cinco filtros que validam se uma estrutura é humanizada ou apenas afirma que é.</p>
+
+    <p>É por isso que a obra se chama Humanização 2.0. Não é uma humanização mais bonita. <strong>É uma humanização que dá para verificar.</strong></p>
+
+    <div class="caixa">
+      <p style="margin:0">Este livro foi catalogado na <strong>Biblioteca do Senado Federal</strong> - sendo a única obra que abarca a humanização sistêmica organizacional, de ponta a ponta.</p>
+    </div>
+
+    <div class="autoridade">
+      <figure>
+        <img src="../img/autoridade-padilha.jpg" alt="Eduardo Casarotto e o Ministro da Saúde, Alexandre Padilha, com o livro Sistemas Humanizados." width="1200" height="675" loading="lazy">
+        <figcaption>Eduardo Casarotto e o Ministro da Saúde, Alexandre Padilha, com o livro</figcaption>
+      </figure>
+      <figure>
+        <img src="../img/autoridade-victor-cesar.jpg" alt="Eduardo Casarotto com Victor Cesar, Secretário de Segurança do Rio de Janeiro." width="1200" height="675" loading="lazy">
+        <figcaption>Eduardo Casarotto e Victor Cesar, Secretário de Segurança do RJ</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="dentro">
+  <div class="wrap">
+    <h2>O que está dentro</h2>
+
+    <p>Os 27 capítulos seguem a ordem de quem vai construir, em três blocos:</p>
+
+    <ol class="cadeia">
+      <li>
+        <span class="num">1</span>
+        <div class="conteudo">
+          <h4>O fundamento</h4>
+          <p>O que é Humanização e o que é um Sistema Humanizado. Os cinco filtros que validam qualquer estrutura. O orgulho e o egoísmo como sistemas do cérebro, e por que é a regra escrita que decide qual dos dois a organização aciona. A história de como o trabalho chegou até aqui, de Taylor a Maslow, e as faixas de evolução organizacional, da empresa primitiva à empresa que opera por propósito.</p>
+        </div>
+      </li>
+      <li>
+        <span class="num">2</span>
+        <div class="conteudo">
+          <h4>A construção</h4>
+          <p>A parte maior do livro. Governança Humanizada, capítulo a capítulo. RH Humanizado por inteiro: descrição de cargo, recrutamento, plano e gestão de carreira, avaliação de desempenho com a Terceira Competência, treinamento, pesquisa de clima, benefícios e até a cartilha de desligamento. E o manual das Necessidades Humanas, com ações práticas de RH para cada necessidade, grupo por grupo.</p>
+        </div>
+      </li>
+      <li>
+        <span class="num">3</span>
+        <div class="conteudo">
+          <h4>A operação</h4>
+          <p>Saúde mental no trabalho: burnout, brownout e boreout, com a leitura estrutural de cada um e o desenho do departamento de saúde mental. Os manuais de feedbacks, de atendimento ao público e de personalidade. A CIPIH, comissão interna análoga à CIPA, voltada à prevenção e ao incentivo da humanização. Espaço físico, inclusão e, por fim, a estrutura de um projeto de certificação em humanização.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section id="manuais">
+  <div class="wrap">
+    <h2>Os manuais prontos</h2>
+
+    <p>A diferença prática deste livro está no formato: boa parte dos capítulos não descreve o que fazer. <strong>Entrega o documento.</strong></p>
+
+    <div class="capitulos">
+      <div><span class="cap-n">01</span><h4>Manual de Humanização de Políticas Internas</h4><p>O roteiro para revisar o que a organização já tem escrito, política por política, contra o funcionamento humano.</p></div>
+      <div><span class="cap-n">02</span><h4>Política de Ética Humanizada e Compliance</h4><p>A base de uma política de ética que vai além de cumprir lei: previne prática abusiva e protege quem denuncia.</p></div>
+      <div><span class="cap-n">03</span><h4>Manual de Feedbacks Humanizado</h4><p>Como estruturar o retorno contínuo, no ritmo em que o cérebro de fato aprende, e não uma vez por ano.</p></div>
+      <div><span class="cap-n">04</span><h4>Manual de Atendimento ao Público</h4><p>As regras de ouro do atendimento humanizado, prontas para treinar equipe: acolhimento, prontidão, não julgamento, brandura.</p></div>
+      <div><span class="cap-n">05</span><h4>Manual das Necessidades Humanas</h4><p>Para cada necessidade humana mapeada pela obra, as ações concretas que o RH implementa, grupo por grupo.</p></div>
+      <div><span class="cap-n">06</span><h4>Manual de Personalidade</h4><p>O instrumento para entender temperamento, caráter e identidade no encaixe entre pessoa e cargo.</p></div>
+      <div><span class="cap-n">07</span><h4>CIPIH</h4><p>A estrutura completa da Comissão Interna de Prevenção e Incentivo de Humanização: composição, papéis e funcionamento.</p></div>
+      <div><span class="cap-n">08</span><h4>Projeto de Certificação em Humanização</h4><p>Estrutura, processos e diretrizes para certificar uma organização, com os critérios que tornam a verificação possível.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="nr1">
+  <div class="wrap">
+    <h2>As bônus aulas sobre a NR-1</h2>
+
+    <p>A NR-1 passou a exigir das organizações a gestão de riscos psicossociais. <strong>Para a maioria das empresas, isso virou uma pergunta sem resposta: gerir como?</strong></p>
+
+    <p>As 3 horas de aulas bônus gravadas que acompanham o livro respondem exatamente essa pergunta. Eduardo Casarotto percorre a relação entre a exigência da norma e os Sistemas Humanizados: <strong>o que são riscos psicossociais na leitura do funcionamento humano, onde eles nascem dentro da estrutura, e como o sistema descrito no livro responde ao que a norma cobra.</strong></p>
+
+    <p>São aulas bônus online, gravadas, para assistir quando quiser, no seu ritmo. O acesso acompanha a compra do livro.</p>
+
+    <p class="destaque">Ação pontual não atende gestão de risco. Sistema atende. É essa a ponte que as aulas constroem.</p>
+  </div>
+</section>
+
+<section id="para-quem">
+  <div class="wrap">
+    <h2>Público indicado</h2>
+
+    <div class="duas">
+      <div>
+        <h3>Para quem decide e implementa</h3>
+        <p>Gestores, diretores, RH, SESMT e compliance que precisam sair do evento pontual e montar estrutura: <strong>o livro entrega o desenho do sistema e os documentos para começar.</strong></p>
+        <p>Vale igualmente para instituição pública, escola, hospital e qualquer organização onde gente trabalha com gente: a metodologia não é exclusiva de empresa.</p>
+      </div>
+      <div>
+        <h3>Para quem atende e assessora</h3>
+        <p>Psicólogos organizacionais, terapeutas, consultores e profissionais de saúde mental no trabalho encontram aqui a leitura estrutural do adoecimento: <strong>burnout, brownout e boreout como sintomas de sistema, não só de indivíduo.</strong></p>
+        <p>É também a base teórica e prática da Pós-graduação em Sistemas Humanizados.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="autor">
+  <div class="wrap">
+    <h2>Quem escreveu</h2>
+
+    <p>Eduardo Casarotto é pesquisador, autor, consultor, filantropo, fundador do Instituto Virtudes e criador da Virtologia e da Humanização 2.0. Condecorado com o título de Comendador Cavaleiro pela Câmara de Justiça de São Paulo.</p>
+
+    <p>Com mais de 25 anos de atuação como terapeuta e consultor organizacional, formou mais de 2.000 terapeutas e dedicou sua trajetória ao estudo do funcionamento humano e da relação entre ambiente, comportamento e adoecimento.</p>
+
+    <p>Ao longo de sua atuação, desenvolveu trabalhos de formação e orientação metodológica para empresas, instituições públicas, organizações, hospitais, escolas e unidades prisionais, levando sua abordagem para contextos onde o funcionamento humano precisa ser compreendido não apenas no indivíduo, mas também nos sistemas em que ele vive e trabalha.</p>
+
+    <p>É autor de mais de 20 livros e de artigos publicados em periódicos científicos. Sua metodologia já foi apresentada no Plenário do Senado Federal, discutida em ambientes institucionais e aplicada em diferentes realidades humanas, organizacionais e sociais.</p>
+
+  </div>
+</section>
+
+<section id="duvidas">
+  <div class="wrap">
+    <h2>O que costumam perguntar</h2>
+
+    <details>
+      <summary>Preciso conhecer a Virtologia antes?</summary>
+      <p>Não. O livro apresenta os conceitos de que precisa no momento em que aparecem. Quem quiser a base completa da escola encontra no <em>Fundamentos da Virtologia</em>, mas ele não é pré-requisito.</p>
+    </details>
+
+    <details>
+      <summary>É só para empresas?</summary>
+      <p>Não. A metodologia se aplica a qualquer instituição onde seres humanos convivem sob regras escritas: empresa, escola, hospital, gestão pública, tribunal, unidade prisional. Os exemplos do livro percorrem vários desses ambientes.</p>
+    </details>
+
+    <details>
+      <summary>O livro garante conformidade com a NR-1?</summary>
+      <p>Nenhum livro garante conformidade, e desconfie de quem prometer isso. A conformidade depende da implementação na sua organização e da avaliação dos profissionais responsáveis por ela. O que o livro e as aulas entregam é o que costuma faltar: um sistema estruturado de gestão do fator humano, com critérios verificáveis, em vez de ações pontuais que não se sustentam em auditoria.</p>
+    </details>
+
+    <details>
+      <summary>Qual é a relação com a Pós-graduação em Sistemas Humanizados?</summary>
+      <p>O livro traz a metodologia; a Pós-graduação em Sistemas Humanizados ensina a construí-la passo a passo, em 15 módulos e 360 horas, com certificação da FACEO, faculdade credenciada pelo MEC. Quem quer se formar implementador vai para a pós. Quem quer dominar a metodologia começa pelo livro.</p>
+    </details>
+
+    <details>
+      <summary>Como recebo as aulas bônus?</summary>
+      <p>As aulas bônus são online e gravadas, com 3 horas de duração total. Não são cobradas: o acesso acompanha a compra do livro.</p>
+    </details>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="precos">
+      <div>
+        <p class="rot">Versão física</p>
+        <p class="valor">R$ 279</p>
+        <p class="obs">frete incluso · aulas bônus incluídas</p>
+        <a class="btn" href="https://payfast.greenn.com.br/125356" target="_blank" rel="noopener">Adquirir a versão física</a>
+      </div>
+      <div>
+        <p class="rot">Versão digital</p>
+        <p class="valor">R$ 147</p>
+        <p class="obs">acesso imediato · aulas bônus incluídas</p>
+        <a class="btn" href="https://payfast.greenn.com.br/154084" target="_blank" rel="noopener">Adquirir a versão digital</a>
+      </div>
+    </div>
+
+    <div class="ponte">
+      <p>Para conhecer o método antes do livro, a apresentação completa da Humanização 2.0 está em:</p>
+      <a class="btn" href="../sistemas/">Conhecer a Humanização 2.0</a>
+    </div>
+  </div>
+</section>
+</main>
+
+
+
+<footer class="rodape">
+  <div class="wrap-largo">
+    <div class="rodape-cols">
+      <div>
+        <h4><a href="../virtologia/">Virtologia</a></h4>
+        <ul>
+          <li><a href="../teorias/">Diante de outras grandes teorias</a></li>
+          <li><a href="../aula1/">Aula aberta</a></li>
+          <!-- <li><a href="../depoimentos/">Depoimentos</a></li> ATIVAR quando a página existir -->
+        </ul>
+      </div>
+      <div>
+        <h4><a href="../sistemas/">Humanização 2.0</a></h4>
+        <ul>
+          <li><a href="../ondas/">As Três Ondas do Trabalho</a></li>
+          <li><a href="../aula2/">Aula aberta sobre a NR-1</a></li>
+          <!-- <li><a href="../filtros/">Os Cinco Filtros</a></li> ATIVAR quando a página existir -->
+          <!-- <li><a href="../nr1/">Saúde mental e a NR-1</a></li> ATIVAR quando a página existir -->
+        </ul>
+      </div>
+      <div>
+        <h4><a href="../formacoes/">Formações</a></h4>
+        <ul>
+          <li><a href="../formacao/">Formação em Virtologia</a></li>
+          <li><a href="../pos-sistemas/">Pós-graduação em Sistemas Humanizados</a></li>
+          <li><a href="../fundamentos/">Fundamentos da Virtologia</a></li>
+          <li><a href="../manual/">Manual de Desenvolvimento Humano</a></li>
+          <li><a href="../livros/">Todos os livros</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Eduardo Casarotto</h4>
+        <ul>
+          <!-- <li><a href="../palestras/">Palestras e eventos</a></li> ATIVAR quando a página existir -->
+          <!-- <li><a href="../noticias/">Notícias</a></li> ATIVAR quando a página existir -->
+          <!-- <li><a href="../contato/">Contato</a></li> ATIVAR quando a página existir -->
+        </ul>
+      </div>
+      <div>
+        <h4><a href="../futuro/">Trazemos o Futuro</a></h4>
+        <div class="redes">
+          <a href="https://www.instagram.com/eduardocasarottooficial/" target="_blank" rel="noopener" aria-label="Instagram"><img src="../img/icone-instagram.svg" alt=""></a>
+          <a href="https://linktw.in/qrGGUW" target="_blank" rel="noopener" aria-label="YouTube"><img src="../img/icone-youtube.svg" alt=""></a>
+          <a href="https://www.tiktok.com/@eduardocasarottooficial" target="_blank" rel="noopener" aria-label="TikTok"><img src="../img/icone-tiktok.svg" alt=""></a>
+        </div>
+      </div>
+    </div>
+    <p class="ressalva">Nos quadros com determinação biológica, a Virtologia soma-se ao tratamento médico e não o substitui. Se você está em sofrimento, procure ajuda profissional.<br>Instituto Virtudes · Editora Virtudes</p>
+  </div>
+</footer>
+
+<script src="../js/site.js"></script>
+</body>
+</html>

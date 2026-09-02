@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Teimosia de Viver | Eduardo Casarotto</title>
+<meta name="description" content="Dez sessões reais de terapia, transcritas como aconteceram. Um tratamento inteiro acompanhado de dentro, do primeiro encontro à reconciliação da família. Com audiobook incluso.">
+<link rel="canonical" href="https://institutovirtudes.com.br/teimosia/">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Instituto Virtudes">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:url" content="https://institutovirtudes.com.br/teimosia/">
+<meta property="og:title" content="Teimosia de Viver">
+<meta property="og:description" content="Dez sessões reais de terapia, transcritas. Um tratamento inteiro acompanhado de dentro. Audiobook incluso.">
+<meta property="og:image" content="https://institutovirtudes.com.br/img/og-padrao.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Instituto Virtudes">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Teimosia de Viver">
+<meta name="twitter:description" content="Dez sessões reais de terapia, transcritas. Um tratamento inteiro acompanhado de dentro. Audiobook incluso.">
+<meta name="twitter:image" content="https://institutovirtudes.com.br/img/og-padrao.jpg">
+
+<link rel="icon" href="../img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/estilo.css">
+<style>
+.ficha{display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--borda);border-radius:var(--raio-card);
+  margin:32px 0 24px;overflow:hidden}
+.ficha div{flex:1 1 150px;padding:18px 20px;border-right:1px solid var(--borda);display:flex;flex-direction:column}
+.ficha div:last-child{border-right:0}
+.ficha dt{font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--apoio);margin-bottom:6px}
+.ficha dd{font-family:'Lora',Georgia,serif;font-size:19px;font-weight:600;margin:auto 0 0;line-height:1.3}
+
+.precos{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:28px 0}
+.precos > div{border:1px solid var(--borda);border-radius:var(--raio-card);padding:26px 24px}
+.precos .rot{font-family:'Inter',sans-serif;font-size:12px;font-weight:600;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--apoio);margin:0 0 10px}
+.precos .valor{font-family:'Lora',Georgia,serif;font-size:34px;font-weight:700;
+  color:var(--texto);margin:0 0 4px;line-height:1}
+.precos .obs{font-size:14px;color:var(--apoio);margin:0 0 18px}
+.precos .btn{margin:0;width:100%;text-align:center}
+.precos.preco-unico{grid-template-columns:1fr;max-width:420px}
+
+.duas{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:32px 0}
+.duas > div{background:var(--claro);border:1px solid var(--borda);border-radius:var(--raio-card);padding:26px 24px}
+.duas h3{font-size:20px;color:var(--azul);margin-bottom:12px;line-height:1.3}
+.duas p{font-size:15.5px;line-height:1.6;margin-bottom:14px}
+.duas p:last-child{margin-bottom:0}
+
+.sumario{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:32px 0}
+.sumario > div{border-top:2px solid var(--azul);padding-top:14px}
+.sumario h4{font-size:16px;color:var(--azul);margin-bottom:8px}
+.sumario p{font-size:14.5px;line-height:1.65;margin:0;color:var(--texto)}
+
+.hero-livro{display:grid;grid-template-columns:260px 1fr;gap:48px;align-items:center;margin:8px 0 16px;background:transparent}
+.capa{margin:0}
+.capa img{width:100%;height:auto;display:block;background:transparent;border:0;border-radius:0}
+.hero-txt .kicker{margin-bottom:8px}
+.hero-txt h1{margin-bottom:14px}
+.hero-txt .lead{margin-bottom:0}
+.hero-txt .ficha{margin:26px 0 0}
+
+.inclui{border:1px solid var(--borda);border-radius:var(--raio-card);padding:26px 24px;margin:28px 0}
+.inclui-rot{font-family:'Inter',sans-serif;font-size:12px;font-weight:600;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--azul);margin:0 0 18px}
+.inclui > div{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.inclui .tres{grid-template-columns:repeat(3,1fr);gap:26px}
+.inclui h4{font-size:17px;margin-bottom:8px;line-height:1.3}
+.inclui p{font-size:14.5px;line-height:1.6;margin:0;color:var(--apoio)}
+
+.capitulos{margin:32px 0}
+.capitulos > div{padding:22px 0;border-bottom:1px solid var(--claro)}
+.capitulos > div:first-child{border-top:1px solid var(--claro)}
+.capitulos .cap-n{font-family:'Inter',sans-serif;font-size:12px;font-weight:600;
+  color:var(--apoio);display:inline-block;min-width:26px}
+.capitulos h4{display:inline;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:600;
+  color:var(--azul);line-height:1.35}
+.capitulos p{font-size:15.5px;line-height:1.65;margin:8px 0 0 26px;color:var(--texto);max-width:70ch}
+
+.cadeia{margin:32px 0;list-style:none;padding:0}
+.cadeia li{display:flex;align-items:flex-start;gap:18px;margin:0;padding:22px 0;border-bottom:1px solid var(--borda)}
+.cadeia li:first-child{border-top:1px solid var(--borda)}
+.cadeia .num{flex:0 0 34px;width:34px;height:34px;border-radius:50%;background:var(--azul);color:#fff;
+  font-family:'Inter',sans-serif;font-size:15px;font-weight:600;display:flex;align-items:center;justify-content:center;line-height:1}
+.cadeia .conteudo{flex:1;min-width:0}
+.cadeia h4{font-size:18px;margin:0 0 8px;line-height:1.3}
+.cadeia p{font-size:16px;line-height:1.6;margin:0 0 10px}
+.cadeia p:last-child{margin-bottom:0}
+.cadeia .ex{font-size:14.5px;color:var(--apoio);background:var(--claro);border-radius:var(--raio);padding:12px 14px}
+
+.objecao{border-left:3px solid var(--azul);padding:4px 0 4px 22px;margin:34px 0}
+#virtude h3,#metodo h3{font-family:'Lora',Georgia,serif;font-size:22px;font-weight:600;margin:38px 0 14px}
+.objecao h3{font-family:'Lora',Georgia,serif;font-size:20px;font-weight:600;color:var(--azul);margin-bottom:12px}
+.objecao p{font-size:16px;margin-bottom:14px}
+.objecao p:last-child{margin-bottom:0}
+
+@media (max-width:640px){
+  .ficha div{flex:1 1 100%;border-right:0;border-bottom:1px solid var(--borda);padding:14px 18px}
+  .ficha div:last-child{border-bottom:0}
+  .precos,.duas,.sumario{grid-template-columns:1fr;gap:14px}
+  .inclui > div,.inclui .tres{grid-template-columns:1fr;gap:18px}
+  .inclui{padding:22px 20px}
+  .hero-livro{grid-template-columns:1fr;gap:22px;text-align:center}
+  .capa{max-width:180px;margin:0 auto}
+  .hero-txt{text-align:left}
+  .capitulos h4{font-size:17px}
+  .capitulos p{font-size:14.5px;margin-left:0}
+  .cadeia li{flex-direction:column;align-items:flex-start;gap:10px;padding:20px 0}
+  .cadeia .num{flex:0 0 auto;width:30px;height:30px;font-size:14px}
+  .cadeia .conteudo{width:100%}
+  .precos > div,.duas > div{padding:22px 20px}
+  .objecao{padding-left:16px}.objecao h3{font-size:18px}
+}
+</style>
+
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '386437925348155');
+fbq('track', 'PageView');
+fbq('track', 'ViewContent', {content_name: 'Teimosia de Viver', content_category: 'livro'});
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
+/></noscript>
+<!-- Fim Meta Pixel -->
+</head>
+<body>
+
+<header class="topo">
+  <div class="topo-int">
+    <a href="../" class="marca">Instituto Virtudes</a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Menu">&#8801;</button>
+    <nav>
+      <ul class="menu" id="menu">
+        <li><a href="../virtologia/">Virtologia</a></li>
+        <li><a href="../sistemas/">Humanização 2.0</a></li>
+        <li class="tem-sub">
+          <button class="menu-sub-btn" aria-expanded="false" aria-haspopup="true">Formações <span class="seta-sub" aria-hidden="true">&#9662;</span></button>
+          <ul class="submenu">
+            <li><a href="../formacao/">Formação em Virtologia</a></li>
+            <li><a href="../pos-sistemas/">Pós-graduação em Sistemas Humanizados</a></li>
+            <li><a href="../formacoes/">Todas as formações</a></li>
+          </ul>
+        </li>
+        <!-- <li><a href="../noticias/">Notícias</a></li> ATIVAR quando a página existir -->
+        <li><a href="../futuro/">Trazemos o Futuro</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section>
+  <div class="wrap">
+    <div class="hero-livro">
+      <figure class="capa">
+        <img src="../img/livros/teimosia-de-viver.png" alt="Capa do livro Teimosia de Viver, de Eduardo Casarotto." width="623" height="1080">
+      </figure>
+
+      <div class="hero-txt">
+        <p class="kicker">Livro · Eduardo Casarotto</p>
+        <h1>Teimosia de Viver</h1>
+        <p class="lead">Um tratamento inteiro do próprio Eduardo Casarotto, transcrito como aconteceu. <strong>Dez sessões reais, do primeiro encontro ao dia em que uma família voltou a se falar.</strong></p>
+
+        <div class="ficha">
+          <div><dt>Formato</dt><dd>Livro físico</dd></div>
+          <div><dt>Sessões terapêuticas realizadas</dt><dd>10</dd></div>
+          <div><dt>Audiobook</dt><dd>Incluso</dd></div>
+          <div><dt>Base</dt><dd>Caso real de tratamento completo</dd></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="precos preco-unico">
+      <div>
+        <p class="rot">Livro físico</p>
+        <p class="valor">R$ 97</p>
+        <p class="obs">mais R$ 28 de frete · audiobook incluso</p>
+        <a class="btn" href="https://payfast.greenn.com.br/125363" target="_blank" rel="noopener">Adquirir o livro</a>
+      </div>
+    </div>
+
+    <nav class="indice" aria-label="Conteúdo desta página">
+      <p class="indice-titulo">Nesta página</p>
+      <ol>
+        <li><a href="#sobre">O que este livro é</a></li>
+        <li><a href="#nasceu">Como o livro nasceu</a></li>
+        <li><a href="#percurso">O percurso do tratamento</a></li>
+        <li><a href="#conceitos">Os conceitos em uso</a></li>
+        <li><a href="#audiobook">O audiobook</a></li>
+        <li><a href="#para-quem">Público indicado</a></li>
+        <li><a href="#autor">Quem escreveu</a></li>
+        <li><a href="#duvidas">O que costumam perguntar</a></li>
+      </ol>
+    </nav>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="wrap">
+    <h2>O que este livro é</h2>
+
+    <p>Quase tudo o que se publica sobre clínica é uma de duas coisas: teoria, ou o caso já resumido pelo terapeuta depois que acabou. Nos dois formatos, o que some é o mesmo: o processo.</p>
+
+    <p class="destaque">Aqui está o processo. As sessões, transcritas, na ordem em que aconteceram.</p>
+
+    <p>A pergunta que foi feita e a resposta que veio. O momento em que a paciente entende, e o momento em que ela desconversa. A tarefa que ela levou para casa, e o que ela trouxe de volta na semana seguinte. <strong>A interpretação sendo construída na frente do leitor, e não apresentada pronta.</strong></p>
+
+    <p>Só os nomes foram trocados, junto com os detalhes que poderiam identificar as pessoas envolvidas. O que se diz nas sessões está como foi dito.</p>
+
+    <div class="caixa">
+      <h3>De onde vem o título</h3>
+      <p>Aida chegou ao consultório aos sessenta anos. Casou aos dezessete, ficou viúva aos trinta e poucos, criou três filhas sozinha numa época em que a sociedade não estava feita para mulher sem marido. Aprendeu a dirigir sozinha, tirando o carro da garagem sem nunca ter posto o pé numa embreagem, porque não tinha dinheiro para aula nem alguém que se dispusesse a ensinar.</p>
+      <p>Depois de escutar mais uma dessas histórias, Eduardo comenta em sessão: <strong>"essa sua teimosia de viver é incrível."</strong> O livro ficou com o nome.</p>
+    </div>
+
+    <p>É por isso que a obra funciona em duas camadas ao mesmo tempo. É um estudo de caso completo, e é a história de uma mulher que apanhou muito da vida e não desistiu dela.</p>
+  </div>
+</section>
+
+<section id="nasceu">
+  <div class="wrap">
+    <h2>Como o livro nasceu</h2>
+
+    <p>Começou por outra pessoa. Quem procurou o consultório foi a filha mais nova, com uma raiva da mãe que não se explicava pelo que ela mesma contava.</p>
+
+    <p>Investigando, Eduardo entendeu que tratar apenas a filha não resolveria: <strong>o conflito era da família inteira, e a leitura que cada uma tinha da mãe era mais objeto interno do que fato.</strong> Chamou a mãe e as irmãs para o consultório.</p>
+
+    <p>Nas duas primeiras sessões, quase nada. Aida não se lembrava da própria vida. Combinaram então que ela escreveria em casa tudo de que conseguisse lembrar, e traria o material na semana seguinte para trabalharem em cima.</p>
+
+    <p class="destaque">O livro é feito desse material. Foi assim que um tratamento virou livro.</p>
+
+    <p>O que veio junto, sem ter sido procurado, foi o retrato de uma geração. Os costumes, os valores, o que se podia e o que não se podia, o dinheiro que mudava de nome a cada plano econômico. <strong>O livro traz notas históricas ao longo das sessões</strong>, para que o leitor mais novo entenda o mundo em que aquelas cenas aconteceram.</p>
+  </div>
+</section>
+
+<section id="percurso">
+  <div class="wrap">
+    <h2>O percurso do tratamento</h2>
+
+    <p>O livro segue a ordem clínica, e é essa ordem que faz o processo ser legível.</p>
+
+    <ol class="cadeia">
+      <li>
+        <span class="num">1</span>
+        <div class="conteudo">
+          <h4>A investigação</h4>
+          <p>A primeira fase. O mapa da história, a linha do tempo, a busca do ponto de fixação. Já na primeira sessão aparece o que vai organizar o resto: um superego rígido, uma carga de culpa que não é dela, e uma depressão que se anuncia antes de ser nomeada.</p>
+        </div>
+      </li>
+      <li>
+        <span class="num">2</span>
+        <div class="conteudo">
+          <h4>A origem dos padrões</h4>
+          <p>De onde vem o comportamento que ela repete há sessenta anos. A preferência materna pelo irmão, a ligação com o pai, e a decisão clínica de não ressignificar nada disso.</p>
+          <p class="ex">O que o leitor vê aqui é a Virtologia se separando da técnica tradicional em tempo real: não se justifica a mãe, não se reescreve a cena. Aceita-se o fato e se interrompe a busca por um amor que não vai vir.</p>
+        </div>
+      </li>
+      <li>
+        <span class="num">3</span>
+        <div class="conteudo">
+          <h4>A compulsão à repetição</h4>
+          <p>Por que ela só se envolvia com um tipo de homem, e por que a filha mais velha foi procurar exatamente o mesmo tipo. O mecanismo é explicado em sessão, em quatro estágios, e depois verificado na própria história dela, caso a caso.</p>
+        </div>
+      </li>
+      <li>
+        <span class="num">4</span>
+        <div class="conteudo">
+          <h4>A herança que atravessa gerações</h4>
+          <p>Aida pesquisa a história da própria família a pedido do terapeuta e volta com o tataravô, a avó, a mãe. O padrão reaparece três gerações depois, em pessoas que nunca souberam da história.</p>
+        </div>
+      </li>
+      <li>
+        <span class="num">5</span>
+        <div class="conteudo">
+          <h4>As virtudes entrando como tarefa</h4>
+          <p>Aceitação, perdão, honestidade, individuação. Não como conceito discutido, e sim como trabalho prescrito entre uma sessão e outra, com o retorno cobrado na semana seguinte.</p>
+        </div>
+      </li>
+      <li>
+        <span class="num">6</span>
+        <div class="conteudo">
+          <h4>A sessão das quatro</h4>
+          <p>Mãe e três filhas na mesma sala, cada mágoa dita na frente de todas, uma de cada vez, conduzida para o perdão e não para o acerto de contas. Só foi possível porque as quatro já haviam sido tratadas antes, e o livro deixa claro por quê.</p>
+        </div>
+      </li>
+      <li>
+        <span class="num">7</span>
+        <div class="conteudo">
+          <h4>Charuto das quartas</h4>
+          <p>O caso discutido com um colega de profissão, sem paciente na sala. É o capítulo em que o raciocínio clínico aparece por inteiro: o que o terapeuta pensou, o que ele descartou, e por que fez o que fez.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section id="conceitos">
+  <div class="wrap">
+    <h2>Os conceitos em uso</h2>
+
+    <p>Nenhum conceito aparece aqui como verbete. Todos aparecem no instante em que a sessão precisa deles, <strong>explicados a uma senhora de sessenta anos que não é da área</strong>, e é essa a razão pela qual o livro se lê sem formação prévia.</p>
+
+    <div class="capitulos">
+      <div><span class="cap-n">01</span><h4>Superego</h4><p>Como um julgador interno formado pela família, pela religião e pela época cobra atitudes que a pessoa nem reconhece como suas, e como essa cobrança vira culpa, depressão e adoecimento do corpo.</p></div>
+      <div><span class="cap-n">02</span><h4>Orgulho e egoísmo</h4><p>Os dois em suas definições virtológicas, e a demonstração no caso concreto: um homem que adoece por oito meses porque o orgulho ferido não o deixa aceitar o próprio erro.</p></div>
+      <div><span class="cap-n">03</span><h4>Complexo de Édipo</h4><p>Na leitura da Virtologia, incluindo o cálculo de posição entre irmãos: qual filha se liga ao pai, qual se alia à mãe, e qual carrega o sentimento de exclusão.</p></div>
+      <div><span class="cap-n">04</span><h4>Compulsão à repetição</h4><p>Os quatro estágios que instalam o mecanismo, e por que a defesa criada pelo inconsciente acaba reproduzindo os elementos da cena original em vez de evitá-los.</p></div>
+      <div><span class="cap-n">05</span><h4>Não ressignificação de memória</h4><p>Um dos pontos em que a Virtologia mais se afasta da clínica tradicional. Por que justificar a mãe para o paciente produz culpa em vez de alívio, e o que se faz em lugar disso.</p></div>
+      <div><span class="cap-n">06</span><h4>A atemporalidade do inconsciente</h4><p>Por que uma mágoa de cinquenta anos atrás é vivida hoje com a mesma carga do dia em que aconteceu, e o que isso muda no manejo.</p></div>
+      <div><span class="cap-n">07</span><h4>Somatização</h4><p>O caminho pelo qual a tensão de uma culpa não resolvida vira sintoma físico, acompanhado dentro do caso e não descrito em abstrato.</p></div>
+      <div><span class="cap-n">08</span><h4>Individuação</h4><p>O que é atingir a maturidade de viver a própria vida sem depender da aprovação dos pais, e por que ela não acontece enquanto a pessoa ainda espera preencher um buraco que não se preenche.</p></div>
+      <div><span class="cap-n">09</span><h4>Escala de necessidades</h4><p>O instrumento de autoavaliação que a paciente passa a usar, e a ligação direta entre necessidades não atendidas e o quadro que a levou ao consultório.</p></div>
+      <div><span class="cap-n">10</span><h4>Transferência e projeção</h4><p>Como a filha lê a mãe através de um objeto interno e não do que a mãe é, e o trabalho de separar uma coisa da outra.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="audiobook">
+  <div class="wrap">
+    <h2>O audiobook</h2>
+
+    <p>O livro traz, impresso, o link para ouvir a obra também em formato de audiobook. <strong>Não é uma compra separada: vem com a versão física.</strong></p>
+
+    <p>Faz diferença neste título mais do que faria em outro. O livro é quase todo diálogo, e diálogo transcrito é o tipo de texto que ganha quando é ouvido: a pergunta, a pausa antes da resposta, a hesitação de quem está prestes a admitir uma coisa que nunca disse em voz alta.</p>
+  </div>
+</section>
+
+<section id="para-quem">
+  <div class="wrap">
+    <h2>Público indicado</h2>
+
+    <div class="duas">
+      <div>
+        <h3>Para quem estuda ou atende</h3>
+        <p>É material de estudo raro, porque mostra o que a teoria não mostra: <strong>como se pergunta, quando se cala, como se devolve uma interpretação e o que se prescreve entre uma sessão e outra.</strong></p>
+        <p>É o que a supervisão ensina e o livro-texto não alcança. E como o capítulo final traz o caso discutido entre colegas, o leitor também vê o raciocínio por trás de cada decisão.</p>
+      </div>
+      <div>
+        <h3>Para quem não é da área</h3>
+        <p>Não é preciso conhecer nada de psicanálise nem de Virtologia. Cada conceito é explicado dentro da sessão, para a própria paciente, com as palavras que ela entende.</p>
+        <p>E há a outra leitura possível, que talvez seja a principal: <strong>uma história de força, de quem levou muitos tombos e se levantou de todos.</strong></p>
+      </div>
+    </div>
+
+    <div class="objecao">
+      <h3>Uma observação sobre a transcrição</h3>
+      <p>As sessões estão como foram. Isso inclui o vocabulário de uma conversa real entre duas pessoas em consultório, que às vezes é direto e às vezes é cru, e inclui assuntos de vida adulta tratados sem eufemismo: sexualidade, traição, violência doméstica, dependência.</p>
+      <p><strong>Nada disso está ali por efeito.</strong> Está porque era o que a paciente trouxe, e porque limpar o material tiraria do leitor justamente aquilo que ele veio ver: uma sessão como ela é.</p>
+    </div>
+  </div>
+</section>
+
+<section id="autor">
+  <div class="wrap">
+    <h2>Quem escreveu</h2>
+
+    <p>Eduardo Casarotto é pesquisador, autor, consultor, filantropo, fundador do Instituto Virtudes e criador da Virtologia e da Humanização 2.0. Condecorado com o título de Comendador Cavaleiro pela Câmara de Justiça de São Paulo.</p>
+
+    <p>Com mais de 25 anos de atuação como terapeuta e consultor organizacional, formou mais de 2.000 terapeutas e dedicou sua trajetória ao estudo do funcionamento humano e da relação entre ambiente, comportamento e adoecimento.</p>
+
+    <p>Ao longo de sua atuação, desenvolveu trabalhos de formação e orientação metodológica para empresas, instituições públicas, organizações, hospitais, escolas e unidades prisionais, levando sua abordagem para contextos onde o funcionamento humano precisa ser compreendido não apenas no indivíduo, mas também nos sistemas em que ele vive e trabalha.</p>
+
+    <p>É autor de mais de 20 livros e de artigos publicados em periódicos científicos. Sua metodologia já foi apresentada no Plenário do Senado Federal, discutida em ambientes institucionais e aplicada em diferentes realidades humanas, organizacionais e sociais.</p>
+
+  </div>
+</section>
+
+<section id="duvidas">
+  <div class="wrap">
+    <h2>O que costumam perguntar</h2>
+
+    <details>
+      <summary>As sessões são reais mesmo?</summary>
+      <p>São. O caso é real e as sessões foram transcritas. O que foi alterado são os nomes e os detalhes capazes de identificar as pessoas envolvidas: nomes de familiares, de lugares e de terceiros citados. O conteúdo clínico está como aconteceu.</p>
+    </details>
+
+    <details>
+      <summary>Tem versão digital?</summary>
+      <p>Não. Este título sai apenas na versão física, e o audiobook vem incluso: o link para ouvir está impresso dentro do livro.</p>
+    </details>
+
+    <details>
+      <summary>Preciso conhecer a Virtologia para ler?</summary>
+      <p>Não. Cada conceito é explicado dentro da sessão, no momento em que aparece, para uma paciente que também não conhecia nenhum deles.</p>
+    </details>
+
+    <details>
+      <summary>Serve para quem estuda outra linha?</summary>
+      <p>Serve, e é uma das melhores portas de entrada para entender em que a Virtologia se afasta da clínica tradicional, porque a diferença aparece em ato e não em argumento. A leitura do caso, evidentemente, é a da Virtologia.</p>
+    </details>
+
+    <details>
+      <summary>É um livro pesado?</summary>
+      <p>Tem passagens duras, porque a vida da paciente teve passagens duras. Mas o arco do livro é de reconstrução, e ele termina com a família reunida e reconciliada.</p>
+    </details>
+
+    <details>
+      <summary>Substitui tratamento?</summary>
+      <p>Não. Nos quadros com determinação biológica, a Virtologia soma-se ao tratamento médico e não fica no lugar dele. Se você está em sofrimento, procure ajuda profissional.</p>
+    </details>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="precos preco-unico">
+      <div>
+        <p class="rot">Livro físico</p>
+        <p class="valor">R$ 97</p>
+        <p class="obs">mais R$ 28 de frete · audiobook incluso</p>
+        <a class="btn" href="https://payfast.greenn.com.br/125363" target="_blank" rel="noopener">Adquirir o livro</a>
+      </div>
+    </div>
+
+    <div class="ponte">
+      <p>Para a teoria por trás de tudo o que acontece nessas sessões, o <em>Fundamentos da Virtologia</em> traz a base inteira da escola:</p>
+      <a class="btn" href="../fundamentos/">Conhecer o Fundamentos da Virtologia</a>
+    </div>
+  </div>
+</section>
+</main>
+
+
+<footer class="rodape">
+  <div class="wrap-largo">
+    <div class="rodape-cols">
+      <div>
+        <h4><a href="../virtologia/">Virtologia</a></h4>
+        <ul>
+          <li><a href="../teorias/">Diante de outras grandes teorias</a></li>
+          <li><a href="../aula1/">Aula aberta</a></li>
+          <!-- <li><a href="../depoimentos/">Depoimentos</a></li> ATIVAR quando a página existir -->
+        </ul>
+      </div>
+      <div>
+        <h4><a href="../sistemas/">Humanização 2.0</a></h4>
+        <ul>
+          <li><a href="../ondas/">As Três Ondas do Trabalho</a></li>
+          <li><a href="../aula2/">Aula aberta sobre a NR-1</a></li>
+          <!-- <li><a href="../filtros/">Os Cinco Filtros</a></li> ATIVAR quando a página existir -->
+          <!-- <li><a href="../nr1/">Saúde mental e a NR-1</a></li> ATIVAR quando a página existir -->
+        </ul>
+      </div>
+      <div>
+        <h4><a href="../formacoes/">Formações</a></h4>
+        <ul>
+          <li><a href="../formacao/">Formação em Virtologia</a></li>
+          <li><a href="../pos-sistemas/">Pós-graduação em Sistemas Humanizados</a></li>
+          <li><a href="../fundamentos/">Fundamentos da Virtologia</a></li>
+          <li><a href="../manual/">Manual de Desenvolvimento Humano</a></li>
+          <li><a href="../livros/">Todos os livros</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Eduardo Casarotto</h4>
+        <ul>
+          <!-- <li><a href="../palestras/">Palestras e eventos</a></li> ATIVAR quando a página existir -->
+          <!-- <li><a href="../noticias/">Notícias</a></li> ATIVAR quando a página existir -->
+          <!-- <li><a href="../contato/">Contato</a></li> ATIVAR quando a página existir -->
+        </ul>
+      </div>
+      <div>
+        <h4><a href="../futuro/">Trazemos o Futuro</a></h4>
+        <div class="redes">
+          <a href="https://www.instagram.com/eduardocasarottooficial/" target="_blank" rel="noopener" aria-label="Instagram"><img src="../img/icone-instagram.svg" alt=""></a>
+          <a href="https://linktw.in/qrGGUW" target="_blank" rel="noopener" aria-label="YouTube"><img src="../img/icone-youtube.svg" alt=""></a>
+          <a href="https://www.tiktok.com/@eduardocasarottooficial" target="_blank" rel="noopener" aria-label="TikTok"><img src="../img/icone-tiktok.svg" alt=""></a>
+        </div>
+      </div>
+    </div>
+    <p class="ressalva">Nos quadros com determinação biológica, a Virtologia soma-se ao tratamento médico e não o substitui. Se você está em sofrimento, procure ajuda profissional.<br>Instituto Virtudes · Editora Virtudes</p>
+  </div>
+</footer>
+
+<script src="../js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Manual de Desenvolvimento Humano em Virtudes | Eduardo Casarotto</title>
+<meta name="description" content="As 33 virtudes e o exercício que grava cada uma no cérebro como memória de longo prazo. Ciclo de 14 dias por virtude, com todos os exercícios de neuroplasticidade da Virtologia.">
+<link rel="canonical" href="https://institutovirtudes.com.br/manual/">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Instituto Virtudes">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:url" content="https://institutovirtudes.com.br/manual/">
+<meta property="og:title" content="Manual de Desenvolvimento Humano em Virtudes">
+<meta property="og:description" content="As 33 virtudes e o exercício que grava cada uma no cérebro. Todos os exercícios de neuroplasticidade da Virtologia.">
+<meta property="og:image" content="https://institutovirtudes.com.br/img/og-padrao.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Instituto Virtudes">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Manual de Desenvolvimento Humano em Virtudes">
+<meta name="twitter:description" content="As 33 virtudes e o exercício que grava cada uma no cérebro. Todos os exercícios de neuroplasticidade da Virtologia.">
+<meta name="twitter:image" content="https://institutovirtudes.com.br/img/og-padrao.jpg">
+
+<link rel="icon" href="../img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/estilo.css">
+<style>
+.ficha{display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--borda);border-radius:var(--raio-card);
+  margin:32px 0 24px;overflow:hidden}
+.ficha div{flex:1 1 120px;padding:18px 20px;border-right:1px solid var(--borda)}
+.ficha div:last-child{border-right:0}
+.ficha dt{font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--apoio);margin-bottom:6px}
+.ficha dd{font-family:'Lora',Georgia,serif;font-size:19px;font-weight:600;margin:0;line-height:1.3}
+
+.precos{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:28px 0}
+.precos > div{border:1px solid var(--borda);border-radius:var(--raio-card);padding:26px 24px}
+.precos .rot{font-family:'Inter',sans-serif;font-size:12px;font-weight:600;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--apoio);margin:0 0 10px}
+.precos .valor{font-family:'Lora',Georgia,serif;font-size:34px;font-weight:700;
+  color:var(--texto);margin:0 0 4px;line-height:1}
+.precos .obs{font-size:14px;color:var(--apoio);margin:0 0 18px}
+.precos .btn{margin:0;width:100%;text-align:center}
+
+.duas{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:32px 0}
+.duas > div{background:var(--claro);border:1px solid var(--borda);border-radius:var(--raio-card);padding:26px 24px}
+.duas h3{font-size:20px;color:var(--azul);margin-bottom:12px;line-height:1.3}
+.duas p{font-size:15.5px;line-height:1.6;margin-bottom:14px}
+.duas p:last-child{margin-bottom:0}
+
+.sumario{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:32px 0}
+.sumario > div{border-top:2px solid var(--azul);padding-top:14px}
+.sumario h4{font-size:16px;color:var(--azul);margin-bottom:8px}
+.sumario p{font-size:14.5px;line-height:1.65;margin:0;color:var(--texto)}
+
+.hero-livro{display:grid;grid-template-columns:260px 1fr;gap:48px;align-items:center;margin:8px 0 16px;background:transparent}
+.capa{margin:0}
+.capa img{width:100%;height:auto;display:block;background:transparent;border:0;border-radius:0}
+.hero-txt .kicker{margin-bottom:8px}
+.hero-txt h1{margin-bottom:14px}
+.hero-txt .lead{margin-bottom:0}
+.hero-txt .ficha{margin:26px 0 0}
+
+.inclui{border:1px solid var(--borda);border-radius:var(--raio-card);padding:26px 24px;margin:28px 0}
+.inclui-rot{font-family:'Inter',sans-serif;font-size:12px;font-weight:600;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--azul);margin:0 0 18px}
+.inclui > div{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.inclui .tres{grid-template-columns:repeat(3,1fr);gap:26px}
+.inclui h4{font-size:17px;margin-bottom:8px;line-height:1.3}
+.inclui p{font-size:14.5px;line-height:1.6;margin:0;color:var(--apoio)}
+
+.capitulos{margin:32px 0}
+.capitulos > div{padding:22px 0;border-bottom:1px solid var(--claro)}
+.capitulos > div:first-child{border-top:1px solid var(--claro)}
+.capitulos .cap-n{font-family:'Inter',sans-serif;font-size:12px;font-weight:600;
+  color:var(--apoio);display:inline-block;min-width:26px}
+.capitulos h4{display:inline;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:600;
+  color:var(--azul);line-height:1.35}
+.capitulos p{font-size:15.5px;line-height:1.65;margin:8px 0 0 26px;color:var(--texto);max-width:70ch}
+
+.cadeia{margin:32px 0;list-style:none;padding:0}
+.cadeia li{display:flex;align-items:flex-start;gap:18px;margin:0;padding:22px 0;border-bottom:1px solid var(--borda)}
+.cadeia li:first-child{border-top:1px solid var(--borda)}
+.cadeia .num{flex:0 0 34px;width:34px;height:34px;border-radius:50%;background:var(--azul);color:#fff;
+  font-family:'Inter',sans-serif;font-size:15px;font-weight:600;display:flex;align-items:center;justify-content:center;line-height:1}
+.cadeia .conteudo{flex:1;min-width:0}
+.cadeia h4{font-size:18px;margin:0 0 8px;line-height:1.3}
+.cadeia p{font-size:16px;line-height:1.6;margin:0 0 10px}
+.cadeia p:last-child{margin-bottom:0}
+.cadeia .ex{font-size:14.5px;color:var(--apoio);background:var(--claro);border-radius:var(--raio);padding:12px 14px}
+
+.objecao{border-left:3px solid var(--azul);padding:4px 0 4px 22px;margin:34px 0}
+#virtude h3,#metodo h3{font-family:'Lora',Georgia,serif;font-size:22px;font-weight:600;margin:38px 0 14px}
+.objecao h3{font-family:'Lora',Georgia,serif;font-size:20px;font-weight:600;color:var(--azul);margin-bottom:12px}
+.objecao p{font-size:16px;margin-bottom:14px}
+.objecao p:last-child{margin-bottom:0}
+
+@media (max-width:640px){
+  .ficha div{flex:1 1 100%;border-right:0;border-bottom:1px solid var(--borda);padding:14px 18px}
+  .ficha div:last-child{border-bottom:0}
+  .precos,.duas,.sumario{grid-template-columns:1fr;gap:14px}
+  .inclui > div,.inclui .tres{grid-template-columns:1fr;gap:18px}
+  .inclui{padding:22px 20px}
+  .hero-livro{grid-template-columns:1fr;gap:22px;text-align:center}
+  .capa{max-width:180px;margin:0 auto}
+  .hero-txt{text-align:left}
+  .capitulos h4{font-size:17px}
+  .capitulos p{font-size:14.5px;margin-left:0}
+  .cadeia li{flex-direction:column;align-items:flex-start;gap:10px;padding:20px 0}
+  .cadeia .num{flex:0 0 auto;width:30px;height:30px;font-size:14px}
+  .cadeia .conteudo{width:100%}
+  .precos > div,.duas > div{padding:22px 20px}
+  .objecao{padding-left:16px}.objecao h3{font-size:18px}
+}
+</style>
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '386437925348155');
+fbq('track', 'PageView');
+fbq('track', 'ViewContent', {content_name: 'Manual de Desenvolvimento Humano em Virtudes', content_category: 'livro'});
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
+/></noscript>
+<!-- Fim Meta Pixel -->
+</head>
+<body>
+
+<header class="topo">
+  <div class="topo-int">
+    <a href="../" class="marca">Instituto Virtudes</a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Menu">&#8801;</button>
+    <nav>
+      <ul class="menu" id="menu">
+        <li><a href="../virtologia/">Virtologia</a></li>
+        <li><a href="../sistemas/">Humanização 2.0</a></li>
+        <li class="tem-sub">
+          <button class="menu-sub-btn" aria-expanded="false" aria-haspopup="true">Formações <span class="seta-sub" aria-hidden="true">&#9662;</span></button>
+          <ul class="submenu">
+            <li><a href="../formacao/">Formação em Virtologia</a></li>
+            <li><a href="../pos-sistemas/">Pós-graduação em Sistemas Humanizados</a></li>
+            <li><a href="../formacoes/">Todas as formações</a></li>
+          </ul>
+        </li>
+        <!-- <li><a href="../noticias/">Notícias</a></li> ATIVAR quando a página existir -->
+        <li><a href="../futuro/">Trazemos o Futuro</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section>
+  <div class="wrap">
+    <div class="hero-livro">
+      <figure class="capa">
+        <img src="../img/livros/manual-desenvolvimento-humano.png" alt="Capa do Manual de Desenvolvimento Humano em Virtudes, de Eduardo Casarotto." width="623" height="1080">
+      </figure>
+
+      <div class="hero-txt">
+        <p class="kicker">Livro · Eduardo Casarotto</p>
+        <h1>Manual de Desenvolvimento Humano em Virtudes</h1>
+        <p class="lead">Se a Virtologia tivesse que caber em um livro só, seria este. <strong>As 33 virtudes, uma a uma, com o exercício que grava cada uma no cérebro como memória de longo prazo.</strong></p>
+
+        <div class="ficha">
+          <div><dt>Páginas</dt><dd>452</dd></div>
+          <div><dt>Virtudes</dt><dd>33</dd></div>
+          <div><dt>Ciclo por virtude</dt><dd>14 dias</dd></div>
+          <div><dt>Pesquisa</dt><dd>15 anos</dd></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="inclui">
+      <p class="inclui-rot">O que vem junto</p>
+      <div class="tres">
+        <div>
+          <h4>Os 33 exercícios de neuroplasticidade</h4>
+          <p>Um roteiro completo por virtude: o texto que a explica, as perguntas para discutir, os exercícios, a meditação, a reflexão, a prática e a afirmação. <strong>É o conjunto inteiro do método, sem nada retido.</strong></p>
+        </div>
+        <div>
+          <h4>A Avaliação de Desempenho Moral</h4>
+          <p>O instrumento que diz em que estágio você está em cada uma das 33 competências, e o que se espera daquela competência quando ela está construída.</p>
+        </div>
+        <div>
+          <h4>O caderno de anotações</h4>
+          <p>As tabelas de acompanhamento do ciclo e o espaço para registrar o percurso: o que foi praticado, o que resistiu, e onde a virtude ainda não pegou.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="precos">
+      <div>
+        <p class="rot">Versão física</p>
+        <p class="valor">R$ 197</p>
+        <p class="obs">mais R$ 28 de frete</p>
+        <a class="btn" href="https://payfast.greenn.com.br/125361" target="_blank" rel="noopener">Adquirir a versão física</a>
+      </div>
+      <div>
+        <p class="rot">Versão digital</p>
+        <p class="valor">R$ 140</p>
+        <p class="obs">acesso imediato</p>
+        <a class="btn" href="https://payfast.greenn.com.br/125523" target="_blank" rel="noopener">Adquirir a versão digital</a>
+      </div>
+    </div>
+
+    <nav class="indice" aria-label="Conteúdo desta página">
+      <p class="indice-titulo">Nesta página</p>
+      <ol>
+        <li><a href="#virtude">O que é uma virtude</a></li>
+        <li><a href="#pesquisa">Como este livro nasceu</a></li>
+        <li><a href="#virtudes">As 33 virtudes</a></li>
+        <li><a href="#metodo">Como uma virtude se grava no cérebro</a></li>
+        <li><a href="#para-quem">Público indicado</a></li>
+        <li><a href="#autor">Quem escreveu</a></li>
+        <li><a href="#duvidas">O que costumam perguntar</a></li>
+      </ol>
+    </nav>
+  </div>
+</section>
+
+<section id="virtude">
+  <div class="wrap">
+    <h2>O que é uma virtude</h2>
+
+    <p>Virtude, aqui, não é qualidade moral, não é traço de temperamento e não é coisa que a pessoa tem ou não tem de nascença.</p>
+
+    <p class="destaque">Virtude é competência. E competência é a soma de conhecimento, habilidade e atitude: saber, saber fazer e fazer.</p>
+
+    <p>A distinção parece sutil e não é. <strong>Dá para saber tudo sobre o perdão</strong> - o que Jesus disse, o que Buda disse, o que a literatura clínica diz - <strong>e não ter a habilidade de perdoar uma pessoa.</strong> Conhecimento sobre uma virtude não é a virtude. É por isso que ler sobre paciência não torna ninguém paciente, e por isso que este livro não para na explicação.</p>
+
+    <h3>De onde vem o que atrapalha</h3>
+
+    <p>As 33 virtudes são elaboradas pelo lobo frontal: a região que planeja, inibe o impulso, projeta o futuro e decide por princípio. É a região que nos separa do animal.</p>
+
+    <p>O que compete com ela vem de baixo. <strong>No tronco cerebral está escrita a mensagem da sobrevivência</strong>, e dela saem duas raízes que a Virtologia identifica na origem de quase todo sofrimento psíquico.</p>
+
+    <div class="caixa">
+      <h3>As duas raízes</h3>
+      <p><strong>O orgulho</strong> é a necessidade primitiva de ter importância, para ser aceito e aprovado, e assim ter a sensação de sobrevivência. Dele derivam a vaidade, a comparação, a dominância, a necessidade de controle, a vingança, a inveja, a arrogância e a reatividade à crítica. Também a timidez e a vergonha, que parecem o contrário e não são.</p>
+      <p><strong>O egoísmo</strong> é a prioridade das próprias necessidades sobre as do outro. Dele derivam a agressividade, a indiferença, a inflexibilidade, o escapismo e a transgressão.</p>
+      <p>A Virtologia descreve os dois como sistemas neurofuncionais, o SNO e o SNE, e os trata pelo que são: <strong>herança da espécie, não defeito de caráter.</strong> Ninguém escolheu o cérebro que recebeu.</p>
+    </div>
+
+    <p>Daí a virada que sustenta o livro inteiro. <strong>A virtude não é um freio aparafusado por cima desses sistemas. É a mudança do cálculo que eles fazem.</strong></p>
+
+    <p>A humildade desloca o valor que depende da posição para o valor que não depende dela. A abnegação desloca o cálculo do eu para o outro. E o mesmo vale, uma a uma, para as 33.</p>
+
+    <p class="destaque">É por isso que a Virtologia chama as virtudes de ideias que moldam o cérebro. Elas não são conselhos sobre como viver. São estruturas que se instalam.</p>
+  </div>
+</section>
+
+<section id="pesquisa">
+  <div class="wrap">
+    <h2>Como este livro nasceu</h2>
+
+    <p>Toda religião propõe um caminho para o desenvolvimento humano. Quase todas dizem coisas diferentes.</p>
+
+    <p><strong>A pergunta que originou este livro foi outra: onde elas concordam?</strong></p>
+
+    <p>Foram mais de 15 anos de pesquisa sobre as crenças de dezenas de tradições. <strong>Budismo, Confucionismo, Cristianismo em linhas católicas e evangélicas, Fé Bahai, Hinduísmo, Islamismo, Judaísmo, Taoísmo, Kardecismo, Umbandismo, Xintoísmo</strong> e outras.</p>
+
+    <p>O que sobrou da comparação foram 33 virtudes, e os passos que cada tradição ensina para desenvolvê-las.</p>
+
+    <p class="destaque">É o que as religiões do mundo têm em comum, separado do que as divide.</p>
+
+    <p>Sobre esse achado, a Virtologia acrescentou o que faltava, e é aqui que a obra deixa de ser filosofia moral: <strong>a descrição do que acontece no cérebro quando cada virtude se constrói, e o exercício que produz essa construção.</strong></p>
+
+    <div class="caixa">
+      <h3>A tese que sustenta o livro</h3>
+      <p>Os problemas globais - fome, desigualdade, racismo, guerra, questões socioambientais - são tratados no livro como <strong>sintomas do nível de desenvolvimento das virtudes das pessoas que habitam o planeta.</strong></p>
+      <p>Lutar contra eles não está errado. Mas, na leitura da obra, não resolve. <strong>Quando as pessoas se tornam mais humanas, ou seja, têm seu lobo frontal fortalecido, seu comportamento deixa de ser governado pelas partes mais primitivas do cérebro, tratando seu orgulho e egoísmo e, assim, esses problemas deixam de ser produzidos.</strong></p>
+    </div>
+  </div>
+</section>
+
+<section id="virtudes">
+  <div class="wrap">
+    <h2>As 33 virtudes</h2>
+
+    <p>Cada uma tem o seu capítulo, com a explicação do que ela é, o que ela desmonta, as perguntas para se examinar, <strong>os exercícios, a meditação, a prática e a afirmação que a constrói.</strong></p>
+
+    <p>Elas estão na ordem do livro, que não é aleatória: <strong>a humildade vem primeiro porque sem ela nenhuma das outras se sustenta.</strong> Pedir aceitação a quem ainda não identificou o próprio orgulho produz encenação de aceitação, não aceitação.</p>
+
+    <div class="capitulos">
+      <div><span class="cap-n">1</span><h4>Humildade</h4><p>Reconhecer as próprias limitações, fraquezas e erros sem precisar se engrandecer nem se comparar com ninguém. Não é o gesto de se diminuir diante do outro, que costuma ser o orgulho em forma sofisticada. É a capacidade de se ver como se é, sem o esforço permanente de aparentar mais ou menos do que se é. Como desmonta o orgulho, sustenta todas as outras.</p></div>
+      <div><span class="cap-n">2</span><h4>Individuação</h4><p>O processo de se diferenciar da persona - a personalidade montada para obter aprovação e aceitação - e passar a habitar quem se é de fato. Trabalha o reconhecimento das máscaras construídas ao longo de décadas de adequação ao meio, e o que custa continuar vivendo dentro delas.</p></div>
+      <div><span class="cap-n">3</span><h4>Brandura</h4><p>Temperança, prudência e estabilidade emocional aplicadas ao mesmo tempo à fala, ao pensar e ao agir. É a virtude que tira a pessoa do funcionamento primitivo de velocidade e reação, sem confundir calma com inação. Abre o bloco do desenvolvimento porque regula o ritmo do próprio organismo.</p></div>
+      <div><span class="cap-n">4</span><h4>Eternidade</h4><p>Sustentar dois reconhecimentos ao mesmo tempo: o corpo é finito e a morte pode chegar a qualquer momento, e a existência continua para além dele, com a qualidade determinada pelo que se desenvolveu aqui. Não exige formato dogmático nenhum. Muda o peso do que hoje parece urgente.</p></div>
+      <div><span class="cap-n">5</span><h4>Perdão</h4><p>Soltar o ressentimento sustentado contra quem feriu. Não é absolver moralmente o outro, não é esquecer e não obriga a reaproximação: é trabalho de quem perdoa sobre si mesmo, para retirar do sistema nervoso o custo de carregar a mágoa indefinidamente. Inclui o autoperdão, e a distinção entre perdoar e abrir mão de justiça.</p></div>
+      <div><span class="cap-n">6</span><h4>Exemplo positivo</h4><p>Reconhecer que toda conduta, inclusive a mais privada, é matéria de aprendizado para quem observa. É a única virtude que não se exerce dentro de quem a pratica, e sim no comportamento futuro do outro, por identificação. O critério prático é ser o mesmo com plateia e sem plateia.</p></div>
+      <div><span class="cap-n">7</span><h4>Igualdade</h4><p>Tratar todas as pessoas com equidade, sem dois pesos e duas medidas, e sem deixar que emoção, cultura, interesse ou conveniência alterem a decisão sobre alguém. É o reconhecimento de que todos têm o mesmo valor, verificado na conduta cotidiana e não na declaração.</p></div>
+      <div><span class="cap-n">8</span><h4>Fraternidade</h4><p>Relacionar-se com qualquer ser humano com a mesma qualidade afetiva que se reserva a um irmão. Do latim <em>frater</em>. Não em registro metafórico nem retórico, e sim como configuração estável: um vínculo que não depende de troca, de concordância nem de pertencimento ao mesmo grupo.</p></div>
+      <div><span class="cap-n">9</span><h4>Aceitação</h4><p>Reconhecer e acolher o real como ele se apresenta, incluindo os próprios limites, em vez de brigar em permanência com o que já é. Não é resignação nem conformismo: é o que libera para a ação eficaz a energia gasta na luta inútil. No livro, a capacidade de deixar de bater a cabeça na parede.</p></div>
+      <div><span class="cap-n">10</span><h4>Perseverança</h4><p>A competência que faz o esforço durar contra o cansaço acumulado, a frustração diante do obstáculo e a tentação de desistir cedo. Não é a teimosia de quem não admite derrota, e sim a maturidade de quem reconhece que processo significativo exige tempo, repetição e tolerância a vários pontos de fadiga.</p></div>
+      <div><span class="cap-n">11</span><h4>Otimismo</h4><p>Antecipar a possibilidade de bem antes que ela se manifeste, e sustentar a ação diante do desconhecido. Decompõe-se em três: positividade, contentamento e perseverança. Não é negação da realidade nem ingenuidade evitativa, e o contentamento com o presente que ela produz não se confunde com conformismo.</p></div>
+      <div><span class="cap-n">12</span><h4>Paciência</h4><p>Tolerar, sem angústia nem raiva, três ordens de coisa: a imperfeição dos outros, o tempo natural dos processos e o próprio limite. Onde a brandura regula o ritmo de dentro, a paciência regula a relação com o tempo de fora. É a pausa entre o estímulo e a reação, treinada até virar automática.</p></div>
+      <div><span class="cap-n">13</span><h4>Reconciliação</h4><p>O gesto concreto de voltar ao outro de quem se afastou: a ligação que se faz, a carta que se envia, a conversa que finalmente acontece. Depende do perdão e não se confunde com ele - o perdão pode ser feito sozinho, a reconciliação exige movimento real, e sem esperar que o outro venha primeiro.</p></div>
+      <div><span class="cap-n">14</span><h4>Fé</h4><p>Acreditar sem ter certeza, e ter certeza sem ter prova. Não é crença religiosa específica, não é otimismo ingênuo e não é pensamento mágico: é a competência de habitar a incerteza sem entrar em colapso, agir antes de saber o resultado e manter direção com visibilidade curta.</p></div>
+      <div><span class="cap-n">15</span><h4>Tudo somos um</h4><p>O reconhecimento de que a pessoa, os outros, os demais reinos vivos e o universo físico são uma unidade só, manifestada em estados diferentes - e, mais do que reconhecimento, uma organização estável a partir da qual se age em cada gesto. Abre o topo da pirâmide, e depende da dissolução da fronteira do ego que as virtudes anteriores prepararam.</p></div>
+      <div><span class="cap-n">16</span><h4>Ajuda ao próximo</h4><p>O amor em ação. O capítulo anterior cultiva o estado interno; este o converte em conduta concreta dirigida a quem precisa, sem escolher a quem se ajuda e sem esperar retorno. Sem essa conversão, o cultivo interno permanece contemplativo e não transforma nada no mundo.</p></div>
+      <div><span class="cap-n">17</span><h4>Amor ao próximo</h4><p>O amor como estado, e não como sentimento episódico. É a diferença entre gostar de alguém e sustentar de forma estável a qualidade afetiva que quer o bem daquela pessoa - inclusive de quem se julgou, de quem discorda e de quem não é próximo.</p></div>
+      <div><span class="cap-n">18</span><h4>Gratidão</h4><p>Redirecionar a atenção da falta para o que existe. Não é sentimento que aparece de vez em quando: é configuração treinável, praticada todo dia sobre as coisas mínimas, que ativa o sistema de recompensa do cérebro. Pede como pré-requisito a regulação da brandura, a tolerância da paciência e a leveza do bom humor.</p></div>
+      <div><span class="cap-n">19</span><h4>Verdade</h4><p>Coerência entre o que se é, o que se pensa e o que se diz e faz. Tem dupla face: verdade consigo mesmo, que é contato direto com o que se sente sem mascaramento defensivo, e verdade com o outro, que é não construir personas para obter aprovação. Inclui o dizer com brandura, para que a verdade sirva ao outro e não à agressividade de quem fala.</p></div>
+      <div><span class="cap-n">20</span><h4>Bom humor</h4><p>Habitar a adversidade em chave leve, fazendo piada da própria tragédia em vez de afundar nela ou fingir que ela não existe. Não é otimismo, que enxerga a parte cheia do copo; não é negação, que ignora a vazia; não é cinismo, que se afasta da dor por desprezo. Opera sobre as perdas que toda biografia acumula.</p></div>
+      <div><span class="cap-n">21</span><h4>Honestidade</h4><p>Coerência entre a palavra empenhada e a ação realizada, sustentada inclusive quando prejudica quem a sustenta. Descrita em quatro dimensões: cumprimento do compromisso, integridade, dignidade e ética. E desce ao concreto: pagar o que se deve, honrar a dívida, seguir a lei, não lesar ninguém.</p></div>
+      <div><span class="cap-n">22</span><h4>Não julgamento</h4><p>Suspender o veredito automático que classifica o outro antes que o encontro aconteça. Não é abrir mão de avaliar: é impedir que o julgamento reflexo funcione como filtro reativo, condenando de antemão o que ainda não foi compreendido. É o capítulo onde o preconceito se desmonta.</p></div>
+      <div><span class="cap-n">23</span><h4>Pureza de coração</h4><p>Duas faces. Para fora, abertura ao outro sem desconfiança primitiva nem malícia projetada. Para dentro, correspondência entre a intenção declarada e a motivação real: estender a mão porque se quer o bem do outro, e não por um benefício que nem se admite estar buscando. Opera na fresta que a verdade e a honestidade ainda deixam aberta.</p></div>
+      <div><span class="cap-n">24</span><h4>Abnegação</h4><p>Egoísmo é eu primeiro; abnegação é o outro primeiro. É a renúncia consciente da própria vontade em favor do próximo, sem anulação de quem renuncia. É a virtude pela qual se vence o tronco cerebral, a estrutura mais arcaica e mais poderosa do funcionamento humano.</p></div>
+      <div><span class="cap-n">25</span><h4>Pagar o mal com o bem</h4><p>Interromper de forma deliberada a lógica do olho por olho, devolvendo bem a quem fez o mal. Não é tolerância passiva, não é absolvição do ofensor e não é submissão: é a quebra do ciclo de retaliação, que se justificou na sobrevivência ancestral e hoje só produz mais dano e mais memória ressentida.</p></div>
+      <div><span class="cap-n">26</span><h4>Honrar a família</h4><p>Sustentar ao mesmo tempo dois movimentos que parecem opostos: o pertencimento ao sistema familiar de origem e a individuação dentro dele. Honrar não é obedecer, não é concordar e não é permanecer fundido. É manter o vínculo afetivo aberto e construir uma vida autoral que não dependa da autorização da família.</p></div>
+      <div><span class="cap-n">27</span><h4>Desapego</h4><p>O desprendimento da identificação do ego com o que se possui. Não exige pobreza, não condena a riqueza e não é incompatível com conforto: opera numa camada anterior, desmontando a equação inconsciente de que a pessoa é aquilo que tem, e de que a próxima aquisição vai preencher um buraco que jamais se preencheu por essa via.</p></div>
+      <div><span class="cap-n">28</span><h4>Busca do melhoramento</h4><p>Integrar dois movimentos: a aceitação e a gratidão pela configuração atual, sem as quais a busca vira rejeição compulsiva de si mesmo; e o trabalho dirigido ao que ainda não se desenvolveu, sem o qual a aceitação vira estagnação. Foco, prioridade, ação e disciplina são o que a coloca em operação.</p></div>
+      <div><span class="cap-n">29</span><h4>Cuidado com o corpo</h4><p>Reconhecer que a pessoa é corpo, e não apenas habita um: cuidar dele é cuidar de si na dimensão mais básica, e é precondição para a operação de todas as outras virtudes. Não é culto estético, não é vigilância hipocondríaca e não é usar o corpo como ferramenta de desempenho ou de aprovação.</p></div>
+      <div><span class="cap-n">30</span><h4>Flexibilidade</h4><p>Modificar a posição quando o contexto, a evidência ou o retorno mostram que ela não serve mais, e sustentar aquilo que precisa ser sustentado. A maturidade da virtude está na discriminação entre os dois domínios: sem mudança, a sustentação vira rigidez; sem eixo preservado, a mudança vira dissolução.</p></div>
+      <div><span class="cap-n">31</span><h4>Utilidade</h4><p>Tempo e energia psíquica tratados como recursos finitos e moralmente significativos. A virtude opera sobre o tempo que sobra depois de dormir, comer, descansar, se divertir e atender o que é vital: esse tempo restante não é neutro, e o que se faz com ele tem peso.</p></div>
+      <div><span class="cap-n">32</span><h4>Amor à natureza e aos animais</h4><p>A inversão de uma pergunta: quem serve a quem? A virtude opera quando a pessoa responde, em conduta e não em discurso, que o humano está aqui para cuidar da natureza, e não a natureza para servir ao humano. É a extensão do cuidado para além do humano, contra a posição utilitarista herdada.</p></div>
+      <div><span class="cap-n">33</span><h4>Responsabilidade</h4><p>Sair da posição de vítima passiva, a quem as coisas acontecem, e assumir a posição de agente, dentro das margens reais do próprio domínio. Não é culpa, não é controle e não é hiperfuncionamento compensatório. No livro: responsável é quem vai resolver, culpado é quem vai pagar.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="metodo">
+  <div class="wrap">
+    <h2>Como uma virtude se grava no cérebro</h2>
+
+    <p>Este não é um livro para ler de ponta a ponta e guardar na estante. <strong>É um manual de trabalho</strong>, e o trabalho tem um alvo preciso.</p>
+
+    <p>Saber discorrer sobre a paciência é uma coisa. <strong>A paciência operar sozinha, no instante em que a situação a exige, sem que você precise decidir ter paciência</strong>, é outra. A primeira é conhecimento. A segunda é memória de longo prazo, do mesmo tipo que faz um motorista experiente frear antes de pensar em frear.</p>
+
+    <p class="destaque">O livro existe para levar a virtude do que se sabe para o que se é.</p>
+
+    <p>E isso não se consegue com esforço de vontade, porque vontade cansa. Consegue-se com neuroplasticidade: a capacidade, documentada, de o cérebro reorganizar as próprias conexões a partir do que se repete.</p>
+
+    <h3>Todas as portas de entrada, ao mesmo tempo</h3>
+
+    <p>Os exercícios do livro não são variações do mesmo gesto. <strong>Cada um entra por uma área de aprendizado diferente do cérebro</strong>, e a soma delas é o que faz a mensagem passar.</p>
+
+    <ol class="cadeia">
+      <li>
+        <span class="num">1</span>
+        <div class="conteudo">
+          <h4>Ler o texto da virtude</h4>
+          <p>O que ela é, o que ela desmonta, e como ela aparece na vida prática de alguém.</p>
+          <p class="ex"><strong>Entrada visual e linguística.</strong></p>
+        </div>
+      </li>
+      <li>
+        <span class="num">2</span>
+        <div class="conteudo">
+          <h4>Escrever a afirmação à mão, todos os dias</h4>
+          <p>À mão, não no teclado. No teclado todas as letras viram o mesmo toque, e o gesto próprio de cada uma se perde.</p>
+          <p class="ex"><strong>Entrada motora e proprioceptiva.</strong></p>
+        </div>
+      </li>
+      <li>
+        <span class="num">3</span>
+        <div class="conteudo">
+          <h4>Dizer a afirmação em voz alta, várias vezes ao dia</h4>
+          <p>Cada virtude tem a sua. A da humildade começa assim: <em>eu não busco mais ter importância; eu domino meu orgulho; a vaidade não me domina mais.</em> Em horários afastados, nunca tudo de uma vez.</p>
+          <p class="ex"><strong>Entrada auditiva e áudio-vocal.</strong> Não é pensamento positivo. É a frase dita na primeira pessoa do presente, ouvida pelo próprio cérebro, com o significado elaborado a cada repetição.</p>
+        </div>
+      </li>
+      <li>
+        <span class="num">4</span>
+        <div class="conteudo">
+          <h4>Praticar a virtude em uma situação real do dia</h4>
+          <p>Uma situação concreta, escolhida de propósito, e enfrentada com a virtude na mão.</p>
+          <p class="ex"><strong>Entrada vivencial e emocional.</strong> É a etapa que grava a virtude junto com as pistas do próprio gatilho, e são elas que a devolvem quando o gatilho voltar.</p>
+        </div>
+      </li>
+      <li>
+        <span class="num">5</span>
+        <div class="conteudo">
+          <h4>Refletir e registrar no caderno</h4>
+          <p>O que foi possível praticar, onde a dificuldade apareceu, que efeito a prática produziu no corpo e na vida.</p>
+          <p class="ex"><strong>Entrada metacognitiva.</strong></p>
+        </div>
+      </li>
+      <li>
+        <span class="num">6</span>
+        <div class="conteudo">
+          <h4>Repetir tudo no dia seguinte, e nos doze seguintes</h4>
+          <p>Uma virtude por vez, catorze dias seguidos.</p>
+          <p class="ex"><strong>Consolidação por espaçamento.</strong> O intervalo entre as repetições não é pausa: é parte do mecanismo.</p>
+        </div>
+      </li>
+      <li>
+        <span class="num">7</span>
+        <div class="conteudo">
+          <h4>Estar presente em cada uma das etapas</h4>
+          <p>Sem presença, o roteiro vira tarefa cumprida e não grava nada.</p>
+          <p class="ex"><strong>Não é uma etapa a mais.</strong> É a condição que dá eficácia a todas as outras.</p>
+        </div>
+      </li>
+    </ol>
+
+    <h3>Por que catorze dias</h3>
+
+    <p>Porque o cérebro protege o que já está escrito. Ele não é folha em branco à espera de inscrição: <strong>só consente em reescrever quando a repetição insiste o bastante</strong>, com espaçamento e com atenção. Uma afirmação repetida três vezes não muda ninguém, e isso não é falta de fé nem de caráter.</p>
+
+    <p>Catorze dias é a unidade de trabalho do método. <strong>É nesse período que a nova rede neural começa a se desenvolver</strong>, e é a partir dela que o comportamento correspondente passa a aparecer sem que você precise puxá-lo.</p>
+
+    <p>A inscrição inicial é o começo, não o fim. A virtude madura pede que o ciclo seja repetido e sustentado na vida real, e o livro traz o critério para distinguir uma virtude construída de uma virtude apenas compreendida.</p>
+
+    <p class="destaque">No fim do processo, o comportamento virtuoso passa a acontecer sozinho. Sem esforço e sem vigilância, porque virou memória de longo prazo.</p>
+  </div>
+</section>
+
+<section id="para-quem">
+  <div class="wrap">
+    <h2>Público indicado</h2>
+
+    <div class="duas">
+      <div>
+        <h3>Para quem quer trabalhar em si mesmo</h3>
+        <p>Não é preciso ser da área da saúde nem conhecer a Virtologia antes. <strong>O livro é autocontido</strong>, e os exercícios são feitos por conta própria.</p>
+        <p>É o caminho mais direto para aplicar a Virtologia na própria vida, e o único livro da obra que se usa desde o primeiro dia.</p>
+      </div>
+      <div>
+        <h3>Para quem atende</h3>
+        <p>Psicólogos, psicanalistas, terapeutas e profissionais que trabalham com desenvolvimento humano encontram aqui <strong>o repertório completo de exercícios</strong> que a Virtologia usa, com a afirmação e o roteiro de cada virtude.</p>
+        <p>É o material que o virtólogo prescreve, na forma em que ele é prescrito.</p>
+      </div>
+    </div>
+
+    <div class="objecao">
+      <h3>Qual é a diferença entre este livro e o Fundamentos da Virtologia?</h3>
+      <p><strong>O <em>Fundamentos</em> explica por que funciona. Este mostra como fazer.</strong></p>
+      <p>O <em>Fundamentos</em> é o tratado: o aparelho psíquico, as faixas de evolução, os transtornos, a técnica clínica, a neurociência que sustenta o método. É onde a teoria está inteira.</p>
+      <p>O <em>Manual</em> é a prática: as 33 virtudes, uma a uma, com o exercício de cada uma. <strong>É o livro que a pessoa usa todo dia enquanto trabalha em si mesma.</strong></p>
+      <p>Os dois se complementam, e quem estuda a fundo costuma ter os dois. Mas se for para começar por um, <strong>este é o que se aplica desde o primeiro dia.</strong></p>
+    </div>
+  </div>
+</section>
+
+<section id="autor">
+  <div class="wrap">
+    <h2>Quem escreveu</h2>
+
+    <p>Eduardo Casarotto é pesquisador, autor, consultor, filantropo, fundador do Instituto Virtudes e criador da Virtologia e da Humanização 2.0. Condecorado com o título de Comendador Cavaleiro pela Câmara de Justiça de São Paulo.</p>
+
+    <p>Com mais de 25 anos de atuação como terapeuta e consultor organizacional, formou mais de 2.000 terapeutas e dedicou sua trajetória ao estudo do funcionamento humano e da relação entre ambiente, comportamento e adoecimento.</p>
+
+    <p>Ao longo de sua atuação, desenvolveu trabalhos de formação e orientação metodológica para empresas, instituições públicas, organizações, hospitais, escolas e unidades prisionais, levando sua abordagem para contextos onde o funcionamento humano precisa ser compreendido não apenas no indivíduo, mas também nos sistemas em que ele vive e trabalha.</p>
+
+    <p>É autor de mais de 20 livros e de artigos publicados em periódicos científicos. Sua metodologia já foi apresentada no Plenário do Senado Federal, discutida em ambientes institucionais e aplicada em diferentes realidades humanas, organizacionais e sociais.</p>
+
+  </div>
+</section>
+
+<section id="duvidas">
+  <div class="wrap">
+    <h2>O que costumam perguntar</h2>
+
+    <details>
+      <summary>Este livro é religioso?</summary>
+      <p>Não. A pesquisa partiu das religiões para encontrar onde elas concordam, mas o livro não professa nenhuma delas e não pede adesão a nenhuma crença. O trabalho proposto é sobre o funcionamento do cérebro.</p>
+    </details>
+
+    <details>
+      <summary>Isso não é autoajuda? As afirmações não são pensamento positivo?</summary>
+      <p>Não, e a diferença é de mecanismo. Pensamento positivo é uma frase animadora repetida para melhorar o ânimo. A afirmação da Virtologia é um texto construído na primeira pessoa do presente, dito em voz alta e escrito à mão todos os dias, em horários espaçados, sempre acompanhado da prática da virtude em situação real e da reflexão sobre ela. O que faz o cérebro gravar não é o otimismo da frase: é a repetição espaçada, com atenção, por várias vias sensoriais ao mesmo tempo.</p>
+    </details>
+
+    <details>
+      <summary>Preciso ler o Fundamentos da Virtologia antes?</summary>
+      <p>Não. Este livro é autocontido, e cada conceito é explicado quando aparece. O <em>Fundamentos</em> aprofunda a teoria, mas não é pré-requisito.</p>
+    </details>
+
+    <details>
+      <summary>Dá para fazer os exercícios sozinho?</summary>
+      <p>Sim, e é para isso que o livro existe. Aplicar em outra pessoa, em contexto clínico, é outra coisa: depende da sua formação e do que o seu conselho de classe permite.</p>
+    </details>
+
+    <details>
+      <summary>Quanto tempo leva para uma virtude ficar gravada?</summary>
+      <p>O ciclo de trabalho de cada virtude é de catorze dias, e é nesse período que a nova rede neural começa a se desenvolver. A consolidação plena depende da virtude e da pessoa, e vem da repetição do ciclo em situações reais. O livro traz o critério para saber se ela está construída de verdade ou apenas compreendida.</p>
+    </details>
+
+    <details>
+      <summary>Posso trabalhar mais de uma virtude ao mesmo tempo?</summary>
+      <p>O método pede uma por vez. Repetir tudo o que o roteiro exige, todos os dias, já ocupa espaço suficiente. E a ordem do livro não é aleatória: as primeiras virtudes preparam o terreno das seguintes.</p>
+    </details>
+
+    <details>
+      <summary>Substitui tratamento?</summary>
+      <p>Não. Nos quadros com determinação biológica, a Virtologia soma-se ao tratamento médico e não fica no lugar dele. Se você está em sofrimento, procure ajuda profissional.</p>
+    </details>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="precos">
+      <div>
+        <p class="rot">Versão física</p>
+        <p class="valor">R$ 197</p>
+        <p class="obs">mais R$ 28 de frete</p>
+        <a class="btn" href="https://payfast.greenn.com.br/125361" target="_blank" rel="noopener">Adquirir a versão física</a>
+      </div>
+      <div>
+        <p class="rot">Versão digital</p>
+        <p class="valor">R$ 140</p>
+        <p class="obs">acesso imediato</p>
+        <a class="btn" href="https://payfast.greenn.com.br/125523" target="_blank" rel="noopener">Adquirir a versão digital</a>
+      </div>
+    </div>
+
+    <div class="ponte">
+      <p>Para a teoria completa por trás dos exercícios, o <em>Fundamentos da Virtologia</em> traz a base inteira da escola em 660 páginas:</p>
+      <a class="btn" href="../fundamentos/">Conhecer o Fundamentos da Virtologia</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="rodape">
+  <div class="wrap-largo">
+    <div class="rodape-cols">
+      <div>
+        <h4><a href="../virtologia/">Virtologia</a></h4>
+        <ul>
+          <li><a href="../teorias/">Diante de outras grandes teorias</a></li>
+          <li><a href="../aula1/">Aula aberta</a></li>
+          <!-- <li><a href="../depoimentos/">Depoimentos</a></li> ATIVAR quando a página existir -->
+        </ul>
+      </div>
+      <div>
+        <h4><a href="../sistemas/">Humanização 2.0</a></h4>
+        <ul>
+          <li><a href="../ondas/">As Três Ondas do Trabalho</a></li>
+          <li><a href="../aula2/">Aula aberta sobre a NR-1</a></li>
+          <!-- <li><a href="../filtros/">Os Cinco Filtros</a></li> ATIVAR quando a página existir -->
+          <!-- <li><a href="../nr1/">Saúde mental e a NR-1</a></li> ATIVAR quando a página existir -->
+        </ul>
+      </div>
+      <div>
+        <h4><a href="../formacoes/">Formações</a></h4>
+        <ul>
+          <li><a href="../formacao/">Formação em Virtologia</a></li>
+          <li><a href="../pos-sistemas/">Pós-graduação em Sistemas Humanizados</a></li>
+          <li><a href="../fundamentos/">Fundamentos da Virtologia</a></li>
+          <li><a href="../manual/">Manual de Desenvolvimento Humano</a></li>
+          <li><a href="../livros/">Todos os livros</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Eduardo Casarotto</h4>
+        <ul>
+          <!-- <li><a href="../palestras/">Palestras e eventos</a></li> ATIVAR quando a página existir -->
+          <!-- <li><a href="../noticias/">Notícias</a></li> ATIVAR quando a página existir -->
+          <!-- <li><a href="../contato/">Contato</a></li> ATIVAR quando a página existir -->
+        </ul>
+      </div>
+      <div>
+        <h4><a href="../futuro/">Trazemos o Futuro</a></h4>
+        <div class="redes">
+          <a href="https://www.instagram.com/eduardocasarottooficial/" target="_blank" rel="noopener" aria-label="Instagram"><img src="../img/icone-instagram.svg" alt=""></a>
+          <a href="https://linktw.in/qrGGUW" target="_blank" rel="noopener" aria-label="YouTube"><img src="../img/icone-youtube.svg" alt=""></a>
+          <a href="https://www.tiktok.com/@eduardocasarottooficial" target="_blank" rel="noopener" aria-label="TikTok"><img src="../img/icone-tiktok.svg" alt=""></a>
+        </div>
+      </div>
+    </div>
+    <p class="ressalva">Nos quadros com determinação biológica, a Virtologia soma-se ao tratamento médico e não o substitui. Se você está em sofrimento, procure ajuda profissional.<br>Instituto Virtudes · Editora Virtudes</p>
+  </div>
+</footer>
+
+<script src="../js/site.js"></script>
+</body>
+</html>

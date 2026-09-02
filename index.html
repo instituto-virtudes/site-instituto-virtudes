@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Instituto Virtudes | Virtologia e Humanização 2.0</title>
+<meta name="description" content="O Instituto Virtudes estuda como o ser humano funciona e o que muda quando ele se desenvolve. Duas escolas: a Virtologia, voltada à pessoa, e a Humanização 2.0, voltada aos ambientes.">
+<link rel="canonical" href="https://institutovirtudes.com.br/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Instituto Virtudes">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:url" content="https://institutovirtudes.com.br/">
+<meta property="og:title" content="Instituto Virtudes | Virtologia e Humanização 2.0">
+<meta property="og:description" content="A maior parte do sofrimento psíquico vem de um sistema primitivo do cérebro comandando o indivíduo. A Virtologia trata isso construindo virtudes no cérebro.">
+<meta property="og:image" content="https://institutovirtudes.com.br/img/og-padrao.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Instituto Virtudes">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Instituto Virtudes | Virtologia e Humanização 2.0">
+<meta name="twitter:description" content="A maior parte do sofrimento psíquico vem de um sistema primitivo do cérebro comandando o indivíduo. A Virtologia trata isso construindo virtudes no cérebro.">
+<meta name="twitter:image" content="https://institutovirtudes.com.br/img/og-padrao.jpg">
+
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/estilo.css">
+
+<style>
+/* ---------- CARROSSEL DE NOTÍCIAS ---------- */
+.noticias{padding:0;border:0}
+.carrossel{position:relative;max-width:1100px;margin:0 auto;padding:28px 24px 0}
+.slides{position:relative;overflow:hidden;border-radius:var(--raio-card)}
+.slide{display:none}
+.slide.ativo{display:block;animation:aparece .5s ease}
+@keyframes aparece{from{opacity:.4}to{opacity:1}}
+.slide a,.slide-conteudo{display:block;border:0}
+.slide img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block;
+  border-radius:var(--raio-card);border:1px solid var(--borda)}
+.slide-txt{padding:18px 2px 0}
+.slide-txt h2{font-size:24px;line-height:1.3;margin-bottom:10px;color:var(--texto)}
+.slide-txt p{font-size:15.5px;color:var(--apoio);line-height:1.6;margin:0}
+
+.seta{position:absolute;top:calc(50% - 60px);transform:translateY(-50%);
+  width:40px;height:40px;border-radius:50%;border:1px solid var(--borda);
+  background:rgba(255,255,255,.92);color:var(--texto);font-size:17px;line-height:1;
+  cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:3}
+.seta:hover{border-color:var(--azul);color:var(--azul)}
+.seta.ant{left:36px}
+.seta.prox{right:36px}
+
+.pontos{display:flex;gap:7px;justify-content:center;margin-top:20px}
+.ponto{width:7px;height:7px;border-radius:50%;background:var(--borda);border:0;padding:0;cursor:pointer}
+.ponto.ativo{background:var(--azul)}
+
+/* ---------- BLOCOS ---------- */
+.intro{text-align:center;max-width:640px;margin:0 auto}
+.intro h2{font-size:28px;margin-bottom:16px}
+.intro p{font-size:17px;color:var(--texto);margin:0}
+
+.duas{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.duas > div{border:1px solid var(--borda);border-radius:var(--raio-card);padding:30px 28px;
+  display:flex;flex-direction:column}
+.duas h3{font-size:23px;margin-bottom:14px;color:var(--azul)}
+.duas p{font-size:15.5px;line-height:1.6;flex:1}
+.duas .btn{margin:18px 0 0;align-self:flex-start}
+
+.trabalho{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin:34px 0}
+.trabalho figure{margin:0}
+.trabalho img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;
+  border-radius:var(--raio-card);border:1px solid var(--borda)}
+.trabalho h3{font-size:19px;margin:16px 0 8px}
+.trabalho p{font-size:14.5px;color:var(--apoio);line-height:1.6;margin:0}
+
+.livros{display:flex;flex-wrap:wrap;gap:26px;justify-content:center;align-items:flex-end;
+  margin:8px 0 28px}
+.livros a{border:0;flex:0 0 auto;width:150px}
+.livros img{width:100%;height:auto;display:block}
+
+.palestra{max-width:840px;margin:0 auto}
+.palestra img{width:100%;height:auto;display:block;border-radius:var(--raio-card);
+  border:1px solid var(--borda);margin-bottom:22px}
+
+/* ---------- RODAPÉ ---------- */
+
+
+@media (max-width:820px){
+  .trabalho{grid-template-columns:1fr;gap:30px}
+  .duas{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .carrossel{padding:20px 20px 0}
+  .seta{width:34px;height:34px;top:calc(50% - 80px)}
+  .seta.ant{left:26px}
+  .seta.prox{right:26px}
+  .slide-txt h2{font-size:20px}
+  .slide-txt p{font-size:14.5px}
+  .intro h2{font-size:24px}
+  .duas > div{padding:24px 20px}
+  .livros{gap:18px}
+  .livros a{width:114px}
+}
+</style>
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '386437925348155');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
+/></noscript>
+<!-- Fim Meta Pixel -->
+</head>
+<body>
+
+<header class="topo">
+  <div class="topo-int">
+    <a href="./" class="marca">Instituto Virtudes</a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Menu">&#8801;</button>
+    <nav>
+      <ul class="menu" id="menu">
+        <li><a href="virtologia/">Virtologia</a></li>
+        <li><a href="sistemas/">Humanização 2.0</a></li>
+        <li class="tem-sub">
+          <button class="menu-sub-btn" aria-expanded="false" aria-haspopup="true">Formações <span class="seta-sub" aria-hidden="true">&#9662;</span></button>
+          <ul class="submenu">
+            <li><a href="formacao/">Formação em Virtologia</a></li>
+            <li><a href="pos-sistemas/">Pós-graduação em Sistemas Humanizados</a></li>
+            <li><a href="formacoes/">Todas as formações</a></li>
+          </ul>
+        </li>
+        <!-- <li><a href="noticias/">Notícias</a></li> ATIVAR quando a página existir -->
+        <li><a href="futuro/">Trazemos o Futuro</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ NOTÍCIAS ============ -->
+<section class="noticias" aria-label="Notícias do Instituto">
+  <div class="carrossel" id="carrossel">
+    <button class="seta ant" aria-label="Notícia anterior">&#10094;</button>
+    <button class="seta prox" aria-label="Próxima notícia">&#10095;</button>
+
+    <div class="slides" aria-live="polite">
+
+      <article class="slide ativo">
+        <div class="slide-conteudo">
+          <img src="img/noticias/senado.jpg" alt="Eduardo Casarotto discursando na tribuna do Senado Federal." width="1600" height="900">
+          <div class="slide-txt">
+            <h2>Virtologia e Humanização 2.0 são apresentadas no Plenário do Senado Federal</h2>
+            <p>No Dia Internacional dos Direitos Humanos, Eduardo Casarotto palestrou, em Brasília, sobre as bases da Virtologia e da Humanização 2.0 para uma sociedade mais consciente e em defesa da dignidade humana.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="slide">
+        <div class="slide-conteudo">
+          <img src="img/noticias/secretario-seguranca-rj.jpg" alt="Eduardo Casarotto ao lado do Secretário de Segurança do Rio de Janeiro, ambos com os livros Fundamentos da Virtologia e Sistemas Humanizados." loading="lazy" width="1600" height="900">
+          <div class="slide-txt">
+            <h2>Humanização 2.0 e Virtologia entram no debate sobre segurança pública no Rio de Janeiro</h2>
+            <p>Eduardo Casarotto discute segurança pública e humanização de sistemas com o Secretário de Segurança do Rio de Janeiro, Victor Cesar Carvalho dos Santos.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- SLIDE DESATIVADO: falta a imagem franco-da-rocha.jpg. Para reativar, remova este comentário.
+      <article class="slide">
+        <div class="slide-conteudo">
+          <img src="img/noticias/franco-da-rocha.jpg" alt="Eduardo Casarotto durante apresentação no Hospital de Custódia e Tratamento Psiquiátrico de Franco da Rocha." loading="lazy" width="1600" height="900">
+          <div class="slide-txt">
+            <h2>Programa de neuroplasticidade em Virtudes será implementado no Hospital de Custódia de Franco da Rocha</h2>
+            <p>Eduardo Casarotto apresentou a Virtologia às 84 mulheres da unidade feminina durante o início da aplicação do Programa Novo Eu, que vai levar exercícios de desenvolvimento de virtudes a todas as pacientes, além de formação e cuidado para os servidores.</p>
+          </div>
+        </div>
+      </article>
+      -->
+
+      <!-- SLIDE DESATIVADO: falta a imagem rondonopolis-penitenciaria.jpg. Para reativar, remova este comentário.
+      <article class="slide">
+        <div class="slide-conteudo">
+          <img src="img/noticias/rondonopolis-penitenciaria.jpg" alt="Eduardo Casarotto na Cadeia Pública Feminina de Rondonópolis." loading="lazy" width="1600" height="900">
+          <div class="slide-txt">
+            <h2>Cadeia Pública Feminina de Rondonópolis fecha acordo e 100% das reeducandas iniciarão a neuroplasticidade da Virtologia</h2>
+            <p>A aplicação do programa da Virtologia envolverá todas as reeducandas e também os policiais penais da unidade, unindo exercícios de virtudes e Humanização 2.0 em um projeto que vai documentar os resultados para servir de referência a outras unidades.</p>
+          </div>
+        </div>
+      </article>
+      -->
+
+      <!-- SLIDE DESATIVADO: falta a imagem jp-news.jpg. Para reativar, remova este comentário.
+      <article class="slide">
+        <div class="slide-conteudo">
+          <img src="img/noticias/jp-news.jpg" alt="Eduardo Casarotto durante entrevista ao vivo na rádio JP News." loading="lazy" width="1600" height="900">
+          <div class="slide-txt">
+            <h2>Virtologia e Humanização 2.0 ganham espaço na JP News</h2>
+            <p>Eduardo Casarotto deu entrevista na rádio JP News sobre as bases da Virtologia e da Humanização 2.0, ampliando o debate sobre desenvolvimento humano e mudança nas instituições.</p>
+          </div>
+        </div>
+      </article>
+      -->
+
+      <!-- SLIDE DESATIVADO: falta a imagem policia-penal-londrina.jpg. Para reativar, remova este comentário.
+      <article class="slide">
+        <div class="slide-conteudo">
+          <img src="img/noticias/policia-penal-londrina.jpg" alt="Eduardo Casarotto com integrantes da Polícia Penal de Londrina." loading="lazy" width="1600" height="900">
+          <div class="slide-txt">
+            <h2>Virtologia fecha aplicação junto à Polícia Penal de Londrina</h2>
+            <p>O Instituto Virtudes fechou com a Polícia Penal de Londrina a aplicação de um programa de desenvolvimento de virtudes, saúde mental e preparo para a volta à sociedade nas penitenciárias da região.</p>
+          </div>
+        </div>
+      </article>
+      -->
+
+      <article class="slide">
+        <div class="slide-conteudo">
+          <img src="img/noticias/instituto-dr-arnaldo.jpg" alt="Eduardo Casarotto em visita ao Instituto de Câncer Dr. Arnaldo, em São Paulo." loading="lazy" width="1600" height="900">
+          <div class="slide-txt">
+            <h2>Projeto de Virtologia e PNEI desperta interesse no Instituto Dr. Arnaldo</h2>
+            <p>Em São Paulo, o Instituto Virtudes apresentou uma proposta de cuidado complementar no tratamento de câncer, que junta Humanização 2.0, desenvolvimento de virtudes e o estudo de como mente, hormônios e sistema de defesa do corpo funcionam juntos.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- SLIDE DESATIVADO: falta a imagem socioeducativo-rondonopolis.jpg. Para reativar, remova este comentário.
+      <article class="slide">
+        <div class="slide-conteudo">
+          <img src="img/noticias/socioeducativo-rondonopolis.jpg" alt="Encontro no Centro de Atendimento Socioeducativo de Rondonópolis." loading="lazy" width="1600" height="900">
+          <div class="slide-txt">
+            <h2>Virtologia avança no sistema socioeducativo de Rondonópolis</h2>
+            <p>O Instituto Virtudes participou do planejamento de aplicação do Programa Novo Eu no Centro de Atendimento Socioeducativo de Rondonópolis, envolvendo jovens e agentes num trabalho de desenvolvimento de virtudes, segurança e Humanização 2.0.</p>
+          </div>
+        </div>
+      </article>
+      -->
+
+      <article class="slide">
+        <div class="slide-conteudo">
+          <img src="img/noticias/ministra-das-mulheres.jpg" alt="Eduardo Casarotto ao lado da Ministra das Mulheres, Márcia Lopes." loading="lazy" width="1600" height="900">
+          <div class="slide-txt">
+            <h2>Virtologia é apresentada à Ministra das Mulheres, Márcia Lopes</h2>
+            <p>Eduardo Casarotto apresentou à ministra Márcia Lopes a aplicação da Virtologia no sistema penitenciário e o Guia das Virtudes para crianças e adolescentes, ampliando a conversa entre desenvolvimento humano e políticas públicas.</p>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="pontos" id="pontos" role="tablist" aria-label="Selecionar notícia"></div>
+  </div>
+</section>
+
+<!-- ============ INSTITUTO ============ -->
+<section>
+  <div class="wrap">
+    <div class="intro">
+      <h2>Instituto Virtudes</h2>
+      <p>O Instituto Virtudes estuda como o ser humano funciona e o que muda quando ele se desenvolve. Desse estudo nasceram duas escolas: a <strong>Virtologia</strong>, voltada à pessoa, e a <strong>Humanização 2.0</strong>, voltada aos ambientes onde as pessoas passam a vida.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AS DUAS ESCOLAS ============ -->
+<section>
+  <div class="wrap-largo">
+    <div class="duas">
+      <div>
+        <h3>Virtologia</h3>
+        <p>A maior parte do sofrimento psíquico vem de uma parte primitiva do cérebro dando as ordens. E ela tem duas bases: o orgulho e o egoísmo. A Virtologia trata saúde mental desenvolvendo virtudes que tiram o poder das duas.</p>
+        <a class="btn" href="virtologia/">Conhecer a Virtologia</a>
+      </div>
+      <div>
+        <h3>Humanização 2.0 · Sistemas Humanizados</h3>
+        <p>Uma empresa também funciona por orgulho e egoísmo, e é isso que adoece quem trabalha nela. A Humanização 2.0 reescreve as regras para que a resposta certa aconteça mesmo quando ninguém está olhando.</p>
+        <a class="btn" href="sistemas/">Conhecer a Humanização 2.0</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ O QUE É A VIRTOLOGIA ============ -->
+<section>
+  <div class="wrap">
+    <h2>O que é a Virtologia</h2>
+
+    <p>A maior parte do sofrimento psíquico vem de uma parte primitiva do cérebro dando as ordens. Ela existe em todo mundo e serve para uma coisa só: sobreviver agora. E ela tem duas bases: <strong>o orgulho, que faz a pessoa viver defendendo o lugar dela, e o egoísmo, que faz tudo virar conta de quanto eu ganho com isso.</strong></p>
+
+    <p>Quando essa parte manda, a pessoa se defende. A defesa se repete, endurece e vira uma casca permanente.</p>
+
+    <p><strong>Vista de fora, essa casca é o que os manuais chamam de transtorno de personalidade.</strong></p>
+
+    <p>A Virtologia trata isso construindo no cérebro aquilo que tira o poder dos dois. E virtude, aqui, não é valor moral: <strong>é um grupo de ideias que, treinado com exercícios certos, constrói um caminho novo dentro do cérebro</strong> e passa a funcionar sozinho, sem esforço.</p>
+
+    <a class="btn" href="virtologia/">Entender mais a Virtologia</a>
+  </div>
+</section>
+
+<!-- ============ O QUE É A HUMANIZAÇÃO 2.0 ============ -->
+<section>
+  <div class="wrap">
+    <h2>O que é a Humanização 2.0</h2>
+
+    <p>A cultura do orgulho e do egoísmo está enfiada no jeito como as empresas foram montadas. A meta impossível, a cobrança que humilha, o processo que desconfia de todo mundo, a decisão tomada pensando no cargo de quem decide. <strong>Nada disso é erro técnico. É a mesma coisa que adoece uma pessoa, só que maior.</strong></p>
+
+    <p>A Humanização 2.0 estuda como as pessoas funcionam e como o ambiente trata isso. Quando o ambiente respeita, ele é humanizado. Quando não respeita, ele adoece quem está lá dentro.</p>
+
+    <p>E ela não trata de campanha nem de boa vontade. <strong>Trata das regras escritas:</strong> os fluxos de processo, a descrição do cargo, as políticas internas, o que acontece quando alguém erra, e o que acontece quando alguém precisa sair correndo porque deu alguma coisa em casa. É ali que o orgulho e o egoísmo viraram regra, e é ali que a mudança acontece.</p>
+
+    <a class="btn" href="sistemas/">Entender mais da Humanização 2.0</a>
+  </div>
+</section>
+
+<!-- ============ ONDE O TRABALHO ACONTECE ============ -->
+<section>
+  <div class="wrap-largo">
+    <h2>Onde o trabalho acontece</h2>
+    <p>O trabalho do Instituto acontece onde o sofrimento é mais concreto: unidades prisionais, comunidades terapêuticas, hospitais, escolas e organizações.</p>
+    <p><strong>A maior parte dos projetos do Instituto é gratuita, e o método é aberto a quem quiser aplicá-lo.</strong></p>
+
+    <div class="trabalho">
+      <figure>
+        <img src="img/trabalho/novo-eu.jpg" alt="Eduardo Casarotto conduzindo aula para reeducandos em unidade prisional." loading="lazy">
+        <h3>Programa “O Novo Eu”</h3>
+        <p>Exercícios de virtudes aplicados em grupo, sem precisar de um virtólogo conduzindo. Foi feito para a própria instituição aplicar sozinha, e é o que acontece hoje em presídios, comunidades terapêuticas e organizações que trabalham com recuperação de pessoas.</p>
+      </figure>
+      <figure>
+        <img src="img/trabalho/guia-das-virtudes.jpg" alt="Criança segurando um exemplar do Guia das Virtudes." loading="lazy">
+        <h3>Livro “Guia das Virtudes” para escolas</h3>
+        <p>Material para Educação Infantil e Anos Iniciais, com roteiro pronto para o professor e um livro que vai para casa com a criança. Trabalha autocontrole e convivência justamente na idade em que o cérebro mais muda com o que se repete.</p>
+      </figure>
+      <figure>
+        <img src="img/trabalho/humanizacao-carceraria.jpg" alt="Eduardo Casarotto durante palestra no Ministério Público de Mato Grosso." loading="lazy">
+        <h3>Humanização Carcerária</h3>
+        <p>A Humanização 2.0 aplicada na estrutura das unidades: regras, rotinas e formação das equipes. O trabalho alcança tanto quem cumpre pena quanto quem trabalha ali dentro.</p>
+      </figure>
+    </div>
+
+    <!-- <a class="btn" href="projetos/">Conhecer os projetos</a> ATIVAR quando /projetos/ existir -->
+  </div>
+</section>
+
+
+<!-- ============ DEPOIMENTOS ============ -->
+<section>
+  <div class="wrap">
+    <h2>Profissionais de outras escolas</h2>
+    <p>Psicólogos, psicanalistas e terapeutas formados em outras linhas estudaram a Virtologia e passaram a trabalhar com ela:</p>
+
+    <blockquote>“Não tem como não falar que é revolucionário. Depois que você conhece, não tem como não trabalhar com isso.”
+      <cite>Carina · Neuropsicopedagoga, psicanalista e terapeuta ABA</cite></blockquote>
+
+    <blockquote>“É libertador. Para consultório, foi uma revolução e tanto.”
+      <cite>Fernanda · Psicóloga clínica (TCC)</cite></blockquote>
+
+    <a class="btn" href="formacao/">Conhecer a Formação em Virtologia</a>
+  </div>
+</section>
+
+<!-- ============ LIVROS ============ -->
+<section>
+  <div class="wrap-largo">
+    <h2>Livros</h2>
+
+    <div class="livros">
+      <a href="fundamentos/"><img src="img/livros/fundamentos-da-virtologia.png" alt="Fundamentos da Virtologia" loading="lazy"></a>
+      <a href="manual/"><img src="img/livros/manual-desenvolvimento-humano.png" alt="Manual de Desenvolvimento Humano em Virtudes" loading="lazy"></a>
+      <a href="sistemas-humanizados/"><img src="img/livros/sistemas-humanizados.avif" alt="Sistemas Humanizados · Humanização 2.0" loading="lazy"></a>
+      <a href="guia/"><img src="img/livros/guia-das-virtudes.png" alt="Guia das Virtudes" loading="lazy"></a>
+      <a href="envelheci/"><img src="img/livros/envelheci-e-dai.png" alt="Envelheci, e Daí?" loading="lazy"></a>
+      <a href="teimosia/"><img src="img/livros/teimosia-de-viver.png" alt="Teimosia de Viver" loading="lazy"></a>
+    </div>
+
+    <p>Diversos livros publicados sobre funcionamento humano, personalidade e desenvolvimento.</p>
+    <a class="btn" href="livros/">Ver os livros</a>
+  </div>
+</section>
+
+<!-- ============ ESTATUTO ============ -->
+<section>
+  <div class="wrap">
+    <h2>Sobre o que a Virtologia afirma</h2>
+    <p>A Virtologia é uma escola clínico-filosófica com base científica. Ela escreve o que afirma de um jeito que pode ser testado, dizendo o que confirmaria e o que derrubaria cada ideia, conversa com a neurociência e publica artigos científicos.</p>
+    <p>Ela passou pelas mesmas seis perguntas que um manual internacional usa para julgar as dezoito maiores teorias da personalidade, de Freud até hoje.</p>
+    <a class="btn" href="teorias/">A Virtologia diante de outras grandes teorias</a>
+  </div>
+</section>
+
+<!-- ============ PALESTRAS ============ -->
+<section>
+  <div class="wrap">
+    <h2>Palestras e eventos</h2>
+    <div class="palestra">
+      <img src="img/palestra.jpg" alt="Eduardo Casarotto durante palestra em evento." width="1092" height="802" loading="lazy">
+    </div>
+    <p>Eduardo Casarotto conduz palestras e formações em instituições, empresas, universidades e eventos.</p>
+    <!-- <a class="btn" href="palestras/">Palestras e eventos</a> ATIVAR quando /palestras/ existir -->
+  </div>
+</section>
+
+</main>
+
+<footer class="rodape">
+  <div class="wrap-largo">
+    <div class="rodape-cols">
+      <div>
+        <h4><a href="virtologia/">Virtologia</a></h4>
+        <ul>
+          <li><a href="teorias/">Diante de outras grandes teorias</a></li>
+          <li><a href="aula1/">Aula aberta</a></li>
+          <!-- <li><a href="depoimentos/">Depoimentos</a></li> ATIVAR quando a página existir -->
+        </ul>
+      </div>
+      <div>
+        <h4><a href="sistemas/">Humanização 2.0</a></h4>
+        <ul>
+          <li><a href="ondas/">As Três Ondas do Trabalho</a></li>
+          <li><a href="aula2/">Aula aberta sobre a NR-1</a></li>
+          <!-- <li><a href="filtros/">Os Cinco Filtros</a></li> ATIVAR quando a página existir -->
+          <!-- <li><a href="nr1/">Saúde mental e a NR-1</a></li> ATIVAR quando a página existir -->
+        </ul>
+      </div>
+      <div>
+        <h4><a href="formacoes/">Formações</a></h4>
+        <ul>
+          <li><a href="formacao/">Formação em Virtologia</a></li>
+          <li><a href="pos-sistemas/">Pós-graduação em Sistemas Humanizados</a></li>
+          <li><a href="fundamentos/">Fundamentos da Virtologia</a></li>
+          <li><a href="manual/">Manual de Desenvolvimento Humano</a></li>
+          <li><a href="livros/">Todos os livros</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Eduardo Casarotto</h4>
+        <ul>
+          <!-- <li><a href="palestras/">Palestras e eventos</a></li> ATIVAR quando a página existir -->
+          <!-- <li><a href="noticias/">Notícias</a></li> ATIVAR quando a página existir -->
+          <!-- <li><a href="contato/">Contato</a></li> ATIVAR quando a página existir -->
+        </ul>
+      </div>
+      <div>
+        <h4><a href="futuro/">Trazemos o Futuro</a></h4>
+        <div class="redes">
+          <a href="https://www.instagram.com/eduardocasarottooficial/" target="_blank" rel="noopener" aria-label="Instagram"><img src="img/icone-instagram.svg" alt=""></a>
+          <a href="https://linktw.in/qrGGUW" target="_blank" rel="noopener" aria-label="YouTube"><img src="img/icone-youtube.svg" alt=""></a>
+          <a href="https://www.tiktok.com/@eduardocasarottooficial" target="_blank" rel="noopener" aria-label="TikTok"><img src="img/icone-tiktok.svg" alt=""></a>
+        </div>
+      </div>
+    </div>
+    <p class="ressalva">Nos quadros com determinação biológica, a Virtologia soma-se ao tratamento médico e não o substitui. Se você está em sofrimento, procure ajuda profissional.<br>Instituto Virtudes · Editora Virtudes</p>
+  </div>
+</footer>
+
+<script src="js/site.js"></script>
+<script>
+(function(){
+  var caixa = document.getElementById('carrossel');
+  if(!caixa) return;
+  var slides = caixa.querySelectorAll('.slide');
+  var pontos = document.getElementById('pontos');
+  var i = 0, timer = null, total = slides.length;
+  var parado = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  slides.forEach(function(_, n){
+    var b = document.createElement('button');
+    b.className = 'ponto' + (n===0 ? ' ativo' : '');
+    b.setAttribute('aria-label', 'Notícia ' + (n+1) + ' de ' + total);
+    b.addEventListener('click', function(){ mostrar(n); reiniciar(); });
+    pontos.appendChild(b);
+  });
+  var bolinhas = pontos.querySelectorAll('.ponto');
+
+  function mostrar(n){
+    i = (n + total) % total;
+    slides.forEach(function(s,k){ s.classList.toggle('ativo', k===i); });
+    bolinhas.forEach(function(b,k){ b.classList.toggle('ativo', k===i); });
+  }
+  function anda(){ mostrar(i+1); }
+  function comeca(){ if(!parado) timer = setInterval(anda, 3000); }
+  function para(){ clearInterval(timer); }
+  function reiniciar(){ para(); comeca(); }
+
+  caixa.querySelector('.ant').addEventListener('click', function(){ mostrar(i-1); reiniciar(); });
+  caixa.querySelector('.prox').addEventListener('click', function(){ mostrar(i+1); reiniciar(); });
+  caixa.addEventListener('mouseenter', para);
+  caixa.addEventListener('mouseleave', comeca);
+  caixa.addEventListener('focusin', para);
+  caixa.addEventListener('focusout', comeca);
+
+  var x0 = null;
+  caixa.addEventListener('touchstart', function(e){ x0 = e.touches[0].clientX; para(); }, {passive:true});
+  caixa.addEventListener('touchend', function(e){
+    if(x0 === null) return;
+    var d = e.changedTouches[0].clientX - x0;
+    if(Math.abs(d) > 45) mostrar(d < 0 ? i+1 : i-1);
+    x0 = null; comeca();
+  }, {passive:true});
+
+  comeca();
+})();
+</script>
+</body>
+</html>
