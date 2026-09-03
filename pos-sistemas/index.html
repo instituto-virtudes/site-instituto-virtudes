@@ -33,6 +33,8 @@
 <style>
 /* específicos desta página */
 .mba-hero{padding:64px 0 52px}
+.hero-lista{margin:16px 0 0;padding-left:24px;max-width:60ch}
+.hero-lista li{font-size:17.5px;line-height:1.6;margin:6px 0}
 .lead-2{font-size:16.5px;line-height:1.65;color:var(--apoio);margin:14px 0 0;max-width:70ch}
 .mba-sub{font-family:'Lora',Georgia,serif;font-size:23px;font-weight:500;line-height:1.35;
   color:#2C63C0;margin:-12px 0 26px}
@@ -42,7 +44,19 @@
 .ficha div:last-child{border-right:0}
 .ficha dt{font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;
   color:var(--apoio);margin-bottom:6px}
+.ficha .ficha-obs{font-family:inherit;font-size:13px;font-weight:400;color:var(--apoio);line-height:1.45;margin-top:6px}
 .ficha dd{font-family:'Lora',Georgia,serif;font-size:19px;font-weight:600;margin:0;line-height:1.3}
+
+.bolsas{background:var(--pastel-azul);border-radius:var(--raio-card);padding:34px 34px 30px;margin:34px 0 0}
+.bolsas-rot{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:#fff;background:var(--azul);border-radius:99px;padding:6px 14px;margin:0 0 16px}
+.bolsas h3{font-family:'Lora',Georgia,serif;font-size:24px;font-weight:600;margin:0 0 18px;color:var(--azul-escuro);line-height:1.3}
+.bolsas ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:2px 30px}
+.bolsas li{position:relative;padding:9px 0 9px 26px;font-size:16.5px;line-height:1.5;color:var(--texto)}
+.bolsas li::before{content:'\2713';position:absolute;left:0;top:9px;color:var(--azul);font-weight:700}
+.bolsas .obs{font-size:14.5px;color:var(--apoio);margin:18px 0 0}
+.bolsas .btn{margin:20px 0 0}
+@media (max-width:760px){.bolsas{padding:28px 24px}.bolsas ul{grid-template-columns:1fr}.bolsas h3{font-size:21px}}
 .selo-mec{font-size:15px;color:var(--apoio);margin-bottom:8px}
 .selo-mec strong{color:var(--texto)}
 
@@ -203,19 +217,37 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
   <div class="wrap">
     <p class="kicker">Pós-graduação · Especialização lato sensu</p>
     <h1>Pós-graduação em Sistemas Humanizados</h1>
-    <p class="mba-sub">A pós-graduação em gestão humanizada</p>
-    <p class="lead"><strong>Como humanizar uma organização de ponta a ponta:</strong> a gestão, os manuais, as políticas internas, os fluxogramas de processo, as normas e a cultura, todos desenhados a partir do funcionamento humano.</p>
+    <p class="lead"><strong>Como humanizar uma organização de ponta a ponta,</strong> desenhando a partir do funcionamento humano:</p>
+    <ul class="hero-lista">
+      <li>A gestão</li>
+      <li>Os manuais</li>
+      <li>As políticas internas</li>
+      <li>Os fluxogramas de processo</li>
+      <li>As normas</li>
+      <li>A cultura</li>
+    </ul>
     <p class="lead-2">Saúde mental, cultura organizacional e gestão de riscos psicossociais entram como consequência de um sistema bem construído, não como ação isolada.</p>
 
     <div class="ficha">
       <div><dt>Carga horária</dt><dd>360 horas</dd></div>
       <div><dt>Formato</dt><dd>Online</dd></div>
-      <div><dt>Duração</dt><dd>4 a 12 meses</dd></div>
+      <div><dt>Duração</dt><dd>4 a 12 meses</dd><dd class="ficha-obs">a depender de quanto tempo o aluno tem para se dedicar aos estudos</dd></div>
     </div>
 
-    <p class="selo-mec">Certificação pela <strong>FACEO - Faculdade Centro Oeste</strong>, instituição credenciada pelo MEC.</p>
 
-    
+    <div class="bolsas">
+      <p class="bolsas-rot">Bolsas exclusivas para</p>
+      <h3>Servidores públicos e profissionais da saúde, da assistência social e da segurança do trabalho</h3>
+      <ul>
+        <li>Funcionários públicos, de qualquer órgão ou esfera</li>
+        <li>Técnicos de enfermagem</li>
+        <li>Enfermeiros</li>
+        <li>Assistentes sociais</li>
+        <li>Técnicos de segurança do trabalho</li>
+      </ul>
+      <p class="obs">Comprove o vínculo ou a formação e converse com a nossa equipe sobre as condições.</p>
+      <a class="btn" href="https://wa.me/5511965419449?text=Ol%C3%A1%21%20Vim%20do%20site%20e%20quero%20saber%20sobre%20a%20bolsa%20para%20a%20P%C3%B3s-gradua%C3%A7%C3%A3o%20em%20Sistemas%20Humanizados" target="_blank" rel="noopener">Quero saber da bolsa</a>
+    </div>
   </div>
 </section>
 
@@ -283,7 +315,7 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
 
     <p class="destaque">É por isso que a NR-1 apareceu. E é por isso que existe demanda por quem saiba construir o sistema que ela exige.</p>
 
-    <a class="btn" href="https://wa.me/5511965419449?text=Ol%C3%A1%21%20Vim%20do%20site%20e%20quero%20saber%20mais%20sobre%20a%20P%C3%B3s-gradua%C3%A7%C3%A3o%20em%20Sistemas%20Humanizados" target="_blank" rel="noopener">Quero me matricular</a>
+    <a class="btn" href="https://wa.me/5511965419449?text=Ol%C3%A1%21%20Vim%20do%20site%20e%20quero%20saber%20mais%20sobre%20a%20P%C3%B3s-gradua%C3%A7%C3%A3o%20em%20Sistemas%20Humanizados" target="_blank" rel="noopener">Quero mais informações</a>
   </div>
 </section>
 
@@ -368,7 +400,7 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
 
 <section>
   <div class="wrap" style="padding-top:0">
-    <a class="btn" href="https://wa.me/5511965419449?text=Ol%C3%A1%21%20Vim%20do%20site%20e%20quero%20saber%20mais%20sobre%20a%20P%C3%B3s-gradua%C3%A7%C3%A3o%20em%20Sistemas%20Humanizados" target="_blank" rel="noopener">Quero me matricular</a>
+    <a class="btn" href="https://wa.me/5511965419449?text=Ol%C3%A1%21%20Vim%20do%20site%20e%20quero%20saber%20mais%20sobre%20a%20P%C3%B3s-gradua%C3%A7%C3%A3o%20em%20Sistemas%20Humanizados" target="_blank" rel="noopener">Quero mais informações</a>
   </div>
 </section>
 
@@ -441,7 +473,7 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
 
     <p class="destaque">É por isso que a Humanização 2.0 age de ponta a ponta. Não há setor da organização que fique de fora.</p>
 
-    <a class="btn" href="https://wa.me/5511965419449?text=Ol%C3%A1%21%20Vim%20do%20site%20e%20quero%20saber%20mais%20sobre%20a%20P%C3%B3s-gradua%C3%A7%C3%A3o%20em%20Sistemas%20Humanizados" target="_blank" rel="noopener">Quero me matricular</a>
+    <a class="btn" href="https://wa.me/5511965419449?text=Ol%C3%A1%21%20Vim%20do%20site%20e%20quero%20saber%20mais%20sobre%20a%20P%C3%B3s-gradua%C3%A7%C3%A3o%20em%20Sistemas%20Humanizados" target="_blank" rel="noopener">Quero mais informações</a>
   </div>
 </section>
 
@@ -546,7 +578,7 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
     </div>
   
 
-    <a class="btn" href="https://wa.me/5511965419449?text=Ol%C3%A1%21%20Vim%20do%20site%20e%20quero%20saber%20mais%20sobre%20a%20P%C3%B3s-gradua%C3%A7%C3%A3o%20em%20Sistemas%20Humanizados" target="_blank" rel="noopener">Quero me matricular</a>
+    <a class="btn" href="https://wa.me/5511965419449?text=Ol%C3%A1%21%20Vim%20do%20site%20e%20quero%20saber%20mais%20sobre%20a%20P%C3%B3s-gradua%C3%A7%C3%A3o%20em%20Sistemas%20Humanizados" target="_blank" rel="noopener">Quero mais informações</a>
   </div>
 </section>
 
@@ -568,7 +600,7 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
     <p><strong>As aulas são gravadas e o ritmo é seu.</strong> Quem tem disponibilidade conclui em quatro meses; quem precisa de mais tempo tem até doze.</p>
   
 
-    <a class="btn" href="https://wa.me/5511965419449?text=Ol%C3%A1%21%20Vim%20do%20site%20e%20quero%20saber%20mais%20sobre%20a%20P%C3%B3s-gradua%C3%A7%C3%A3o%20em%20Sistemas%20Humanizados" target="_blank" rel="noopener">Quero me matricular</a>
+    <a class="btn" href="https://wa.me/5511965419449?text=Ol%C3%A1%21%20Vim%20do%20site%20e%20quero%20saber%20mais%20sobre%20a%20P%C3%B3s-gradua%C3%A7%C3%A3o%20em%20Sistemas%20Humanizados" target="_blank" rel="noopener">Quero mais informações</a>
   </div>
 </section>
 
@@ -590,7 +622,7 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
     <p>O pré-requisito é apenas graduação completa, em qualquer área.</p>
   
 
-    <a class="btn" href="https://wa.me/5511965419449?text=Ol%C3%A1%21%20Vim%20do%20site%20e%20quero%20saber%20mais%20sobre%20a%20P%C3%B3s-gradua%C3%A7%C3%A3o%20em%20Sistemas%20Humanizados" target="_blank" rel="noopener">Quero me matricular</a>
+    <a class="btn" href="https://wa.me/5511965419449?text=Ol%C3%A1%21%20Vim%20do%20site%20e%20quero%20saber%20mais%20sobre%20a%20P%C3%B3s-gradua%C3%A7%C3%A3o%20em%20Sistemas%20Humanizados" target="_blank" rel="noopener">Quero mais informações</a>
   </div>
 </section>
 
@@ -645,17 +677,31 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
     </details>
   
 
-    <a class="btn" href="https://wa.me/5511965419449?text=Ol%C3%A1%21%20Vim%20do%20site%20e%20quero%20saber%20mais%20sobre%20a%20P%C3%B3s-gradua%C3%A7%C3%A3o%20em%20Sistemas%20Humanizados" target="_blank" rel="noopener">Quero me matricular</a>
+    <a class="btn" href="https://wa.me/5511965419449?text=Ol%C3%A1%21%20Vim%20do%20site%20e%20quero%20saber%20mais%20sobre%20a%20P%C3%B3s-gradua%C3%A7%C3%A3o%20em%20Sistemas%20Humanizados" target="_blank" rel="noopener">Quero mais informações</a>
   </div>
 </section>
 
 
 <section id="conhecer">
   <div class="wrap">
+
+    <div class="bolsas" style="margin:0 0 34px">
+      <p class="bolsas-rot">Bolsas exclusivas para</p>
+      <h3>Servidores públicos e profissionais da saúde, da assistência social e da segurança do trabalho</h3>
+      <ul>
+        <li>Funcionários públicos, de qualquer órgão ou esfera</li>
+        <li>Técnicos de enfermagem</li>
+        <li>Enfermeiros</li>
+        <li>Assistentes sociais</li>
+        <li>Técnicos de segurança do trabalho</li>
+      </ul>
+      <p class="obs">Comprove o vínculo ou a formação e converse com a nossa equipe sobre as condições.</p>
+      <a class="btn" href="https://wa.me/5511965419449?text=Ol%C3%A1%21%20Vim%20do%20site%20e%20quero%20saber%20sobre%20a%20bolsa%20para%20a%20P%C3%B3s-gradua%C3%A7%C3%A3o%20em%20Sistemas%20Humanizados" target="_blank" rel="noopener">Quero saber da bolsa</a>
+    </div>
     <div class="cta-caixa">
       <h2>Conhecer a pós-graduação</h2>
       <p>O programa completo, o formato e os valores são apresentados em conversa direta.</p>
-      <a class="btn" href="https://wa.me/5511965419449?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20p%C3%B3s-gradua%C3%A7%C3%A3o%20em%20Sistemas%20Humanizados" target="_blank" rel="noopener">Quero me matricular</a>
+      <a class="btn" href="https://wa.me/5511965419449?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20p%C3%B3s-gradua%C3%A7%C3%A3o%20em%20Sistemas%20Humanizados" target="_blank" rel="noopener">Quero mais informações</a>
       <p class="apoio">Para quem prefere examinar a metodologia antes, o livro <em>Sistemas Humanizados · Humanização 2.0</em> reúne o conteúdo integral do curso.</p>
     </div>
   </div>
