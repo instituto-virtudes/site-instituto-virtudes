@@ -242,7 +242,7 @@ body{
   background-attachment:fixed;
 }
 body::before{
-  content:'';position:fixed;inset:0;background:rgba(255,255,255,.82);
+  content:'';position:fixed;inset:0;background:rgba(255,255,255,.90);
   pointer-events:none;z-index:-1;
 }
 main,.topo,.rodape{position:relative}
