@@ -15,6 +15,11 @@
   <url><loc>https://institutovirtudes.com.br/sistemas-humanizados/</loc><priority>0.7</priority></url>
   <url><loc>https://institutovirtudes.com.br/livros/</loc><priority>0.6</priority></url>
   <url><loc>https://institutovirtudes.com.br/terapeutas/</loc><priority>0.7</priority></url>
+  <url><loc>https://institutovirtudes.com.br/palestras/</loc><priority>0.7</priority></url>
+  <url><loc>https://institutovirtudes.com.br/contato/</loc><priority>0.5</priority></url>
+  <url><loc>https://institutovirtudes.com.br/trocas/</loc><priority>0.3</priority></url>
+  <url><loc>https://institutovirtudes.com.br/frete/</loc><priority>0.3</priority></url>
+  <url><loc>https://institutovirtudes.com.br/privacidade/</loc><priority>0.3</priority></url>
   <url><loc>https://institutovirtudes.com.br/ondas/</loc><priority>0.7</priority></url>
   <url><loc>https://institutovirtudes.com.br/teorias/</loc><priority>0.7</priority></url>
 </urlset>
