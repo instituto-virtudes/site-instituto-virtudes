@@ -31,9 +31,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/estilo.css">
 <style>
-.itens h3{font-size:20px;margin:32px 0 10px}
-.itens h3:first-child{margin-top:0}
-.itens p{font-size:16px}
+.itens{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:30px 0;align-items:start}
+.itens-caixa{border:1px solid var(--borda);border-radius:var(--raio-card);padding:26px 24px;background:#fff}
+.itens-caixa h3{font-size:19px;margin:0 0 10px;color:var(--azul-escuro)}
+.itens-caixa p{font-size:15.5px;line-height:1.65;margin:0}
+.itens-caixa p + p{margin-top:10px}
+@media (max-width:820px){.itens{grid-template-columns:1fr;gap:16px}}
 </style>
 <!-- Meta Pixel -->
 <script>
@@ -102,6 +105,7 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
         </li>
         <li><a href="../palestras/">Palestras</a></li>
         <li><a href="../futuro/">Trazemos o Futuro</a></li>
+        <li><a href="../inteiras/" target="_blank" rel="noopener">Inteiras</a></li>
       </ul>
     </nav>
   </div>
@@ -120,7 +124,7 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
 
 <section>
   <div class="wrap">
-    <div class="video"><iframe src="https://www.youtube.com/embed/T9WzaKo6gmc" title="Aula aberta 1 do Instituto Virtudes" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+    <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/T9WzaKo6gmc?rel=0" title="Aula aberta 1 do Instituto Virtudes" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
   </div>
 </section>
 
@@ -130,26 +134,34 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
     <p>Com casos reais de tratamento de automutilação e pensamento suicida usando exercícios de virtudes, a aula percorre a base da Virtologia: de como o ser humano funciona até o plano de trabalho no consultório.</p>
 
     <div class="itens">
-      <h3>Ninguém reage ao mundo. A gente reage à própria memória.</h3>
+      <div class="itens-caixa">
+<h3>Ninguém reage ao mundo. A gente reage à própria memória.</h3>
       <p>Toda palavra, cena ou lembrança puxa junto um monte de coisas que a pessoa já viveu. A palavra "casamento" não chega sozinha: ela vem com o casamento dos pais, com o que deu errado antes, com o que ela ouviu a vida inteira sobre isso. No cérebro isso são redes neurais: grupos de neurônios que foram se ligando uns aos outros a cada experiência e que hoje disparam juntos. <strong>Por isso duas pessoas ouvem a mesma frase e sentem coisas opostas.</strong> E por isso explicar não muda: a explicação não chega até onde a rede está.</p>
-
-      <h3>O que a Virtologia altera, e o que não tenta alterar</h3>
+      </div>
+      <div class="itens-caixa">
+<h3>O que a Virtologia altera, e o que não tenta alterar</h3>
       <p>A memória não se reescreve. O que muda é como a pessoa a percebe e reage a ela. A aula mostra por que tentar dar um novo significado ao passado do paciente é, para a Virtologia, o erro mais comum do consultório.</p>
-
-      <h3>A diferença entre se controlar e funcionar</h3>
+      </div>
+      <div class="itens-caixa">
+<h3>A diferença entre se controlar e funcionar</h3>
       <p>Quem se segura por regra continua sentindo a mesma coisa. Só não age. A aula mostra como perceber, na fala do paciente, a diferença entre a virtude construída e a virtude de fachada, e por que <strong>o sintoma denuncia essa diferença mesmo quando a fala não denuncia.</strong></p>
-
-      <h3>A Lei do Fluxo: PRF = (I × E) × FA × PO × PS × LV</h3>
+      </div>
+      <div class="itens-caixa">
+<h3>A Lei do Fluxo: PRF = (I × E) × FA × PO × PS × LV</h3>
       <p>A fórmula com que a Virtologia lê uma pessoa inteira, letra por letra, e o que cada uma explica.</p>
-
-      <h3>As necessidades humanas e o tanque</h3>
+      </div>
+      <div class="itens-caixa">
+<h3>As necessidades humanas e o tanque</h3>
       <p>As <strong>51 necessidades humanas</strong> não são gosto nem cultura, e vão mudando conforme o cérebro da pessoa se desenvolve. Cada uma tem uma reserva, que a Virtologia chama de tanque, e ela não pode secar nem transbordar. Os dois extremos geram sintoma, e é aí que <strong>boa parte da clínica confunde doença com necessidade em falta.</strong></p>
-
-      <h3>Aplicação em unidade prisional</h3>
+      </div>
+      <div class="itens-caixa">
+<h3>Aplicação em unidade prisional</h3>
       <p>O caso de uma interna que chegou ao programa se cortando e com tentativa de suicídio, e <strong>o que mudou depois de três virtudes trabalhadas</strong> com exercícios. Tem registro em vídeo e o relato do professor que conduziu o trabalho.</p>
-
-      <h3>Como se monta um plano de trabalho</h3>
+      </div>
+      <div class="itens-caixa">
+<h3>Como se monta um plano de trabalho</h3>
       <p>Três coisas apontando para o mesmo lado: em que ponto o cérebro da pessoa está, qual necessidade alimentar agora, e qual virtude construir junto. <strong>É o ponto em que a aula sai da teoria e entrega método.</strong></p>
+      </div>
     </div>
 
     <p class="nota">A aula é corrida, e um assunto se apoia no outro.</p>
@@ -264,7 +276,7 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
 
     <p>Estudar Virtologia você já está fazendo agora. <strong>A Formação é outra coisa: é o caminho de quem vai dominar o método inteiro e aplicar com segurança, no consultório ou dentro de uma instituição.</strong></p>
 
-    <p>São mais de <strong>60 aulas</strong> com a profundidade desta, do fundamento à técnica. E junto com elas, <strong>acompanhamento de verdade: supervisões, orientação e correção de rota do começo ao fim.</strong> Não é conteúdo para assistir sozinho. É formação conduzida por quem já aplica.</p>
+    <p>São mais de <strong>60 aulas</strong> com a profundidade desta, do fundamento à técnica. E junto com elas, <strong>tira-dúvidas ao vivo toda semana e um encontro mensal com Eduardo Casarotto.</strong> Não é conteúdo para assistir sozinho. É formação conduzida por quem já aplica.</p>
 
     <p>O programa, o formato e os valores são apresentados em conversa pelo WhatsApp:</p>
 
@@ -295,7 +307,7 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
 
     <details>
       <summary>Como funciona a Formação em Virtologia?</summary>
-      <p>São mais de 60 aulas, do fundamento à técnica, com acompanhamento e supervisões ao longo de todo o caminho. Programa, formato e valores são apresentados na conversa pelo WhatsApp, sem compromisso.</p>
+      <p>São mais de 60 aulas, do fundamento à técnica, com acompanhamento ao longo de todo o caminho. Programa, formato e valores são apresentados na conversa pelo WhatsApp, sem compromisso.</p>
     </details>
   </div>
 </section>

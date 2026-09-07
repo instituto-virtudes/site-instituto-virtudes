@@ -38,12 +38,70 @@
 .experiencias{display:grid;grid-template-columns:1fr 1fr;gap:0 40px;margin:28px 0;max-width:860px}
 .experiencias p{margin:0;padding:11px 0;font-size:16.5px;line-height:1.5;border-bottom:1px solid var(--claro)}
 h3{font-family:'Lora',Georgia,serif;font-size:21px;font-weight:600;margin:44px 0 4px}
-.capitulos{margin:6px 0 0}
-.capitulos > div{padding:20px 0;border-bottom:1px solid var(--claro)}
-.capitulos > div:last-child{border-bottom:0}
-.cap-n{font-size:12px;font-weight:600;color:var(--azul);margin-right:10px}
-.capitulos h4{display:inline;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:600}
-.capitulos p{font-size:15.5px;line-height:1.65;margin:8px 0 0 30px;color:var(--texto);max-width:70ch}
+
+/* ================= TEMAS — bloco editorial ================= */
+#temas{
+  /* escala de espacamento */
+  --e1:8px; --e2:16px; --e3:24px; --e4:32px; --e5:48px; --e6:64px;
+  --linha:rgba(44,99,192,.13);      /* borda de baixa opacidade */
+  --linha-forte:rgba(44,99,192,.34);
+  --cinza:#4A5462;                  /* cinza-escuro da descricao */
+  --bolha:#E8F0FC;                  /* azul-claro do numero */
+  background:var(--branco);         /* fundo liso: a malha nao atravessa esta secao */
+}
+#temas .wrap{max-width:1220px}
+#temas > .wrap > h2{margin-bottom:var(--e2)}
+.temas-intro{max-width:66ch;margin:0}
+
+.tema{margin-top:var(--e6)}
+.tema:first-of-type{margin-top:var(--e5)}
+
+/* --- cabecalho integrado --- */
+.tema-cab{display:grid;grid-template-columns:440px 1fr;gap:var(--e5);align-items:center}
+.tema-foto{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;display:block;
+  border-radius:16px;border:1px solid var(--linha)}
+.tema-rotulo{font-size:12.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--azul);margin:0 0 var(--e2)}
+.tema-cab h3{font-family:'Lora',Georgia,serif;font-weight:600;letter-spacing:-.015em;
+  font-size:clamp(31px,4.1vw,46px);line-height:1.1;margin:0}
+.tema-apoio{font-size:17px;line-height:1.6;color:var(--apoio);margin:var(--e2) 0 0;max-width:46ch}
+
+/* --- lista --- */
+.tema-rot-lista{font-size:12.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--apoio);margin:var(--e5) 0 var(--e3)}
+.palestras{display:grid;grid-template-columns:1fr 1fr;gap:var(--e3)}
+.palestra{
+  display:grid;grid-template-columns:34px 1fr;column-gap:var(--e2);row-gap:12px;
+  align-content:start;background:var(--branco);border:1px solid var(--linha);
+  border-radius:14px;padding:var(--e4) var(--e4) var(--e4) var(--e3);
+  transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;
+}
+.pal-n{grid-column:1;grid-row:1;width:34px;height:34px;border-radius:50%;
+  background:var(--bolha);color:var(--azul);font-size:13.5px;font-weight:600;
+  display:flex;align-items:center;justify-content:center;margin-top:3px}
+.palestra h4{grid-column:2;grid-row:1;font-family:'Lora',Georgia,serif;font-weight:600;
+  font-size:clamp(21px,1.9vw,25px);line-height:1.25;letter-spacing:-.01em;margin:0;color:var(--texto)}
+.palestra p{grid-column:2;grid-row:2;font-size:17.5px;line-height:1.6;color:var(--cinza);margin:0}
+@media (hover:hover){
+  .palestra:hover{transform:translateY(-3px);border-color:var(--linha-forte);
+    box-shadow:0 12px 30px rgba(20,45,90,.07)}
+}
+@media (prefers-reduced-motion:reduce){
+  .palestra{transition:none}
+  .palestra:hover{transform:none}
+}
+
+@media (max-width:1000px){
+  .tema-cab{grid-template-columns:360px 1fr;gap:var(--e4)}
+  .palestras{grid-template-columns:1fr}
+}
+@media (max-width:720px){
+  #temas{--e5:32px;--e6:48px}
+  .tema-cab{grid-template-columns:1fr;gap:var(--e3);align-items:start}
+  .tema-apoio{font-size:16px}
+  .palestra{padding:var(--e3);column-gap:14px}
+  .palestra p{font-size:17px}
+}
 .pacote{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:34px 0}
 .pacote > div{border:1px solid var(--borda);border-radius:var(--raio-card);padding:28px 24px}
 .pacote h3{font-family:'Lora',Georgia,serif;font-size:19px;font-weight:600;margin:10px 0 10px}
@@ -54,15 +112,21 @@ h3{font-family:'Lora',Georgia,serif;font-size:21px;font-weight:600;margin:44px 0
 .duas > div{border:1px solid var(--borda);border-radius:var(--raio-card);padding:28px 26px}
 .duas h3{margin:0 0 10px;font-size:19px;color:var(--azul-escuro)}
 .duas p{margin:0;font-size:16px;line-height:1.65}
-.autoridade-dupla{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:36px 0 0}
-.autoridade-dupla img{width:100%;height:auto;display:block;border-radius:var(--raio-card);border:1px solid var(--borda)}
+.clientes{margin:34px 0 0}
+.clientes img{width:100%;height:auto;display:block;max-width:1000px;margin:0 auto;
+  background:var(--branco);border:1px solid var(--borda);border-radius:var(--raio-card)}
+.selo-paz{text-align:center}
+.selo-paz-txt{margin:0 auto;max-width:620px}
+.selo-paz-fig{margin:22px auto 0;max-width:700px}
+.selo-paz-fig img{width:100%;height:auto;display:block;border-radius:var(--raio-card);border:1px solid var(--borda)}
+.selo-paz-fig figcaption{margin:12px 0 0;font-size:14px;color:var(--apoio)}
 .contato-blocos{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:32px 0 0}
 .contato-blocos > div{border:1px solid var(--borda);border-radius:var(--raio-card);padding:26px 24px}
 .contato-blocos .rot{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--apoio);margin:0 0 8px}
 .contato-blocos .nome{font-family:'Lora',Georgia,serif;font-size:18px;font-weight:600;margin:0 0 6px}
 .contato-blocos p{font-size:16px;margin:0}
 @media (max-width:820px){
-  .experiencias,.pacote,.duas,.autoridade-dupla,.contato-blocos{grid-template-columns:1fr;gap:16px}
+  .experiencias,.pacote,.duas,.contato-blocos{grid-template-columns:1fr;gap:16px}
 }
 </style><!-- Meta Pixel -->
 <script>
@@ -131,6 +195,7 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
         </li>
         <li><a href="../palestras/">Palestras</a></li>
         <li><a href="../futuro/">Trazemos o Futuro</a></li>
+        <li><a href="../inteiras/" target="_blank" rel="noopener">Inteiras</a></li>
       </ul>
     </nav>
   </div>
@@ -166,6 +231,7 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
       <p><strong>Gestão pública:</strong> integridade, governança e dados.</p>
       <p><strong>Justiça:</strong> direitos humanos e sistemas complexos.</p>
       <p><strong>Sistema prisional:</strong> personalidade e ressocialização.</p>
+      <p><strong>Longevidade:</strong> envelhecer com saúde mental e propósito.</p>
     </div>
 
     <p class="destaque">A linguagem muda conforme o público. O rigor da ideia permanece.</p>
@@ -175,41 +241,198 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
 <section id="temas">
   <div class="wrap">
     <h2>Temas</h2>
+    <p class="temas-intro">Os títulos abaixo são pontos de partida, não um cardápio fechado. <strong>Cada palestra nasce do contexto do evento</strong> e pode incorporar outros recortes em diálogo com a curadoria.</p>
 
-    <p>Os títulos abaixo são pontos de partida, não um cardápio fechado. <strong>Cada palestra nasce do contexto do evento</strong> e pode incorporar outros recortes em diálogo com a curadoria.</p>
+    <article class="tema">
+      <div class="tema-cab">
+        <img class="tema-foto" src="../img/palestras/tema-organizacoes.jpg" alt="Eduardo Casarotto em palestra para plateia de profissionais, vista da última fileira." width="900" height="675" loading="lazy">
+        <div>
+          <p class="tema-rotulo">Linha temática</p>
+          <h3>Organizações, liderança e cultura</h3>
+          <p class="tema-apoio">Escolha uma abordagem para o seu evento.</p>
+        </div>
+      </div>
 
-    <h3>Organizações, liderança e cultura</h3>
-    <div class="capitulos">
-      <div><span class="cap-n">01</span><h4>Humanização não é gentileza</h4><p>O que diferencia boa intenção, ação humanizada e transformação sistêmica.</p></div>
-      <div><span class="cap-n">02</span><h4>O que está adoecendo sua empresa e ninguém está medindo?</h4><p>Saúde mental no trabalho como questão de estrutura, não apenas de indivíduo.</p></div>
-      <div><span class="cap-n">03</span><h4>Sua liderança produz confiança ou apenas obediência?</h4><p>Autoridade, vínculo, limites e desenvolvimento sem paternalismo.</p></div>
-      <div><span class="cap-n">04</span><h4>Cultura organizacional: o que o ambiente ensina todos os dias?</h4><p>Como regras, símbolos e exemplos cotidianos moldam decisões e relações.</p></div>
-      <div><span class="cap-n">05</span><h4>Ética sob pressão: quem somos quando as escolhas importam?</h4><p>Integridade, personalidade e tomada de decisão em situações reais.</p></div>
-    </div>
+      <p class="tema-rot-lista">Palestras disponíveis</p>
+      <div class="palestras">
+        <div class="palestra">
+          <span class="pal-n">01</span>
+          <h4>Humanização não é gentileza</h4>
+          <p>O que diferencia boa intenção, ação humanizada e transformação sistêmica.</p>
+        </div>
+        <div class="palestra">
+          <span class="pal-n">02</span>
+          <h4>O que está adoecendo sua empresa e ninguém está medindo?</h4>
+          <p>Saúde mental no trabalho como questão de estrutura, não apenas de indivíduo.</p>
+        </div>
+        <div class="palestra">
+          <span class="pal-n">03</span>
+          <h4>Sua liderança produz confiança ou apenas obediência?</h4>
+          <p>Autoridade, vínculo, limites e desenvolvimento sem paternalismo.</p>
+        </div>
+        <div class="palestra">
+          <span class="pal-n">04</span>
+          <h4>Cultura organizacional: o que o ambiente ensina todos os dias?</h4>
+          <p>Como regras, símbolos e exemplos cotidianos moldam decisões e relações.</p>
+        </div>
+        <div class="palestra">
+          <span class="pal-n">05</span>
+          <h4>Ética sob pressão: quem somos quando as escolhas importam?</h4>
+          <p>Integridade, personalidade e tomada de decisão em situações reais.</p>
+        </div>
+      </div>
+    </article>
 
-    <h3>Saúde e cuidado</h3>
-    <div class="capitulos">
-      <div><span class="cap-n">01</span><h4>Humanização na saúde: cuidar de quem cuida</h4><p>Reconhecer que quem sustenta o cuidado também precisa de cuidado.</p></div>
-      <div><span class="cap-n">02</span><h4>O paciente não é o diagnóstico</h4><p>Escuta, vínculo e dignidade dentro da rotina assistencial.</p></div>
-      <div><span class="cap-n">03</span><h4>Virtudes contra o câncer</h4><p>Forças humanas diante do diagnóstico e do tratamento.</p></div>
-      <div><span class="cap-n">04</span><h4>Saúde mental de quem cuida</h4><p>Quando dedicação, pressão e exaustão se confundem.</p></div>
-    </div>
+    <article class="tema">
+      <div class="tema-cab">
+        <img class="tema-foto" src="../img/palestras/tema-saude.jpg" alt="Eduardo Casarotto em auditório, diante do slide Os Cinco Filtros da Humanização." width="900" height="675" loading="lazy">
+        <div>
+          <p class="tema-rotulo">Linha temática</p>
+          <h3>Saúde e cuidado</h3>
+          <p class="tema-apoio">Escolha uma abordagem para o seu evento.</p>
+        </div>
+      </div>
 
-    <h3>Educação</h3>
-    <div class="capitulos">
-      <div><span class="cap-n">01</span><h4>Quem estamos formando enquanto ensinamos?</h4><p>A escola ensina conteúdos e também forma a pessoa que o aluno está se tornando.</p></div>
-      <div><span class="cap-n">02</span><h4>Saúde mental na escola: cuidar de quem cuida e de quem aprende</h4><p>Convivência, vínculo e ambiente como fatores de risco ou de proteção.</p></div>
-      <div><span class="cap-n">03</span><h4>Virtudes e neuroplasticidade na formação da personalidade</h4><p>Como o cérebro aprende e muda: atenção, repetição e experiência.</p></div>
-      <div><span class="cap-n">04</span><h4>Competências socioemocionais que saem do discurso</h4><p>Do conceito à prática recorrente, com continuidade entre escola e família.</p></div>
-    </div>
+      <p class="tema-rot-lista">Palestras disponíveis</p>
+      <div class="palestras">
+        <div class="palestra">
+          <span class="pal-n">01</span>
+          <h4>Humanização na saúde: cuidar de quem cuida</h4>
+          <p>Reconhecer que quem sustenta o cuidado também precisa de cuidado.</p>
+        </div>
+        <div class="palestra">
+          <span class="pal-n">02</span>
+          <h4>O paciente não é o diagnóstico</h4>
+          <p>Escuta, vínculo e dignidade dentro da rotina assistencial.</p>
+        </div>
+        <div class="palestra">
+          <span class="pal-n">03</span>
+          <h4>Virtudes contra o câncer</h4>
+          <p>Forças humanas diante do diagnóstico e do tratamento.</p>
+        </div>
+        <div class="palestra">
+          <span class="pal-n">04</span>
+          <h4>Saúde mental de quem cuida</h4>
+          <p>Quando dedicação, pressão e exaustão se confundem.</p>
+        </div>
+      </div>
+    </article>
 
-    <h3>Justiça, segurança pública e sistema prisional</h3>
-    <div class="capitulos">
-      <div><span class="cap-n">01</span><h4>Não existe ressocialização feita por um servidor que está se desintegrando</h4><p>Cuidar de quem cumpre pena e de quem sustenta a operação como condição de segurança.</p></div>
-      <div><span class="cap-n">02</span><h4>Papo reto sobre o cárcere</h4><p>O que o sistema mede, o que ignora e o que precisa mudar.</p></div>
-      <div><span class="cap-n">03</span><h4>Do discurso ao indicador: humanização que produz ação</h4><p>Linha de base, acompanhamento e leitura qualitativa para orientar decisão.</p></div>
-      <div><span class="cap-n">04</span><h4>O Novo Eu: comportamento, neuroplasticidade e reconstrução de trajetórias</h4><p>Virtudes, projeto de vida e acompanhamento de percursos.</p></div>
-    </div>
+    <article class="tema">
+      <div class="tema-cab">
+        <img class="tema-foto" src="../img/palestras/tema-educacao.jpg" alt="Eduardo Casarotto no palco, ao lado do slide sobre brownout." width="900" height="675" loading="lazy">
+        <div>
+          <p class="tema-rotulo">Linha temática</p>
+          <h3>Educação</h3>
+          <p class="tema-apoio">Escolha uma abordagem para o seu evento.</p>
+        </div>
+      </div>
+
+      <p class="tema-rot-lista">Palestras disponíveis</p>
+      <div class="palestras">
+        <div class="palestra">
+          <span class="pal-n">01</span>
+          <h4>Quem estamos formando enquanto ensinamos?</h4>
+          <p>A escola ensina conteúdos e também forma a pessoa que o aluno está se tornando.</p>
+        </div>
+        <div class="palestra">
+          <span class="pal-n">02</span>
+          <h4>Saúde mental na escola: cuidar de quem cuida e de quem aprende</h4>
+          <p>Convivência, vínculo e ambiente como fatores de risco ou de proteção.</p>
+        </div>
+        <div class="palestra">
+          <span class="pal-n">03</span>
+          <h4>Virtudes e neuroplasticidade na formação da personalidade</h4>
+          <p>Como o cérebro aprende e muda: atenção, repetição e experiência.</p>
+        </div>
+        <div class="palestra">
+          <span class="pal-n">04</span>
+          <h4>Competências socioemocionais que saem do discurso</h4>
+          <p>Do conceito à prática recorrente, com continuidade entre escola e família.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="tema">
+      <div class="tema-cab">
+        <img class="tema-foto" src="../img/palestras/tema-longevidade.jpg" alt="Eduardo Casarotto como palestrante no Longevidade Expo + Fórum." width="900" height="675" loading="lazy">
+        <div>
+          <p class="tema-rotulo">Linha temática</p>
+          <h3>Longevidade</h3>
+          <p class="tema-apoio">Escolha uma abordagem para o seu evento.</p>
+        </div>
+      </div>
+
+      <p class="tema-rot-lista">Palestras disponíveis</p>
+      <div class="palestras">
+        <div class="palestra">
+          <span class="pal-n">01</span>
+          <h4>Servir para viver</h4>
+          <p>Por que o corpo adoece quando a pessoa se isola, e o que a caridade em ato faz no cérebro. A tese central: quem se coloca a serviço do outro vive mais, e vive melhor.</p>
+        </div>
+        <div class="palestra">
+          <span class="pal-n">02</span>
+          <h4>A solidão é uma questão neurológica</h4>
+          <p>O cérebro registra a solidão como ameaça à sobrevivência, e o corpo somatiza isso. Como o afastamento da tecnologia e das gerações mais novas produz um isolamento que ninguém escolheu.</p>
+        </div>
+        <div class="palestra">
+          <span class="pal-n">03</span>
+          <h4>Não é só o corpo: neuroplasticidade depois dos 60</h4>
+          <p>Caminhada, alimentação e exercício cuidam do corpo. O que cuida do cérebro é outra coisa, e ela se treina em qualquer idade.</p>
+        </div>
+        <div class="palestra">
+          <span class="pal-n">04</span>
+          <h4>A queixa é o choro do adulto</h4>
+          <p>Reclamar é o pedido de acolhimento que o cérebro primitivo sabe fazer. O que muda quando a pessoa assume a responsabilidade por si mesma em vez de esperar ser cuidada.</p>
+        </div>
+        <div class="palestra">
+          <span class="pal-n">05</span>
+          <h4>Perdoar é uma técnica, não um gesto</h4>
+          <p>Perdão como ausência de mágoa sobre uma memória específica, e o passo a passo de como se faz. Por que rancor guardado tem custo no corpo.</p>
+        </div>
+        <div class="palestra">
+          <span class="pal-n">06</span>
+          <h4>Depender do outro não é fraqueza</h4>
+          <p>O orgulho como necessidade de ter importância, e por que ele torna a dependência insuportável justamente na fase em que ela chega.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="tema">
+      <div class="tema-cab">
+        <img class="tema-foto" src="../img/palestras/tema-justica.jpg" alt="Eduardo Casarotto em conversa no Ministério Público do Estado de Mato Grosso." width="900" height="675" loading="lazy">
+        <div>
+          <p class="tema-rotulo">Linha temática</p>
+          <h3>Justiça, segurança pública e sistema prisional</h3>
+          <p class="tema-apoio">Escolha uma abordagem para o seu evento.</p>
+        </div>
+      </div>
+
+      <p class="tema-rot-lista">Palestras disponíveis</p>
+      <div class="palestras">
+        <div class="palestra">
+          <span class="pal-n">01</span>
+          <h4>Não existe ressocialização feita por um servidor que está se desintegrando</h4>
+          <p>Cuidar de quem cumpre pena e de quem sustenta a operação como condição de segurança.</p>
+        </div>
+        <div class="palestra">
+          <span class="pal-n">02</span>
+          <h4>Papo reto sobre o cárcere</h4>
+          <p>O que o sistema mede, o que ignora e o que precisa mudar.</p>
+        </div>
+        <div class="palestra">
+          <span class="pal-n">03</span>
+          <h4>Do discurso ao indicador: humanização que produz ação</h4>
+          <p>Linha de base, acompanhamento e leitura qualitativa para orientar decisão.</p>
+        </div>
+        <div class="palestra">
+          <span class="pal-n">04</span>
+          <h4>O Novo Eu: comportamento, neuroplasticidade e reconstrução de trajetórias</h4>
+          <p>Virtudes, projeto de vida e acompanhamento de percursos.</p>
+        </div>
+      </div>
+    </article>
+
   </div>
 </section>
 
@@ -262,28 +485,20 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
 
 <section id="trajetoria">
   <div class="wrap">
-    <h2>Onde já esteve</h2>
+    <h2>Algumas das organizações onde Eduardo Casarotto já deu palestras, consultorias e treinamentos</h2>
 
-    <div class="experiencias">
-      <p>Senado Federal, no Dia Internacional dos Direitos Humanos</p>
-      <p>Ministério Público do Estado de Mato Grosso</p>
-      <p>Escola Paulista da Magistratura, Tribunal de Justiça de São Paulo</p>
-      <p>Congresso Brasileiro Psicologia: Ciência e Profissão</p>
-      <p>Hospital de Custódia e Tratamento Psiquiátrico de Franco da Rocha</p>
-      <p>Penitenciária Estadual de Londrina II, Polícia Penal do Paraná</p>
-      <p>Formação de professores da rede municipal de São João Del Rei</p>
-      <p>Instituto Ação Pela Paz, Programa Semear</p>
-      <p>Universidades, congressos, TV Senado, TV Escola e Jovem Pan News</p>
-    </div>
-
-    <div class="caixa">
-      <p style="margin:0">O Instituto Virtudes é reconhecido como <strong>Organização Embaixadora da Cultura de Paz</strong> (2026-2027).</p>
-    </div>
-
-    <figure class="autoridade-dupla">
-      <img src="../img/autoridade-padilha.jpg" alt="Eduardo Casarotto e o Ministro da Saúde, Alexandre Padilha." width="1200" height="675" loading="lazy">
-      <img src="../img/autoridade-victor-cesar.jpg" alt="Eduardo Casarotto e Victor Cesar, Secretário de Segurança do Rio de Janeiro." width="1200" height="675" loading="lazy">
+    <figure class="clientes">
+      <img src="../img/clientes-eduardo-casarotto.png" alt="Logos de organizações que já contrataram palestras, consultorias e treinamentos com Eduardo Casarotto." loading="lazy">
     </figure>
+
+    <div class="caixa selo-paz">
+      <p class="selo-paz-txt">O Instituto Virtudes é reconhecido como <strong>Organização Embaixadora da Cultura de Paz</strong> (2026-2027).</p>
+
+      <figure class="selo-paz-fig">
+        <img src="../img/reconhecimento-cultura-de-paz.jpg" alt="Certificado de Reconhecimento de Organização Embaixadora da Cultura de Paz 2026-2027 concedido ao Instituto Virtudes." width="1500" height="1060" loading="lazy">
+        <figcaption>Reconhecimento concedido pelo programa Londrina Pazeando.</figcaption>
+      </figure>
+    </div>
   </div>
 </section>
 
