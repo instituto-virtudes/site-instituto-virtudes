@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apostilas e materiais | Formação em Virtologia</title>
+<meta name="description" content="Materiais de apoio da Formação em Virtologia: apostilas, guias e capítulos em PDF.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="../img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/estilo.css">
+<style>
+.apostilas-topo{padding:56px 0 8px}
+.apostilas-topo h1{font-size:clamp(30px,4vw,42px);line-height:1.15;margin-bottom:16px}
+.apostilas-topo .lead{max-width:62ch}
+
+.mat-grupo{padding:40px 0 0;border-top:0}
+.mat-grupo h2{font-size:clamp(21px,2vw,25px);margin-bottom:18px}
+.materiais{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.materiais a{display:grid;grid-template-columns:34px 1fr;column-gap:14px;row-gap:3px;align-content:center;
+  border:1px solid var(--borda);border-radius:var(--raio-card);
+  padding:18px 20px;background:#fff;color:var(--texto);height:100%;
+  transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease}
+.materiais a::before{grid-column:1;grid-row:1/3;align-self:center}
+.materiais .mat-nome{grid-column:2;grid-row:1}
+.materiais .mat-meta{grid-column:2;grid-row:2}
+.materiais a::before{content:'';flex:0 0 34px;height:34px;border-radius:9px;background:var(--pastel-azul) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232C63C0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z'/%3E%3Cpolyline points='14 2 14 8 20 8'/%3E%3C/svg%3E") center/18px no-repeat}
+.materiais .mat-nome{font-family:'Lora',Georgia,serif;font-size:17.5px;font-weight:600;line-height:1.3}
+.materiais .mat-meta{font-size:13px;color:var(--apoio);letter-spacing:.02em}
+@media (hover:hover){.materiais a:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(20,45,90,.08);border-color:var(--azul)}}
+@media (max-width:760px){.materiais{grid-template-columns:1fr}}
+
+.livros-alunos{background:var(--pastel-azul);border-radius:var(--raio-card);padding:34px 30px;margin:28px 0 8px}
+.livros-alunos h2{margin-bottom:8px}
+.livros-alunos p{color:var(--azul-escuro);max-width:62ch}
+.livros-alunos p strong{color:var(--azul-escuro)}
+.livros-lista{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:12px}
+.livros-lista a{display:flex;justify-content:space-between;align-items:center;gap:16px;background:#fff;
+  border-radius:12px;padding:18px 22px;color:var(--texto);font-weight:500}
+.livros-lista a span.seta{color:var(--azul);font-weight:600;white-space:nowrap}
+@media (hover:hover){.livros-lista a:hover{color:var(--azul-escuro)}}
+@media (prefers-reduced-motion:reduce){.materiais a{transition:none}.materiais a:hover{transform:none}}
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <div class="topo-int">
+    <a href="../" class="marca"><img src="../img/logo-instituto-virtudes.png" alt="Instituto Virtudes - Humanização e Virtologia" width="439" height="120"></a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Menu">&#8801;</button>
+    <nav>
+      <ul class="menu" id="menu">
+        <li class="tem-sub">
+          <button class="menu-sub-btn" aria-expanded="false" aria-haspopup="true">Virtologia <span class="seta-sub" aria-hidden="true">&#9662;</span></button>
+          <ul class="submenu">
+            <li><a href="../virtologia/">O que é a Virtologia</a></li>
+            <li><a href="../formacao/">Formação em Virtologia</a></li>
+            <li><a href="../terapeutas/">Terapia gratuita</a></li>
+            <li><a href="../teorias/">Diante de outras grandes teorias</a></li>
+            <li><a href="../aula1/">Aula aberta</a></li>
+          </ul>
+        </li>
+        <li class="tem-sub">
+          <button class="menu-sub-btn" aria-expanded="false" aria-haspopup="true">Humanização 2.0 <span class="seta-sub" aria-hidden="true">&#9662;</span></button>
+          <ul class="submenu">
+            <li><a href="../sistemas/">O que é a Humanização 2.0</a></li>
+            <li><a href="../pos-sistemas/">Pós-graduação em Sistemas Humanizados</a></li>
+            <li><a href="../ondas/">As Três Ondas do Trabalho</a></li>
+            <li><a href="../aula2/">Aula aberta sobre a NR-1</a></li>
+          </ul>
+        </li>
+        <li class="tem-sub">
+          <button class="menu-sub-btn" aria-expanded="false" aria-haspopup="true">Formações <span class="seta-sub" aria-hidden="true">&#9662;</span></button>
+          <ul class="submenu">
+            <li><a href="../formacao/">Formação em Virtologia</a></li>
+            <li><a href="../pos-sistemas/">Pós-graduação em Sistemas Humanizados</a></li>
+            <li><a href="../formacoes/">Todas as formações</a></li>
+          </ul>
+        </li>
+        <li class="tem-sub">
+          <button class="menu-sub-btn" aria-expanded="false" aria-haspopup="true">Livros <span class="seta-sub" aria-hidden="true">&#9662;</span></button>
+          <ul class="submenu">
+            <li><a href="../fundamentos/">Fundamentos da Virtologia</a></li>
+            <li><a href="../manual/">Manual de Desenvolvimento Humano em Virtudes</a></li>
+            <li><a href="../sistemas-humanizados/">Sistemas Humanizados · Humanização 2.0</a></li>
+            <li><a href="../guia/">Guia das Virtudes</a></li>
+            <li><a href="../teimosia/">Teimosia de Viver</a></li>
+            <li><a href="../envelheci/">Envelheci, e Daí?</a></li>
+            <li><a href="../livros/">Todos os livros</a></li>
+          </ul>
+        </li>
+        <li><a href="../palestras/">Palestras</a></li>
+        <li><a href="../futuro/">Trazemos o Futuro</a></li>
+        <li><a href="../inteiras/" target="_blank" rel="noopener">Inteiras</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="apostilas-topo">
+  <div class="wrap">
+    <p class="kicker">Formação em Virtologia</p>
+    <h1>Apostilas e materiais</h1>
+    <p class="lead">Material de apoio da Formação. Todos os arquivos abrem em PDF, para leitura na tela ou download.</p>
+  </div>
+</section>
+
+<div class="wrap">
+  <section class="livros-alunos">
+    <h2>Versões físicas dos livros</h2>
+    <p>Os links abaixo já vêm com o <strong>desconto para alunos</strong> aplicado.</p>
+    <ul class="livros-lista">
+      <li><a href="https://payfast.greenn.com.br/redirect/300371" target="_blank" rel="noopener">Fundamentos da Virtologia <span class="seta">Adquirir &rarr;</span></a></li>
+      <li><a href="https://payfast.greenn.com.br/125361/offer/sIAMVx?cupom=TRAZEMOSOFUTURO" target="_blank" rel="noopener">Manual de Desenvolvimento Humano em Virtudes <span class="seta">Adquirir &rarr;</span></a></li>
+      <li><a href="https://payfast.greenn.com.br/redirect/300375" target="_blank" rel="noopener">Os dois livros juntos, com desconto maior e economia no frete <span class="seta">Adquirir &rarr;</span></a></li>
+    </ul>
+  </section>
+
+    <section class="mat-grupo">
+      <h2>Fundamentos e personalidade</h2>
+      <ul class="materiais">
+        <li><a href="arquivos/posicionamento-da-virtologia.pdf" target="_blank" rel="noopener"><span class="mat-nome">Posicionamento da Virtologia</span><span class="mat-meta">PDF · 82 KB</span></a></li>
+        <li><a href="arquivos/personalidade-na-virtologia.pdf" target="_blank" rel="noopener"><span class="mat-nome">Personalidade na Virtologia</span><span class="mat-meta">PDF · 252 KB</span></a></li>
+        <li><a href="arquivos/personalidade-em-perspectiva.pdf" target="_blank" rel="noopener"><span class="mat-nome">Personalidade em Perspectiva</span><span class="mat-meta">PDF · 575 KB</span></a></li>
+        <li><a href="arquivos/fases-do-desenvolvimento-da-personalidade.pdf" target="_blank" rel="noopener"><span class="mat-nome">Fases do Desenvolvimento da Personalidade</span><span class="mat-meta">PDF · 999 KB</span></a></li>
+        <li><a href="arquivos/transtornos-de-personalidade-dsm-5.pdf" target="_blank" rel="noopener"><span class="mat-nome">Transtornos de Personalidade (DSM-5)</span><span class="mat-meta">PDF · 236 KB</span></a></li>
+        <li><a href="arquivos/individuo-funcional-e-disfuncional.pdf" target="_blank" rel="noopener"><span class="mat-nome">Indivíduo Funcional e Disfuncional</span><span class="mat-meta">PDF · 143 KB</span></a></li>
+        <li><a href="arquivos/funcoes-do-ego.pdf" target="_blank" rel="noopener"><span class="mat-nome">Funções do Ego</span><span class="mat-meta">PDF · 46 KB</span></a></li>
+      </ul>
+    </section>
+
+    <section class="mat-grupo">
+      <h2>Necessidades humanas</h2>
+      <ul class="materiais">
+        <li><a href="arquivos/necessidades-humanas.pdf" target="_blank" rel="noopener"><span class="mat-nome">Necessidades Humanas</span><span class="mat-meta">PDF · 1.3 MB</span></a></li>
+        <li><a href="arquivos/grupos-de-necessidades.pdf" target="_blank" rel="noopener"><span class="mat-nome">Grupos de Necessidades</span><span class="mat-meta">PDF · 2.0 MB</span></a></li>
+        <li><a href="arquivos/as-nove-grandes-areas-da-vida.pdf" target="_blank" rel="noopener"><span class="mat-nome">As Nove Grandes Áreas da Vida</span><span class="mat-meta">PDF · 518 KB</span></a></li>
+      </ul>
+    </section>
+
+    <section class="mat-grupo">
+      <h2>Virtudes</h2>
+      <ul class="materiais">
+        <li><a href="arquivos/virtudes-como-estruturas-neurais.pdf" target="_blank" rel="noopener"><span class="mat-nome">Virtudes como Estruturas Neurais</span><span class="mat-meta">PDF · 143 KB</span></a></li>
+        <li><a href="arquivos/afirmacoes-mentais-e-as-33-virtudes.pdf" target="_blank" rel="noopener"><span class="mat-nome">Afirmações Mentais e as 33 Virtudes</span><span class="mat-meta">PDF · 181 KB</span></a></li>
+        <li><a href="arquivos/virtudes-x-faixas-de-evolucao-x-comportamento.pdf" target="_blank" rel="noopener"><span class="mat-nome">Virtudes x Faixas de Evolução x comportamento</span><span class="mat-meta">PDF · 143 KB</span></a></li>
+        <li><a href="arquivos/humildade-como-estrutura-neural.pdf" target="_blank" rel="noopener"><span class="mat-nome">Humildade (como estrutura neural)</span><span class="mat-meta">PDF · 284 KB</span></a></li>
+        <li><a href="arquivos/arquitetura-neural-da-humildade.pdf" target="_blank" rel="noopener"><span class="mat-nome">Arquitetura Neural da Humildade</span><span class="mat-meta">PDF · 15.0 MB</span></a></li>
+        <li><a href="arquivos/perdao-como-estrutura-neural.pdf" target="_blank" rel="noopener"><span class="mat-nome">Perdão (como estrutura neural)</span><span class="mat-meta">PDF · 278 KB</span></a></li>
+        <li><a href="arquivos/brandura-como-estrutura-neural.pdf" target="_blank" rel="noopener"><span class="mat-nome">Brandura (como estrutura neural)</span><span class="mat-meta">PDF · 261 KB</span></a></li>
+        <li><a href="arquivos/arquitetura-do-orgulho-e-do-egoismo.pdf" target="_blank" rel="noopener"><span class="mat-nome">Arquitetura do Orgulho e do Egoísmo</span><span class="mat-meta">PDF · 1.6 MB</span></a></li>
+      </ul>
+    </section>
+
+    <section class="mat-grupo">
+      <h2>Cérebro e neuroplasticidade</h2>
+      <ul class="materiais">
+        <li><a href="arquivos/sara-na-virtologia.pdf" target="_blank" rel="noopener"><span class="mat-nome">SARA na Virtologia</span><span class="mat-meta">PDF · 97 KB</span></a></li>
+        <li><a href="arquivos/sara-e-exercicios-de-neuroplasticidade.pdf" target="_blank" rel="noopener"><span class="mat-nome">Sara e Exercícios de Neuroplasticidade</span><span class="mat-meta">PDF · 56 KB</span></a></li>
+        <li><a href="arquivos/sno-e-sne-os-dois-motores-da-primitividade.pdf" target="_blank" rel="noopener"><span class="mat-nome">SNO e SNE - Os Dois Motores da Primitividade</span><span class="mat-meta">PDF · 1.2 MB</span></a></li>
+        <li><a href="arquivos/apagao-sno-e-sne-na-virtologia.pdf" target="_blank" rel="noopener"><span class="mat-nome">Apagão, SNO e SNE na Virtologia</span><span class="mat-meta">PDF · 277 KB</span></a></li>
+        <li><a href="arquivos/glias-na-virtologia.pdf" target="_blank" rel="noopener"><span class="mat-nome">Glias na Virtologia</span><span class="mat-meta">PDF · 196 KB</span></a></li>
+        <li><a href="arquivos/ideias-que-moldam-o-cerebro.pdf" target="_blank" rel="noopener"><span class="mat-nome">Ideias que moldam o cérebro</span><span class="mat-meta">PDF · 245 KB</span></a></li>
+        <li><a href="arquivos/arquitetura-das-afirmacoes-mentais.pdf" target="_blank" rel="noopener"><span class="mat-nome">Arquitetura das Afirmações Mentais</span><span class="mat-meta">PDF · 196 KB</span></a></li>
+        <li><a href="arquivos/afirmacoes-mentais-guia-para-alunos.pdf" target="_blank" rel="noopener"><span class="mat-nome">Afirmações Mentais (guia para alunos)</span><span class="mat-meta">PDF · 35 KB</span></a></li>
+        <li><a href="arquivos/tedio-e-introspeccao-na-virtologia.pdf" target="_blank" rel="noopener"><span class="mat-nome">Tédio e Introspecção na Virtologia</span><span class="mat-meta">PDF · 249 KB</span></a></li>
+      </ul>
+    </section>
+
+    <section class="mat-grupo">
+      <h2>Leis e princípios</h2>
+      <ul class="materiais">
+        <li><a href="arquivos/22-leis-da-vida.pdf" target="_blank" rel="noopener"><span class="mat-nome">22 Leis da Vida</span><span class="mat-meta">PDF · 547 KB</span></a></li>
+        <li><a href="arquivos/leis-do-universo-lei-do-fluxo-e-ressonancia-schumann.pdf" target="_blank" rel="noopener"><span class="mat-nome">Leis do Universo, Lei do Fluxo e Ressonância Schumann</span><span class="mat-meta">PDF · 11 KB</span></a></li>
+      </ul>
+    </section>
+
+    <section class="mat-grupo">
+      <h2>Sociedade, trabalho e as ondas</h2>
+      <ul class="materiais">
+        <li><a href="arquivos/quem-e-essa-tal-sociedade.pdf" target="_blank" rel="noopener"><span class="mat-nome">Quem é essa tal Sociedade?</span><span class="mat-meta">PDF · 65 KB</span></a></li>
+        <li><a href="arquivos/por-que-nao-nos-dobramos-ao-manual.pdf" target="_blank" rel="noopener"><span class="mat-nome">Por que não nos dobramos ao manual?</span><span class="mat-meta">PDF · 283 KB</span></a></li>
+        <li><a href="arquivos/liturgia-da-segunda-onda.pdf" target="_blank" rel="noopener"><span class="mat-nome">Liturgia da Segunda Onda</span><span class="mat-meta">PDF · 153 KB</span></a></li>
+        <li><a href="arquivos/terceira-onda-do-trabalho.pdf" target="_blank" rel="noopener"><span class="mat-nome">Terceira Onda do Trabalho</span><span class="mat-meta">PDF · 1.5 MB</span></a></li>
+      </ul>
+    </section>
+
+    <section class="mat-grupo">
+      <h2>Apostilas e palestras</h2>
+      <ul class="materiais">
+        <li><a href="arquivos/virtologia-clinica-apostila.pdf" target="_blank" rel="noopener"><span class="mat-nome">Virtologia Clínica (apostila)</span><span class="mat-meta">PDF · 658 KB</span></a></li>
+        <li><a href="arquivos/humanizacao-2-0-nr-1-e-saude-mental-corporativa-apostila.pdf" target="_blank" rel="noopener"><span class="mat-nome">Humanização 2.0, NR-1 e Saúde Mental Corporativa (apostila)</span><span class="mat-meta">PDF · 1.2 MB</span></a></li>
+        <li><a href="arquivos/virtologia-pnei-e-cancer-apostila-da-palestra.pdf" target="_blank" rel="noopener"><span class="mat-nome">Virtologia, PNEI e Câncer (apostila da palestra)</span><span class="mat-meta">PDF · 628 KB</span></a></li>
+        <li><a href="arquivos/virtologia-pnei-e-cancer-slides-da-palestra.pdf" target="_blank" rel="noopener"><span class="mat-nome">Virtologia, PNEI e Câncer (slides da palestra)</span><span class="mat-meta">PDF · 638 KB</span></a></li>
+      </ul>
+    </section>
+
+
+</div>
+
+</main>
+
+<footer class="rodape">
+  <div class="wrap-largo">
+    <div class="rodape-cols">
+      <div>
+        <h4><a href="../virtologia/">Virtologia</a></h4>
+        <ul>
+          <li><a href="../terapeutas/">Terapia gratuita</a></li>
+          <li><a href="../teorias/">Diante de outras grandes teorias</a></li>
+          <li><a href="../aula1/">Aula aberta</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4><a href="../sistemas/">Humanização 2.0</a></h4>
+        <ul>
+          <li><a href="../ondas/">As Três Ondas do Trabalho</a></li>
+          <li><a href="../aula2/">Aula aberta sobre a NR-1</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4><a href="../formacoes/">Formações</a></h4>
+        <ul>
+          <li><a href="../formacao/">Formação em Virtologia</a></li>
+          <li><a href="../pos-sistemas/">Pós-graduação em Sistemas Humanizados</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4><a href="../livros/">Livros</a></h4>
+        <ul>
+          <li><a href="../fundamentos/">Fundamentos da Virtologia</a></li>
+          <li><a href="../manual/">Manual de Desenvolvimento Humano em Virtudes</a></li>
+          <li><a href="../sistemas-humanizados/">Sistemas Humanizados</a></li>
+          <li><a href="../guia/">Guia das Virtudes</a></li>
+          <li><a href="../teimosia/">Teimosia de Viver</a></li>
+          <li><a href="../envelheci/">Envelheci, e Daí?</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4><a href="../futuro/">Trazemos o Futuro</a></h4>
+        <div class="redes">
+          <a href="https://www.instagram.com/eduardocasarottooficial/" target="_blank" rel="noopener" aria-label="Instagram"><img src="../img/icone-instagram.svg" alt=""></a>
+          <a href="https://linktw.in/qrGGUW" target="_blank" rel="noopener" aria-label="YouTube"><img src="../img/icone-youtube.svg" alt=""></a>
+          <a href="https://www.tiktok.com/@eduardocasarottooficial" target="_blank" rel="noopener" aria-label="TikTok"><img src="../img/icone-tiktok.svg" alt=""></a>
+        </div>
+      </div>
+    </div>
+    <div class="ressalva">
+      <p>Nos quadros com determinação biológica, a Virtologia soma-se ao tratamento médico e não o substitui.</p>
+      <div class="contatos">
+        <a href="mailto:grupo@institutovirtudes.com.br"><img src="../img/icone-email.svg" alt="" width="18" height="18">grupo@institutovirtudes.com.br</a>
+        <a href="https://wa.me/5564996428026" target="_blank" rel="noopener"><img src="../img/icone-whatsapp.svg" alt="" width="18" height="18">+55 64 99642-8026</a>
+      </div>
+      <p class="legais"><a href="../contato/">Fale conosco</a> · <a href="../trocas/">Trocas, devolução e reembolso</a> · <a href="../frete/">Política de Frete</a> · <a href="../privacidade/">Política de Privacidade</a></p>
+      <p class="copyright">&copy; 2026 Instituto Virtudes. Todos os direitos reservados.<br>
+        DCM Instituto Virtudes de Treinamento LTDA · CNPJ 33.247.144/0001-04<br>
+        Instituto Virtudes · Editora Virtudes</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/site.js"></script>
+</body>
+</html>
