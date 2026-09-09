@@ -35,7 +35,7 @@
 
 /* específicos desta página */
 .mba-hero{padding:64px 0 52px}
-.pos-centro .btn,section > .wrap > .btn,.bolsas .btn,.cta-caixa .btn,.bolsas > .btn,div.bolsas a.btn{display:table;margin-left:auto;margin-right:auto;text-align:center}
+.pos-centro .btn,section > .wrap > .btn,
 .video-hero{max-width:760px;margin:30px 0 6px}
 .hero-lista{margin:16px 0 0;padding-left:24px;max-width:60ch}
 .hero-lista li{font-size:17.5px;line-height:1.6;margin:6px 0}
@@ -51,16 +51,7 @@
 .ficha .ficha-obs{font-family:inherit;font-size:13px;font-weight:400;color:var(--apoio);line-height:1.45;margin-top:6px}
 .ficha dd{font-family:'Lora',Georgia,serif;font-size:19px;font-weight:600;margin:0;line-height:1.3}
 
-.bolsas{background:var(--pastel-azul);border-radius:var(--raio-card);padding:34px 34px 30px;margin:34px 0 0}
-.bolsas-rot{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
-  color:#fff;background:var(--azul);border-radius:99px;padding:6px 14px;margin:0 0 16px}
-.bolsas h3{font-family:'Lora',Georgia,serif;font-size:24px;font-weight:600;margin:0 0 18px;color:var(--azul-escuro);line-height:1.3}
-.bolsas ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:2px 30px}
-.bolsas li{position:relative;padding:9px 0 9px 26px;font-size:16.5px;line-height:1.5;color:var(--texto)}
-.bolsas li::before{content:'\2713';position:absolute;left:0;top:9px;color:var(--azul);font-weight:700}
-.bolsas .obs{font-size:14.5px;color:var(--apoio);margin:18px 0 0}
-.bolsas .btn{margin:20px auto 0;display:table;text-align:center}
-@media (max-width:760px){.bolsas{padding:28px 24px}.bolsas ul{grid-template-columns:1fr}.bolsas h3{font-size:21px}}
+@media (max-width:760px){}
 .selo-mec{font-size:15px;color:var(--apoio);margin-bottom:8px}
 .selo-mec strong{color:var(--texto)}
 
@@ -204,6 +195,10 @@
 .lista-seca li{font-size:16px;line-height:1.55;padding:6px 0 6px 18px;position:relative;break-inside:avoid}
 .lista-seca li::before{content:'';position:absolute;left:0;top:.85em;width:6px;height:6px;border-radius:50%;background:var(--azul)}
 @media (max-width:640px){.lista-seca{columns:1}}
+.investimento{background:var(--pastel-azul);border-radius:var(--raio-card);padding:34px 30px;margin:36px 0;text-align:center}
+.investimento p{font-size:17px;line-height:1.6;color:var(--azul-escuro);margin:0 auto;max-width:60ch}
+.investimento .btn{margin:22px auto 0;display:table}
+@media (max-width:640px){.investimento{padding:26px 20px}}
 </style>
 <!-- Meta Pixel -->
 <script>
@@ -635,17 +630,9 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
   <div class="wrap">
     <h2>Condições de ingresso</h2>
     <p>Fale com a nossa equipe para conhecer valores, formas de pagamento e as condições disponíveis.</p>
-    <div class="bolsas">
-      <p class="bolsas-rot">Bolsas exclusivas para</p>
-      <h3>Servidores públicos e profissionais da saúde e da assistência social</h3>
-      <ul>
-        <li>Funcionários públicos</li>
-        <li>Agentes penitenciários e policiais penais</li>
-        <li>Enfermeiros</li>
-        <li>Assistentes sociais</li>
-      </ul>
-      <p class="obs">Comprove o vínculo ou a formação e converse com a nossa equipe sobre as condições.</p>
-      <a class="btn" href="https://wa.me/5511965419449?text=Ol%C3%A1%21%20Vim%20pela%20p%C3%A1gina%20voltada%20a%20profissionais%20de%20RH%20e%20quero%20saber%20mais%20sobre%20a%20P%C3%B3s-gradua%C3%A7%C3%A3o%20em%20Sistemas%20Humanizados." target="_blank" rel="noopener">Quero saber da bolsa</a>
+    <div class="investimento">
+      <p>As condições de investimento são apresentadas na conversa, conforme o seu perfil e vínculo profissional.</p>
+      <a class="btn" href="https://wa.me/5511965419449?text=Ol%C3%A1%21%20Vim%20pela%20p%C3%A1gina%20voltada%20a%20profissionais%20de%20RH%20e%20quero%20saber%20mais%20sobre%20a%20P%C3%B3s-gradua%C3%A7%C3%A3o%20em%20Sistemas%20Humanizados." target="_blank" rel="noopener">Quero falar com a equipe</a>
     </div>
   </div>
 </section>
@@ -776,10 +763,9 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll('a.btn[href*="wa.me"]').forEach(function (btn) {
     btn.addEventListener("click", function () {
       if (typeof fbq !== "function") return;
-      var bolsa = /bolsa/i.test(btn.href);
       fbq("track", "Contact", {
         content_category: "Pós-graduação Sistemas Humanizados",
-        content_name: bolsa ? "Clique_WhatsApp_Pos_RH_Bolsa" : "Clique_WhatsApp_Pos_RH_Info",
+        content_name: "Clique_WhatsApp_Pos_RH_Info",
         segment: "rh"
       });
     });
