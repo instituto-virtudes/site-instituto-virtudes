@@ -1,0 +1,100 @@
+/* ============================================================
+   FLUXO DE MATRÍCULA - estilos
+   Reaproveita os tokens do estilo.css (--azul, --borda, etc.)
+   ============================================================ */
+.mtr-fundo{position:fixed;inset:0;z-index:9999;background:rgba(9,16,28,.55);
+  display:flex;align-items:center;justify-content:center;padding:24px}
+.mtr-fundo[hidden]{display:none}
+
+.mtr-caixa{background:#fff;border-radius:18px;width:100%;max-width:680px;max-height:92vh;
+  display:flex;flex-direction:column;box-shadow:0 30px 80px rgba(10,25,60,.28);overflow:hidden}
+
+.mtr-topo{display:flex;align-items:center;gap:16px;padding:16px 20px 0}
+.mtr-barra{flex:1;height:3px;background:var(--pastel-azul,#DCE8FA);border-radius:3px;overflow:hidden}
+.mtr-barra span{display:block;height:100%;width:33%;background:var(--azul,#2C63C0);
+  border-radius:3px;transition:width .25s ease}
+.mtr-fechar{width:40px;height:40px;border:0;background:none;font-size:28px;line-height:1;
+  color:var(--apoio,#5C6B7E);cursor:pointer;border-radius:10px;flex:none}
+.mtr-fechar:hover{background:var(--claro,#F4F6F9);color:var(--texto,#050D14)}
+
+.mtr-corpo{padding:22px 34px 34px;overflow-y:auto;outline:none}
+
+.mtr-rotulo{font-size:12px;font-weight:600;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--azul,#2C63C0);margin:0 0 12px}
+.mtr-corpo h2{font-family:'Lora',Georgia,serif;font-size:clamp(22px,2.6vw,27px);line-height:1.25;
+  font-weight:600;margin:0 0 12px;color:var(--texto,#050D14)}
+.mtr-sub{font-family:'Lora',Georgia,serif;font-size:19px;font-weight:600;margin:26px 0 12px}
+.mtr-texto{font-size:16.5px;line-height:1.6;color:var(--texto,#050D14);margin:0 0 18px;max-width:60ch}
+.mtr-nota{font-size:14.5px;line-height:1.55;color:var(--apoio,#5C6B7E);margin:14px 0 0;max-width:62ch}
+
+/* opções da etapa 1 */
+.mtr-opcoes{display:grid;gap:10px;margin-top:20px}
+.mtr-opcao{text-align:left;font-size:16px;line-height:1.45;padding:16px 18px;border-radius:12px;
+  border:1px solid var(--borda,rgba(44,99,192,.16));background:#fff;color:var(--texto,#050D14);
+  cursor:pointer;font-family:inherit;transition:border-color .15s ease,background .15s ease}
+.mtr-opcao:hover{border-color:var(--azul,#2C63C0);background:#F7FAFF}
+.mtr-opcao.mtr-sel{border-color:var(--azul,#2C63C0);background:var(--pastel-azul,#DCE8FA)}
+
+/* âncora de preço */
+.mtr-ancora{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0 0}
+.mtr-ancora > div{border:1px solid var(--borda,rgba(44,99,192,.16));border-radius:12px;padding:16px 18px}
+.mtr-ancora span{display:block;font-size:13px;color:var(--apoio,#5C6B7E);margin-bottom:6px}
+.mtr-ancora strong{font-family:'Lora',Georgia,serif;font-size:21px;font-weight:600;color:var(--texto,#050D14)}
+.mtr-ancora-sua{background:var(--pastel-azul,#DCE8FA);border-color:transparent}
+.mtr-ancora-sua strong{color:var(--azul-escuro,#234E99)}
+
+/* ofertas */
+.mtr-ofertas{display:grid;gap:10px;margin-top:16px}
+.mtr-oferta{display:grid;text-align:left;padding:18px 20px;border-radius:12px;cursor:pointer;
+  border:1px solid var(--borda,rgba(44,99,192,.16));background:#fff;font-family:inherit;
+  transition:border-color .15s ease,background .15s ease}
+.mtr-oferta:hover{border-color:var(--azul,#2C63C0);background:#F7FAFF}
+.mtr-oferta.mtr-sel{border-color:var(--azul,#2C63C0);background:var(--pastel-azul,#DCE8FA)}
+.mtr-of-rot{font-size:12.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--azul,#2C63C0)}
+.mtr-of-val{font-family:'Lora',Georgia,serif;font-size:23px;font-weight:600;margin-top:5px;color:var(--texto,#050D14)}
+.mtr-of-det{font-size:14.5px;color:var(--apoio,#5C6B7E);margin-top:3px}
+.mtr-of-tot{font-size:14px;color:var(--apoio,#5C6B7E);margin-top:6px}
+
+/* resumo na etapa 3 */
+.mtr-resumo{display:flex;justify-content:space-between;align-items:center;gap:16px;
+  background:var(--claro,#F4F6F9);border-radius:12px;padding:14px 18px;margin:0 0 20px}
+.mtr-resumo span{font-size:14px;color:var(--apoio,#5C6B7E)}
+.mtr-resumo strong{font-family:'Lora',Georgia,serif;font-size:19px;font-weight:600}
+
+/* formulário */
+.mtr-campos{display:grid;gap:6px}
+.mtr-campos label{font-size:14px;font-weight:500;color:var(--texto,#050D14);margin-top:12px}
+.mtr-campos input{font-family:inherit;font-size:16px;padding:13px 15px;border-radius:10px;
+  border:1px solid var(--borda,rgba(44,99,192,.16));background:#fff;color:var(--texto,#050D14);width:100%}
+.mtr-campos input:focus{outline:2px solid var(--azul,#2C63C0);outline-offset:1px;border-color:transparent}
+.mtr-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.mtr-erro{margin:12px 0 0;font-size:14.5px;color:#B3261E;background:#FDECEA;
+  border-radius:10px;padding:11px 14px}
+.mtr-enviar{margin-top:20px;background:var(--azul,#2C63C0);color:#fff;border:0;border-radius:12px;
+  padding:16px 24px;font-family:inherit;font-size:16.5px;font-weight:500;cursor:pointer;
+  min-height:52px;transition:background .15s ease}
+.mtr-enviar:hover{background:var(--azul-escuro,#234E99)}
+.mtr-enviar:disabled{opacity:.65;cursor:default}
+.mtr-legal{font-size:13px;line-height:1.5;color:var(--apoio,#5C6B7E);margin:14px 0 0}
+.mtr-legal a{color:var(--azul,#2C63C0)}
+
+/* rodapé do modal */
+.mtr-rodape{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;
+  margin-top:26px;padding-top:18px;border-top:1px solid var(--borda,rgba(44,99,192,.16))}
+.mtr-voltar{border:0;background:none;color:var(--apoio,#5C6B7E);font-family:inherit;font-size:15px;
+  cursor:pointer;padding:10px 0;min-height:44px}
+.mtr-voltar:hover{color:var(--texto,#050D14)}
+.mtr-duvida{font-size:14px;color:var(--azul,#2C63C0);text-decoration:underline;text-underline-offset:3px;
+  display:inline-flex;align-items:center;min-height:44px}
+
+/* mobile: quase tela cheia */
+@media (max-width:640px){
+  .mtr-fundo{padding:0;align-items:flex-end}
+  .mtr-caixa{max-width:100%;max-height:96vh;border-radius:18px 18px 0 0}
+  .mtr-corpo{padding:18px 20px 28px}
+  .mtr-ancora{grid-template-columns:1fr}
+  .mtr-rodape{flex-direction:column;align-items:flex-start;gap:4px}
+}
+@media (prefers-reduced-motion:reduce){
+  .mtr-barra span,.mtr-opcao,.mtr-oferta,.mtr-enviar{transition:none}
+}
