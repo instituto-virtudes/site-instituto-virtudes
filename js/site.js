@@ -141,13 +141,13 @@ document.addEventListener('click', function (e) {
 // Checkout da Greenn: UTMs, src e lp_variant são acrescentados por js/origem.js.
 
 
-// Teste A/B/C do livro Sistemas Humanizados (entrada: /sistemas-humanizados/rot/)
-// - Quem tem o cookie iv_ab_livro_sh recebe no GA4 a propriedade de usuário ab_livro_sh (a, b ou c),
+// Teste A/B do livro Sistemas Humanizados (entrada: /sistemas-humanizados/rot/)
+// - Quem tem o cookie iv_ab_livro_sh recebe no GA4 a propriedade de usuário ab_livro_sh (a ou b),
 //   que acompanha os eventos seguintes, inclusive start_checkout.
 // - Na chegada vinda da URL do teste, registra no GA4 o evento experiment_view com a variante,
 //   desde que a página aberta seja a variante sorteada. Não dispara nada no Meta Pixel.
 (function () {
-  var m = document.cookie.match(/(?:^|;\s*)iv_ab_livro_sh=([abc])(?:;|$)/);
+  var m = document.cookie.match(/(?:^|;\s*)iv_ab_livro_sh=([ab])(?:;|$)/);
   if (!m || typeof gtag !== 'function') return;
   gtag('set', 'user_properties', { ab_livro_sh: m[1] });
   var chegada = null;
