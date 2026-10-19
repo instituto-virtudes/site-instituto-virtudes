@@ -15,16 +15,24 @@
   var PARAMS = ["utm_source","utm_medium","utm_campaign","utm_content","utm_term",
                 "campaign_id","adset_id","ad_id","fbclid"];
 
+  /* A captura oficial fica em js/origem.js (UTMs mais recentes da visita).
+     Sem ele, vale a mesma regra aqui: UTMs explícitas na URL trocam o conjunto guardado. */
   function capturarAtribuicao() {
+    if (window.IVOrigem) return window.IVOrigem.ler();
     var guardado = ler(CHAVE_ATRIB) || {};
     var url = new URLSearchParams(location.search);
+    var temUtm = PARAMS.slice(0, 5).some(function (p) { return url.get(p); });
     var mudou = false;
+    if (temUtm) {
+      PARAMS.forEach(function (p) { delete guardado[p]; });
+      mudou = true;
+    }
     PARAMS.forEach(function (p) {
       var v = url.get(p);
       if (v && !guardado[p]) { guardado[p] = v; mudou = true; }
     });
-    if (!guardado.referencia_origem) {
-      guardado.referencia_origem = document.referrer || null; mudou = true;
+    if (!guardado.referencia_origem && document.referrer) {
+      guardado.referencia_origem = document.referrer; mudou = true;
     }
     if (mudou) gravar(CHAVE_ATRIB, guardado);
     return guardado;
@@ -323,7 +331,10 @@
         currency: "BRL"
       });
       try { sessionStorage.removeItem(CHAVE); } catch (e) {}
-      window.location.href = res.dados.url_checkout;
+      /* leva as UTMs da visita à Greenn; se a visita tiver UTMs, elas substituem o conjunto que vier no link */
+      var destino = res.dados.url_checkout;
+      if (window.IVOrigem) destino = window.IVOrigem.decorar(destino);
+      window.location.href = destino;
     })
     .catch(function () {
       enviando = false;

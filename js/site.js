@@ -49,3 +49,93 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+// Eventos de conversão (GA4 + Meta Pixel)
+// Cliques: click_postgrad, click_book, click_lesson, click_whatsapp, click_enroll, start_checkout.
+// Um link pode forçar o nome do evento com data-evento="...".
+// Links do menu e do rodapé só contam se tiverem data-evento.
+// Visualização: <body data-pagina="aula"> gera view_lesson_page; data-pagina="pos" gera view_postgrad.
+(function () {
+  function enviar(nome, dados) {
+    if (typeof gtag === 'function') gtag('event', nome, dados);
+    if (typeof fbq === 'function') fbq('trackCustom', nome, dados);
+  }
+  document.addEventListener('DOMContentLoaded', function () {
+    var pag = document.body && document.body.getAttribute('data-pagina');
+    if (pag === 'aula') enviar('view_lesson_page', { page_path: location.pathname });
+    if (pag === 'pos') enviar('view_postgrad', { page_path: location.pathname });
+  });
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if (!a) return;
+    var ev = a.getAttribute('data-evento');
+    if (!ev) {
+      if (a.closest('.menu, .rodape')) return;
+      var h = a.getAttribute('href') || '';
+      if (/wa\.me|whatsapp\.com/.test(h)) ev = 'click_whatsapp';
+      else if (/payfast\.greenn/.test(h)) ev = 'start_checkout';
+      else if (/#matricula$/.test(h) || a.hasAttribute('data-matricula')) ev = 'click_enroll';
+      else if (/pos-sistemas\//.test(h)) ev = 'click_postgrad';
+      else if (/sistemas-humanizados\//.test(h)) ev = 'click_book';
+      else if (/(aula2|aularh)\//.test(h)) ev = 'click_lesson';
+    }
+    if (!ev) return;
+    enviar(ev, {
+      link_url: a.href,
+      link_text: (a.textContent || '').trim().slice(0, 80),
+      page_path: location.pathname,
+      variante: (document.body && document.body.getAttribute('data-variante')) || ''
+    });
+  });
+})();
+
+
+// Origem no WhatsApp
+// A captura das UTMs fica em js/origem.js (carregado antes deste arquivo).
+// Links de WhatsApp com data-wa-origem recebem a origem no fim da mensagem pré-preenchida.
+(function () {
+  function ler() {
+    if (window.IVOrigem) return window.IVOrigem.ler();
+    try { return JSON.parse(sessionStorage.getItem('matricula_atribuicao')) || {}; } catch (e) { return {}; }
+  }
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest ? e.target.closest('a[data-wa-origem]') : null;
+    if (!a) return;
+    var at = ler(), partes = [];
+    if (at.utm_source) partes.push(at.utm_source);
+    if (at.utm_campaign) partes.push(at.utm_campaign);
+    if (!partes.length) return;
+    try {
+      var m = a.href.match(/([?&]text=)([^&]*)/);
+      var t = m ? decodeURIComponent(m[2].replace(/\+/g, ' ')) : '';
+      if (t.indexOf('[origem:') === -1) {
+        var novo = encodeURIComponent(t + ' [origem: ' + partes.join(' / ') + ']');
+        a.href = m ? a.href.replace(m[0], m[1] + novo) : a.href + (a.href.indexOf('?') > -1 ? '&' : '?') + 'text=' + novo;
+      }
+    } catch (err) {}
+  }, true);
+})();
+
+
+// Player vertical 4:5 (.video45): só carrega o YouTube depois do clique na capa.
+// Toca dentro da página (playsinline) e permite tela cheia. Sem autoplay antes do clique.
+// Evento: video_start (GA4 + Meta Pixel), com a variante da página.
+document.addEventListener('click', function (e) {
+  var capa = e.target.closest ? e.target.closest('.video45-capa[data-yt]') : null;
+  if (!capa) return;
+  var id = capa.getAttribute('data-yt');
+  var f = document.createElement('iframe');
+  f.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&playsinline=1&rel=0&modestbranding=1';
+  f.title = capa.getAttribute('data-titulo') || 'Vídeo';
+  f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen';
+  f.setAttribute('allowfullscreen', '');
+  f.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+  capa.parentNode.replaceChild(f, capa);
+  var dados = { video_id: id, page_path: location.pathname,
+                variante: (document.body && document.body.getAttribute('data-variante')) || '' };
+  if (typeof gtag === 'function') gtag('event', 'video_start', dados);
+  if (typeof fbq === 'function') fbq('trackCustom', 'video_start', dados);
+});
+
+
+// Checkout da Greenn: UTMs, src e lp_variant são acrescentados por js/origem.js.
