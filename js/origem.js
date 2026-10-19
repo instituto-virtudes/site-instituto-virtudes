@@ -27,7 +27,8 @@
 
   var CHAVE = "matricula_atribuicao";           // mesma chave que matricula.js já usa
   var UTMS = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term", "utm_id"];
-  // Ficam guardados para o registro de matrícula (Supabase); nunca vão para o checkout.
+  // Ficam guardados para o registro de matrícula (Supabase). Desses, só o fbclid vai também
+  // ao checkout (identificador do clique no anúncio da Meta, sem dado pessoal).
   var IDS_ANUNCIO = ["campaign_id", "adset_id", "ad_id", "fbclid"];
   var CHECKOUT_HOSTS = ["payfast.greenn.com.br"];
   var MAX = 200;
@@ -106,7 +107,8 @@
     var extras = daVisita.map(function (kv) { return kv[0] + "=" + encodeURIComponent(kv[1]); });
     var corpo = document.body;
     if (corpo) {
-      [["src", corpo.getAttribute("data-src-checkout")],
+      [["fbclid", g.fbclid],
+       ["src", corpo.getAttribute("data-src-checkout")],
        ["lp_variant", corpo.getAttribute("data-variante")]].forEach(function (kv) {
         var v = limpar(kv[1]);
         if (v && presentes.indexOf(kv[0]) === -1) extras.push(kv[0] + "=" + encodeURIComponent(v));

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--
+  ENTRADA DO TESTE A/B/C - livro Sistemas Humanizados
+  URL única para os anúncios. Sorteia A, B ou C (33% / 33% / 34%) na primeira visita,
+  grava a variante no cookie iv_ab_livro_sh por 90 dias e reencaminha com location.replace,
+  levando todos os parâmetros do anúncio (UTMs, fbclid etc.). Quem volta cai na mesma variante.
+  Os destinos são fixos (lista abaixo): nada da URL decide para onde ir, então não há
+  redirecionamento aberto nem loop. Esta página não carrega Pixel nem GA4 (não conta visita).
+  Para conferir uma variante: ?ab=a, ?ab=b ou ?ab=c (grava a escolha no cookie e sai da URL).
+-->
+<script>
+(function () {
+  var DESTINOS = { a: "/sistemas-humanizados/", b: "/sistemas-humanizados/b/", c: "/sistemas-humanizados/c/" };
+  var COOKIE = "iv_ab_livro_sh", DIAS = 90;
+
+  function lerCookie() {
+    var m = document.cookie.match(/(?:^|;\s*)iv_ab_livro_sh=([abc])(?:;|$)/);
+    return m ? m[1] : null;
+  }
+  function sortear() {
+    var r;
+    try { var u = new Uint32Array(1); crypto.getRandomValues(u); r = u[0] / 4294967296; }
+    catch (e) { r = Math.random(); }
+    return r < 0.33 ? "a" : (r < 0.66 ? "b" : "c");
+  }
+
+  var params = new URLSearchParams(location.search);
+  var forcada = (params.get("ab") || "").toLowerCase();
+  var atual = lerCookie(), variante, nova = false;
+  if (DESTINOS.hasOwnProperty(forcada)) { variante = forcada; nova = variante !== atual; }
+  else if (atual) { variante = atual; }
+  else { variante = sortear(); nova = true; }
+
+  try {
+    document.cookie = COOKIE + "=" + variante + "; Max-Age=" + (DIAS * 86400) + "; Path=/; SameSite=Lax" +
+      (location.protocol === "https:" ? "; Secure" : "");
+  } catch (e) {}
+  // Marca a chegada nesta aba, para a página de destino registrar a visita do teste (GA4).
+  try {
+    sessionStorage.setItem("iv_ab_livro_sh_chegada",
+      JSON.stringify({ variante: variante, nova: nova, em: new Date().toISOString() }));
+  } catch (e) {}
+
+  // Leva tudo o que veio no link, menos os parâmetros de controle do teste.
+  // lp_variant sai daqui: quem define a variante é a página de destino, para não haver dois valores.
+  params.delete("ab");
+  params.delete("lp_variant");
+  var q = params.toString();
+  location.replace(DESTINOS[variante] + (q ? "?" + q : "") + location.hash);
+})();
+</script>
+<noscript><meta http-equiv="refresh" content="0; url=/sistemas-humanizados/"></noscript>
+<title>Livro Sistemas Humanizados - Humanização 2.0 | Eduardo Casarotto</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://institutovirtudes.com.br/sistemas-humanizados/">
+<meta name="description" content="Conheça o livro de Eduardo Casarotto: estruturas, processos e instrumentos para a humanização sistêmica das organizações, com manuais prontos e 3 horas de aulas bônus.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Instituto Virtudes">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:url" content="https://institutovirtudes.com.br/sistemas-humanizados/">
+<meta property="og:title" content="Uma coisa é defender organizações centradas no ser humano. Outra é saber como construí-las.">
+<meta property="og:description" content="Livro Sistemas Humanizados · Humanização 2.0, de Eduardo Casarotto, com manuais prontos e 3 horas de aulas bônus sobre a NR-1. Catalogado na Biblioteca do Senado Federal.">
+<meta property="og:image" content="https://institutovirtudes.com.br/img/og-padrao.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../img/favicon.png">
+<style>html,body{margin:0;background:#fff}</style>
+</head>
+<body>
+<noscript><p style="font-family:system-ui,sans-serif;padding:24px"><a href="/sistemas-humanizados/">Abrir a página do livro Sistemas Humanizados</a></p></noscript>
+</body>
+</html>
