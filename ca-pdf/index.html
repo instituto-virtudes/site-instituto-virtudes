@@ -40,6 +40,8 @@
   border-left:5px solid #0c2f3c}
 .eb h1{font-family:'Lora',Georgia,serif;font-size:42px;line-height:1.15;margin:0 0 10px}
 .eb .sub{font-size:19px;line-height:1.5;color:var(--apoio);margin:0 0 18px}
+.eb .sub{margin-bottom:10px}
+.eb .paginas{font-size:18px;font-weight:700;color:var(--texto);margin:0 0 18px}
 .eb .txt{font-size:17px;line-height:1.65;margin:0 0 26px;max-width:58ch}
 .btn-dl{display:inline-flex;align-items:center;gap:10px;font-size:17px;padding:16px 28px}
 .btn-dl svg{width:20px;height:20px;flex:none}
@@ -190,6 +192,7 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
       <p class="kicker">8ª Semana Fellipelli de Neurociência e Inteligência Emocional</p>
       <h1>O Cérebro Antifrágil</h1>
       <p class="sub">Neurociência para o Protagonismo na Era do Caos</p>
+      <p class="paginas">224 páginas</p>
       <p class="txt">Edição especial do livro do Dr. Eduardo Casarotto, feita para os participantes da 8ª Semana Fellipelli e para acompanhar a palestra. Baixe o seu exemplar em PDF.</p>
       <form class="eb-form" id="eb-form" novalidate>
         <p class="eb-form-tit">Preencha para baixar o e-book</p>
@@ -215,7 +218,6 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
           Baixar o e-book
         </a>
       </div>
-      <p class="obs">PDF · 224 páginas · 5 MB</p>
     </div>
   </div>
 </section>
@@ -325,7 +327,7 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
 /* Cadastro para baixar o e-book. Grava no Supabase (tabela leads_ebook, só inserção)
    e só libera o PDF depois que o cadastro foi gravado. */
 (function () {
-  var SUPABASE_URL = "https://uytprfvsvapblmbijmnz.supabase.co";
+  var SUPABASE_URL = "https://geyegibuqyzwjrlgenoz.supabase.co";
   var CHAVE_PUBLICAVEL = "sb_publishable_mutLDU4fGSeHnMAX-nnU1w_WsAesYv_"; /* sb_publishable_... (nunca a secreta) */
   var EBOOK = "cerebro-antifragil";
 
@@ -369,14 +371,19 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
       headers: { "apikey": CHAVE_PUBLICAVEL, "Content-Type": "application/json", "Prefer": "return=minimal" },
       body: JSON.stringify(corpo)
     }).then(function (r) {
-      if (!r.ok) throw new Error("status " + r.status);
+      if (!r.ok) return r.text().then(function (t) {
+        try { console.error("Cadastro e-book:", r.status, t); } catch (e) {}
+        var cod = ""; try { cod = JSON.parse(t).code || ""; } catch (e) {}
+        throw new Error(r.status + (cod ? " " + cod : ""));
+      });
       form.hidden = true; ok.hidden = false;
       if (typeof fbq === "function") fbq("track", "Lead", { content_name: "Ebook " + EBOOK });
       if (typeof gtag === "function") gtag("event", "generate_lead", { lead_source: "ebook_" + EBOOK, page_path: location.pathname });
       setTimeout(function () { link.click(); }, 300);
-    }).catch(function () {
+    }).catch(function (err) {
       btn.disabled = false; btn.innerHTML = textoBtn;
-      falhar("Não conseguimos registrar seu cadastro agora. Confira a internet e tente de novo em instantes.");
+      var cod = err && err.message && /^\d/.test(err.message) ? " (código " + err.message + ")" : "";
+      falhar("Não conseguimos registrar seu cadastro agora. Confira a internet e tente de novo em instantes." + cod);
     });
   });
 })();
