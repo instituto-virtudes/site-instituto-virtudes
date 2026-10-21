@@ -9,10 +9,27 @@
   grava a variante no cookie iv_ab_livro_sh por 90 dias e reencaminha com location.replace,
   levando todos os parâmetros do anúncio (UTMs, fbclid etc.). Quem volta cai na mesma variante.
   Os destinos são fixos (lista abaixo): nada da URL decide para onde ir, então não há
-  redirecionamento aberto nem loop. Esta página não carrega Pixel nem GA4 (não conta visita).
+  redirecionamento aberto nem loop. Esta página dispara o PageView do Meta Pixel (para a Meta contar a
+  visita do anúncio) e só depois redireciona; não carrega GA4.
   A = /sistemas-humanizados/ (página principal), B = /sistemas-humanizados/b/.
   Para conferir uma variante: ?ab=a ou ?ab=b (grava a escolha no cookie e sai da URL).
 -->
+<!-- Meta Pixel: PageView da entrada do anúncio, antes do redirecionamento -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '386437925348155');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
+/></noscript>
 <script>
 (function () {
   var DESTINOS = { a: "/sistemas-humanizados/", b: "/sistemas-humanizados/b/" };
@@ -51,7 +68,16 @@
   params.delete("ab");
   params.delete("lp_variant");
   var q = params.toString();
-  location.replace(DESTINOS[variante] + (q ? "?" + q : "") + location.hash);
+  var destino = DESTINOS[variante] + (q ? "?" + q : "") + location.hash;
+
+  // Espera o Pixel carregar e enviar o PageView (até 1,2 s; com bloqueador de anúncios, segue no limite).
+  var inicio = Date.now(), foi = false;
+  function ir() { if (foi) return; foi = true; location.replace(destino); }
+  (function esperar() {
+    if (window.fbq && window.fbq.callMethod) return setTimeout(ir, 250);
+    if (Date.now() - inicio > 1200) return ir();
+    setTimeout(esperar, 50);
+  })();
 })();
 </script>
 <noscript><meta http-equiv="refresh" content="0; url=/sistemas-humanizados/"></noscript>
