@@ -13,7 +13,7 @@
 <meta property="og:locale" content="pt_BR">
 <meta property="og:url" content="https://institutovirtudes.com.br/sistemas-humanizados/">
 <meta property="og:title" content="Uma coisa é defender organizações centradas no ser humano. Outra é saber como construí-las.">
-<meta property="og:description" content="Livro Sistemas Humanizados · Humanização 2.0, de Eduardo Casarotto, com manuais prontos e 3 horas de aulas bônus sobre a NR-1. Catalogado na Biblioteca do Senado Federal.">
+<meta property="og:description" content="Livro Sistemas Humanizados · Humanização 2.0, de Eduardo Casarotto, com manuais prontos e 3 horas de aulas bônus para aprofundamento. Catalogado na Biblioteca do Senado Federal.">
 <meta property="og:image" content="https://institutovirtudes.com.br/img/og-padrao.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -21,7 +21,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Uma coisa é defender organizações centradas no ser humano. Outra é saber como construí-las.">
-<meta name="twitter:description" content="Livro Sistemas Humanizados · Humanização 2.0, de Eduardo Casarotto, com manuais prontos e 3 horas de aulas bônus sobre a NR-1. Catalogado na Biblioteca do Senado Federal.">
+<meta name="twitter:description" content="Livro Sistemas Humanizados · Humanização 2.0, de Eduardo Casarotto, com manuais prontos e 3 horas de aulas bônus para aprofundamento. Catalogado na Biblioteca do Senado Federal.">
 <meta name="twitter:image" content="https://institutovirtudes.com.br/img/og-padrao.jpg">
 
 <link rel="icon" href="../img/favicon.png">
@@ -128,6 +128,38 @@
 }
 .titulo-livro{font-family:'Lora',Georgia,serif;font-size:23px;font-weight:500;color:var(--azul);margin:-10px 0 22px;line-height:1.35}
 @media (max-width:640px){.titulo-livro{font-size:19px}}
+
+/* compra no fim da página */
+.acoes-versoes{justify-content:center;margin:30px 0 8px}
+.hoje-faixa{background:var(--pastel-azul);color:var(--azul-escuro);border-radius:var(--raio-card);padding:16px 20px;font-size:17px;line-height:1.5;margin:0 0 28px}
+.resumo{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:0 0 28px}
+.resumo > div{border:1px solid var(--borda);border-radius:var(--raio-card);padding:24px 24px 20px;min-width:0}
+.resumo h3{font-size:20px;margin-bottom:4px}
+.resumo .resumo-num{font-size:14px;font-weight:600;color:var(--azul);margin:0 0 14px}
+.resumo ul,.resumo ol{margin:0;padding-left:20px}
+.resumo li{font-size:15px;line-height:1.5;margin:0 0 8px}
+.aulas-lista li{margin-bottom:5px}
+.versoes{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
+.versao{display:flex;flex-direction:column;border:1px solid var(--borda);border-radius:var(--raio-card);padding:26px 24px;min-width:0}
+.versao .versao-mockup{width:150px;height:auto;align-self:center;margin:0 0 18px}
+.versao .rot{font-family:'Inter',sans-serif;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--apoio);margin:0 0 12px}
+.versao ul{margin:0 0 18px;padding-left:20px}
+.versao li{font-size:15.5px;line-height:1.5;margin:0 0 8px}
+.versao .valor{font-family:'Lora',Georgia,serif;font-size:34px;font-weight:700;line-height:1;margin:auto 0 16px}
+.versao .btn{margin:0;width:100%;text-align:center}
+.versao-fisica{display:grid;grid-template-columns:120px minmax(0,1fr);grid-template-rows:auto 1fr auto auto;column-gap:22px}
+.versao-fisica > *{grid-column:2}
+.versao-fisica .versao-mockup{grid-column:1;grid-row:1 / span 2;width:120px;align-self:start;margin:0 0 18px}
+.versao-fisica .valor,.versao-fisica .btn{grid-column:1 / -1}
+.versao-fisica .valor{margin-top:0}
+@media (max-width:640px){
+  .resumo,.versoes{grid-template-columns:1fr;gap:16px}
+  .resumo > div,.versao{padding:22px 18px}
+  .acoes-versoes .btn{width:100%}
+  .versao-fisica{grid-template-columns:minmax(0,1fr);grid-template-rows:none}
+  .versao-fisica > *,.versao-fisica .versao-mockup{grid-column:1}
+  .versao-fisica .versao-mockup{grid-row:auto;justify-self:center;margin:0 0 16px}
+}
 </style>
 <!-- Meta Pixel -->
 <script>
@@ -163,57 +195,6 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
 <header class="topo">
   <div class="topo-int">
     <a href="../" class="marca"><img src="../img/logo-instituto-virtudes.png" alt="Instituto Virtudes - Humanização e Virtologia" width="439" height="120"></a>
-    <button class="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Menu">&#8801;</button>
-    <nav>
-      <ul class="menu" id="menu">
-        <li class="tem-sub">
-          <button class="menu-sub-btn" aria-expanded="false" aria-haspopup="true">Virtologia <span class="seta-sub" aria-hidden="true">&#9662;</span></button>
-          <ul class="submenu">
-            <li><a href="../virtologia/">O que é a Virtologia</a></li>
-            <li><a href="../formacao/">Formação em Virtologia</a></li>
-            <li><a href="../terapeutas/">Terapia gratuita</a></li>
-            <li><a href="../teorias/">Diante de outras grandes teorias</a></li>
-            <li><a href="../aula1/">Aula aberta</a></li>
-          </ul>
-        </li>
-        <li class="tem-sub">
-          <button class="menu-sub-btn" aria-expanded="false" aria-haspopup="true">Humanização 2.0 <span class="seta-sub" aria-hidden="true">&#9662;</span></button>
-          <ul class="submenu">
-            <li><a href="../sistemas/">Entenda a transformação</a></li>
-            <li><a href="../sistemas/#evidencias">Evidências internacionais</a></li>
-            <li><a href="../pos-sistemas/">Pós-graduação em Sistemas Humanizados</a></li>
-            <li><a href="../sistemas-humanizados/">O livro Sistemas Humanizados</a></li>
-            <li><a href="../aula2/">Aula aberta sobre a NR-1</a></li>
-            <li><a href="../aularh/">Aula aberta para RH</a></li>
-            <li><a href="../ondas/">As Três Ondas do Trabalho</a></li>
-          </ul>
-        </li>
-        <li class="tem-sub">
-          <button class="menu-sub-btn" aria-expanded="false" aria-haspopup="true">Formações <span class="seta-sub" aria-hidden="true">&#9662;</span></button>
-          <ul class="submenu">
-            <li><a href="../formacao/">Formação em Virtologia</a></li>
-            <li><a href="../pos-sistemas/">Pós-graduação em Sistemas Humanizados</a></li>
-            <li><a href="../formacoes/">Todas as formações</a></li>
-          </ul>
-        </li>
-        <li class="tem-sub">
-          <button class="menu-sub-btn" aria-expanded="false" aria-haspopup="true">Livros <span class="seta-sub" aria-hidden="true">&#9662;</span></button>
-          <ul class="submenu">
-            <li><a href="../fundamentos/">Fundamentos da Virtologia</a></li>
-            <li><a href="../manual/">Manual de Desenvolvimento Humano em Virtudes</a></li>
-            <li><a href="../sistemas-humanizados/">Sistemas Humanizados · Humanização 2.0</a></li>
-            <li><a href="../guia/">Guia das Virtudes</a></li>
-            <li><a href="../teimosia/">Teimosia de Viver</a></li>
-            <li><a href="../envelheci/">Envelheci, e Daí?</a></li>
-            <li><a href="../livros/">Todos os livros</a></li>
-          </ul>
-        </li>
-        <li><a href="../palestras/">Palestras</a></li>
-        <li><a href="../futuro/">Trazemos o Futuro</a></li>
-        <li><a href="../inteiras/" target="_blank" rel="noopener">Inteiras</a></li>
-        <li><a href="../contato/">Contato</a></li>
-      </ul>
-    </nav>
   </div>
 </header>
 
@@ -228,10 +209,6 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
         <p class="titulo-livro">Sistemas Humanizados · Humanização 2.0</p>
         <p class="lead"><strong>A centralidade humana já é uma discussão internacional, de normas ISO às recomendações sobre o futuro do trabalho.</strong> Neste livro, Eduardo Casarotto apresenta uma proposta integrada para compreender o funcionamento humano e trabalhar sobre políticas, cargos, processos, gestão e governança.</p>
         <p class="sublead">Não é um livro de sensibilização: <strong>é o manual de construção do sistema, com os documentos prontos</strong>. É a obra que fundamenta a pós-graduação.</p>
-        <div class="acoes">
-          <a class="btn" href="#versoes">Ver as versões do livro</a>
-          <a class="btn-sec" href="../pos-sistemas/">Prefere estudar em profundidade? Veja a pós</a>
-        </div>
       </div>
     </div>
 
@@ -242,7 +219,7 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
     <div class="ficha">
       <div><dt>Páginas</dt><dd>449</dd></div>
       <div><dt>Capítulos</dt><dd>27</dd></div>
-      <div><dt>Aulas bônus sobre a NR-1</dt><dd>3 horas</dd></div>
+      <div><dt>Aulas bônus para aprofundamento</dt><dd>3 horas</dd></div>
       <div><dt>Catalogado na</dt><dd>Biblioteca do Senado Federal</dd></div>
     </div>
 
@@ -254,8 +231,8 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
           <p>Como humanizar uma empresa de ponta a ponta, incluindo os manuais que a organização adapta e aplica: políticas internas, ética, feedbacks, atendimento, personalidade e a comissão interna de humanização. <strong>Documentos de trabalho, não conceitos soltos.</strong></p>
         </div>
         <div>
-          <h4>3 horas de aulas bônus gravadas sobre a NR-1</h4>
-          <p>Aulas online com Eduardo Casarotto sobre a relação entre a exigência de gestão de riscos psicossociais da NR-1 e os Sistemas Humanizados: o que a norma passou a cobrar, e como o sistema responde. <strong>Acesso imediato após a compra.</strong></p>
+          <h4>3 horas de aulas bônus para aprofundamento</h4>
+          <p>Aulas online com Eduardo Casarotto que aprofundam o livro: NR-1 e riscos psicossociais, os cinco filtros, pesquisa de clima, entrevista individual, comitê de avaliação e mais. <strong>Comprando <span data-hoje>hoje</span>, você também ganha as aulas, com acesso imediato.</strong></p>
         </div>
       </div>
     </div>
@@ -276,20 +253,6 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
     </div>
     <p class="apoio" style="margin-top:16px;font-size:14px">Registros de encontros, palestras e apresentações. As imagens não indicam endosso das autoridades ou instituições aos cursos e livros.</p>
 
-    <div class="precos" id="versoes">
-      <div>
-        <p class="rot">Versão física</p>
-        <p class="valor">R$ 279</p>
-        <p class="obs">frete incluso · aulas bônus com acesso imediato</p>
-        <a class="btn" href="https://payfast.greenn.com.br/125356/offer/ShfwB0" target="_blank" rel="noopener">Adquirir a versão física</a>
-      </div>
-      <div>
-        <p class="rot">Versão digital</p>
-        <p class="valor">R$ 147</p>
-        <p class="obs">acesso imediato ao livro e às aulas bônus</p>
-        <a class="btn" href="https://payfast.greenn.com.br/154084/offer/JhJu2t" target="_blank" rel="noopener">Adquirir a versão digital</a>
-      </div>
-    </div>
 
     <div class="video45-bloco" id="por-dentro">
       <h2>Veja o livro por dentro</h2>
@@ -301,6 +264,11 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
       </div>
     </div>
 
+    <div class="acoes acoes-versoes">
+      <a class="btn" href="#comprar">Quero a versão física</a>
+      <a class="btn" href="#comprar">Quero a versão digital</a>
+    </div>
+
     <nav class="indice" aria-label="Conteúdo desta página">
       <p class="indice-titulo">Nesta página</p>
       <ol>
@@ -308,10 +276,11 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
         <li><a href="#tese">O que este livro é</a></li>
         <li><a href="#dentro">O que está dentro</a></li>
         <li><a href="#manuais">Os manuais prontos</a></li>
-        <li><a href="#nr1">As bônus aulas sobre a NR-1</a></li>
+        <li><a href="#nr1">As aulas bônus</a></li>
         <li><a href="#para-quem">Público indicado</a></li>
         <li><a href="#autor">Quem escreveu</a></li>
         <li><a href="#duvidas">O que costumam perguntar</a></li>
+        <li><a href="#comprar">As versões do livro</a></li>
       </ol>
     </nav>
   </div>
@@ -413,13 +382,13 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
 
 <section id="nr1">
   <div class="wrap">
-    <h2>As bônus aulas sobre a NR-1</h2>
+    <h2>As aulas bônus para aprofundamento</h2>
 
     <p>A NR-1 passou a exigir das organizações a gestão de riscos psicossociais. <strong>Para muitas empresas, isso virou uma pergunta difícil: gerir como?</strong></p>
 
-    <p><strong>As 3 horas de aulas bônus gravadas que acompanham o livro</strong> tratam dessa pergunta. Eduardo Casarotto percorre a relação entre a exigência da norma e os Sistemas Humanizados: o que são riscos psicossociais na leitura do funcionamento humano, onde eles nascem dentro da estrutura, e como o sistema descrito no livro pode apoiar a gestão que a norma cobra.</p>
+    <p><strong>As 3 horas de aulas bônus que acompanham o livro</strong> partem dessa pergunta e vão além dela. Eduardo Casarotto aprofunda o que está nas páginas: o que são riscos psicossociais na leitura do funcionamento humano, onde eles nascem dentro da estrutura, os cinco filtros, a pesquisa de clima, a entrevista individual e o comitê de avaliação.</p>
 
-    <p>São aulas bônus online, gravadas, para assistir quando quiser, no seu ritmo. <strong>O acesso é imediato e acompanha a compra do livro.</strong></p>
+    <p>São aulas online, para assistir quando quiser, no seu ritmo. <strong>Comprando <span data-hoje>hoje</span>, você também ganha as aulas, com acesso imediato.</strong></p>
 
     <p class="destaque">Ação pontual, sozinha, não é gestão de risco. As aulas mostram como pensar a estrutura.</p>
   </div>
@@ -488,7 +457,7 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
 
     <details>
       <summary>Como recebo as aulas bônus?</summary>
-      <p>As aulas bônus são online e gravadas, com 3 horas de duração total. Não são cobradas: o acesso acompanha a compra do livro e é imediato, com as instruções enviadas por e-mail e WhatsApp após a confirmação do pagamento.</p>
+      <p>As aulas bônus são online, com 3 horas de duração total. Não são cobradas: o acesso acompanha a compra do livro e é imediato, com as instruções enviadas por e-mail e WhatsApp após a confirmação do pagamento. Na versão física, você também recebe o livro em PDF na mesma plataforma, com acesso imediato, enquanto o livro impresso chega.</p>
     </details>
   </div>
 </section>
@@ -524,27 +493,71 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
   </div>
 </section>
 
-<section>
+<section id="comprar" class="comprar">
   <div class="wrap">
-    <div class="precos">
+    <h2>As versões do livro</h2>
+    <p class="hoje-faixa">Comprando <span data-hoje>hoje</span>, você também ganha <strong>3 horas de aulas bônus para aprofundamento</strong>, com acesso imediato.</p>
+
+    <div class="resumo">
       <div>
-        <p class="rot">Versão física</p>
-        <p class="valor">R$ 279</p>
-        <p class="obs">frete incluso · aulas bônus com acesso imediato</p>
-        <a class="btn" href="https://payfast.greenn.com.br/125356/offer/ShfwB0" target="_blank" rel="noopener">Adquirir a versão física</a>
+        <h3>No livro</h3>
+        <p class="resumo-num">449 páginas · 27 capítulos</p>
+        <ul>
+          <li>O que é um Sistema Humanizado e os cinco filtros que validam qualquer estrutura</li>
+          <li>Governança e RH humanizados: cargo, recrutamento, carreira, avaliação de desempenho com a Terceira Competência, clima e desligamento</li>
+          <li>O manual das Necessidades Humanas, com ações de RH para cada necessidade</li>
+          <li>Saúde mental no trabalho: burnout, brownout e boreout, e o departamento de saúde mental</li>
+          <li>Manuais prontos: políticas internas, ética e compliance, feedbacks, atendimento ao público, personalidade e a CIPIH</li>
+          <li>A estrutura de um projeto de certificação em humanização</li>
+        </ul>
       </div>
       <div>
+        <h3>Nas aulas bônus</h3>
+        <p class="resumo-num">3 horas ao todo</p>
+        <ol class="aulas-lista">
+          <li>Introdução</li>
+          <li>Exigências da NR-1</li>
+          <li>Expressões do Orgulho e Egoísmo</li>
+          <li>Os 5 Filtros da Humanização 2.0</li>
+          <li>Riscos Psicossociais x Sistemas Humanizados</li>
+          <li>Analisando um Questionário de Riscos Psicossociais Validado</li>
+          <li>Burocracias da NR-1 com Engª de Segurança do Trabalho</li>
+          <li>Comitê de Avaliação</li>
+          <li>Pesquisa de Clima - Humanização 2.0</li>
+          <li>Entrevista Individual - Humanização 2.0</li>
+          <li>O Momento Histórico que Estamos Vivendo</li>
+          <li>O que Torna Sistêmico?</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="versoes">
+      <div class="versao versao-fisica">
+        <img class="versao-mockup" src="../img/livros/sistemas-humanizados.avif" alt="Mockup do livro físico Sistemas Humanizados · Humanização 2.0." width="560" height="1032" loading="lazy">
+        <p class="rot">Versão física</p>
+        <ul>
+          <li>Livro impresso, 449 páginas, com frete incluso</li>
+          <li><strong>Livro em PDF com acesso imediato</strong>, enquanto o impresso chega</li>
+          <li>3 horas de aulas bônus, com acesso imediato</li>
+        </ul>
+        <p class="valor">R$ 279,00</p>
+        <a class="btn" href="https://payfast.greenn.com.br/125356/offer/ShfwB0" target="_blank" rel="noopener">Comprar a versão física por R$&nbsp;279,00</a>
+      </div>
+      <div class="versao">
         <p class="rot">Versão digital</p>
-        <p class="valor">R$ 147</p>
-        <p class="obs">acesso imediato ao livro e às aulas bônus</p>
-        <a class="btn" href="https://payfast.greenn.com.br/154084/offer/JhJu2t" target="_blank" rel="noopener">Adquirir a versão digital</a>
+        <ul>
+          <li>Livro em PDF, 449 páginas, com acesso imediato</li>
+          <li>3 horas de aulas bônus, com acesso imediato</li>
+          <li>Tudo na mesma plataforma, para ler e assistir quando quiser</li>
+        </ul>
+        <p class="valor">R$ 147,00</p>
+        <a class="btn" href="https://payfast.greenn.com.br/154084/offer/JhJu2t" target="_blank" rel="noopener">Comprar a versão digital por R$&nbsp;147,00</a>
       </div>
     </div>
 
     <div class="ponte">
-      <p>Quer entender a proposta antes de comprar? Veja o debate internacional e a apresentação dos Sistemas Humanizados, ou assista a uma aula aberta.</p>
+      <p>Quer ver Eduardo Casarotto aplicando a proposta antes de comprar?</p>
       <div class="acoes">
-        <a class="btn-sec" href="../sistemas/">Conhecer a proposta</a>
         <a class="btn-sec" href="../aula2/">Assistir a uma aula aberta</a>
       </div>
     </div>
@@ -619,5 +632,13 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
 
 <script src="../js/origem.js"></script>
 <script src="../js/site.js"></script>
+<script>
+(function(){
+  try{
+    var d=new Intl.DateTimeFormat('pt-BR',{timeZone:'America/Sao_Paulo',day:'2-digit',month:'2-digit',year:'numeric'}).format(new Date());
+    document.querySelectorAll('[data-hoje]').forEach(function(el){el.textContent='hoje, dia '+d;});
+  }catch(e){}
+})();
+</script>
 </body>
 </html>
