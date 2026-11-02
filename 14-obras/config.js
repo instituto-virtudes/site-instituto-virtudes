@@ -73,10 +73,10 @@ window.COLECAO = {
   livros: [
     { id: "fundamentos", grupo: "fundamentos", titulo: "Fundamentos da Virtologia", sub: "3ª edição, 2026",
       capa: "img/fundamentos-da-virtologia.webp", ficha: "Cerca de 1.194 páginas · formato A4",
-      texto: "A arquitetura teórica da Virtologia: funcionamento humano, personalidade, necessidades, Faixas de Evolução, aparelho psíquico, Lei do Fluxo, Leis da Vida, Inconsciente Operacional, substrato biológico, neuroplasticidade e as 33 virtudes, com mais de 400 páginas dedicadas a elas." },
+      texto: "A arquitetura teórica da Virtologia: funcionamento humano, personalidade, necessidades, Faixas de Evolução neurológica, aparelho psíquico, Lei do Fluxo, Leis da Vida, Inconsciente Operacional, substrato biológico, neuroplasticidade e as 33 virtudes, com mais de 400 páginas dedicadas a elas." },
 
     { id: "manejos", grupo: "fundamentos", titulo: "Manejos, Técnicas e Supervisão", sub: "",
-      capa: "img/manejos-tecnicas-supervisao.webp", ficha: "Mais de 600 páginas · formato A4",
+      capa: "img/manejos-tecnicas-supervisao.webp", ficha: "Mais de 700 páginas · formato A4",
       texto: "A Virtologia em aplicação: investigação, condução clínica, técnicas, procedimentos e supervisão. O grande complemento prático dos Fundamentos." },
 
     { id: "terceira-onda", grupo: "pensamentos", titulo: "A Terceira Onda do Trabalho", sub: "",

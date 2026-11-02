@@ -220,6 +220,41 @@ section.c-fotos-sec{padding:0 0 40px;border-top:0}
   .c-ficha dd{font-size:16px}
 }
 .c-apoio2{color:var(--texto);margin-top:8px !important}
+.hoje-faixa{background:var(--pastel-azul);color:var(--azul-escuro);border-radius:var(--raio-card);padding:16px 20px;font-size:17px;line-height:1.5;margin:0 0 28px}
+.resumo{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:0 0 28px}
+.resumo > div{border:1px solid var(--borda);border-radius:var(--raio-card);padding:24px 24px 20px;min-width:0}
+.resumo h3{font-size:20px;margin-bottom:4px}
+.resumo .resumo-num{font-size:14px;font-weight:600;color:var(--azul);margin:0 0 14px}
+.resumo ul,.resumo ol{margin:0;padding-left:20px}
+.resumo li{font-size:15px;line-height:1.5;margin:0 0 8px}
+.aulas-lista li{margin-bottom:5px}
+.versoes{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
+.versao{display:flex;flex-direction:column;border:1px solid var(--borda);border-radius:var(--raio-card);padding:26px 24px;min-width:0}
+.versao .versao-mockup{width:150px;height:auto;align-self:center;margin:0 0 18px}
+.versao .rot{font-family:'Inter',sans-serif;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--apoio);margin:0 0 12px}
+.versao ul{margin:0 0 18px;padding-left:20px}
+.versao li{font-size:15.5px;line-height:1.5;margin:0 0 8px}
+.versao .valor{font-family:'Lora',Georgia,serif;font-size:34px;font-weight:700;line-height:1;margin:auto 0 16px}
+.versao .btn{margin:0;width:100%;text-align:center}
+.versao-fisica{display:grid;grid-template-columns:120px minmax(0,1fr);grid-template-rows:auto 1fr auto auto;column-gap:22px}
+.versao-fisica > *{grid-column:2}
+.versao-fisica .versao-mockup{grid-column:1;grid-row:1 / span 2;width:120px;align-self:start;margin:0 0 18px}
+.versao-fisica .valor,.versao-fisica .btn{grid-column:1 / -1}
+.versao-fisica .valor{margin-top:0}
+@media (max-width:640px){
+  .resumo,.versoes{grid-template-columns:1fr;gap:16px}
+  .resumo > div,.versao{padding:22px 18px}
+  .acoes-versoes .btn{width:100%}
+  .versao-fisica{grid-template-columns:minmax(0,1fr);grid-template-rows:none}
+  .versao-fisica > *,.versao-fisica .versao-mockup{grid-column:1}
+  .versao-fisica .versao-mockup{grid-row:auto;justify-self:center;margin:0 0 16px}
+}
+.c-topo-versoes{margin:26px 0 0}
+.c-aulas-tit{font-family:'Inter',sans-serif;font-size:14px;font-weight:600;color:var(--azul-escuro);margin:22px 0 10px}
+.c-aulas-lista{margin:0 0 18px;padding-left:22px;columns:2;column-gap:32px}
+.c-aulas-lista li{font-size:15px;line-height:1.5;break-inside:avoid}
+@media (max-width:640px){.c-aulas-lista{columns:1}}
+.c-final .hoje-faixa{text-align:left}
 </style>
 <!-- Meta Pixel -->
 <script>
@@ -255,58 +290,6 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
 <header class="topo">
   <div class="topo-int">
     <a href="../../" class="marca"><img src="../../img/logo-instituto-virtudes.png" alt="Instituto Virtudes - Humanização e Virtologia" width="439" height="120"></a>
-    <button class="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Menu">&#8801;</button>
-    <nav>
-      <ul class="menu" id="menu">
-        <li class="tem-sub">
-          <button class="menu-sub-btn" aria-expanded="false" aria-haspopup="true">Virtologia <span class="seta-sub" aria-hidden="true">&#9662;</span></button>
-          <ul class="submenu">
-            <li><a href="../../virtologia/">O que é a Virtologia</a></li>
-            <li><a href="../../formacao/">Formação em Virtologia</a></li>
-            <li><a href="../../terapeutas/">Terapia gratuita</a></li>
-            <li><a href="../../teorias/">Diante de outras grandes teorias</a></li>
-            <li><a href="../../aula1/">Aula aberta</a></li>
-          </ul>
-        </li>
-        <li class="tem-sub">
-          <button class="menu-sub-btn" aria-expanded="false" aria-haspopup="true">Humanização 2.0 <span class="seta-sub" aria-hidden="true">&#9662;</span></button>
-          <ul class="submenu">
-            <li><a href="../../sistemas/">Entenda a transformação</a></li>
-            <li><a href="../../sistemas/#evidencias">Evidências internacionais</a></li>
-            <li><a href="../../pos-sistemas/">Pós-graduação em Sistemas Humanizados</a></li>
-            <li><a href="../../sistemas-humanizados/">O livro Sistemas Humanizados</a></li>
-            <li><a href="../../aula2/">Aula aberta sobre a NR-1</a></li>
-            <li><a href="../../aularh/">Aula aberta para RH</a></li>
-            <li><a href="../../ondas/">As Três Ondas do Trabalho</a></li>
-          </ul>
-        </li>
-        <li class="tem-sub">
-          <button class="menu-sub-btn" aria-expanded="false" aria-haspopup="true">Formações <span class="seta-sub" aria-hidden="true">&#9662;</span></button>
-          <ul class="submenu">
-            <li><a href="../../formacao/">Formação em Virtologia</a></li>
-            <li><a href="../../pos-sistemas/">Pós-graduação em Sistemas Humanizados</a></li>
-            <li><a href="../../formacoes/">Todas as formações</a></li>
-          </ul>
-        </li>
-        <li class="tem-sub">
-          <button class="menu-sub-btn" aria-expanded="false" aria-haspopup="true">Livros <span class="seta-sub" aria-hidden="true">&#9662;</span></button>
-          <ul class="submenu">
-            <li><a href="../../14-obras/">Coleção Especial · 14 obras</a></li>
-            <li><a href="../../fundamentos/">Fundamentos da Virtologia</a></li>
-            <li><a href="../../manual/">Manual de Desenvolvimento Humano em Virtudes</a></li>
-            <li><a href="../../sistemas-humanizados/">Sistemas Humanizados · Humanização 2.0</a></li>
-            <li><a href="../../guia/">Guia das Virtudes</a></li>
-            <li><a href="../../teimosia/">Teimosia de Viver</a></li>
-            <li><a href="../../envelheci/">Envelheci, e Daí?</a></li>
-            <li><a href="../../livros/">Todos os livros</a></li>
-          </ul>
-        </li>
-        <li><a href="../../palestras/">Palestras</a></li>
-        <li><a href="../../futuro/">Trazemos o Futuro</a></li>
-        <li><a href="../../inteiras/" target="_blank" rel="noopener">Inteiras</a></li>
-        <li><a href="../../contato/">Contato</a></li>
-      </ul>
-    </nav>
   </div>
 </header>
 
@@ -326,23 +309,31 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
     <p class="c-apoio">Da ISO 27500, em 2016, à nova NR-1, em 2026, <strong>normas e documentos internacionais defendem que o futuro será baseado em organizações centradas no ser humano</strong>.</p>
     <p class="c-apoio c-apoio2">Neste livro, você tem a arquitetura que as constitui.</p>
 
-    <div class="precos c-precos" id="comprar">
-      <div>
-        <p class="rot">Livro físico</p>
-        <p class="valor">R$ 279</p>
-        <p class="c-desc">Livro impresso <em>Sistemas Humanizados · Humanização 2.0</em>. <strong>Inclui 3 horas de aulas gravadas com Eduardo Casarotto, com acesso imediato.</strong></p>
-        <p class="obs">Frete incluso · envio pelos Correios</p>
-        <a class="btn" href="https://payfast.greenn.com.br/125356/offer/t0uG8O" target="_blank" rel="noopener">Quero o livro físico</a>
+    <div id="comprar" class="c-topo-versoes">
+    <p class="hoje-faixa">Comprando <span data-hoje>hoje</span>, você também ganha <strong>3 horas de aulas bônus para aprofundamento</strong>, com acesso imediato.</p>
+    <div class="versoes">
+      <div class="versao">
+        <p class="rot">Versão física</p>
+        <ul>
+          <li>Livro impresso, 449 páginas, com frete incluso</li>
+          <li><strong>Livro em PDF com acesso imediato</strong>, enquanto o impresso chega</li>
+          <li>3 horas de aulas bônus, com acesso imediato</li>
+        </ul>
+        <p class="valor">R$ 279,00</p>
+        <a class="btn" href="https://payfast.greenn.com.br/125356/offer/ShfwB0" target="_blank" rel="noopener">Comprar a versão física por R$&nbsp;279,00</a>
       </div>
-      <div>
-        <p class="rot">Livro digital</p>
-        <p class="valor">R$ 147</p>
-        <p class="c-desc">Versão digital do livro <em>Sistemas Humanizados · Humanização 2.0</em>. <strong>Inclui 3 horas de aulas gravadas com Eduardo Casarotto, com acesso imediato.</strong></p>
-        <p class="obs">Acesso imediato, enviado por e-mail e WhatsApp após o pagamento</p>
-        <a class="btn" href="https://payfast.greenn.com.br/154084/offer/q2C8j3" target="_blank" rel="noopener">Quero o livro digital</a>
+      <div class="versao">
+        <p class="rot">Versão digital</p>
+        <ul>
+          <li>Livro em PDF, 449 páginas, com acesso imediato</li>
+          <li>3 horas de aulas bônus, com acesso imediato</li>
+          <li>Tudo na mesma plataforma, para ler e assistir quando quiser</li>
+        </ul>
+        <p class="valor">R$ 147,00</p>
+        <a class="btn" href="https://payfast.greenn.com.br/154084/offer/JhJu2t" target="_blank" rel="noopener">Comprar a versão digital por R$&nbsp;147,00</a>
       </div>
     </div>
-    <p class="c-escolha">Você escolhe uma versão. As 3 horas de aulas acompanham a versão escolhida, com acesso imediato.</p>
+    </div>
   </div>
 </section>
 
@@ -446,7 +437,7 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
 <section id="por-dentro">
   <div class="wrap">
     <div class="video45-bloco">
-      <h2>Veja o livro por dentro.</h2>
+      <h2>Veja os 27 capítulos por dentro.</h2>
       <p class="c-sub">Eduardo Casarotto apresenta a obra e mostra os conhecimentos e instrumentos que fazem parte dos Sistemas Humanizados.</p>
       <div class="video45">
         <button type="button" class="video45-capa com-capa" data-yt="DPeaNqJu2bc" data-titulo="Veja o livro Sistemas Humanizados por dentro" aria-label="Assistir ao vídeo: veja o livro por dentro">
@@ -499,7 +490,22 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
   <div class="wrap">
     <div class="c-aulas">
       <h2>Além do livro, você recebe 3 horas de aulas com o autor.</h2>
-      <p class="c-sub">Eduardo Casarotto aprofunda os conteúdos da obra em <strong>aulas gravadas que acompanham a versão física ou digital, com acesso imediato</strong>.</p>
+      <p class="c-sub">Eduardo Casarotto aprofunda os conteúdos da obra em aulas gravadas. <strong>Comprando <span data-hoje>hoje</span>, você também ganha as aulas, com acesso imediato.</strong></p>
+      <h3 class="c-aulas-tit">As 12 aulas, 3 horas ao todo</h3>
+      <ol class="aulas-lista c-aulas-lista">
+          <li>Introdução</li>
+          <li>Exigências da NR-1</li>
+          <li>Expressões do Orgulho e Egoísmo</li>
+          <li>Os 5 Filtros da Humanização 2.0</li>
+          <li>Riscos Psicossociais x Sistemas Humanizados</li>
+          <li>Analisando um Questionário de Riscos Psicossociais Validado</li>
+          <li>Burocracias da NR-1 com Engª de Segurança do Trabalho</li>
+          <li>Comitê de Avaliação</li>
+          <li>Pesquisa de Clima - Humanização 2.0</li>
+          <li>Entrevista Individual - Humanização 2.0</li>
+          <li>O Momento Histórico que Estamos Vivendo</li>
+          <li>O que Torna Sistêmico?</li>
+        </ol>
       <ul class="c-lista">
         <li><strong>O tema:</strong> a relação entre a exigência de gestão dos riscos psicossociais da NR-1 e os Sistemas Humanizados, ou seja, onde esses riscos nascem dentro da estrutura e como o sistema do livro pode apoiar essa gestão.</li>
         <li><strong>O formato:</strong> aulas online e gravadas, para assistir quando quiser, no seu ritmo.</li>
@@ -535,7 +541,7 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
 
     <details>
       <summary>Qual a diferença entre o livro físico e o digital?</summary>
-      <p>O conteúdo é o mesmo. O físico é o livro impresso, enviado pelos Correios com frete incluso. O digital é a versão eletrônica da obra. Você escolhe uma das duas; a compra de uma versão não inclui a outra.</p>
+      <p>O conteúdo é o mesmo. O físico é o livro impresso, enviado pelos Correios com frete incluso, e inclui o livro em PDF com acesso imediato, para você começar a ler enquanto o impresso chega. O digital é só a versão em PDF.</p>
     </details>
 
     <details>
@@ -578,25 +584,65 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
 <!-- 11. COMPRA FINAL -->
 <section id="escolha" class="c-final">
   <div class="wrap">
-    <h2>Escolha sua versão de Sistemas Humanizados.</h2>
-    <p class="c-sub">Livro físico ou digital. <strong>As duas versões incluem 3 horas de aulas gravadas com Eduardo Casarotto, com acesso imediato.</strong></p>
-    <div class="precos c-precos">
+    <h2>As versões do livro</h2>
+    <p class="hoje-faixa">Comprando <span data-hoje>hoje</span>, você também ganha <strong>3 horas de aulas bônus para aprofundamento</strong>, com acesso imediato.</p>
+
+    <div class="resumo">
       <div>
-        <p class="rot">Livro físico</p>
-        <p class="valor">R$ 279</p>
-        <p class="c-desc">Livro impresso <em>Sistemas Humanizados · Humanização 2.0</em>. <strong>Inclui 3 horas de aulas gravadas com Eduardo Casarotto, com acesso imediato.</strong></p>
-        <p class="obs">Frete incluso · envio pelos Correios</p>
-        <a class="btn" href="https://payfast.greenn.com.br/125356/offer/t0uG8O" target="_blank" rel="noopener">Quero o livro físico</a>
+        <h3>No livro</h3>
+        <p class="resumo-num">449 páginas · 27 capítulos</p>
+        <ul>
+          <li>O que é um Sistema Humanizado e os cinco filtros que validam qualquer estrutura</li>
+          <li>Governança e RH humanizados: cargo, recrutamento, carreira, avaliação de desempenho com a Terceira Competência, clima e desligamento</li>
+          <li>O manual das Necessidades Humanas, com ações de RH para cada necessidade</li>
+          <li>Saúde mental no trabalho: burnout, brownout e boreout, e o departamento de saúde mental</li>
+          <li>Manuais prontos: políticas internas, ética e compliance, feedbacks, atendimento ao público, personalidade e a CIPIH</li>
+          <li>A estrutura de um projeto de certificação em humanização</li>
+        </ul>
       </div>
       <div>
-        <p class="rot">Livro digital</p>
-        <p class="valor">R$ 147</p>
-        <p class="c-desc">Versão digital do livro <em>Sistemas Humanizados · Humanização 2.0</em>. <strong>Inclui 3 horas de aulas gravadas com Eduardo Casarotto, com acesso imediato.</strong></p>
-        <p class="obs">Acesso imediato, enviado por e-mail e WhatsApp após o pagamento</p>
-        <a class="btn" href="https://payfast.greenn.com.br/154084/offer/q2C8j3" target="_blank" rel="noopener">Quero o livro digital</a>
+        <h3>Nas aulas bônus</h3>
+        <p class="resumo-num">3 horas ao todo</p>
+        <ol class="aulas-lista">
+          <li>Introdução</li>
+          <li>Exigências da NR-1</li>
+          <li>Expressões do Orgulho e Egoísmo</li>
+          <li>Os 5 Filtros da Humanização 2.0</li>
+          <li>Riscos Psicossociais x Sistemas Humanizados</li>
+          <li>Analisando um Questionário de Riscos Psicossociais Validado</li>
+          <li>Burocracias da NR-1 com Engª de Segurança do Trabalho</li>
+          <li>Comitê de Avaliação</li>
+          <li>Pesquisa de Clima - Humanização 2.0</li>
+          <li>Entrevista Individual - Humanização 2.0</li>
+          <li>O Momento Histórico que Estamos Vivendo</li>
+          <li>O que Torna Sistêmico?</li>
+        </ol>
       </div>
     </div>
-    <p class="c-escolha">Você escolhe uma versão. As 3 horas de aulas acompanham a versão escolhida, com acesso imediato.</p>
+
+    <div class="versoes">
+      <div class="versao versao-fisica">
+        <img class="versao-mockup" src="../../img/livros/sistemas-humanizados.avif" alt="Mockup do livro físico Sistemas Humanizados · Humanização 2.0." width="560" height="1032" loading="lazy">
+        <p class="rot">Versão física</p>
+        <ul>
+          <li>Livro impresso, 449 páginas, com frete incluso</li>
+          <li><strong>Livro em PDF com acesso imediato</strong>, enquanto o impresso chega</li>
+          <li>3 horas de aulas bônus, com acesso imediato</li>
+        </ul>
+        <p class="valor">R$ 279,00</p>
+        <a class="btn" href="https://payfast.greenn.com.br/125356/offer/ShfwB0" target="_blank" rel="noopener">Comprar a versão física por R$&nbsp;279,00</a>
+      </div>
+      <div class="versao">
+        <p class="rot">Versão digital</p>
+        <ul>
+          <li>Livro em PDF, 449 páginas, com acesso imediato</li>
+          <li>3 horas de aulas bônus, com acesso imediato</li>
+          <li>Tudo na mesma plataforma, para ler e assistir quando quiser</li>
+        </ul>
+        <p class="valor">R$ 147,00</p>
+        <a class="btn" href="https://payfast.greenn.com.br/154084/offer/JhJu2t" target="_blank" rel="noopener">Comprar a versão digital por R$&nbsp;147,00</a>
+      </div>
+    </div>
     <p class="c-pos">Quer estudar essa proposta numa formação acadêmica? Conheça também a <a href="../../pos-sistemas/">Pós-graduação em Sistemas Humanizados - Humanização 2.0</a>.</p>
     <p class="c-assinatura">Trazemos o futuro. Instituto Virtudes</p>
   </div>
@@ -670,5 +716,13 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
 
 <script src="../../js/origem.js"></script>
 <script src="../../js/site.js"></script>
+<script>
+(function(){
+  try{
+    var d=new Intl.DateTimeFormat('pt-BR',{timeZone:'America/Sao_Paulo',day:'2-digit',month:'2-digit',year:'numeric'}).format(new Date());
+    document.querySelectorAll('[data-hoje]').forEach(function(el){el.textContent='hoje, dia '+d;});
+  }catch(e){}
+})();
+</script>
 </body>
 </html>
