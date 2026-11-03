@@ -52,7 +52,8 @@
   function umaVez(chave) { try { if (sessionStorage.getItem(chave)) return false; sessionStorage.setItem(chave, "1"); } catch (e) {} return true; }
 
   /* ---------- telas ---------- */
-  var TELAS = ["intro", "p_area", "edu1", "p_objetivo", "edu2", "exemplo", "p_conhecimento", "edu3", "dados", "fim"];
+  var TELAS = ["intro", "p_area", "v_cerebro", "p_objetivo", "v_personalidade", "v_aparelho", "p_conhecimento", "v_mandatos", "v_mais", "dados", "fim"];
+  var I = function (nome) { return TELAS.indexOf(nome); };
   var PERGUNTA = { p_area: "area", p_objetivo: "objetivo", p_conhecimento: "conhecimento" };
 
   function opcoes(campo) {
@@ -62,40 +63,48 @@
     }).join("") + "</div>";
   }
 
-  var pessoal = function () { return st.r.area === "interesse_pessoal"; };
-
-  var INTRO_OBJ = {
-    compreender_padroes: "Você quer entender por que as pessoas repetem padrões que as fazem sofrer. A Virtologia parte daí e vai além.",
-    investigar_atendimentos: "Você quer investigar com mais profundidade. Na Virtologia, a investigação é o primeiro de três movimentos.",
-    metodologia_virtudes: "Você quer orientar o desenvolvimento de virtudes. É onde a Virtologia chega, no terceiro de três movimentos.",
-    ampliar_repertorio: "Você quer ampliar seu repertório. A Virtologia oferece uma estrutura de trabalho em três movimentos.",
-    desenvolvimento_pessoal: "Você quer se desenvolver. Os mesmos três movimentos servem para olhar o próprio funcionamento."
-  };
-
-  var CARTOES = [
-    ["Uma nova leitura do funcionamento humano", "Estudar como investigar padrões de comportamento, necessidades, personalidade e mecanismos inconscientes."],
-    ["Os mecanismos de orgulho e egoísmo", "Conhecer a arquitetura teórica da Virtologia para interpretar reações defensivas, relações humanas e padrões associados ao sofrimento."],
-    ["Investigar recursos disponíveis e recursos a desenvolver", "Estudar como as virtudes e as Faixas de Evolução neurológica fazem parte da leitura virtológica do funcionamento humano."],
-    ["Uma estrutura para conduzir o trabalho", "Aprofundar a aplicação do tripé Investigação, Ensinamento e Ação."],
-    ["Orientar o desenvolvimento de virtudes", "Estudar princípios de aprendizagem, neuroplasticidade e os exercícios propostos pela metodologia."],
-    ["Um repertório para diferentes situações humanas", "Compreender como a Virtologia aborda dificuldades de relacionamento, reações defensivas, conflitos, necessidades e outros aspectos da personalidade."]
+  var FASES = [
+    ["Intrauterino", "concepção"], ["Oral", "0-1"], ["Anal", "1-3"], ["Fálica-genital", "3-6"], ["Latência", "6-9"],
+    ["Transição", "9-11"], ["Adolescência inicial", "11-13"], ["Adolescência média", "13-15"], ["Adolescência tardia", "15-17"],
+    ["Limiar adulto", "17-19"], ["Independência", "19-24"], ["Consolidação", "24-28"], ["Vida adulta plena", "28-30"],
+    ["Realização", "30-35"], ["Maturidade", "35-40"], ["Generatividade", "40-50"], ["Transição", "50-60"],
+    ["Integridade", "60-70"], ["Sabedoria", "70-80"], ["Plenitude", "80-90"], ["Unidade", "90-100"]
   ];
+
+  /* esquema do cérebro em corte (posições aproximadas, só para localizar) */
+  var CEREBRO =
+    '<svg class="cerebro" viewBox="34 26 344 272" role="img" aria-label="Esquema do cérebro em corte, com as regiões do SNO e do SNE numeradas">' +
+      '<path class="c-cortex" d="M62,168 C40,118 72,58 142,44 C204,30 284,40 322,76 C356,106 362,150 342,180 C330,196 310,202 288,198 C268,204 250,214 226,214 C202,214 186,205 170,210 C150,218 120,222 100,212 C80,204 67,190 62,168 Z"/>' +
+      '<ellipse class="c-cerebelo" cx="292" cy="222" rx="44" ry="25"/>' +
+      '<path class="c-tronco" d="M226,205 C231,236 235,262 237,292 L259,292 C259,263 256,236 252,205 Z"/>' +
+      '<path class="c-calo" d="M128,142 C168,104 252,98 288,136"/>' +
+      [[1,96,92,"reg"],[2,112,138,"dois"],[3,96,176,"sne"],[4,152,124,"dois"],[5,176,174,"sno"],[6,256,108,"sno"],[7,300,140,"dois"],[8,198,198,"sne"],[9,236,206,"sne"],[10,248,262,"orig"]]
+        .map(function (r) { return '<g class="c-ponto r-' + r[3] + '"><circle cx="' + r[1] + '" cy="' + r[2] + '" r="11"/><text x="' + r[1] + '" y="' + (r[2] + 4) + '">' + r[0] + "</text></g>"; }).join("") +
+      '<text class="c-rot" x="40" y="44">frente</text>' +
+    "</svg>";
+
 
   function tela(nome) {
     switch (nome) {
 
       case "intro": return {
         html:
-          '<p class="kicker">Formação em Virtologia</p>' +
-          '<h1 id="tit" tabindex="-1">E se você pudesse ir além de compreender o sofrimento humano e aprender uma metodologia para trabalhar sua transformação?</h1>' +
-          '<p class="sub">Conheça a Formação em Virtologia e descubra como aprofundar sua atuação profissional por meio do estudo da personalidade, dos mecanismos inconscientes e do desenvolvimento de virtudes por neuroplasticidade.</p>' +
-          '<p class="rotulo">Uma formação para quem deseja desenvolver uma compreensão mais profunda do funcionamento humano e novas possibilidades de atuação.</p>' +
-          '<ul class="promessas">' +
-            '<li><strong>Investigar com mais profundidade</strong><span>Compreender padrões, necessidades e mecanismos que influenciam comportamentos.</span></li>' +
-            '<li><strong>Desenvolver uma direção de trabalho</strong><span>Identificar os recursos humanos que precisam ser fortalecidos.</span></li>' +
-            '<li><strong>Transformar conhecimento em aplicação</strong><span>Estudar maneiras de orientar exercícios e ações voltadas à construção de virtudes.</span></li>' +
+          '<p class="kicker">Pré-inscrição</p>' +
+          '<h1 id="tit" tabindex="-1">Formação em Virtologia</h1>' +
+          '<p class="sub">Um curso para se formar com o Dr. Eduardo Casarotto e aprender tudo o que ele sabe sobre tratamento terapêutico. Preencha a pré-inscrição para receber todas as informações.</p>' +
+          '<p class="rotulo">Nossos alunos são profissionais que trabalham com:</p>' +
+          '<ul class="profissoes"><li>Psicologia</li><li>Psiquiatria</li><li>Psicanálise</li><li>Terapias</li><li>Nutrição</li><li>Desenvolvimento de pessoas</li><li>Coaching</li></ul>' +
+          '<p class="quem">E qualquer pessoa que queira aprender a fundo como o ser humano funciona e como transformá-lo, psicológica e neurologicamente, para que se torne mais funcional e saudável mentalmente.</p>' +
+          '<p class="rotulo">Como funciona</p>' +
+          '<ul class="como">' +
+            '<li><strong>60 horas</strong><span>de aulas, 100% online</span></li>' +
+            '<li><strong>Tudo liberado</strong><span>de uma vez, para assistir no seu tempo</span></li>' +
+            '<li><strong>Aula mensal ao vivo</strong><span>com o Dr. Eduardo Casarotto</span></li>' +
+            '<li><strong>Tira-dúvidas semanal</strong><span>em grupo, no Google Meet, com nossos especialistas</span></li>' +
+            '<li><strong>Grupos de estudo</strong><span>criados pelos alunos mais experientes</span></li>' +
+            '<li><strong>1 ano de acesso</strong><span>à plataforma</span></li>' +
           "</ul>",
-        botao: "Descobrir como a Virtologia pode ampliar minha atuação",
+        botao: "Seguir para pré-inscrição",
         aoAvancar: function () { if (umaVez("fi_quiz_iniciado")) { fbCustom("QuizStarted", { content_name: "Formação em Virtologia" }); ga("quiz_iniciado", { pagina: "formacao_interesse" }); } }
       };
 
@@ -104,19 +113,26 @@
         pergunta: "area"
       };
 
-      case "edu1": return {
+      case "v_cerebro": return {
         html:
-          '<p class="kicker">Capítulo 1</p>' +
-          '<h2 id="tit" tabindex="-1">O que muda quando você passa a investigar o funcionamento humano por outra perspectiva?</h2>' +
-          '<p>Imagine alguém que entende o comportamento que o faz sofrer, sabe que ele prejudica sua vida e, mesmo assim, continua repetindo o padrão.</p>' +
-          (pessoal()
-            ? '<p>A Virtologia propõe ir além da explicação: quem estuda aprende a investigar os mecanismos envolvidos, a estrutura da personalidade, as necessidades por trás das reações e os recursos a desenvolver, inclusive em si mesmo.</p>' +
-              '<blockquote>Não é apenas saber explicar por que alguém age de determinada maneira. É entender o que precisa ser desenvolvido para funcionar de outra forma.</blockquote>' +
-              '<p class="fecho">A proposta é transformar a compreensão do funcionamento humano em direção de desenvolvimento.</p>'
-            : '<p>Na Virtologia, o profissional não para na explicação: aprende a investigar os mecanismos envolvidos, a estrutura da personalidade, as necessidades por trás das reações e os recursos que precisam ser desenvolvidos.</p>' +
-              '<blockquote>Não é apenas saber explicar por que alguém age de determinada maneira. É estudar como identificar o que essa pessoa precisa desenvolver para funcionar de outra forma.</blockquote>' +
-              '<p class="fecho">A proposta é transformar a compreensão do funcionamento humano em direção de trabalho.</p>'),
-        botao: "Quero conhecer essas possibilidades"
+          '<p class="kicker">O ser humano pela Virtologia</p>' +
+          '<h2 id="tit" tabindex="-1">O orgulho e o egoísmo têm endereço no cérebro</h2>' +
+          '<p class="legenda-topo">Dois sistemas: o <b class="t-sno">SNO</b>, do orgulho, calcula a minha posição. O <b class="t-sne">SNE</b>, do egoísmo, calcula a minha vantagem.</p>' +
+          CEREBRO +
+          '<ol class="regioes">' +
+            '<li><i class="r-reg">1</i>Pré-frontal dorsolateral</li>' +
+            '<li><i class="r-dois">2</i>Pré-frontal medial</li>' +
+            '<li><i class="r-sne">3</i>Pré-frontal ventromedial</li>' +
+            '<li><i class="r-dois">4</i>Cingulado anterior e ínsula</li>' +
+            '<li><i class="r-sno">5</i>Estriado ventral</li>' +
+            '<li><i class="r-sno">6</i>Cingulado posterior</li>' +
+            '<li><i class="r-dois">7</i>Junção temporoparietal</li>' +
+            '<li><i class="r-sne">8</i>Amígdala</li>' +
+            '<li><i class="r-sne">9</i>Área tegmental ventral</li>' +
+            '<li><i class="r-orig">10</i>Tronco cerebral</li>' +
+          "</ol>" +
+          '<p class="chave"><i class="r-sno"></i>SNO <i class="r-sne"></i>SNE <i class="r-dois"></i>os dois <i class="r-reg"></i>regulador <i class="r-orig"></i>origem</p>',
+        botao: "Continuar"
       };
 
       case "p_objetivo": return {
@@ -124,32 +140,31 @@
         pergunta: "objetivo"
       };
 
-      case "edu2": return {
+      case "v_personalidade": return {
         html:
-          '<p class="kicker">Capítulo 2</p>' +
-          '<h2 id="tit" tabindex="-1">Da investigação à transformação</h2>' +
-          '<p class="pessoal">' + esc(INTRO_OBJ[st.r.objetivo] || "A Virtologia organiza sua proposta de trabalho em três movimentos fundamentais.") + '</p>' +
-          '<ol class="movimentos">' +
-            '<li><strong>Investigação</strong><span>Compreender como a pessoa funciona: padrões, necessidades, defesas e personalidade.</span></li>' +
-            '<li><strong>Ensinamento</strong><span>Ajudar a pessoa a entender o próprio funcionamento e orientar mudanças concretas.</span></li>' +
-            '<li><strong>Ação</strong><span>Desenvolver os recursos necessários com exercícios de virtudes, por aprendizagem e neuroplasticidade.</span></li>' +
-          "</ol>" +
-          '<blockquote>Compreender o funcionamento, identificar o que precisa ser desenvolvido e orientar a transformação.</blockquote>',
-        botao: "Ver um exemplo de aplicação"
+          '<p class="kicker">O ser humano pela Virtologia</p>' +
+          '<h2 id="tit" tabindex="-1">A personalidade tem cinco partes</h2>' +
+          '<div class="equacao">' +
+            '<p class="eq-res">Personalidade</p>' +
+            '<p class="eq-igual">=</p>' +
+            '<ul class="eq-partes">' +
+              '<li><strong>Identidade</strong></li>' +
+              '<li><strong>Caráter</strong></li>' +
+              '<li><strong>Temperamento</strong><span>12 campos</span></li>' +
+              '<li><strong>Virtudes</strong><span>33 virtudes</span></li>' +
+              '<li><strong>Psique</strong><span>aparelho psíquico</span></li>' +
+            "</ul>" +
+          "</div>" +
+          '<p class="legenda">Cada pessoa tem a sua composição. É ela que explica por que duas pessoas, na mesma situação, reagem de jeitos tão diferentes.</p>',
+        botao: "Continuar"
       };
 
-      case "exemplo": return {
+      case "v_aparelho": return {
         html:
-          '<p class="kicker">Exemplo de aplicação</p>' +
-          '<h2 id="tit" tabindex="-1">Uma pessoa que não consegue lidar com críticas</h2>' +
-          '<p>Ela sabe que reage mal, sabe que isso prejudica seus relacionamentos e até explica de onde isso vem. <strong>Mas continua reagindo na defensiva.</strong></p>' +
-          '<ol class="fluxo" aria-label="Como a Virtologia propõe estudar esse caso">' +
-            '<li><em>Comportamento observado</em>Reação defensiva diante de críticas</li>' +
-            '<li><em>Investigar</em>Orgulho, necessidade de importância e aceitação, recursos da personalidade</li>' +
-            '<li><em>Ensinar</em>A diferença entre sentir a crítica como ameaça e encará-la com consciência</li>' +
-            '<li><em>Orientar a ação</em>Humildade, aceitação e abertura ao aprendizado, conforme o planejamento do caso</li>' +
-          "</ol>" +
-          '<p class="fecho"><strong>É só um exemplo.</strong> A formação oferece uma arquitetura para situações muito mais diversas, não uma técnica única.</p>',
+          '<p class="kicker">O ser humano pela Virtologia</p>' +
+          '<h2 id="tit" tabindex="-1">O aparelho psíquico</h2>' +
+          '<figure class="figura-livro"><img src="../../img/virtologia/aparelho-psiquico.webp" alt="Diagrama do aparelho psíquico na Virtologia, com Tanque, Memória, Persona, Ego, Self, Superego, Instintos, Defesas, Condicionamentos, Complexo, Holofote, Transcendência, Interferência e IC." width="900" height="1163"><figcaption>Fundamentos da Virtologia, terceira edição</figcaption></figure>' +
+          '<p class="legenda">Tanque, Holofote, Complexo, Persona, Self, Transcendência... Cada parte tem uma função, e todas aparecem no comportamento de uma pessoa.</p>',
         botao: "Continuar"
       };
 
@@ -158,19 +173,37 @@
         pergunta: "conhecimento"
       };
 
-      case "edu3": return {
+      case "v_mandatos": return {
         html:
-          '<p class="kicker">Capítulo 3</p>' +
-          '<h2 id="tit" tabindex="-1">O que você desenvolve ao estudar Virtologia de maneira aprofundada?</h2>' +
-                    '<div class="cartoes">' + CARTOES.map(function (c, i) {
-            return '<details><summary><span class="n">' + (i + 1) + "</span>" + esc(c[0]) + "</summary><p>" + esc(c[1]) + "</p></details>";
-          }).join("") + "</div>" +
+          '<p class="kicker">O ser humano pela Virtologia</p>' +
+          '<h2 id="tit" tabindex="-1">Cada idade da vida tem um mandato</h2>' +
+          '<p class="legenda-topo">A experiência que o cérebro precisa atravessar naquela fase para a personalidade se construir. São 21 fases, do útero à longevidade:</p>' +
+          '<ol class="fases">' + FASES.map(function (f) { return "<li><strong>" + esc(f[0]) + "</strong><span>" + esc(f[1]) + "</span></li>"; }).join("") + "</ol>" +
+          '<p class="rotulo">Cada mandato pode ser:</p>' +
+          '<ul class="desfechos"><li class="d-bem">Bem vivido</li><li class="d-nao">Não vivido</li><li class="d-mal">Mal vivido</li></ul>',
+        botao: "Continuar"
+      };
+
+      case "v_mais": return {
+        html:
+          '<p class="kicker">O ser humano pela Virtologia</p>' +
+          '<h2 id="tit" tabindex="-1">E isso é só uma parte</h2>' +
+          '<p class="legenda-topo">A Virtologia ainda lê o ser humano por:</p>' +
+          '<ul class="mosaico">' +
+            '<li><strong>7</strong>Faixas de Evolução neurológica</li>' +
+            '<li><strong>51</strong>necessidades humanas</li>' +
+            '<li><strong>33</strong>virtudes</li>' +
+            '<li><strong>12</strong>campos do temperamento</li>' +
+            '<li><strong>SNO</strong>e <strong class="in">SNE</strong> e seus cálculos</li>' +
+            '<li><strong>21</strong>fases e seus mandatos</li>' +
+          "</ul>" +
+          '<p class="formula-lf"><span>A Lei do Fluxo</span>PRF = E × I × PS × FA × PO × LV</p>' +
           '<div class="quadro">' +
             '<p><span>Livro ou aula</span>Conhecer as ideias.</p>' +
             '<p class="forte"><span>Formação</span>A arquitetura completa e suas aplicações. Inclui o livro.</p>' +
           "</div>" +
           '<p class="aviso">Formação oferecida atualmente como curso livre. A aplicação profissional deve respeitar as atribuições, a formação prévia e os limites legais de cada profissão.</p>',
-        botao: "Quero conhecer as condições para ingressar"
+        botao: "Continuar"
       };
 
       case "dados": return {
@@ -208,13 +241,13 @@
 
   /* ---------- navegação ---------- */
   function primeiraPendente() {
-    if (!st.r.area) return 1;
-    if (!st.r.objetivo) return 3;
-    if (!st.r.conhecimento) return 6;
+    if (!st.r.area) return I("p_area");
+    if (!st.r.objetivo) return I("p_objetivo");
+    if (!st.r.conhecimento) return I("p_conhecimento");
     return null;
   }
   function permitida(n) {
-    if (n >= 9 && !st.codigo) return 8;
+    if (n >= I("fim") && !st.codigo) return I("dados");
     var p = primeiraPendente();
     if (p !== null && n > p) return p;
     return n;
@@ -226,7 +259,7 @@
     st.etapa = n; salvar();
     if (empilhar) { try { history.pushState({ fi: n }, ""); empilhados++; } catch (e) {} }
     desenhar(dir);
-    if (n > 0 && n < 9) ga("quiz_etapa", { etapa: TELAS[n] });
+    if (n > 0 && n < I("fim")) ga("quiz_etapa", { etapa: TELAS[n] });
   }
 
   function guardarDados() {
@@ -376,8 +409,8 @@
           ga("generate_lead", { pagina: "formacao_interesse", trilha: "virtologia" });
         }
         enviando = false;
-        try { history.replaceState({ fi: 9 }, ""); } catch (e) {}
-        st.etapa = 9; salvar(); desenhar(1);
+        try { history.replaceState({ fi: I("fim") }, ""); } catch (e) {}
+        st.etapa = I("fim"); salvar(); desenhar(1);
       })
       .catch(function () {
         enviando = false;

@@ -171,3 +171,79 @@ blockquote{font-family:var(--f-tit);font-size:16px;line-height:1.38;font-weight:
 .passos{list-style:none;display:grid;gap:10px;margin:6px 0 4px}
 .passos li{background:var(--branco);border:1px solid var(--borda);border-left:3px solid var(--ouro);border-radius:8px;padding:12px 14px;font-size:15px;line-height:1.45}
 .passos strong{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ouro);margin-bottom:3px}
+
+/* ===== abertura ===== */
+.profissoes{list-style:none;display:flex;flex-wrap:wrap;gap:6px;margin:0 0 8px}
+.profissoes li{background:var(--branco);border:1px solid var(--borda);border-radius:999px;padding:4px 11px;font-size:13.5px;font-weight:600}
+.quem{font-size:13.5px;line-height:1.45;color:var(--cinza)}
+.como{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.como li{background:var(--branco);border:1px solid var(--borda);border-top:3px solid var(--ouro);border-radius:8px;padding:8px 10px}
+.como strong{display:block;font-size:14px;line-height:1.25}
+.como span{display:block;font-size:12.5px;line-height:1.35;color:var(--cinza)}
+
+/* ===== vitrines ===== */
+:root{--sno:#B8914F;--sne:#2C8C83;--reg:#0B2341;--orig:#7A8699}
+.legenda-topo{font-size:14px;line-height:1.45;color:var(--cinza)}
+.legenda{font-size:14px;line-height:1.45;color:var(--cinza);margin-top:8px}
+.t-sno{color:var(--sno)} .t-sne{color:var(--sne)}
+
+.cerebro{display:block;width:100%;max-width:420px;height:auto;margin:2px auto 6px}
+.c-cortex{fill:#EDE7DB;stroke:#B9AE98;stroke-width:2}
+.c-cerebelo{fill:#E3DCCD;stroke:#B9AE98;stroke-width:2}
+.c-tronco{fill:#E3DCCD;stroke:#B9AE98;stroke-width:2}
+.c-calo{fill:none;stroke:#C9BFA9;stroke-width:6;stroke-linecap:round}
+.c-ponto circle{stroke:#fff;stroke-width:2}
+.c-ponto text{font:700 11px var(--f-txt);fill:#fff;text-anchor:middle}
+.c-rot{font:600 11px var(--f-txt);fill:#9AA3AF;letter-spacing:.08em;text-transform:uppercase}
+.c-ponto.r-sno circle{fill:var(--sno)} .c-ponto.r-sne circle{fill:var(--sne)} .c-ponto.r-reg circle{fill:var(--reg)} .c-ponto.r-orig circle{fill:var(--orig)}
+.c-ponto.r-dois circle{fill:var(--sno);stroke:var(--sne);stroke-width:4}
+.regioes{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:3px 10px;margin:0}
+.regioes li{display:flex;align-items:center;gap:7px;font-size:12.5px;line-height:1.25}
+.regioes em{font-style:normal;color:var(--cinza)}
+.regioes i,.chave i{flex:0 0 18px;width:18px;height:18px;border-radius:50%;font:700 10px/18px var(--f-txt);color:#fff;text-align:center;font-style:normal;display:inline-block}
+.r-sno{background:var(--sno)} .r-sne{background:var(--sne)} .r-reg{background:var(--reg)} .r-orig{background:var(--orig)}
+.r-dois{background:var(--sno);box-shadow:inset 0 0 0 3px var(--sne)}
+.chave{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--cinza);margin-top:8px !important}
+.chave i{width:12px;height:12px;flex:0 0 12px;margin-left:6px}
+
+.equacao{background:var(--branco);border:1px solid var(--borda);border-radius:12px;padding:14px 14px 12px;margin:6px 0 4px;text-align:center}
+.eq-res{font-family:var(--f-tit);font-size:22px;font-weight:600;margin:0 !important}
+.eq-igual{font-size:22px;color:var(--ouro);margin:0 0 6px !important;line-height:1}
+.eq-partes{list-style:none;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;counter-reset:p}
+.eq-partes li{position:relative;background:var(--marinho);color:#fff;border-radius:8px;padding:10px 4px;display:flex;flex-direction:column;justify-content:center;min-height:74px}
+.eq-partes li + li::before{content:"+";position:absolute;left:-7px;top:50%;transform:translate(-50%,-50%);color:var(--ouro);font-weight:700;font-size:15px}
+.eq-partes strong{font-size:12.5px;line-height:1.2;word-break:break-word}
+.eq-partes span{font-size:10.5px;line-height:1.2;color:#E5C88E;margin-top:3px}
+@media (max-width:420px){
+  .eq-partes{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 8px}
+  .eq-partes li:nth-child(4)::before{display:none}
+  .eq-partes li{min-height:62px}
+}
+
+.figura-livro{margin:4px 0 0;text-align:center}
+.figura-livro img{display:block;margin:0 auto;height:auto;max-height:44vh;max-height:44dvh;width:auto;max-width:100%;background:#fff;border:1px solid var(--borda);border-radius:8px;padding:6px}
+.figura-livro figcaption{font-size:11px;color:var(--cinza);margin-top:4px}
+
+.fases{list-style:none;display:flex;flex-wrap:wrap;gap:5px;margin:4px 0 6px}
+.fases li{background:var(--branco);border:1px solid var(--borda);border-radius:7px;padding:3px 8px;display:flex;gap:5px;align-items:baseline}
+.fases strong{font-size:12px;font-weight:600}
+.fases span{font-size:11px;color:var(--ouro);font-weight:600}
+.desfechos{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.desfechos li{border-radius:8px;padding:9px 6px;text-align:center;font-size:13.5px;font-weight:600;color:#fff}
+.d-bem{background:var(--sne)} .d-nao{background:var(--orig)} .d-mal{background:#9C4A3C}
+
+.mosaico{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:4px 0 8px}
+.mosaico li{background:var(--branco);border:1px solid var(--borda);border-radius:8px;padding:8px 10px;font-size:12.5px;line-height:1.3;color:var(--cinza)}
+.mosaico strong{display:block;font-family:var(--f-tit);font-size:20px;line-height:1.1;color:var(--marinho)}
+.mosaico strong.in{display:inline;font-size:inherit;font-family:inherit;color:var(--marinho)}
+.formula-lf{font-family:var(--f-tit);font-weight:600;font-size:17px;text-align:center;background:var(--marinho);color:#fff;border-radius:8px;padding:9px 10px;margin-bottom:8px !important}
+.formula-lf span{display:block;font-family:var(--f-txt);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#E5C88E;margin-bottom:2px}
+
+/* compactação das vitrines */
+.cerebro{max-height:200px;margin:0 auto 4px}
+.regioes{gap:2px 8px}
+.regioes li{font-size:12px}
+.chave{flex-wrap:wrap;margin-top:6px !important;font-size:11.5px}
+.mosaico{gap:5px}
+.mosaico li{padding:6px 9px}
+.mosaico strong{font-size:18px}
