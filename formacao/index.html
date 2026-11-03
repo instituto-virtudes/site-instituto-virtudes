@@ -94,6 +94,58 @@
 .sabe-lista h3{font-family:'Lora',Georgia,serif;font-size:19px;font-weight:600;line-height:1.3;margin:0 0 10px;color:var(--texto)}
 .sabe-lista p{font-size:16px;line-height:1.6;color:var(--apoio);margin:0}
 @media (max-width:820px){.sabe-lista{grid-template-columns:1fr;gap:14px}}
+
+.frentes > div{background:#fff}
+.mapa-cerebro{margin:30px 0 34px;border:1px solid var(--borda);border-radius:var(--raio-card);overflow:hidden;background:#fff}
+.mc-camada{padding:20px 24px}
+.mc-topo{background:var(--azul-escuro);color:#fff}
+.mc-topo h3,.mc-topo p{color:#fff}
+.mc-base{background:var(--claro);border-top:1px solid var(--borda)}
+.mc-rot{font-size:12px !important;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin:0 0 4px !important;opacity:.8}
+.mapa-cerebro h3{font-size:19px;line-height:1.3;margin:0 0 6px}
+.mapa-cerebro p{font-size:15px;line-height:1.55;margin:0}
+.mc-meio{display:grid;grid-template-columns:1fr 1fr;position:relative}
+.mc-meio::before,.mc-meio::after{content:"";position:absolute;left:50%;width:2px;height:14px;background:var(--azul);transform:translateX(-1px)}
+.mc-meio::before{top:0}.mc-meio::after{bottom:0}
+.mc-sis{padding:22px 24px}
+.mc-sis + .mc-sis{border-left:1px solid var(--borda)}
+.mc-sis .mc-rot{color:var(--azul)}
+.mc-sis ul{list-style:none;margin:10px 0 0;padding:0}
+.mc-sis li{font-size:14.5px;line-height:1.5;color:var(--apoio);padding:7px 0;border-top:1px solid var(--claro);margin:0}
+.mc-sis li strong{color:var(--texto)}
+.sub-cerebro{font-size:23px;margin:10px 0 12px}
+.formula{font-family:'Lora',Georgia,serif;font-size:21px;font-weight:600;line-height:1.35;text-align:center;
+  background:var(--pastel-azul);color:var(--azul-escuro);border-radius:var(--raio-card);padding:18px 20px;margin:20px 0}
+.niveis{list-style:none;counter-reset:nv;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:24px 0 28px;padding:0}
+.niveis li{counter-increment:nv;border:1px solid var(--borda);border-radius:var(--raio-card);padding:16px 16px 18px;font-size:14.5px;line-height:1.5;color:var(--apoio);margin:0;background:#fff}
+.niveis li::before{content:counter(nv);display:block;font-family:'Lora',Georgia,serif;font-size:22px;font-weight:700;color:var(--azul);margin-bottom:4px}
+.niveis strong{display:block;color:var(--texto);font-size:16px;margin-bottom:4px}
+.tabela-rolar{overflow-x:auto;margin:18px 0 30px}
+.protocolo{width:100%;border-collapse:collapse;font-size:15px;line-height:1.5;background:#fff}
+.protocolo th{text-align:left;font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:var(--apoio);font-weight:600;padding:10px 14px;border-bottom:2px solid var(--borda)}
+.protocolo td{padding:11px 14px;border-bottom:1px solid var(--borda);vertical-align:top}
+.protocolo td:first-child{font-weight:600;white-space:nowrap;color:var(--texto)}
+.protocolo td:last-child{color:var(--apoio)}
+.do-livro-rot{font-size:13px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--apoio);margin:0 0 12px}
+.do-livro{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.do-livro a{display:block;border:0;color:var(--texto);font-size:14px;line-height:1.4}
+.do-livro img{display:block;width:100%;height:auto;border:1px solid var(--borda);border-radius:4px;box-shadow:0 8px 24px rgba(5,13,20,.10);margin-bottom:8px;transition:transform .2s}
+.do-livro a:hover img{transform:translateY(-3px)}
+.do-livro + .apoio{margin-top:10px}
+@media (max-width:820px){
+  .niveis{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  .mc-meio{grid-template-columns:1fr}
+  .mc-sis + .mc-sis{border-left:0;border-top:1px solid var(--borda)}
+  .mc-meio::before,.mc-meio::after{display:none}
+  .mc-camada,.mc-sis{padding:18px}
+  .formula{font-size:18px;padding:16px}
+  .protocolo td:first-child{white-space:normal}
+  .protocolo td,.protocolo th{padding:10px}
+  .do-livro{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+  .do-livro a{font-size:12px}
+}
 </style>
 <!-- Meta Pixel -->
 <script>
@@ -138,6 +190,7 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
             <li><a href="../terapeutas/">Terapia gratuita</a></li>
             <li><a href="../teorias/">Diante de outras grandes teorias</a></li>
             <li><a href="../aula1/">Aula aberta</a></li>
+            <li><a href="../aulas/virtologia/">Aula ao vivo gratuita</a></li>
           </ul>
         </li>
         <li class="tem-sub">
@@ -149,15 +202,18 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
             <li><a href="../sistemas-humanizados/">O livro Sistemas Humanizados</a></li>
             <li><a href="../aula2/">Aula aberta sobre a NR-1</a></li>
             <li><a href="../aularh/">Aula aberta para RH</a></li>
+            <li><a href="../aulas/humanizacao/">Aula ao vivo gratuita</a></li>
             <li><a href="../ondas/">As Três Ondas do Trabalho</a></li>
           </ul>
         </li>
         <li class="tem-sub">
-          <button class="menu-sub-btn" aria-expanded="false" aria-haspopup="true">Formações <span class="seta-sub" aria-hidden="true">&#9662;</span></button>
+          <button class="menu-sub-btn" aria-expanded="false" aria-haspopup="true">Formações e cursos <span class="seta-sub" aria-hidden="true">&#9662;</span></button>
           <ul class="submenu">
             <li><a href="../formacao/">Formação em Virtologia</a></li>
             <li><a href="../pos-sistemas/">Pós-graduação em Sistemas Humanizados</a></li>
-            <li><a href="../formacoes/">Todas as formações</a></li>
+            <li><a href="../formacoes/#intro-virtologia">Curso de Introdução à Virtologia</a></li>
+            <li><a href="../formacoes/#intro-sistemas">Curso de Introdução aos Sistemas Humanizados</a></li>
+            <li><a href="../formacoes/">Todas as formações e cursos</a></li>
           </ul>
         </li>
         <li class="tem-sub">
@@ -206,9 +262,11 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
       <p class="indice-titulo">Nesta página</p>
       <ol>
         <li><a href="#funcional">O que é fazer alguém voltar a funcionar</a></li>
+        <li><a href="#trunfo">O ponto central da Virtologia</a></li>
         <li><a href="#para-quem">Para quem é</a></li>
         <li><a href="#sabe-fazer">O que você sai sabendo fazer</a></li>
         <li><a href="#aprender">O que você vai aprender</a></li>
+        <li><a href="#cerebro">A base neurocientífica</a></li>
         <li><a href="#outras">Diante de outras linhas</a></li>
         <li><a href="#como-funciona">Como funciona</a></li>
         <li><a href="#depoimentos">Depoimentos</a></li>
@@ -237,6 +295,47 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
     <p>Você aprende a trabalhar com <strong>ansiedade, depressão, transtornos de personalidade, borderline, TOC, compulsões, automutilação, pensamento suicida, pânico e fibromialgia</strong>, entre outros casos, com um método que vai na causa e não só no sintoma.</p>
 
     <a class="btn" href="https://wa.me/5511965419449?text=Ol%C3%A1%21%20Vim%20do%20site%20e%20quero%20saber%20mais%20sobre%20a%20Forma%C3%A7%C3%A3o%20em%20Virtologia" target="_blank" rel="noopener">Quero me matricular</a>
+  </div>
+</section>
+
+<section id="trunfo">
+  <div class="wrap">
+    <p class="kicker">O ponto central da Virtologia</p>
+    <h2>Quando a pessoa faz o que não queria fazer, quem está no comando?</h2>
+
+    <p>Quando alguém age de um jeito que depois lamenta, faz exatamente o que não gostaria de fazer, é porque naquele momento não estava consciente. E se não era a consciência que estava no comando, o que era?</p>
+
+    <p>Eram os instintos primitivos, os condicionamentos aprendidos na vida e na formação do caráter, e o que vem da genética. E qual é a base genética mais forte de qualquer ser vivo? <strong>Sobreviver.</strong></p>
+
+    <p>O ser humano sobrevive de dois jeitos:</p>
+
+    <div class="duas">
+      <div>
+        <h3>Pelo egoísmo</h3>
+        <p>Colocar a própria vida acima das outras. <strong>O meu antes do seu.</strong></p>
+      </div>
+      <div>
+        <h3>Pelo orgulho</h3>
+        <p>Ser aceito, aprovado, importante para os outros. Somos uma espécie que aprendeu que sobreviver em grupo é mais eficiente do que sobreviver sozinho. <strong>Quem tem lugar no grupo é protegido, e a chance de morrer diminui.</strong></p>
+      </div>
+    </div>
+
+    <p class="destaque">Orgulho e egoísmo são as duas expressões básicas do primitivismo humano. Identificar as duas é o grande trunfo da Virtologia, e é nelas que ela atua.</p>
+
+    <p>E ela faz isso com uma leitura da personalidade mais profunda que a das outras linhas: as Faixas de Evolução neurológica, as necessidades, o temperamento, o aparelho psíquico. É o que permite saber o que está no comando de cada pessoa, e por isso a Virtologia atua em duas frentes.</p>
+
+    <div class="duas frentes">
+      <div>
+        <h3>A saúde mental de cada pessoa</h3>
+        <p>Os transtornos que você vai tratar estão ligados a defesas: respostas automáticas do cérebro, que fogem da consciência. Elas saem do lado instintivo, do orgulho e do egoísmo. <strong>Quando a virtude tira o poder dos dois, a defesa perde a força.</strong></p>
+      </div>
+      <div>
+        <h3>O futuro da sociedade</h3>
+        <p>O mundo precisa de pessoas menos egoístas, que queiram o bem do outro. Quando o ser humano deixa de se colocar acima dos outros e de buscar poder, status e importância acima do bem comum, <strong>a sociedade se torna um lugar melhor: sem guerra, sem fome, sem desigualdade.</strong></p>
+      </div>
+    </div>
+
+    <p>É o âmbito pessoal, da saúde mental e do tratamento, junto com o âmbito coletivo, do futuro da humanidade. <strong>Quem se forma em Virtologia trabalha nos dois ao mesmo tempo.</strong></p>
   </div>
 </section>
 
@@ -364,6 +463,92 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
         </div>
       </li>
     </ol>
+
+    <a class="btn" href="https://wa.me/5511965419449?text=Ol%C3%A1%21%20Vim%20do%20site%20e%20quero%20saber%20mais%20sobre%20a%20Forma%C3%A7%C3%A3o%20em%20Virtologia" target="_blank" rel="noopener">Quero me matricular</a>
+  </div>
+</section>
+
+<section id="cerebro">
+  <div class="wrap">
+    <p class="kicker">A base neurocientífica</p>
+    <h2>O que acontece no cérebro, segundo o Fundamentos da Virtologia</h2>
+
+    <p>A Virtologia não trata orgulho e egoísmo como defeito moral. O livro <em>Fundamentos da Virtologia</em>, terceira edição, descreve os dois como sistemas neurofuncionais, com os circuitos de cada um. <strong>É isso que você estuda na Formação.</strong></p>
+
+    <div class="mapa-cerebro" role="group" aria-label="Os dois sistemas primitivos e o regulador, segundo o Fundamentos da Virtologia">
+      <div class="mc-camada mc-topo">
+        <p class="mc-rot">O regulador</p>
+        <h3>Lobo frontal · córtex pré-frontal dorsolateral</h3>
+        <p>É onde as virtudes são inscritas. Quando ele deixa de conter os dois sistemas, acontece o que a Virtologia chama de <strong>apagão</strong>: o primitivo assume o comando do ato.</p>
+      </div>
+      <div class="mc-meio">
+        <div class="mc-sis">
+          <p class="mc-rot">SNO · Sistema Neurofuncional do Orgulho</p>
+          <h3>Calcula a minha posição</h3>
+          <ul>
+            <li><strong>Estriado ventral:</strong> dá valor à posição em relação aos outros</li>
+            <li><strong>Pré-frontal medial e cingulado posterior:</strong> referem tudo ao eu</li>
+            <li><strong>Ínsula anterior e cingulado anterior:</strong> a dor social, quando a crítica dói</li>
+            <li><strong>Junção temporoparietal:</strong> o olhar do outro</li>
+          </ul>
+        </div>
+        <div class="mc-sis">
+          <p class="mc-rot">SNE · Sistema Neurofuncional do Egoísmo</p>
+          <h3>Calcula a minha vantagem</h3>
+          <ul>
+            <li><strong>Pré-frontal ventromedial e dorsomedial:</strong> a conta entre o eu e o outro</li>
+            <li><strong>Junção temporoparietal:</strong> o freio que aumenta o peso do outro</li>
+            <li><strong>Amígdala:</strong> amplifica ameaça e desejo</li>
+            <li><strong>Área tegmental ventral e accumbens:</strong> a recompensa sequestrada na compulsão</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mc-camada mc-base">
+        <p class="mc-rot">A origem</p>
+        <h3>Tronco cerebral · a mensagem de sobrevivência</h3>
+        <p>No orgulho: sem um lugar no grupo, estou em risco. No egoísmo: a minha vida primeiro.</p>
+      </div>
+    </div>
+
+    <h3 class="sub-cerebro">Como uma virtude vira cérebro</h3>
+    <p>Para a Virtologia, treinar uma virtude é reconstruir tecido cerebral. O livro resume a memória de longo prazo numa fórmula com a mesma forma da Lei do Fluxo:</p>
+
+    <p class="formula">Memória de longo prazo = Atenção × Emoção × Cognição × Repetição</p>
+
+    <p>É multiplicação, não soma: se um fator vai a zero, o resultado inteiro vai a zero. <strong>Sem atenção, nada entra. Sem emoção, entra e não fica. Sem cognição, fica e não se integra. Sem repetição, integra e se apaga.</strong></p>
+
+    <ol class="niveis">
+      <li><strong>Molecular</strong>Genes são ativados e proteínas novas são fabricadas. Nenhuma mudança duradoura acontece sem isso.</li>
+      <li><strong>Neuronal</strong>O nascimento, a maturação e a sobrevivência de neurônios.</li>
+      <li><strong>Dendrítico</strong>As espinhas que recebem as conexões crescem, mudam de forma e se multiplicam.</li>
+      <li><strong>Sináptico</strong>Nascem sinapses novas, e as que já existem ficam mais fortes ou mais fracas.</li>
+    </ol>
+
+    <p>O protocolo de cada virtude foi montado para mobilizar essa cascata inteira. <strong>Cada passo tem uma razão no cérebro:</strong></p>
+
+    <div class="tabela-rolar">
+      <table class="protocolo">
+        <thead><tr><th>Passo do protocolo</th><th>O que ele aciona no cérebro</th></tr></thead>
+        <tbody>
+          <tr><td>Ler a afirmação em voz alta</td><td>A via fonológica e o retorno da própria voz reforçam o registro</td></tr>
+          <tr><td>Escrever a afirmação à mão</td><td>Os circuitos motores somam outra via de codificação</td></tr>
+          <tr><td>Meditar dez minutos</td><td>O pré-frontal treina a atenção, e o ensaio mental ativa parte dos circuitos da ação</td></tr>
+          <tr><td>Recuperar, sem consultar</td><td>Lembrar sem olhar fortalece o acesso à conduta, não à frase</td></tr>
+          <tr><td>Escrever a frase de gatilho</td><td>Cria um par gatilho-resposta disponível sob pressão</td></tr>
+          <tr><td>Aplicar em situação real</td><td>A memória fica gravada junto com as pistas da situação em que vai ser usada</td></tr>
+          <tr><td>Registrar o erro e o acerto</td><td>O sinal de erro do cingulado anterior ajusta a próxima tentativa</td></tr>
+          <tr><td>Dormir</td><td>A consolidação acontece no sono profundo</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="do-livro-rot">Páginas do <em>Fundamentos da Virtologia</em>, terceira edição</p>
+    <div class="do-livro">
+      <a href="../img/fundamentos/pagina-159-sno-sne.webp" target="_blank" rel="noopener"><img src="../img/fundamentos/pagina-159-sno-sne-mini.webp" alt="Página 159 do Fundamentos da Virtologia: a arquitetura do SNO e os sistemas químicos do apagão" width="440" height="623" loading="lazy"><span>p. 159 · A arquitetura do SNO</span></a>
+      <a href="../img/fundamentos/pagina-256-memoria.webp" target="_blank" rel="noopener"><img src="../img/fundamentos/pagina-256-memoria-mini.webp" alt="Página 256 do Fundamentos da Virtologia: a fórmula da memória de longo prazo e a neuroplasticidade" width="440" height="623" loading="lazy"><span>p. 256 · A fórmula da memória</span></a>
+      <a href="../img/fundamentos/pagina-268-protocolo.webp" target="_blank" rel="noopener"><img src="../img/fundamentos/pagina-268-protocolo-mini.webp" alt="Página 268 do Fundamentos da Virtologia: os passos do protocolo e o mecanismo neural de cada um" width="440" height="623" loading="lazy"><span>p. 268 · O protocolo passo a passo</span></a>
+    </div>
+    <p class="apoio">Toque numa página para ver em tamanho maior.</p>
 
     <a class="btn" href="https://wa.me/5511965419449?text=Ol%C3%A1%21%20Vim%20do%20site%20e%20quero%20saber%20mais%20sobre%20a%20Forma%C3%A7%C3%A3o%20em%20Virtologia" target="_blank" rel="noopener">Quero me matricular</a>
   </div>
@@ -578,6 +763,7 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
           <li><a href="../terapeutas/">Terapia gratuita</a></li>
           <li><a href="../teorias/">Diante de outras grandes teorias</a></li>
           <li><a href="../aula1/">Aula aberta</a></li>
+          <li><a href="../aulas/virtologia/">Aula ao vivo gratuita</a></li>
         </ul>
       </div>
       <div>
@@ -586,16 +772,19 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
           <li><a href="../sistemas/#evidencias">Evidências internacionais</a></li>
           <li><a href="../aula2/">Aula aberta sobre a NR-1</a></li>
           <li><a href="../aularh/">Aula aberta para RH</a></li>
+          <li><a href="../aulas/humanizacao/">Aula ao vivo gratuita</a></li>
           <li><a href="../sistemas-humanizados/">O livro</a></li>
           <li><a href="../pos-sistemas/">Pós-graduação</a></li>
           <li><a href="../ondas/">As Três Ondas do Trabalho</a></li>
         </ul>
       </div>
       <div>
-        <h4><a href="../formacoes/">Formações</a></h4>
+        <h4><a href="../formacoes/">Formações e cursos</a></h4>
         <ul>
           <li><a href="../formacao/">Formação em Virtologia</a></li>
           <li><a href="../pos-sistemas/">Pós-graduação em Sistemas Humanizados</a></li>
+          <li><a href="../formacoes/#intro-virtologia">Introdução à Virtologia</a></li>
+          <li><a href="../formacoes/#intro-sistemas">Introdução aos Sistemas Humanizados</a></li>
         </ul>
       </div>
       <div>

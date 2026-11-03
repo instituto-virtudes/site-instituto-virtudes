@@ -3,22 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Formações | Instituto Virtudes</title>
-<meta name="description" content="Formação em Virtologia e Pós-graduação em Sistemas Humanizados, com certificação de instituição credenciada pelo MEC e versão em curso livre. Os caminhos de estudo do Instituto Virtudes.">
+<title>Formações e cursos | Instituto Virtudes</title>
+<meta name="description" content="Formação em Virtologia, Pós-graduação em Sistemas Humanizados (também em curso livre) e os cursos de introdução que vêm com os livros. Todos os caminhos de estudo do Instituto Virtudes.">
 <link rel="canonical" href="https://institutovirtudes.com.br/formacoes/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Instituto Virtudes">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:url" content="https://institutovirtudes.com.br/formacoes/">
-<meta property="og:title" content="Formações | Instituto Virtudes">
-<meta property="og:description" content="Formação em Virtologia e Pós-graduação em Sistemas Humanizados, com certificação de instituição credenciada pelo MEC e versão em curso livre.">
+<meta property="og:title" content="Formações e cursos | Instituto Virtudes">
+<meta property="og:description" content="Formação em Virtologia, Pós-graduação em Sistemas Humanizados e os cursos de introdução que vêm com os livros.">
 <meta property="og:image" content="https://institutovirtudes.com.br/img/og-padrao.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Instituto Virtudes">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Formações | Instituto Virtudes">
-<meta name="twitter:description" content="Formação em Virtologia e Pós-graduação em Sistemas Humanizados, com certificação de instituição credenciada pelo MEC e versão em curso livre.">
+<meta name="twitter:title" content="Formações e cursos | Instituto Virtudes">
+<meta name="twitter:description" content="Formação em Virtologia, Pós-graduação em Sistemas Humanizados e os cursos de introdução que vêm com os livros.">
 <meta name="twitter:image" content="https://institutovirtudes.com.br/img/og-padrao.jpg">
 <link rel="icon" href="../img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,6 +34,18 @@
 .curso .tag-mec{color:#fff;background:var(--azul)}
 .curso .tag-livre{color:var(--azul-escuro);background:var(--pastel-azul)}
 .curso .tag-cert{color:#fff;background:var(--texto)}
+.curso .tag-livro{color:#6B4A12;background:#F6EAD3}
+.curso .acoes{margin-top:8px}
+.curso .acoes .btn{margin:0}
+.esc-sub{font-size:17px;color:var(--apoio);margin:-14px 0 18px}
+.aovivo{background:var(--marinho,#0B2341);color:#F3EEE4;border-radius:var(--raio-card);padding:30px 30px 26px;margin:36px 0 0}
+.aovivo h3{color:#fff;font-size:23px;margin-bottom:8px}
+.aovivo p{color:#D3DAE3;font-size:16px;margin-bottom:18px}
+.aovivo .acoes{margin:0}
+.aovivo .btn{background:#E5BE80;color:#0B2341;font-weight:600}
+.aovivo .btn:hover{background:#EDCB93}
+.aovivo .btn-sec{color:#fff;border-color:#67D3C6}
+.aovivo .btn-sec:hover{background:rgba(103,211,198,.15)}
 .curso h3{font-size:24px;margin-bottom:6px;line-height:1.25}
 .curso .sub{font-size:15px;color:var(--apoio);margin-bottom:16px;line-height:1.5}
 .curso p{font-size:16px;line-height:1.65;margin-bottom:16px}
@@ -106,6 +118,7 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
             <li><a href="../terapeutas/">Terapia gratuita</a></li>
             <li><a href="../teorias/">Diante de outras grandes teorias</a></li>
             <li><a href="../aula1/">Aula aberta</a></li>
+            <li><a href="../aulas/virtologia/">Aula ao vivo gratuita</a></li>
           </ul>
         </li>
         <li class="tem-sub">
@@ -117,15 +130,18 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
             <li><a href="../sistemas-humanizados/">O livro Sistemas Humanizados</a></li>
             <li><a href="../aula2/">Aula aberta sobre a NR-1</a></li>
             <li><a href="../aularh/">Aula aberta para RH</a></li>
+            <li><a href="../aulas/humanizacao/">Aula ao vivo gratuita</a></li>
             <li><a href="../ondas/">As Três Ondas do Trabalho</a></li>
           </ul>
         </li>
         <li class="tem-sub">
-          <button class="menu-sub-btn" aria-expanded="false" aria-haspopup="true">Formações <span class="seta-sub" aria-hidden="true">&#9662;</span></button>
+          <button class="menu-sub-btn" aria-expanded="false" aria-haspopup="true">Formações e cursos <span class="seta-sub" aria-hidden="true">&#9662;</span></button>
           <ul class="submenu">
             <li><a href="../formacao/">Formação em Virtologia</a></li>
             <li><a href="../pos-sistemas/">Pós-graduação em Sistemas Humanizados</a></li>
-            <li><a href="../formacoes/">Todas as formações</a></li>
+            <li><a href="../formacoes/#intro-virtologia">Curso de Introdução à Virtologia</a></li>
+            <li><a href="../formacoes/#intro-sistemas">Curso de Introdução aos Sistemas Humanizados</a></li>
+            <li><a href="../formacoes/">Todas as formações e cursos</a></li>
           </ul>
         </li>
         <li class="tem-sub">
@@ -154,14 +170,16 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
 <section>
   <div class="wrap">
     <p class="kicker">Instituto Virtudes</p>
-    <h1>Formações</h1>
-    <p class="lead">Todos os caminhos de estudo do Instituto, das duas escolas: a Virtologia, voltada à pessoa, e os Sistemas Humanizados - Humanização 2.0, voltados às organizações.</p>
+    <h1>Formações e cursos</h1>
+    <p class="lead">Todos os caminhos de estudo do Instituto, nas duas escolas: a Virtologia, voltada à pessoa, e os Sistemas Humanizados - Humanização 2.0, voltados às organizações. Em cada uma, dá para começar pelo curso de introdução, que vem com o livro, e seguir para a formação completa.</p>
 
     <nav class="indice" aria-label="Conteúdo desta página">
       <p class="indice-titulo">Nesta página</p>
       <ol>
-        <li><a href="#virtologia">Formação em Virtologia</a></li>
-        <li><a href="#pos-sistemas">Pós-graduação em Sistemas Humanizados</a></li>
+        <li><a href="#intro-virtologia">Curso de Introdução à Virtologia</a></li>
+        <li><a href="#formacao-virtologia">Formação em Virtologia</a></li>
+        <li><a href="#intro-sistemas">Curso de Introdução aos Sistemas Humanizados</a></li>
+        <li><a href="#pos-sistemas">Pós-graduação em Sistemas Humanizados, também em curso livre</a></li>
         <li><a href="#como-escolher">Como escolher</a></li>
       </ol>
     </nav>
@@ -171,14 +189,29 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
 <section id="virtologia">
   <div class="wrap">
     <h2>Virtologia</h2>
-    <p>Para quem quer tratar transtornos e sofrimento psíquico construindo, no cérebro do paciente, a estrutura que faz ele voltar a funcionar de maneira saudável.</p>
+    <p>Para quem quer entender o funcionamento humano e tratar transtornos e sofrimento psíquico construindo, no cérebro da pessoa, a estrutura que faz ela voltar a funcionar de maneira saudável.</p>
 
-    <div class="curso">
+    <div class="curso" id="intro-virtologia">
+      <span class="tag tag-livro">Vem com o livro</span>
+      <h3>Curso de Introdução à Virtologia</h3>
+      <p class="sub">Para começar: o método do começo ao fim, junto com o livro <em>Fundamentos da Virtologia</em></p>
+
+      <p>Aulas em vídeo em que o Dr. Eduardo Casarotto apresenta a Virtologia em linguagem simples: as Faixas de Evolução neurológica, as 51 necessidades humanas, o aparelho psíquico, as virtudes, o inconsciente e os mecanismos de defesa, com casos reais explicados um a um. <strong>Junto vêm os 33 exercícios de neuroplasticidade, um para cada virtude.</strong></p>
+
+      <div class="dados">
+        <div><strong>Vem com o livro</strong><em>Fundamentos da Virtologia</em></div>
+        <div><strong>Física ou digital</strong>as duas versões incluem o curso</div>
+      </div>
+
+      <a class="btn" href="../fundamentos/">Conhecer o livro e o curso</a>
+    </div>
+
+    <div class="curso" id="formacao-virtologia">
       <span class="tag tag-cert">Certificado teórico</span>
       <h3>Formação em Virtologia</h3>
-      <p class="sub">O caminho de quem vai aplicar a Virtologia em pessoas</p>
+      <p class="sub">Para aplicar: o caminho de quem vai usar a Virtologia com pessoas</p>
 
-      <p>Todo o conteúdo do livro <em>Fundamentos da Virtologia</em>, do fundamento à técnica. E, ao lado das aulas, <strong>tira-dúvidas por escrito abaixo de cada aula e um Encontro Fechado ao vivo por mês com Eduardo Casarotto</strong>, voltado a aprofundamento e aplicação, sem presença obrigatória.</p>
+      <p>Todo o conteúdo do livro <em>Fundamentos da Virtologia</em>, do fundamento à técnica. E, ao lado das aulas, <strong>tira-dúvidas por escrito abaixo de cada aula e um Encontro Fechado ao vivo por mês com o Dr. Eduardo Casarotto</strong>, voltado a aprofundamento e aplicação, sem presença obrigatória.</p>
 
       <div class="dados">
         <div><strong>60h</strong>de aulas gravadas</div>
@@ -192,13 +225,31 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
   </div>
 </section>
 
-<section id="pos-sistemas">
+<section id="sistemas">
   <div class="wrap">
     <h2>Sistemas Humanizados · Humanização 2.0</h2>
     <p class="lead">O futuro das organizações exige conhecimentos sobre funcionamento humano e gestão sistêmica.</p>
-    <p>A ISO discute organizações centradas no ser humano, e a OIT defende essa direção para o futuro do trabalho. Para quem atua ou deseja atuar com RH, saúde, segurança do trabalho, liderança e consultoria, a pós aprofunda uma proposta específica de transformação organizacional: comparar o funcionamento humano com o que a instituição tem escrito, e reescrever o que não bate. <a href="../sistemas/#evidencias">Veja as referências internacionais.</a></p>
+    <p>A ISO discute organizações centradas no ser humano, e a OIT defende essa direção para o futuro do trabalho. Para quem atua ou deseja atuar com RH, saúde, segurança do trabalho, liderança e consultoria, a proposta é comparar o funcionamento humano com o que a instituição tem escrito, e reescrever o que não bate. <a href="../sistemas/#evidencias">Veja as referências internacionais.</a></p>
 
-    <div class="curso">
+    <div class="curso" id="intro-sistemas">
+      <span class="tag tag-livro">Vem com o livro</span>
+      <h3>Curso de Introdução aos Sistemas Humanizados</h3>
+      <p class="sub">Para começar: as aulas que acompanham o livro <em>Sistemas Humanizados · Humanização 2.0</em></p>
+
+      <p>Aulas online em que o Dr. Eduardo Casarotto aprofunda o que está no livro: <strong>as exigências da NR-1 e os riscos psicossociais, os cinco filtros da Humanização 2.0, a pesquisa de clima, a entrevista individual e o comitê de avaliação</strong>, entre outros temas. Junto com o livro vêm os manuais prontos, como políticas internas, ética e compliance e feedbacks.</p>
+
+      <div class="dados">
+        <div><strong>3 horas</strong>de aulas online</div>
+        <div><strong>12</strong>aulas</div>
+        <div><strong>Acesso imediato</strong>após a compra do livro</div>
+      </div>
+
+      <p>As aulas acompanham o livro e não emitem certificado.</p>
+
+      <a class="btn" href="../sistemas-humanizados/">Conhecer o livro e o curso</a>
+    </div>
+
+    <div class="curso" id="pos-sistemas">
       <span class="tag tag-mec">Certificado de IES credenciada pelo MEC</span>
       <h3>Pós-graduação em Sistemas Humanizados</h3>
       <p class="sub">Saúde Mental, Cultura Organizacional e Gestão de Riscos Psicossociais (NR-1)</p>
@@ -213,13 +264,9 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
       </div>
 
       <p><span class="tag tag-livre">Também em curso livre</span></p>
-
       <p><strong>O conteúdo é o mesmo</strong>, na modalidade de curso livre, para quem ainda não tem graduação.</p>
 
-      <div class="acoes">
-        <a class="btn" href="../pos-sistemas/">Conhecer a Pós-graduação em Sistemas Humanizados</a>
-        <a class="btn-sec" href="../aula2/">Assistir a uma aula sobre a proposta</a>
-      </div>
+      <a class="btn" href="../pos-sistemas/">Conhecer a Pós-graduação em Sistemas Humanizados</a>
     </div>
   </div>
 </section>
@@ -230,20 +277,20 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
 
     <div class="escolher">
       <div>
-        <h4>Quero trabalhar com pessoas individualmente</h4>
-        <p>Formação em Virtologia, que ensina o método do fundamento à técnica, com tira-dúvidas por escrito na plataforma e Encontro Fechado mensal com Eduardo Casarotto.</p>
+        <h4>Quero conhecer antes de fazer uma formação</h4>
+        <p>Comece pelo curso de introdução da escola que interessa a você. Ele vem com o livro: <em>Fundamentos da Virtologia</em> ou <em>Sistemas Humanizados · Humanização 2.0</em>.</p>
       </div>
       <div>
-        <h4>Quero estudar como analisar e transformar organizações</h4>
+        <h4>Quero trabalhar com pessoas individualmente</h4>
+        <p>Formação em Virtologia, que ensina o método do fundamento à técnica, com tira-dúvidas por escrito na plataforma e Encontro Fechado mensal com o Dr. Eduardo Casarotto.</p>
+      </div>
+      <div>
+        <h4>Quero analisar e transformar organizações</h4>
         <p>Pós-graduação em Sistemas Humanizados. E se você também atende pessoas, os dois caminhos se somam: a Virtologia trata o indivíduo, a Humanização 2.0 trata o ambiente que ele frequenta.</p>
       </div>
       <div>
-        <h4>Quero titulação de pós-graduação</h4>
-        <p>A Pós-graduação em Sistemas Humanizados, especialização lato sensu com certificado emitido pela FACEO - Faculdade Centro Oeste, instituição credenciada pelo MEC. Exige graduação completa em alguma área.</p>
-      </div>
-      <div>
-        <h4>Não tenho graduação</h4>
-        <p>A versão em curso livre da Pós-graduação em Sistemas Humanizados, com o mesmo conteúdo. Ou a Formação em Virtologia, que não exige graduação.</p>
+        <h4>Quero titulação, com ou sem graduação</h4>
+        <p>Com graduação completa: a pós-graduação, especialização lato sensu com certificado da FACEO - Faculdade Centro Oeste, credenciada pelo MEC. Sem graduação: a versão em curso livre, com o mesmo conteúdo, ou a Formação em Virtologia.</p>
       </div>
     </div>
 
@@ -253,9 +300,13 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
       <p>O que muda é a titulação ao final e o pré-requisito de entrada. A pós-graduação exige graduação completa e emite certificado de especialização lato sensu. O curso livre não exige nada e emite certificado de curso livre.</p>
     </div>
 
-    <div class="ponte">
-      <p>Se você ainda está decidindo, a aula aberta sobre a Lei do Fluxo é uma aula real da Formação, disponibilizada por inteiro:</p>
-      <a class="btn" href="../aula1/">Assistir à aula aberta</a>
+    <div class="aovivo">
+      <h3>Ainda decidindo? Participe de uma aula ao vivo gratuita</h3>
+      <p>Aulas abertas, online e ao vivo com o Dr. Eduardo Casarotto, com espaço para perguntas. A inscrição é gratuita.</p>
+      <div class="acoes">
+        <a class="btn" href="../aulas/virtologia/">Aula ao vivo de Virtologia</a>
+        <a class="btn-sec" href="../aulas/humanizacao/">Aula ao vivo de Humanização 2.0</a>
+      </div>
     </div>
   </div>
 </section>
@@ -270,6 +321,7 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
           <li><a href="../terapeutas/">Terapia gratuita</a></li>
           <li><a href="../teorias/">Diante de outras grandes teorias</a></li>
           <li><a href="../aula1/">Aula aberta</a></li>
+          <li><a href="../aulas/virtologia/">Aula ao vivo gratuita</a></li>
         </ul>
       </div>
       <div>
@@ -278,16 +330,19 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
           <li><a href="../sistemas/#evidencias">Evidências internacionais</a></li>
           <li><a href="../aula2/">Aula aberta sobre a NR-1</a></li>
           <li><a href="../aularh/">Aula aberta para RH</a></li>
+          <li><a href="../aulas/humanizacao/">Aula ao vivo gratuita</a></li>
           <li><a href="../sistemas-humanizados/">O livro</a></li>
           <li><a href="../pos-sistemas/">Pós-graduação</a></li>
           <li><a href="../ondas/">As Três Ondas do Trabalho</a></li>
         </ul>
       </div>
       <div>
-        <h4><a href="../formacoes/">Formações</a></h4>
+        <h4><a href="../formacoes/">Formações e cursos</a></h4>
         <ul>
           <li><a href="../formacao/">Formação em Virtologia</a></li>
           <li><a href="../pos-sistemas/">Pós-graduação em Sistemas Humanizados</a></li>
+          <li><a href="../formacoes/#intro-virtologia">Introdução à Virtologia</a></li>
+          <li><a href="../formacoes/#intro-sistemas">Introdução aos Sistemas Humanizados</a></li>
         </ul>
       </div>
       <div>

@@ -1,0 +1,112 @@
+/* =====================================================================
+   AULAS AO VIVO - FORMULÁRIO E CONVITE (compartilhado)
+   Usado nas páginas de inscrição e nas aulas gravadas. Tudo fica dentro de
+   .iv-form, .convite-vivo ou .ev-ponto, para não mexer no resto do site.
+   ===================================================================== */
+
+/* ponto vermelho do "ao vivo" (só pulsa quando a aula está acontecendo) */
+.ev-ponto{display:inline-block;width:10px;height:10px;border-radius:50%;background:#E5484D;flex:0 0 auto;vertical-align:middle;margin-right:8px;box-shadow:0 0 0 3px rgba(229,72,77,.22)}
+.ev-ponto-ativo{animation:ev-pulso 1.6s ease-in-out infinite}
+@keyframes ev-pulso{50%{box-shadow:0 0 0 7px rgba(229,72,77,0)}}
+@media (prefers-reduced-motion:reduce){.ev-ponto-ativo{animation:none}}
+
+/* ---------- formulário ---------- */
+.iv-form{font-size:16px;line-height:1.55;color:var(--texto)}
+.iv-form p{margin:0}
+.iv-form .aviso-config{background:#FFF6E5;border:1px solid #E7C27A;border-radius:var(--raio-card);padding:16px 18px;margin:0 0 18px;font-size:15px}
+.iv-form .aviso-config ul{margin:8px 0 0;padding-left:20px}
+.iv-form #form-aula,.iv-form .sucesso{background:#fff;border:1px solid var(--borda);border-radius:var(--raio-card);padding:28px 28px 24px;box-shadow:0 10px 30px rgba(11,35,65,.06)}
+.iv-form .progresso{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--azul);margin:0 0 8px}
+.iv-form .barra-prog{height:5px;background:var(--pastel-azul);border-radius:5px;margin:0 0 22px;overflow:hidden}
+.iv-form .barra-prog i{display:block;height:100%;width:33.34%;background:var(--azul);border-radius:5px;transition:width .3s}
+.iv-form .etapa{border:0;margin:0;padding:0;min-width:0}
+.iv-form .etapa legend{padding:0;margin:0 0 6px}
+.iv-form .et-tit{display:block;font-family:'Lora',Georgia,serif;font-size:24px;font-weight:600;line-height:1.25;color:var(--texto);outline:none}
+.iv-form .destaque-tit{color:var(--azul-escuro);font-size:26px}
+.iv-form .et-txt{font-size:15.5px;color:var(--apoio);margin:0 0 18px}
+.iv-form .campo{margin:0 0 16px}
+.iv-form .campo label{display:block;font-weight:600;font-size:15px;margin:0 0 6px}
+.iv-form .campo input{width:100%;font:inherit;font-size:17px;padding:13px 14px;border:1px solid var(--borda);border-radius:6px;background:#fff;color:var(--texto)}
+.iv-form .campo input:focus,.iv-form .opcao input:focus-visible+span{outline:2px solid var(--azul);outline-offset:1px}
+.iv-form .campo input[aria-invalid="true"]{border-color:#B3261E}
+.iv-form .dica{font-size:13px;color:var(--apoio);margin:6px 0 0}
+.iv-form .erro{font-size:14px;color:#B3261E;margin:6px 0 0}
+.iv-form .erro:empty{display:none}
+.iv-form .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.iv-form .grupo-op{margin:0 0 20px}
+.iv-form .sn{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.iv-form .sn .opcao{margin:0}
+.iv-form .pergunta{font-weight:600;font-size:16.5px;margin:0 0 10px}
+.iv-form .opcao{display:flex;align-items:flex-start;gap:12px;padding:12px 14px;border:1px solid var(--borda);border-radius:6px;margin:0 0 8px;cursor:pointer;font-size:16px;line-height:1.4;background:#fff}
+.iv-form .opcao input{width:20px;height:20px;margin:1px 0 0;flex:0 0 auto;accent-color:var(--azul)}
+.iv-form .opcao:has(input:checked){border-color:var(--azul);background:#F3F7FE}
+.iv-form .consent{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;line-height:1.45;margin:4px 0 14px;cursor:pointer}
+.iv-form .consent input{width:18px;height:18px;margin:2px 0 0;flex:0 0 auto;accent-color:var(--azul)}
+.iv-form .uso-dados{font-size:13.5px;color:var(--apoio);margin:0 0 14px}
+.iv-form .uso-dados a{border-bottom:1px solid var(--borda)}
+.iv-form .antes-btn{font-size:16px;line-height:1.5;margin:0 0 16px;padding:14px 16px;background:var(--pastel-azul);border-radius:6px;color:var(--azul-escuro)}
+.iv-form .acoes-form{display:flex;gap:12px;justify-content:space-between;align-items:center;margin-top:8px}
+.iv-form .acoes-form .btn,.iv-form .acoes-form .btn-sec{margin:0;cursor:pointer;font-family:inherit}
+.iv-form .acoes-form .btn:only-child{margin-left:auto}
+.iv-form .btn{min-height:48px}
+.iv-form .btn-final{white-space:normal;line-height:1.3;text-align:center;max-width:340px}
+.iv-form .btn[disabled]{opacity:.7;cursor:progress}
+.iv-form .erro-envio{margin:0 0 12px}
+.iv-form .status-envio{position:absolute;left:-9999px}
+.iv-form .sucesso h3{font-size:24px;margin:0 0 10px}
+.iv-form .sucesso p{margin:0 0 14px}
+.iv-form .sucesso .btn{margin:0}
+
+/* ---------- convite nas aulas gravadas ---------- */
+.convite-vivo{--ev-cor:#E5BE80;--ev-fundo:#0B2341;margin:16px 0 4px;border-radius:10px;background:var(--ev-fundo);color:#F3EEE4;overflow:hidden;
+  background-image:radial-gradient(120% 140% at 100% 0,rgba(255,255,255,.07),transparent 55%)}
+.convite-vivo p{margin:0}
+.cv-int{display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:20px;align-items:end;padding:26px 0 0 28px}
+.cv-texto{padding-bottom:26px}
+.cv-texto{display:flex;flex-direction:column;align-items:flex-start}
+.cv-selo{display:inline-flex;align-items:center;font-size:12.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#fff;
+  border:1px solid color-mix(in srgb,var(--ev-cor) 60%,transparent);border-radius:6px;padding:5px 11px;margin:0 0 14px !important}
+.cv-tit{font-family:'Lora',Georgia,serif;font-size:25px;line-height:1.22;font-weight:600;color:#fff;margin:0 0 10px}
+.cv-tema{font-size:15.5px;line-height:1.45;color:#D9DEE6;margin:0 0 12px !important}
+.cv-tema span{color:var(--ev-cor);font-weight:600}
+.cv-data{font-size:15px;color:#C7D0DA;margin:0 0 12px !important}
+.cv-data strong{display:inline-block;margin-right:6px;font-family:'Lora',Georgia,serif;font-size:26px;line-height:1.15;color:var(--ev-cor);font-weight:700;letter-spacing:-.01em}
+.cv-txt{font-size:15px;line-height:1.55;color:#D9DEE6;margin:0 0 16px !important}
+.cv-btn{appearance:none;border:0;cursor:pointer;font:600 16.5px/1.25 'Inter',system-ui,sans-serif;background:var(--ev-cor);color:var(--ev-fundo);
+  padding:15px 24px;border-radius:6px;min-height:50px;text-align:center}
+.cv-btn:hover{filter:brightness(1.06)}
+.cv-btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.cv-apoio{font-size:13.5px;color:#AEB9C7;margin:10px 0 0 !important}
+.cv-foto{margin:0;align-self:end}
+.cv-foto img{display:block;width:100%;height:auto;max-height:330px;object-fit:cover;object-position:50% 0;border:0;border-radius:0;
+  -webkit-mask-image:linear-gradient(to right,transparent 0,#000 28%,#000 85%,transparent 100%),linear-gradient(to bottom,transparent 0,#000 18%);-webkit-mask-composite:source-in;
+  mask-image:linear-gradient(to right,transparent 0,#000 28%,#000 85%,transparent 100%),linear-gradient(to bottom,transparent 0,#000 18%);mask-composite:intersect}
+.cv-aberto .cv-btn{display:none}
+.cv-form{padding:0 28px 28px}
+.cv-form .iv-form,.cv-form.iv-form{color:var(--texto)}
+
+@media (max-width:760px){
+  .convite-vivo{margin:12px -4px 4px;border-radius:8px}
+  .cv-int{grid-template-columns:1fr;gap:16px;padding:18px 18px 20px}
+  .cv-texto{padding-bottom:0}
+  .cv-foto{display:none}
+  .cv-tit{font-size:21px;margin-bottom:8px}
+  .cv-tema{font-size:14.5px;margin-bottom:10px !important}
+  .cv-data strong{font-size:22px}
+  .cv-data strong{display:block;margin-right:0}
+  .cv-texto .cv-tema{order:9;margin:16px 0 0 !important;padding-top:14px;border-top:1px solid rgba(255,255,255,.14);width:100%}
+  .cv-texto .cv-txt{order:10;margin:8px 0 0 !important;font-size:14.5px}
+  .cv-btn{width:100%}
+  .cv-form{padding:0 12px 14px}
+  .cv-aberto .cv-texto .cv-txt{display:none}
+  .cv-aberto .cv-int{padding-bottom:12px}
+}
+
+@media (max-width:640px){
+  .iv-form #form-aula,.iv-form .sucesso{padding:22px 18px 20px}
+  .iv-form .et-tit{font-size:22px}
+  .iv-form .destaque-tit{font-size:23px}
+  .iv-form .acoes-form{flex-direction:column-reverse;align-items:stretch}
+  .iv-form .acoes-form .btn,.iv-form .acoes-form .btn-sec{width:100%;text-align:center}
+  .iv-form .btn-final{max-width:none}
+}

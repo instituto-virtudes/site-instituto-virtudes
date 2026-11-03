@@ -1,24 +1,39 @@
 /* =====================================================================
-   AULAS AO VIVO - CONFIGURAÇÃO CENTRAL
-   Para a aula da próxima semana: mude só este arquivo.
-   Cada aula tem um "id" ÚNICO e definitivo. Nova aula = novo id
-   (nunca reaproveite o id de uma aula que já aconteceu: as inscrições
-   antigas ficam guardadas com o id da aula original).
-   O mesmo id precisa existir na tabela "aulas" do Supabase, com o link
-   do grupo. É o Supabase que decide para qual grupo a pessoa vai.
+   AULAS AO VIVO - CONFIGURAÇÃO CENTRAL (um único lugar para tudo)
+
+   Este arquivo alimenta:
+   - as páginas de inscrição: /aulas/virtologia/ e /aulas/humanizacao/
+   - o convite logo abaixo do vídeo das aulas gravadas:
+     /aula1/ (Virtologia), /aula2/ e /aularh/ (Humanização 2.0)
+
+   PARA A PRÓXIMA AULA DE UMA TRILHA
+   1. Copie o bloco da aula dentro de "aulas: [ ... ]" da trilha e cole
+      logo abaixo, separado por vírgula.
+   2. No bloco novo, troque: id, inicio, titulo, subtitulo, apresentacao,
+      temas, capa e grupoUrl. A data por extenso e o horário são
+      calculados sozinhos a partir de "inicio".
+   3. Em img/aulas/ vão a capa (16:9, usada na imagem de compartilhamento)
+      e a "foto": só o Eduardo, recortada da capa, sem nenhum texto. É a
+      foto que aparece nas páginas, ao lado do texto.
+   4. O mesmo id precisa existir na tabela "aulas" do Supabase, com o
+      link do grupo (é o Supabase que decide para qual grupo a pessoa vai).
+   Nunca reaproveite o id de uma aula que já aconteceu.
+
+   Quando uma aula termina (início + duração), as páginas passam sozinhas
+   para a próxima aula da lista. Se não houver próxima, o convite das aulas
+   gravadas some e a página de inscrição avisa que a aula já aconteceu.
    ===================================================================== */
 window.AULAS_CONFIG = {
 
   /* Função do Supabase que grava a inscrição.
-     Deixe "envioAtivo: false" até a função e as tabelas estarem instaladas.
-     Com false, a página mostra um aviso e não deixa finalizar a inscrição. */
+     Com "envioAtivo: false" as páginas mostram um aviso e não deixam finalizar. */
   endpoint: "https://geyegibuqyzwjrlgenoz.supabase.co/functions/v1/inscricao-aula",
   envioAtivo: true,
 
   /* Versão do aviso de uso de dados mostrado na etapa 3. Mude se o texto mudar. */
   versaoAviso: "aviso-aulas-2026-11-v2",
 
-  /* Opções do formulário (as mesmas nas duas páginas, para o CRM ler igual).
+  /* Opções do formulário (as mesmas em todas as páginas, para o CRM ler igual).
      "valor" é o que vai para o banco: não mude um valor que já recebeu inscrições. */
   opcoes: {
     area: [
@@ -43,50 +58,76 @@ window.AULAS_CONFIG = {
     ]
   },
 
-  aulas: {
+  /* Inscrições feitas no convite das aulas gravadas levam estas UTMs,
+     para separar de quem se inscreveu pela página de inscrição.
+     utm_campaign recebe o nome da página (aula1, aula2, aularh). */
+  utmAulaGravada: { utm_source: "site", utm_medium: "aula-gravada", utm_content: "convite-aula-ao-vivo" },
+
+  trilhas: {
 
     virtologia: {
-      id: "virtologia-20261109-1900",
-      trilha: "virtologia",
-      rotuloTrilha: "Virtologia",
-      chamada: "Aula gratuita, online e ao vivo",
-      titulo: "Por que pacientes com os mesmos sintomas respondem de modo diferente ao tratamento?",
-      subtitulo: "O que observar no paciente antes de escolher como intervir?",
-      apresentacao: "Nesta aula aberta, Eduardo Casarotto apresenta três eixos da Virtologia para discutir o que observar no paciente antes da escolha de uma intervenção: Faixas de Evolução neurológica, estado de aprendizagem e três fatores clínicos.",
-      temas: [
-        "Faixas de Evolução neurológica.",
-        "Estado de aprendizagem.",
-        "Três fatores clínicos."
-      ],
-      paraQuem: "Especialmente para profissionais que atendem pacientes e pessoas interessadas em compreender a proposta da Virtologia. A participação é gratuita e aberta ao público.",
-      inicio: "2026-11-09T19:00:00-03:00",
-      duracaoMinutos: 150,
-      dataExtenso: "Segunda-feira, 9 de novembro de 2026",
-      dataCurta: "09/11/2026",
-      grupoUrl: "https://chat.whatsapp.com/EsvtD5YU9XOGSMClks7e5B?mode=gi_t",
-      aulaGravada: "../../aula1/"
+      rotulo: "Virtologia",
+      cor: "#E5BE80",              /* destaque da capa (dourado) */
+      fundo: "#0B2341",            /* azul da capa */
+      paginaInscricao: "aulas/virtologia/",
+      perguntaAluno: "Você já é aluno(a) da Formação em Virtologia?",
+      aulaGravada: "aula1/",
+      paraQuem: "Especialmente para psicólogos, terapeutas e profissionais que atendem pessoas, e para quem quer conhecer a proposta da Virtologia. A aula é aberta ao público e não exige formação na área.",
+      bio: "Fundamentador da Escola Clínico-Filosófica Virtologia, pesquisador e professor. Forma terapeutas há 25 anos, coordena cursos de pós-graduação e é autor de mais de 20 livros, entre eles Fundamentos da Virtologia, com publicações científicas no Brazilian Journal of Health Review.",
+      aulas: [
+        {
+          id: "virtologia-20261109-1900",
+          inicio: "2026-11-09T19:00:00-03:00",
+          duracaoMinutos: 150,
+          titulo: "Por que o mesmo manejo funciona com um paciente e não com outro?",
+          subtitulo: "O que observar antes de escolher como intervir? O segredo está na formação da personalidade.",
+          /* cada item vira um parágrafo */
+          apresentacao: [
+            "Nesta aula aberta, o Dr. Eduardo Casarotto mostra como a Virtologia lê a pessoa por vários componentes ao mesmo tempo, como as Faixas de Evolução neurológica, o temperamento e as necessidades. É essa leitura que ajuda a entender de onde vem um comportamento, se ele está tornando a pessoa mais ou menos funcional e se de fato precisa ser alterado.",
+            "Dois exemplos: quem está numa faixa mais primitiva muitas vezes precisa treinar primeiro o controle, diferente de quem já está numa faixa mais avançada. E um exercício de fazer, passado para alguém de temperamento pensador, tende a ter pouco efeito. Há casos, ainda, em que a dificuldade vem de uma necessidade desequilibrada, algo mais biológico do que psíquico.",
+            "Na comparação com as dezoito maiores teorias da personalidade, feita no livro Fundamentos da Virtologia, nenhuma delas reúne num só sistema as grandes heranças da psicologia que a Virtologia integra. Essa leitura mais ampla dá uma base melhor para escolher o manejo de cada pessoa."
+          ],
+          temas: [
+            "Faixas de Evolução neurológica.",
+            "Estado de aprendizagem.",
+            "Três fatores clínicos."
+          ],
+          capa: "img/aulas/virtologia-2026-11-09-v2.webp",
+          foto: "img/aulas/virtologia-2026-11-09-v2-foto.webp",   /* só o Eduardo, recortado da capa */
+          capaAlt: "Capa da aula: Por que o mesmo manejo funciona com um paciente e não com outro? Gratuita e ao vivo, 9 de novembro, 19h.",
+          grupoUrl: "https://chat.whatsapp.com/EsvtD5YU9XOGSMClks7e5B?mode=gi_t"
+        }
+      ]
     },
 
     humanizacao: {
-      id: "humanizacao-20261112-1900",
-      trilha: "humanizacao",
-      rotuloTrilha: "Humanização 2.0",
-      chamada: "Aula gratuita, online e ao vivo",
-      titulo: "A limitação de programas de saúde corporativa",
-      subtitulo: "O que uma ação de acolhimento consegue mudar e onde ela para? Como transformar uma iniciativa de bem-estar em parte da rotina?",
-      apresentacao: "Nesta aula aberta, Eduardo Casarotto discute o alcance das ações de acolhimento e o desafio de dar continuidade às iniciativas de bem-estar no cotidiano das organizações.",
-      temas: [
-        "O que uma ação de acolhimento consegue mudar.",
-        "Onde estão os limites de uma iniciativa pontual.",
-        "Como transformar uma iniciativa de bem-estar em parte da rotina."
-      ],
-      paraQuem: "Especialmente para profissionais de RH, gestores, consultores e psicólogos organizacionais. A participação é gratuita e aberta ao público.",
-      inicio: "2026-11-12T19:00:00-03:00",
-      duracaoMinutos: 150,
-      dataExtenso: "Quinta-feira, 12 de novembro de 2026",
-      dataCurta: "12/11/2026",
-      grupoUrl: "https://chat.whatsapp.com/CoOr4I3SjBgKJy6GLEMwzZ?mode=gi_t",
-      aulaGravada: "../../aula2/"
+      rotulo: "Humanização 2.0",
+      cor: "#67D3C6",              /* destaque da capa (verde-água) */
+      fundo: "#081F38",
+      paginaInscricao: "aulas/humanizacao/",
+      perguntaAluno: "Você já é aluno(a) da Formação em Sistemas Humanizados?",
+      aulaGravada: "aula2/",
+      paraQuem: "Especialmente para profissionais de RH, gestores, consultores e psicólogos organizacionais. A aula é aberta ao público.",
+      bio: "Fundamentador dos Sistemas Humanizados e da Humanização 2.0, pesquisador, professor e consultor empresarial. Autor do livro Sistemas Humanizados e coordenador de cursos de pós-graduação, teve seu trabalho de humanização aplicado em grandes organizações, hospitais oncológicos, escolas, órgãos públicos e sistemas prisionais no Brasil e na Colômbia.",
+      aulas: [
+        {
+          id: "humanizacao-20261112-1900",
+          inicio: "2026-11-12T19:00:00-03:00",
+          duracaoMinutos: 150,
+          titulo: "A limitação de programas de saúde corporativa",
+          subtitulo: "Como transformar bem-estar em regras e processos?",
+          apresentacao: "Nesta aula aberta, o Dr. Eduardo Casarotto discute o alcance e os limites do acolhimento e a integração das iniciativas de bem-estar ao cotidiano das organizações.",
+          temas: [
+            "O que uma ação de acolhimento consegue mudar.",
+            "Onde estão os limites de uma iniciativa pontual.",
+            "Como transformar bem-estar em regras e processos da rotina."
+          ],
+          capa: "img/aulas/humanizacao-2026-11-12.webp",
+          foto: "img/aulas/humanizacao-2026-11-12-foto.webp",
+          capaAlt: "Capa da aula: A limitação de programas de saúde corporativa. Gratuita e ao vivo, 12 de novembro, 19h.",
+          grupoUrl: "https://chat.whatsapp.com/CoOr4I3SjBgKJy6GLEMwzZ?mode=gi_t"
+        }
+      ]
     }
   }
 };
