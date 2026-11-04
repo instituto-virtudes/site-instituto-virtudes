@@ -389,6 +389,38 @@ body:not(.aut-off) [data-autografo="off"]{display:none!important}
 /* ---------- animação discreta ---------- */
 .rev{opacity:0;transform:translateY(18px);transition:opacity .9s ease,transform .9s ease}
 .rev.vis{opacity:1;transform:none}
+.comparativo{margin:40px auto 0;max-width:980px;background:#fff;border:1px solid var(--linha);padding:40px 44px 34px}
+.comparativo h3{font-family:var(--serif);font-weight:600;font-size:clamp(26px,2.6vw,34px);line-height:1.15;margin:0 0 8px;color:var(--tinta)}
+.comparativo .cmp-sub{font-size:15px;color:var(--apoio);margin:0 0 22px;max-width:46em}
+.comparativo .cmp-sub b{color:var(--tinta)}
+.cmp{width:100%;border-collapse:collapse;font-size:15px;font-variant-numeric:lining-nums tabular-nums}
+.cmp th{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ouro-texto);font-weight:600;text-align:right;padding:0 12px 10px;border-bottom:1px solid var(--linha)}
+.cmp th:first-child{text-align:left;padding-left:0}
+.cmp td{padding:10px 12px;border-bottom:1px solid var(--linha);text-align:right;white-space:nowrap;color:var(--apoio)}
+.cmp td:first-child{text-align:left;white-space:normal;padding-left:0;color:var(--tinta)}
+.cmp td:first-child small{display:block;font-size:12.5px;color:var(--apoio)}
+.cmp td.sep s{text-decoration-thickness:1px}
+.cmp td.col{color:var(--tinta);font-weight:600}
+.cmp td.eco{color:var(--verde)}
+.cmp tfoot td{border-bottom:0;border-top:2px solid var(--tinta);padding-top:14px;font-weight:600;color:var(--tinta);font-size:16px}
+.cmp tfoot td.col{font-family:var(--serif);font-size:24px}
+.cmp tfoot td.eco{color:var(--verde)}
+.comparativo .cmp-nota{font-size:13px;color:var(--apoio);margin:16px 0 0;line-height:1.55}
+@media (max-width:600px){
+  .comparativo{margin:28px 0 0;border-left:0;border-right:0;padding:30px 20px 26px}
+  .cmp thead{display:none}
+  .cmp,.cmp tbody,.cmp tfoot{display:block}
+  .cmp tr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px 8px;padding:10px 0;border-bottom:1px solid var(--linha)}
+  .cmp td{display:block;border:0;padding:0;text-align:left;font-size:14px}
+  .cmp td:first-child{grid-column:1 / -1;font-weight:600;font-size:15px;margin-bottom:2px}
+  .cmp td.sep::before,.cmp td.col::before,.cmp td.eco::before{display:block;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ouro-texto);font-weight:600;font-family:var(--sans)}
+  .cmp td.sep::before{content:"Separado"}
+  .cmp td.col::before{content:"Na coleção"}
+  .cmp td.eco::before{content:"Economia"}
+  .cmp tfoot tr{border-bottom:0;border-top:2px solid var(--tinta);padding-top:14px}
+  .cmp tfoot td{border-top:0;padding:0}
+  .cmp tfoot td.col{font-size:21px}
+}
 @media (prefers-reduced-motion:reduce){.rev{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.cta:hover{transform:none}}
 
 /* ---------- responsivo ---------- */
@@ -538,7 +570,7 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
         <p>Os <span data-cfg="limiteAutografos">100</span> primeiros pedidos recebem os <span data-cfg="quantidadeLivros">14</span> livros autografados individualmente, à mão, pelo autor.<small>Pela ordem de confirmação do pagamento. É a única oportunidade de ter a coleção autografada.</small></p>
       </div>
       <a class="cta" data-cta="hero" data-label="Garantir minha coleção" href="#oferta">Garantir minha coleção <span class="seta" aria-hidden="true">&rarr;</span></a>
-      <p class="hero-preco">De <s data-preco="regular">R$ 2.997,00</s> por <b data-preco="prevenda">R$ 1.997,00</b> · frete incluso</p>
+      <p class="hero-preco">De <s data-preco="regular">R$ 3.047,00</s> por <b data-preco="prevenda">R$ 1.997,00</b> · frete incluso</p>
     </div>
     <div class="vis">
       <div class="pilha" id="pilha" role="img" aria-label="As 14 capas da coleção, em uma estante"></div>
@@ -844,9 +876,9 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
         <h2 data-cfg="nome">Coleção Especial Eduardo Casarotto</h2>
         <p class="qtd"><span data-cfg="quantidadeLivros">14</span> livros físicos</p>
         <div class="precos">
-          <p class="de">De <s data-preco="regular">R$ 2.997,00</s></p>
+          <p class="de">De <s data-preco="regular">R$ 3.047,00</s></p>
           <p class="por"><small>por</small><span data-preco="prevenda">R$ 1.997,00</span></p>
-          <p class="econ">Economia de <span data-preco="economia">R$ 1.000,00</span> (cerca de <span data-preco="percentual">33,4%</span>) sobre a soma dos preços regulares dos <span data-cfg="quantidadeLivros">14</span> títulos.</p>
+          <p class="econ">Economia de <span data-preco="economia">R$ 1.050,00</span> (cerca de <span data-preco="percentual">34,5%</span>) sobre a soma dos <span data-cfg="quantidadeLivros">14</span> títulos comprados separados, com frete. <a href="#comparativo">Veja livro a livro</a>.</p>
           <p class="econ">O valor é menor porque se trata de uma pré-venda: você garante a coleção agora e recebe os livros a partir de <span data-cfg="dataEnvio">25 de novembro de 2026</span>.<span data-autografo="on"> Os <b>autógrafos</b> não entram nessa conta: não têm preço e são <b>exclusivos dos <span data-cfg="limiteAutografos">100</span> primeiros pedidos</b>.</span></p>
         </div>
         <ul class="inclui">
@@ -870,6 +902,16 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
         <p class="ol-sub"><span data-autografo="on">Os <span data-cfg="quantidadeLivros">14</span> livros, autografados à mão pelo autor para os <span data-cfg="limiteAutografos">100</span> primeiros pedidos</span><span data-autografo="off">Os <span data-cfg="quantidadeLivros">14</span> livros da coleção</span></p>
         <ol class="lista-livros" id="lista-livros"></ol>
       </div>
+    </div>
+    <div class="comparativo rev" id="comparativo">
+      <h3>Cada livro separado e na coleção</h3>
+      <p class="cmp-sub">Comprados um a um, com frete, os <span data-cfg="quantidadeLivros">14</span> livros somam <b data-preco="regular">R$ 3.047,00</b>. Na coleção, saem por <b data-preco="prevenda">R$ 1.997,00</b>, com frete incluso.</p>
+      <table class="cmp">
+        <thead><tr><th>Livro</th><th>Separado, com frete</th><th>Na coleção</th><th>Economia</th></tr></thead>
+        <tbody id="cmp-corpo"></tbody>
+        <tfoot id="cmp-total"></tfoot>
+      </table>
+      <p class="cmp-nota">Na coluna "Na coleção", o valor da pré-venda está dividido entre os <span data-cfg="quantidadeLivros">14</span> títulos na proporção do preço de cada um. A coleção é vendida só completa.</p>
     </div>
   </div>
 </section>
@@ -926,6 +968,25 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
   if (sup) sup.innerHTML = "Ficou alguma dúvida? Fale com a equipe" + (wa ? ' pelo <a href="' + esc(wa) + '" target="_blank" rel="noopener">WhatsApp ' + esc(foneFmt) + '</a>' : "") + (s.email ? (wa ? " ou" : "") + ' pelo e-mail <a href="mailto:' + esc(s.email) + '">' + esc(s.email) + "</a>" : "") + ".";
   var rc = $("#rodape-contato");
   if (rc) rc.innerHTML = (s.email ? '<a href="mailto:' + esc(s.email) + '">' + esc(s.email) + "</a>" : "") + (wa ? ' · <a href="https://wa.me/' + esc(s.whatsapp) + '" target="_blank" rel="noopener">' + esc(foneFmt) + "</a>" : "");
+
+  /* ---------- comparação: cada livro separado e na coleção ---------- */
+  (function(){
+    var corpo = $("#cmp-corpo"), total = $("#cmp-total");
+    if (!corpo) return;
+    var lista = livros.filter(function(l){ return l.precoAvulso > 0; });
+    if (!lista.length) { var cx = $("#comparativo"); if (cx) cx.remove(); return; }
+    var soma = lista.reduce(function(s, l){ return s + l.precoAvulso; }, 0);
+    var alvo = Math.round((C.precoPreVenda || 0) * 100);
+    /* divide o preço da coleção na proporção de cada livro, em centavos, sem sobrar nem faltar */
+    var partes = lista.map(function(l, i){ var bruto = l.precoAvulso * alvo / soma; return { i: i, c: Math.floor(bruto), resto: bruto - Math.floor(bruto) }; });
+    var falta = alvo - partes.reduce(function(s, p){ return s + p.c; }, 0);
+    partes.slice().sort(function(a, b){ return b.resto - a.resto; }).slice(0, falta).forEach(function(p){ partes[p.i].c += 1; });
+    corpo.innerHTML = lista.map(function(l, i){
+      var col = partes[i].c / 100;
+      return "<tr><td>" + esc(l.titulo) + (l.sub && l.grupo !== "fundamentos" ? "<small>" + esc(l.sub.replace(/ · .*$/, "")) + "</small>" : "") + '</td><td class="sep"><s>' + brl.format(l.precoAvulso) + '</s></td><td class="col">' + brl.format(col) + '</td><td class="eco">' + brl.format(l.precoAvulso - col) + "</td></tr>";
+    }).join("");
+    total.innerHTML = "<tr><td>Total dos " + lista.length + ' livros</td><td class="sep"><s>' + brl.format(soma) + '</s></td><td class="col">' + brl.format(alvo / 100) + '</td><td class="eco">' + brl.format(soma - alvo / 100) + "</td></tr>";
+  })();
 
   /* ---------- capas ---------- */
   var ALTURA = {"img/fundamentos-da-virtologia.webp":905,"img/manejos-tecnicas-supervisao.webp":910,"img/sistemas-humanizados.webp":920,"img/a-terceira-onda-do-trabalho.webp":961,"img/guia-educacao-infantil.webp":640,"img/guia-anos-iniciais.webp":928,"img/guia-anos-finais.webp":920,"img/guia-livro-do-professor.webp":919};

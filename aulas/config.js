@@ -88,9 +88,12 @@ window.AULAS_CONFIG = {
             "Na comparação com as dezoito maiores teorias da personalidade, feita no livro Fundamentos da Virtologia, nenhuma delas reúne num só sistema as grandes heranças da psicologia que a Virtologia integra. Essa leitura mais ampla dá uma base melhor para escolher o manejo de cada pessoa."
           ],
           temas: [
-            "Faixas de Evolução neurológica.",
-            "Estado de aprendizagem.",
-            "Três fatores clínicos."
+            "A formação da personalidade.",
+            "O caráter.",
+            "Os 12 campos do temperamento.",
+            "As 51 necessidades humanas.",
+            "Os mandatos de vida.",
+            "As Faixas de Evolução neurológica."
           ],
           capa: "img/aulas/virtologia-2026-11-09-v2.webp",
           foto: "img/aulas/virtologia-2026-11-09-v2-foto.webp",   /* só o Eduardo, recortado da capa */

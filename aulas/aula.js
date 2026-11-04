@@ -61,10 +61,15 @@
       '<p class="ev-acesso"><strong>Como você recebe o acesso:</strong> ao concluir a inscrição, você segue para o grupo da aula no WhatsApp. O link do Zoom é enviado lá no dia da aula.</p>' +
     '</div></section>';
 
+  /* conteúdo opcional da própria página, mostrado no fim: <template id="aula-extra"> */
+  var tpl = document.getElementById("aula-extra");
+  var extra = tpl ? tpl.innerHTML : "";
+
   var conteudo =
     '<section class="ev-conteudo"><div class="wrap ev-duas">' +
       '<div><h2>O que será discutido</h2>' + [].concat(A.apresentacao).map(function (t) { return '<p>' + esc(t) + '</p>'; }).join("") +
-        '<ul class="temas">' + A.temas.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + '</ul></div>' +
+        ((A.temas && A.temas.length) ? '<ul class="temas">' + A.temas.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + '</ul>' : "") +
+        (extra ? '<p class="tm-ver"><a href="#o-que-sera-abordado">Veja um resumo de cada tema mais abaixo</a></p>' : "") + '</div>' +
       '<aside class="ev-quem"><h3>Para quem é esta aula</h3><p>' + esc(T.paraQuem) + '</p>' +
         (encerrada ? "" : '<a class="btn" href="#inscricao" data-ir-form>' + CTA + '</a>') + '</aside>' +
     '</div></section>';
@@ -96,10 +101,13 @@
     '</div></section>';
 
   main.innerHTML = hero + beneficios + conteudo + professor + inscricao +
-    '<section class="faq"><div class="wrap"><h2>Perguntas frequentes</h2>' + faq + '</div></section>' +
+    '<section class="faq"><div class="wrap"><h2>Perguntas frequentes</h2>' + faq + '</div></section>' + extra +
     (encerrada ? "" : '<div class="ev-fixo" id="ev-fixo" style="--ev-cor:' + esc(T.cor) + ';--ev-fundo:' + esc(T.fundo) + '"><a href="#inscricao" data-ir-form>' + CTA + '</a><span>' + esc(D.semanaCurta) + ", " + D.curta + " · " + D.hora + '</span></div>');
 
-  if (encerrada) return;
+  if (encerrada) {
+    Array.prototype.forEach.call(main.querySelectorAll(".tm-cta"), function (el) { el.parentNode.removeChild(el); });
+    return;
+  }
 
   var secao = document.getElementById("inscricao");
   var api = IV.montarFormulario(document.getElementById("form-box"), {
