@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Depoimentos sobre a Virtologia e a Formação | Instituto Virtudes</title>
+<meta name="description" content="Relatos de atendimento com as virtudes, depoimentos em vídeo e mensagens de alunos sobre a Virtologia, a Formação em Virtologia e as aulas com o Dr. Eduardo Casarotto.">
+<link rel="canonical" href="https://institutovirtudes.com.br/depoimentos/">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Instituto Virtudes">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:url" content="https://institutovirtudes.com.br/depoimentos/">
+<meta property="og:title" content="Depoimentos sobre a Virtologia">
+<meta property="og:description" content="O que dizem alunos e terapeutas que vivem a Virtologia.">
+<meta property="og:image" content="https://institutovirtudes.com.br/img/og-padrao.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Instituto Virtudes">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Depoimentos sobre a Virtologia">
+<meta name="twitter:description" content="O que dizem alunos e terapeutas que vivem a Virtologia.">
+<meta name="twitter:image" content="https://institutovirtudes.com.br/img/og-padrao.jpg">
+
+<link rel="icon" href="../img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/estilo.css">
+<style>
+.dp-hero{padding-bottom:40px}
+.dp-hero h1{max-width:20em}
+.dp-nav{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.dp-nav a{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--borda);border-radius:999px;padding:8px 14px;font-size:15px;color:var(--texto);background:#fff}
+.dp-nav a:hover{border-color:var(--azul);color:var(--azul)}
+.dp-nav span{font-size:12px;font-weight:600;background:var(--pastel-azul);color:var(--azul-escuro);border-radius:999px;padding:1px 8px}
+.dp-sec > .wrap > p:not(.kicker){max-width:44em}
+.dp-sec h2{margin-bottom:10px}
+.dp-av{flex:0 0 40px;width:40px;height:40px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-family:'Lora',Georgia,serif;font-weight:700;font-size:17px;color:#fff;background:var(--azul)}
+figure.dp-card,figure.dp-caso{margin:0}
+figcaption{display:flex;align-items:center;gap:11px}
+figcaption b{display:block;font-size:14.5px;line-height:1.3;color:var(--texto);word-break:break-word}
+figcaption small{display:block;font-size:13px;line-height:1.35;color:var(--apoio)}
+blockquote{margin:0;border:0;padding:0}
+
+.dp-casos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin:26px 0 18px}
+.dp-caso{background:#fff;border:1px solid var(--borda);border-top:4px solid var(--azul);border-radius:var(--raio-card);padding:22px 22px 20px;display:flex;flex-direction:column}
+.dp-caso:first-child{grid-column:1 / -1}
+.dp-caso blockquote{flex:1 1 auto;margin:0 0 16px}
+.dp-caso blockquote p{font-family:'Lora',Georgia,serif;font-size:17.5px;line-height:1.55;color:var(--texto);margin:0 0 10px}
+.dp-caso blockquote p:last-child{margin-bottom:0}
+.dp-tags{list-style:none;display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;padding:0}
+.dp-tags li{background:var(--pastel-azul);color:var(--azul-escuro);border-radius:999px;padding:3px 11px;font-size:13px;font-weight:600;margin:0}
+.dp-nota{font-size:14.5px;color:var(--apoio);background:var(--claro);border-radius:var(--raio);padding:10px 12px;margin:0 0 16px}
+.dp-ressalva{font-size:14px;color:var(--apoio);border-left:3px solid var(--borda);padding:4px 0 4px 14px;max-width:none !important}
+
+.dp-escuro{background:var(--azul-escuro);color:#fff}
+.dp-escuro h2,.dp-escuro p{color:#fff}
+.dp-escuro .kicker{color:#DCE8FA}
+.dp-escuro > .wrap > p:not(.kicker){color:#DCE8FA}
+.dp-videos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:26px}
+.dp-video{margin:0}
+.dp-video figcaption{display:block;margin-top:12px}
+.dp-play{position:relative;display:block;width:100%;aspect-ratio:16/9;padding:0;border:0;border-radius:var(--raio-card);overflow:hidden;cursor:pointer;background:#000}
+.dp-play img{width:100%;height:100%;object-fit:cover;display:block;opacity:.85;transition:opacity .2s}
+.dp-play:hover img{opacity:1}
+.dp-play:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.dp-play-ico{position:absolute;left:50%;top:50%;width:62px;height:44px;margin:-22px 0 0 -31px;border-radius:12px;background:rgba(0,0,0,.72)}
+.dp-play-ico::after{content:"";position:absolute;left:25px;top:13px;border-style:solid;border-width:9px 0 9px 15px;border-color:transparent transparent transparent #fff}
+.dp-video .video{margin:0}
+.dp-fala{font-family:'Lora',Georgia,serif;font-size:17px;line-height:1.45;margin:0 0 6px}
+.dp-nome{font-size:13.5px;margin:0;color:#DCE8FA !important}
+
+.dp-mural{columns:3 300px;column-gap:18px;margin-top:22px}
+.dp-card{break-inside:avoid;display:inline-block;width:100%;background:#fff;border:1px solid var(--borda);border-radius:var(--raio-card);padding:18px 18px 16px;margin:0 0 18px !important}
+.dp-card blockquote{font-size:15.5px;line-height:1.6;color:var(--texto);margin:0 0 14px;position:relative;padding-top:20px}
+.dp-card blockquote::before{content:"\201C";position:absolute;left:-2px;top:-14px;font-family:'Lora',Georgia,serif;font-size:52px;line-height:1;color:var(--pastel-azul)}
+.dp-vida .dp-av{background:#2C8C83}
+.dp-aulas .dp-av{background:var(--azul)}
+.dp-professor .dp-av{background:#B8914F}
+#a-virtologia-na-vida,#o-professor{background:var(--claro)}
+
+.dp-final{text-align:center}
+.dp-final p{max-width:36em;margin-left:auto;margin-right:auto}
+.dp-acoes{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:18px}
+.dp-acoes .btn{margin:0}
+.btn-sec{background:#fff;color:var(--azul);border:1px solid var(--azul)}
+.btn-sec:hover{background:var(--pastel-azul)}
+
+@media (max-width:900px){
+  .dp-videos{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  .dp-nav{gap:6px}
+  .dp-nav a{font-size:14px;padding:7px 12px}
+  .dp-casos{grid-template-columns:1fr;gap:14px}
+  .dp-caso{padding:18px 16px 16px}
+  .dp-caso blockquote p{font-size:16.5px}
+  .dp-videos{grid-template-columns:1fr;gap:22px}
+  .dp-mural{columns:1}
+  .dp-card{margin-bottom:12px !important}
+  .dp-acoes{flex-direction:column}
+}
+</style>
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '386437925348155');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
+/></noscript>
+<!-- Fim Meta Pixel -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3XCMQHKG5N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3XCMQHKG5N');
+</script>
+</head>
+<body>
+
+<header class="topo">
+  <div class="topo-int">
+    <a href="../" class="marca"><img src="../img/logo-instituto-virtudes.png" alt="Instituto Virtudes - Humanização e Virtologia" width="439" height="120"></a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Menu">&#8801;</button>
+    <nav>
+      <ul class="menu" id="menu">
+        <li class="tem-sub">
+          <button class="menu-sub-btn" aria-expanded="false" aria-haspopup="true">Virtologia <span class="seta-sub" aria-hidden="true">&#9662;</span></button>
+          <ul class="submenu">
+            <li><a href="../virtologia/">O que é a Virtologia</a></li>
+            <li><a href="../formacao/">Formação em Virtologia</a></li>
+            <li><a href="../terapeutas/">Terapia gratuita</a></li>
+            <li><a href="../teorias/">Diante de outras grandes teorias</a></li>
+            <li><a href="../depoimentos/">Depoimentos</a></li>
+            <li><a href="../aula1/">Aula aberta</a></li>
+            <li><a href="../aulas/virtologia/">Aula ao vivo gratuita</a></li>
+          </ul>
+        </li>
+        <li class="tem-sub">
+          <button class="menu-sub-btn" aria-expanded="false" aria-haspopup="true">Humanização 2.0 <span class="seta-sub" aria-hidden="true">&#9662;</span></button>
+          <ul class="submenu">
+            <li><a href="../sistemas/">Entenda a transformação</a></li>
+            <li><a href="../sistemas/#evidencias">Evidências internacionais</a></li>
+            <li><a href="../pos-sistemas/">Pós-graduação em Sistemas Humanizados</a></li>
+            <li><a href="../sistemas-humanizados/">O livro Sistemas Humanizados</a></li>
+            <li><a href="../aula2/">Aula aberta sobre a NR-1</a></li>
+            <li><a href="../aularh/">Aula aberta para RH</a></li>
+            <li><a href="../aulas/humanizacao/">Aula ao vivo gratuita</a></li>
+            <li><a href="../ondas/">As Três Ondas do Trabalho</a></li>
+          </ul>
+        </li>
+        <li class="tem-sub">
+          <button class="menu-sub-btn" aria-expanded="false" aria-haspopup="true">Formações e cursos <span class="seta-sub" aria-hidden="true">&#9662;</span></button>
+          <ul class="submenu">
+            <li><a href="../formacao/">Formação em Virtologia</a></li>
+            <li><a href="../pos-sistemas/">Pós-graduação em Sistemas Humanizados</a></li>
+            <li><a href="../formacoes/#intro-virtologia">Curso de Introdução à Virtologia</a></li>
+            <li><a href="../formacoes/#intro-sistemas">Curso de Introdução aos Sistemas Humanizados</a></li>
+            <li><a href="../formacoes/">Todas as formações e cursos</a></li>
+          </ul>
+        </li>
+        <li class="tem-sub">
+          <button class="menu-sub-btn" aria-expanded="false" aria-haspopup="true">Livros <span class="seta-sub" aria-hidden="true">&#9662;</span></button>
+          <ul class="submenu">
+            <li><a href="../14-obras/">Coleção Especial · 14 obras</a></li>
+            <li><a href="../fundamentos/">Fundamentos da Virtologia</a></li>
+            <li><a href="../manual/">Manual de Desenvolvimento Humano em Virtudes</a></li>
+            <li><a href="../sistemas-humanizados/">Sistemas Humanizados · Humanização 2.0</a></li>
+            <li><a href="../guia/">Guia das Virtudes</a></li>
+            <li><a href="../teimosia/">Teimosia de Viver</a></li>
+            <li><a href="../envelheci/">Envelheci, e Daí?</a></li>
+            <li><a href="../livros/">Todos os livros</a></li>
+          </ul>
+        </li>
+        <li><a href="../palestras/">Palestras</a></li>
+        <li><a href="../futuro/">Trazemos o Futuro</a></li>
+        <li><a href="../inteiras/" target="_blank" rel="noopener">Inteiras</a></li>
+        <li><a href="../contato/">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="dp-hero">
+  <div class="wrap">
+    <p class="kicker">Depoimentos</p>
+    <h1>O que dizem alunos e terapeutas que vivem a Virtologia</h1>
+    <p class="lead">Relatos de atendimento, depoimentos em vídeo e mensagens de alunos sobre a Virtologia, a Formação e as aulas com o Dr. Eduardo Casarotto. Tudo escrito por quem viveu.</p>
+    <nav class="dp-nav" aria-label="Tipos de depoimento"><a href="#na-pratica">Resultados na prática <span>5</span></a><a href="#em-video">Em vídeo <span>6</span></a><a href="#a-virtologia-na-vida">A Virtologia na vida <span>8</span></a><a href="#as-aulas">As aulas e a Formação <span>8</span></a><a href="#o-professor">O professor <span>8</span></a></nav>
+  </div>
+</section>
+
+<section id="na-pratica" class="dp-sec">
+  <div class="wrap">
+    <p class="kicker">Resultados na prática</p>
+    <h2>Relatos de atendimento com as virtudes</h2>
+    <p>Terapeutas e alunos contando o que aconteceu quando a virtude foi aplicada: qual virtude, por quanto tempo, e o que mudou.</p>
+    <div class="dp-casos"><figure class="dp-caso"><ul class="dp-tags" aria-label="Virtudes trabalhadas"><li>Aceitação</li><li>Individuação</li></ul><blockquote><p>Gente, dá resultado mesmo... Entrei por causa da compulsão alimentar, não tenho mais.</p><p>Os pacientes que estou tendo no estágio: o mais antigo, que está entrando no terceiro mês, já apresentou tanta mudança em seu comportamento. Ele fez só Aceitação. Uma outra paciente, uma senhora de 54 anos submissa à mãe: ficamos 3 semanas em Individuação e, parece mágica, cortou o cordão umbilical...</p><p>E outra que, com duas semanas de Aceitação, emagreceu 3 quilos. A cada consulta se tem relatos de mudanças...</p></blockquote><figcaption><span class="dp-av" aria-hidden="true">N</span><span><b>Nicileia D.</b><small>Em estágio clínico · Porto Alegre · WhatsApp</small></span></figcaption></figure><figure class="dp-caso"><ul class="dp-tags" aria-label="Virtudes trabalhadas"><li>Responsabilidade</li></ul><blockquote><p>Estou com um cliente há 6 sessões. Na 4ª sessão passei para ele a Virtude da Responsabilidade. Ele começou a trabalhar, foi buscar o psiquiatra, começou a tomar o remédio que o psiquiatra passou para bipolar, está mais centrado e confiante.</p><p>Até eu me surpreendi com a rapidez disso tudo, sendo que ele estava com muitas ideias perdidas, problemas no relacionamento com a noiva, falta de responsabilidade, e hoje está outra pessoa.</p></blockquote><figcaption><span class="dp-av" aria-hidden="true">D</span><span><b>Debora S.</b><small>Terapeuta · WhatsApp</small></span></figcaption></figure><figure class="dp-caso"><ul class="dp-tags" aria-label="Virtudes trabalhadas"><li>Aceitação</li><li>Humildade</li><li>Individuação</li><li>Perseverança</li></ul><blockquote><p>Hoje tive um feedback maravilhoso de um paciente. Estamos na 15ª sessão, trabalhamos as seguintes virtudes: Aceitação (21 dias), Humildade (30 dias), Individuação (14 dias), e Perseverança, que estamos trabalhando atualmente. Todos os dias o paciente me envia o áudio com as afirmações e a escrita.</p><p>[...] Ele fez a consulta hoje com seu médico e me enviou esta mensagem: &quot;Terminei a consulta com o psiquiatra e estou de alta dos medicamentos.&quot;</p><p>Esse caminho neural foi registrado com sucesso!</p></blockquote><figcaption><span class="dp-av" aria-hidden="true">F</span><span><b>Fernanda</b><small>Terapeuta · em mensagem ao Dr. Eduardo Casarotto · WhatsApp</small></span></figcaption></figure><figure class="dp-caso"><ul class="dp-tags" aria-label="Virtudes trabalhadas"><li>Humildade</li></ul><blockquote><p>A atividade da Humildade foi simplesmente um divisor de águas na minha vida. Dia após dia eu comecei a perceber como foi enriquecedor e transformador para os meus pensamentos e atitudes.</p><p>A Humildade começou a me mostrar um caminho mais brando e leve de lidar com as pessoas e situações da minha vida. Situações que antes eram um grande medo e até bloqueios começaram a ser sanadas de forma tão simples. Pretendo fazer para sempre.</p></blockquote><p class="dp-nota">Taiane, ao compartilhar: &quot;É incrível a capacidade de construção de novos caminhos neurais através da ferramenta que usamos. Resultados palpáveis, professor!&quot;</p><figcaption><span class="dp-av" aria-hidden="true">P</span><span><b>Paciente de Taiane</b><small>Mensagem compartilhada pela terapeuta Taiane · Instagram</small></span></figcaption></figure><figure class="dp-caso"><ul class="dp-tags" aria-label="Virtudes trabalhadas"><li>Aceitação</li></ul><blockquote><p>Eu estou fazendo a virtude da Aceitação. Comecei na sexta-feira santa. De lá pra cá comecei a ter insights. Eu sempre falava em aceitar as coisas, e até achava que estava indo pelo caminho certo, até entender que aceitar não é se conformar.</p><p>Hoje me peguei pensando que aceitar é muito mais difícil se não houver um comprometimento interno, e esse comprometimento em mim começou a surgir quando eu comecei a questionar as frases. Falava tanto, mas meu corpo gritava. Aceitar é quase um let it go, deixar ir, se não for mesmo. E de fato não olhar para trás.</p></blockquote><figcaption><span class="dp-av" aria-hidden="true">E</span><span><b>Erika C.</b><small>Aluna, sobre a própria experiência · WhatsApp</small></span></figcaption></figure></div>
+    <p class="dp-ressalva">Relatos individuais, compartilhados por quem viveu ou acompanhou o processo. Não são promessa de resultado. Nos quadros com determinação biológica, a Virtologia soma-se ao tratamento médico e não o substitui, e qualquer mudança de medicação é decisão do médico.</p>
+  </div>
+</section>
+
+<section id="em-video" class="dp-sec dp-escuro">
+  <div class="wrap">
+    <p class="kicker">Em vídeo</p>
+    <h2>Profissionais que já atendiam contam o que mudou</h2>
+    <p>Psicólogos, psicanalistas e terapeutas de outras linhas que estudaram a Virtologia e passaram a trabalhar com ela. Toque para assistir.</p>
+    <div class="dp-videos"><figure class="dp-video"><button type="button" class="dp-play" data-video="54-DFhfCKFo" aria-label="Assistir ao depoimento de Dâmaris"><img src="https://i.ytimg.com/vi/54-DFhfCKFo/hqdefault.jpg" alt="" width="480" height="360" loading="lazy"><span class="dp-play-ico" aria-hidden="true"></span></button><figcaption><p class="dp-fala">"Melhorou o pânico e a ansiedade da minha paciente em apenas 14 dias."</p><p class="dp-nome">Dâmaris · Psicóloga clínica</p></figcaption></figure><figure class="dp-video"><button type="button" class="dp-play" data-video="zQtXvSPwbrc" aria-label="Assistir ao depoimento de Carina"><img src="https://i.ytimg.com/vi/zQtXvSPwbrc/hqdefault.jpg" alt="" width="480" height="360" loading="lazy"><span class="dp-play-ico" aria-hidden="true"></span></button><figcaption><p class="dp-fala">"Não tem como não falar que é revolucionário. Depois que você conhece, não tem como não trabalhar com isso."</p><p class="dp-nome">Carina · Neuropsicopedagoga, psicanalista e terapeuta ABA</p></figcaption></figure><figure class="dp-video"><button type="button" class="dp-play" data-video="WD7Zjkop8-o" aria-label="Assistir ao depoimento de Fernanda"><img src="https://i.ytimg.com/vi/WD7Zjkop8-o/hqdefault.jpg" alt="" width="480" height="360" loading="lazy"><span class="dp-play-ico" aria-hidden="true"></span></button><figcaption><p class="dp-fala">"É libertador. Para consultório, foi uma revolução e tanto."</p><p class="dp-nome">Fernanda · Psicóloga clínica (TCC)</p></figcaption></figure><figure class="dp-video"><button type="button" class="dp-play" data-video="9JgaqzV8Yck" aria-label="Assistir ao depoimento de Grace Campos"><img src="https://i.ytimg.com/vi/9JgaqzV8Yck/hqdefault.jpg" alt="" width="480" height="360" loading="lazy"><span class="dp-play-ico" aria-hidden="true"></span></button><figcaption><p class="dp-fala">"A Virtologia é o &#x27;como&#x27; de todas as terapias. Linguagem fácil, compreensível, onde qualquer um pode fazer."</p><p class="dp-nome">Grace Campos · Psicanalista</p></figcaption></figure><figure class="dp-video"><button type="button" class="dp-play" data-video="8SwPa8b4eFE" aria-label="Assistir ao depoimento de Dinorá"><img src="https://i.ytimg.com/vi/8SwPa8b4eFE/hqdefault.jpg" alt="" width="480" height="360" loading="lazy"><span class="dp-play-ico" aria-hidden="true"></span></button><figcaption><p class="dp-fala">"Quando você vai percebendo, você vê que aquela não é mais a mesma pessoa que comecei a atender."</p><p class="dp-nome">Dinorá · Psicóloga especialista em autismo</p></figcaption></figure><figure class="dp-video"><button type="button" class="dp-play" data-video="3LKJZyZLKN4" aria-label="Assistir ao depoimento de Rosa"><img src="https://i.ytimg.com/vi/3LKJZyZLKN4/hqdefault.jpg" alt="" width="480" height="360" loading="lazy"><span class="dp-play-ico" aria-hidden="true"></span></button><figcaption><p class="dp-fala">"Quando você vê, você já está agindo. Muito mais rápido e pontual do que outras terapias."</p><p class="dp-nome">Rosa · Psicóloga</p></figcaption></figure></div>
+  </div>
+</section>
+
+<section id="a-virtologia-na-vida" class="dp-sec">
+  <div class="wrap">
+    <p class="kicker">A Virtologia na vida</p>
+    <h2>O que muda em quem estuda e aplica as virtudes em si mesmo.</h2>
+    <div class="dp-mural"><figure class="dp-card dp-vida"><blockquote>Eduuu, minha gratidão por você vai muito além do aprendizado. A Virtologia transformou a minha maneira de enxergar a mim mesma, as pessoas e a vida. E hoje posso contribuir pra transformação de outras vidas também. Obrigada por tanto! É um grande privilégio aprender com você!</blockquote><figcaption><span class="dp-av" aria-hidden="true">N</span><span><b>@nataliairisvirtologa</b><small>no Instagram</small></span></figcaption></figure><figure class="dp-card dp-vida"><blockquote>Ensino que vai muito, muito além da teoria e transforma vidas, como vem transformando a minha e a de meus clientes por consequência... Sou profundamente grata ao mestrão!</blockquote><figcaption><span class="dp-av" aria-hidden="true">M</span><span><b>@mag.montagna</b><small>no Instagram</small></span></figcaption></figure><figure class="dp-card dp-vida"><blockquote>Eduardo Casarotto traz consigo uma trajetória que o faz ser, além de professor, um criador, pesquisador, pensador, instrutor e revolucionário. Não quero apenas parabenizá-lo, mas agradecer profundamente por ter mudado minha vida com sua dedicação ao desenvolvimento da Virtologia. Às vezes, me pergunto como tudo estaria agora se eu não tivesse me desenvolvido tanto por meio das virtudes. Minha profunda gratidão pela sua vida, pela sua existência e pelo seu propósito, que vem se realizando em minha vida.</blockquote><figcaption><span class="dp-av" aria-hidden="true">L</span><span><b>@lensampaio</b><small>no Instagram</small></span></figcaption></figure><figure class="dp-card dp-vida"><blockquote>Ao Mestre que me trouxe a vontade de melhorar cada vez mais. A cada Virtude aplicada eu me sinto mais inteira, com mais presença, escuta e compreensão de mim e dos meus clientes. Prof, agradeço por tudo, pela sua vida, pelos seus ancestrais por ter nos permitido você estar aqui hoje nos ensinando, nos evoluindo e nos tornando seres mais humanizados e virtuosos. Gratidão imensa.</blockquote><figcaption><span class="dp-av" aria-hidden="true">D</span><span><b>@deborasuziggan_terapeutafdr</b><small>no Instagram</small></span></figcaption></figure><figure class="dp-card dp-vida"><blockquote>&quot;A vida é caos e quem evita o caos evita a vida&quot;: esse é um dos ensinamentos que eu sempre vou levar, pois através dele tive permissão interna para tentar, tentar, e desenvolver um estado interno de certeza de que está tudo bem se eu não acertar... Algo de bom e grande sempre nasce depois de cada tentativa! Deus abençoe grandemente sua vida, meu grande mestre! Seu propósito me ajuda todos os dias a descobrir o meu.</blockquote><figcaption><span class="dp-av" aria-hidden="true">J</span><span><b>@juju.carlota</b><small>no Instagram</small></span></figcaption></figure><figure class="dp-card dp-vida"><blockquote>Feliz em aprender com o @eduardocasarottooficial e poder evoluir enquanto ser humano após os ensinamentos. Colho ótimos frutos após a minha evolução com as virtudes e seus ensinamentos, do Brasil para o mundo.</blockquote><figcaption><span class="dp-av" aria-hidden="true">A</span><span><b>@anakarolinacejudo</b><small>no Instagram</small></span></figcaption></figure><figure class="dp-card dp-vida"><blockquote>Ah, esse é &quot;meu mestre com carinho&quot;... Cada ensinamento tornou-se um convite à evolução, fortalecendo meu propósito de contribuir para que outras pessoas também descubram o poder da própria transformação. Mestre, que sua missão continue inspirando pessoas, despertando consciências e construindo uma sociedade mais virtuosa, humana e livre!</blockquote><figcaption><span class="dp-av" aria-hidden="true">J</span><span><b>@julianacarregosa</b><small>no Instagram</small></span></figcaption></figure><figure class="dp-card dp-vida"><blockquote>Esse é o nosso professor querido. Não existem palavras pra falar deste homem que trouxe a maior ciência do tratamento humano, que é a Virtologia. A melhor homenagem que posso fazer por este homem é dar o meu melhor no amor ao próximo, que aprendi com ele.</blockquote><figcaption><span class="dp-av" aria-hidden="true">V</span><span><b>@virtologo</b><small>no Instagram</small></span></figcaption></figure></div>
+  </div>
+</section>
+
+<section id="as-aulas" class="dp-sec">
+  <div class="wrap">
+    <p class="kicker">As aulas e a Formação</p>
+    <h2>Como é aprender Virtologia com o Dr. Eduardo Casarotto.</h2>
+    <div class="dp-mural"><figure class="dp-card dp-aulas"><blockquote>Nossa, o que eu aprendi com o professor Eduardo! Aprendi a ser uma estudante, uma aluna que não tem medo de falar, de errar, nem de perguntar. Ele ensinou para mim o que eu estava precisando aprender, o que eu buscava em um professor, o que eu buscava em uma escola. E toda aula era mais do que uma aula: era uma sessão terapêutica em que eu derrubava muitas barreiras que havia em mim. Hoje eu sou uma pessoa diferente, nesses últimos nove meses em que conheci o professor e estive com ele ao vivo nas aulas. [...] Nesse momento eu fui presenteada com as virtudes para conquistar a minha cura, e foi graças a ter conhecido o professor Eduardo e a Virtologia.</blockquote><figcaption><span class="dp-av" aria-hidden="true">E</span><span><b>@erikacrisostomo_</b><small>no Instagram</small></span></figcaption></figure><figure class="dp-card dp-aulas"><blockquote>Ahhh, o que dizer desse Prof. MARAVILHOSO?! Além de GENIAL, é espontâneo, &quot;papo reto&quot;, sem máscaras, que nos ensina alavancando nossas virtudes, nos mostrando que o mundo pode ser muito além do que já existe, que devemos, sim, ter esperança de humanizarmos lugares que aparentemente seriam impossíveis, como presídios, para fazermos uma sociedade melhor, além de humanizarmos hospitais, escolas, empresas e organizações... Suas aulas eram como encontros em que abríamos ainda mais nossa visão de mundo, como um convite pra viver uma vida verdadeiramente autêntica... Gratidão eterna, Prof. Edu querido!! Já estou com saudades desses encontros!!!</blockquote><figcaption><span class="dp-av" aria-hidden="true">J</span><span><b>@julianacristinabalbo</b><small>no Instagram</small></span></figcaption></figure><figure class="dp-card dp-aulas"><blockquote>Edu do céu, sou muito grata pelos seus ensinamentos. Meu estado de certeza hoje é real por ter aprendido com você. Eu demoraria anos-luz pra chegar onde estou sem sua grande aula.</blockquote><figcaption><span class="dp-av" aria-hidden="true">E</span><span><b>@estou.danielaamorim</b><small>no Instagram</small></span></figcaption></figure><figure class="dp-card dp-aulas"><blockquote>Edu! Nossa imensa gratidão por suas aulas maravilhosas e verdadeiramente transformadoras. Seu conhecimento, sua paixão pelo ensino e sua generosidade deixaram marcas inesquecíveis em todos nós. Obrigada por nos inspirar a ir sempre além.</blockquote><figcaption><span class="dp-av" aria-hidden="true">J</span><span><b>@janeirealbarozzo</b><small>no Instagram</small></span></figcaption></figure><figure class="dp-card dp-aulas"><blockquote>Obrigado, professor Eduardo! Você é um presente pra todos nós alunos. É muito bom tê-lo com sua presença, empatia, humanidade e ensinos. Aprendemos e evoluímos muito com tudo o que você é e passa. Vida longa pra você nesse propósito de levar conhecimento, lucidez e consciência a quem precisa. Gratidão!</blockquote><figcaption><span class="dp-av" aria-hidden="true">F</span><span><b>@flavioxavier.s</b><small>no Instagram</small></span></figcaption></figure><figure class="dp-card dp-aulas"><blockquote>Parabéns, professor Edu! Você tem muitas qualidades, mas como professor é excepcional. A gente fica horas e horas assistindo e querendo sempre mais. Gratidão por tanto!</blockquote><figcaption><span class="dp-av" aria-hidden="true">L</span><span><b>@lilianevoigt_terapeuta</b><small>no Instagram</small></span></figcaption></figure><figure class="dp-card dp-aulas"><blockquote>Mestre querido, eu amooo sua forma de ensinar, simples, direto e cirúrgico sempre!!! O meu preferido.</blockquote><figcaption><span class="dp-av" aria-hidden="true">M</span><span><b>@marilyteixeira_mary</b><small>no Instagram</small></span></figcaption></figure><figure class="dp-card dp-aulas"><blockquote>Querido professor, obrigada por compartilhar cada conhecimento seu com carinho, amor e muita paciência! Suas lições sempre estarão em meu coração e, por onde eu andar, seguirei os seus e passarei adiante seus ensinamentos! Obrigada sempre!</blockquote><figcaption><span class="dp-av" aria-hidden="true">A</span><span><b>@andrea_28oliveira</b><small>no Instagram</small></span></figcaption></figure></div>
+  </div>
+</section>
+
+<section id="o-professor" class="dp-sec">
+  <div class="wrap">
+    <p class="kicker">O professor</p>
+    <h2>Sobre quem conduz as aulas.</h2>
+    <div class="dp-mural"><figure class="dp-card dp-professor"><blockquote>Agradeço aos céus pela oportunidade de me pôr em união ao professor @eduardocasarottooficial, com quem aprendi e aprendo a cada dia assuntos que jamais imaginaria conseguir me aprofundar! Só posso agradecer pela sua existência!</blockquote><figcaption><span class="dp-av" aria-hidden="true">F</span><span><b>@fabiceci42</b><small>no Instagram</small></span></figcaption></figure><figure class="dp-card dp-professor"><blockquote>Parabéns, prof, você transforma vidas! Esse jeito direto de ensinar, ama o que faz sem interesse nenhum, apenas o bem do próximo! Que Deus continue a te iluminar nessa trajetória de amor!</blockquote><figcaption><span class="dp-av" aria-hidden="true">M</span><span><b>@marildavirtologa</b><small>no Instagram</small></span></figcaption></figure><figure class="dp-card dp-professor"><blockquote>Grande professor! Com certeza ampliou as nossas consciências! Divisor de águas em nossas vidas! Gratidão, gratidão e gratidão! Nosso Mestre maravilhoso!</blockquote><figcaption><span class="dp-av" aria-hidden="true">S</span><span><b>@soraya.rlima</b><small>no Instagram</small></span></figcaption></figure><figure class="dp-card dp-professor"><blockquote>O melhor dos últimos tempos, referência em sabedoria e conhecimento sobre a mente humana.</blockquote><figcaption><span class="dp-av" aria-hidden="true">F</span><span><b>@fernanda.dias.lima1</b><small>no Instagram</small></span></figcaption></figure><figure class="dp-card dp-professor"><blockquote>É que obra, viu, a que transforma vidas profundamente, deixando aprendizados MARAVILHOSOS.</blockquote><figcaption><span class="dp-av" aria-hidden="true">S</span><span><b>@sandravmlm</b><small>no Instagram</small></span></figcaption></figure><figure class="dp-card dp-professor"><blockquote>Parabéns, Edu, você transforma vidas com seus ensinamentos. Gratidão.</blockquote><figcaption><span class="dp-av" aria-hidden="true">D</span><span><b>@denise_lanza</b><small>no Instagram</small></span></figcaption></figure><figure class="dp-card dp-professor"><blockquote>É um privilégio encontrar este grande mestre!!! Que sua vida seja plena!!!</blockquote><figcaption><span class="dp-av" aria-hidden="true">H</span><span><b>@helainec.terapeuta</b><small>no Instagram</small></span></figcaption></figure><figure class="dp-card dp-professor"><blockquote>&quot;Você nasceu para ser você, não aquilo que você não é. O mundo precisa de você.&quot;</blockquote><figcaption><span class="dp-av" aria-hidden="true">E</span><span><b>@elissa_khoury_daher</b><small>no Instagram</small></span></figcaption></figure></div>
+  </div>
+</section>
+
+<section class="dp-final">
+  <div class="wrap">
+    <h2>Quer viver isso também?</h2>
+    <p>Comece pela aula ao vivo e gratuita, ou faça a pré-inscrição na Formação em Virtologia.</p>
+    <div class="dp-acoes">
+      <a class="btn" href="../formacao/interesse/">Seguir para pré-inscrição na Formação</a>
+      <a class="btn btn-sec" href="../aulas/virtologia/">Assistir à aula ao vivo gratuita</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="rodape">
+  <div class="wrap-largo">
+    <div class="rodape-cols">
+      <div>
+        <h4><a href="../virtologia/">Virtologia</a></h4>
+        <ul>
+          <li><a href="../terapeutas/">Terapia gratuita</a></li>
+          <li><a href="../teorias/">Diante de outras grandes teorias</a></li>
+          <li><a href="../depoimentos/">Depoimentos</a></li>
+          <li><a href="../aula1/">Aula aberta</a></li>
+          <li><a href="../aulas/virtologia/">Aula ao vivo gratuita</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4><a href="../sistemas/">Humanização 2.0</a></h4>
+        <ul>
+          <li><a href="../sistemas/#evidencias">Evidências internacionais</a></li>
+          <li><a href="../aula2/">Aula aberta sobre a NR-1</a></li>
+          <li><a href="../aularh/">Aula aberta para RH</a></li>
+          <li><a href="../aulas/humanizacao/">Aula ao vivo gratuita</a></li>
+          <li><a href="../sistemas-humanizados/">O livro</a></li>
+          <li><a href="../pos-sistemas/">Pós-graduação</a></li>
+          <li><a href="../ondas/">As Três Ondas do Trabalho</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4><a href="../formacoes/">Formações e cursos</a></h4>
+        <ul>
+          <li><a href="../formacao/">Formação em Virtologia</a></li>
+          <li><a href="../pos-sistemas/">Pós-graduação em Sistemas Humanizados</a></li>
+          <li><a href="../formacoes/#intro-virtologia">Introdução à Virtologia</a></li>
+          <li><a href="../formacoes/#intro-sistemas">Introdução aos Sistemas Humanizados</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4><a href="../livros/">Livros</a></h4>
+        <ul>
+          <li><a href="../fundamentos/">Fundamentos da Virtologia</a></li>
+          <li><a href="../manual/">Manual de Desenvolvimento Humano em Virtudes</a></li>
+          <li><a href="../sistemas-humanizados/">Sistemas Humanizados</a></li>
+          <li><a href="../guia/">Guia das Virtudes</a></li>
+          <li><a href="../teimosia/">Teimosia de Viver</a></li>
+          <li><a href="../envelheci/">Envelheci, e Daí?</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4><a href="../futuro/">Trazemos o Futuro</a></h4>
+        <div class="redes">
+          <a href="https://www.instagram.com/eduardocasarottooficial/" target="_blank" rel="noopener" aria-label="Instagram"><img src="../img/icone-instagram.svg" alt=""></a>
+          <a href="https://linktw.in/qrGGUW" target="_blank" rel="noopener" aria-label="YouTube"><img src="../img/icone-youtube.svg" alt=""></a>
+          <a href="https://www.tiktok.com/@eduardocasarottooficial" target="_blank" rel="noopener" aria-label="TikTok"><img src="../img/icone-tiktok.svg" alt=""></a>
+        </div>
+      </div>
+    </div>
+    <div class="ressalva">
+      <p>Nos quadros com determinação biológica, a Virtologia soma-se ao tratamento médico e não o substitui.</p>
+      <div class="contatos">
+        <a href="mailto:grupo@institutovirtudes.com.br"><img src="../img/icone-email.svg" alt="" width="18" height="18">grupo@institutovirtudes.com.br</a>
+        <a href="https://wa.me/5564996428026" target="_blank" rel="noopener"><img src="../img/icone-whatsapp.svg" alt="" width="18" height="18">+55 64 99642-8026</a>
+      </div>
+      <p class="legais"><a href="../contato/">Fale conosco</a> · <a href="../trocas/">Trocas, devolução e reembolso</a> · <a href="../frete/">Política de Frete</a> · <a href="../privacidade/">Política de Privacidade</a></p>
+      <p class="copyright">&copy; 2026 Instituto Virtudes. Todos os direitos reservados.<br>
+        DCM Instituto Virtudes de Treinamento LTDA · CNPJ 33.247.144/0001-04<br>
+        Instituto Virtudes · Editora Virtudes</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/origem.js"></script>
+<script src="../js/site.js"></script>
+<script>
+document.querySelectorAll(".dp-play").forEach(function(b){b.addEventListener("click",function(){
+  var f=document.createElement("iframe");f.src="https://www.youtube-nocookie.com/embed/"+b.getAttribute("data-video")+"?rel=0&autoplay=1";
+  f.title=b.getAttribute("aria-label");f.allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";f.allowFullscreen=true;f.referrerPolicy="strict-origin-when-cross-origin";
+  var w=document.createElement("div");w.className="video";w.appendChild(f);b.replaceWith(w);
+  if(window.fbq)fbq("trackCustom","DepoimentoVideo",{video:b.getAttribute("data-video")});
+  if(window.gtag)gtag("event","depoimento_video",{video:b.getAttribute("data-video")});
+});});
+</script>
+
+</body>
+</html>

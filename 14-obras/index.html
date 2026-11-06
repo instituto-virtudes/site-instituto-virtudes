@@ -389,6 +389,19 @@ body:not(.aut-off) [data-autografo="off"]{display:none!important}
 /* ---------- animação discreta ---------- */
 .rev{opacity:0;transform:translateY(18px);transition:opacity .9s ease,transform .9s ease}
 .rev.vis{opacity:1;transform:none}
+.pc-livro{font-size:13px;line-height:1.4;color:var(--apoio);margin:10px 0 0;font-variant-numeric:lining-nums tabular-nums}
+.pc-livro s{color:var(--apoio)}
+.pc-livro b{color:var(--tinta);font-weight:600}
+.lista-livros .pc{font-style:normal;display:block;font-size:12.5px;color:var(--apoio);font-variant-numeric:lining-nums tabular-nums}
+.lista-livros .pc b{color:var(--tinta);font-weight:600}
+.so-colecao{display:flex;gap:14px;align-items:flex-start;background:#FBF6EC;border:1px solid var(--ouro);border-left-width:4px;padding:16px 18px;margin:0 0 22px}
+.so-colecao svg{flex:0 0 26px;color:var(--ouro-texto);margin-top:2px}
+.so-colecao p{margin:0;font-size:15px;line-height:1.5;color:var(--tinta)}
+.so-colecao p + p{margin-top:6px;font-size:14px;color:var(--apoio)}
+.aviso-oferta{border:1px solid var(--linha);background:#FBF6EC;padding:14px 16px;margin:0 0 22px}
+.aviso-oferta p{margin:0;font-size:14.5px;line-height:1.5;color:var(--tinta)}
+.aviso-oferta p + p{margin-top:8px}
+.cmp th small{display:block;font-size:10.5px;letter-spacing:.06em;text-transform:none;font-weight:500;color:var(--apoio);margin-top:2px}
 .comparativo{margin:40px auto 0;max-width:980px;background:#fff;border:1px solid var(--linha);padding:40px 44px 34px}
 .comparativo h3{font-family:var(--serif);font-weight:600;font-size:clamp(26px,2.6vw,34px);line-height:1.15;margin:0 0 8px;color:var(--tinta)}
 .comparativo .cmp-sub{font-size:15px;color:var(--apoio);margin:0 0 22px;max-width:46em}
@@ -410,11 +423,11 @@ body:not(.aut-off) [data-autografo="off"]{display:none!important}
   .comparativo{margin:28px 0 0;border-left:0;border-right:0;padding:30px 20px 26px}
   .cmp thead{display:none}
   .cmp,.cmp tbody,.cmp tfoot{display:block}
-  .cmp tr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px 8px;padding:10px 0;border-bottom:1px solid var(--linha)}
+  .cmp tr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px 14px;padding:10px 0;border-bottom:1px solid var(--linha)}
   .cmp td{display:block;border:0;padding:0;text-align:left;font-size:14px}
   .cmp td:first-child{grid-column:1 / -1;font-weight:600;font-size:15px;margin-bottom:2px}
-  .cmp td.sep::before,.cmp td.col::before,.cmp td.eco::before{display:block;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ouro-texto);font-weight:600;font-family:var(--sans)}
-  .cmp td.sep::before{content:"Separado"}
+  .cmp td.sep::before,.cmp td.col::before,.cmp td.eco::before{display:block;white-space:normal;line-height:1.25;margin-bottom:2px;font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--ouro-texto);font-weight:600;font-family:var(--sans)}
+  .cmp td.sep::before{content:"Fora da coleção"}
   .cmp td.col::before{content:"Na coleção"}
   .cmp td.eco::before{content:"Economia"}
   .cmp tfoot tr{border-bottom:0;border-top:2px solid var(--tinta);padding-top:14px}
@@ -570,7 +583,7 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
         <p>Os <span data-cfg="limiteAutografos">100</span> primeiros pedidos recebem os <span data-cfg="quantidadeLivros">14</span> livros autografados individualmente, à mão, pelo autor.<small>Pela ordem de confirmação do pagamento. É a única oportunidade de ter a coleção autografada.</small></p>
       </div>
       <a class="cta" data-cta="hero" data-label="Garantir minha coleção" href="#oferta">Garantir minha coleção <span class="seta" aria-hidden="true">&rarr;</span></a>
-      <p class="hero-preco">De <s data-preco="regular">R$ 3.047,00</s> por <b data-preco="prevenda">R$ 1.997,00</b> · frete incluso</p>
+      <p class="hero-preco">De <s data-preco="regular">R$ 3.061,00</s> por <b data-preco="prevenda">R$ 1.997,00</b> · frete incluso</p>
     </div>
     <div class="vis">
       <div class="pilha" id="pilha" role="img" aria-label="As 14 capas da coleção, em uma estante"></div>
@@ -786,6 +799,7 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
         <ul class="tres-pontos">
           <li><b>Um a um</b><span>Não é uma assinatura impressa nem um cartão avulso: cada um dos <span data-cfg="quantidadeLivros">14</span> exemplares é assinado à mão.</span></li>
           <li><b>Os <span data-cfg="limiteAutografos">100</span> primeiros</b><span>Conta a ordem de confirmação do pagamento, não o clique nem o carrinho iniciado.</span></li>
+          <li><b>Só na coleção completa</b><span>Os autógrafos estão apenas na coleção de <span data-cfg="quantidadeLivros">14</span> livros. Fora dela, nenhum livro sai autografado.</span></li>
           <li><b>Oportunidade única</b><span>Esta é a única oportunidade de pedir os <span data-cfg="quantidadeLivros">14</span> livros autografados pelo Dr. Eduardo Casarotto.</span></li>
         </ul>
         <a class="cta" data-cta="autografos" data-label="Garantir minha coleção" href="#oferta">Garantir minha coleção <span class="seta" aria-hidden="true">&rarr;</span></a>
@@ -851,7 +865,7 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
         <details><summary>Quem já possui edições anteriores de Fundamentos ou Sistemas Humanizados encontrará conteúdos novos?</summary>
           <p>Sim. A 3ª edição de Fundamentos da Virtologia tem cerca de 1.194 páginas em formato A4, contra cerca de 660 páginas em 16 × 23 cm da edição anterior, com mais de 400 páginas dedicadas às 33 virtudes, a nova arquitetura neurofuncional do orgulho e do egoísmo, a Lei do Fluxo e as 22 Leis da Vida, o Inconsciente Operacional e a comparação com 18 teorias da personalidade. A 2ª edição de Sistemas Humanizados passou de 449 para 792 páginas e de 27 para 46 capítulos.</p></details>
         <details><summary>Posso adquirir somente alguns livros?</summary>
-          <p>Esta página é dedicada exclusivamente à Coleção Especial, com os <span data-cfg="quantidadeLivros">14</span> livros.<span data-autografo="on"> Essa é a única coleção com autógrafos do autor.</span></p></details>
+          <p>Nesta pré-venda, não: os livros saem só na Coleção Especial, com os <span data-cfg="quantidadeLivros">14</span>.<span data-opcional-combos> Combos menores serão lançados <span data-cfg="lancamentoCombosMenores">no final de novembro</span>.</span><span data-autografo="on"> Os <b>autógrafos</b> estão <b>só na coleção completa</b>: fora dela, nenhum livro sai autografado.</span> <a href="#comparativo">Veja o preço de cada livro fora e dentro da coleção</a>.</p></details>
       </div>
     </div>
   </div>
@@ -876,10 +890,14 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
         <h2 data-cfg="nome">Coleção Especial Eduardo Casarotto</h2>
         <p class="qtd"><span data-cfg="quantidadeLivros">14</span> livros físicos</p>
         <div class="precos">
-          <p class="de">De <s data-preco="regular">R$ 3.047,00</s></p>
+          <p class="de">De <s data-preco="regular">R$ 3.061,00</s></p>
           <p class="por"><small>por</small><span data-preco="prevenda">R$ 1.997,00</span></p>
-          <p class="econ">Economia de <span data-preco="economia">R$ 1.050,00</span> (cerca de <span data-preco="percentual">34,5%</span>) sobre a soma dos <span data-cfg="quantidadeLivros">14</span> títulos comprados separados, com frete. <a href="#comparativo">Veja livro a livro</a>.</p>
+          <p class="econ">Economia de <span data-preco="economia">R$ 1.064,00</span> (cerca de <span data-preco="percentual">34,8%</span>) sobre a soma dos <span data-cfg="quantidadeLivros">14</span> livros fora da coleção. <a href="#comparativo">Veja o preço de cada livro</a>.</p>
           <p class="econ">O valor é menor porque se trata de uma pré-venda: você garante a coleção agora e recebe os livros a partir de <span data-cfg="dataEnvio">25 de novembro de 2026</span>.<span data-autografo="on"> Os <b>autógrafos</b> não entram nessa conta: não têm preço e são <b>exclusivos dos <span data-cfg="limiteAutografos">100</span> primeiros pedidos</b>.</span></p>
+        </div>
+        <div class="aviso-oferta">
+          <p data-autografo="on"><b>Autógrafos só na coleção completa.</b> Nenhum livro fora da coleção de <span data-cfg="quantidadeLivros">14</span> sai autografado.</p>
+          <p data-opcional-combos><b>Combos menores só <span data-cfg="lancamentoCombosMenores">no final de novembro</span>.</b> Até lá, os livros saem apenas na coleção completa<span data-autografo="on">, e os combos menores não terão autógrafos</span>.</p>
         </div>
         <ul class="inclui">
           <li class="destaque-envio"><b>Envios começam em <span data-cfg="dataEnvio">25 de novembro de 2026</span>.</b> Nenhum livro é enviado antes dessa data.</li>
@@ -904,14 +922,18 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
       </div>
     </div>
     <div class="comparativo rev" id="comparativo">
-      <h3>Cada livro separado e na coleção</h3>
-      <p class="cmp-sub">Comprados um a um, com frete, os <span data-cfg="quantidadeLivros">14</span> livros somam <b data-preco="regular">R$ 3.047,00</b>. Na coleção, saem por <b data-preco="prevenda">R$ 1.997,00</b>, com frete incluso.</p>
+      <h3>O preço de cada livro, fora e dentro da coleção</h3>
+      <p class="cmp-sub">Fora da coleção, os <span data-cfg="quantidadeLivros">14</span> livros somam <b data-preco="regular">R$ 3.061,00</b>. Na coleção completa, saem por <b data-preco="prevenda">R$ 1.997,00</b>, com frete incluso.</p>
+      <div class="so-colecao" data-autografo="on">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21c3-1 5-3 7-6l9-9a2.1 2.1 0 0 0-3-3l-9 9c-3 2-5 4-6 7z"/><path d="M14 6l4 4"/><path d="M3 21h6"/></svg>
+        <div><p><b>Os autógrafos só estão inclusos na coleção completa de <span data-cfg="quantidadeLivros">14</span> livros.</b></p><p>Fora da coleção, nenhum livro sai autografado. E dentro dela, só os <span data-cfg="limiteAutografos">100</span> primeiros pedidos confirmados recebem os <span data-cfg="quantidadeLivros">14</span> autógrafos.</p></div>
+      </div>
       <table class="cmp">
-        <thead><tr><th>Livro</th><th>Separado, com frete</th><th>Na coleção</th><th>Economia</th></tr></thead>
+        <thead><tr><th>Livro</th><th>Fora da coleção<small>sem autógrafo</small></th><th>Na coleção de <span data-cfg="quantidadeLivros">14</span><small data-autografo="on">com autógrafo</small></th><th>Economia</th></tr></thead>
         <tbody id="cmp-corpo"></tbody>
         <tfoot id="cmp-total"></tfoot>
       </table>
-      <p class="cmp-nota">Na coluna "Na coleção", o valor da pré-venda está dividido entre os <span data-cfg="quantidadeLivros">14</span> títulos na proporção do preço de cada um. A coleção é vendida só completa.</p>
+      <p class="cmp-nota">Nesta pré-venda, a coleção é vendida só completa.<span data-opcional-combos> Combos menores serão lançados <span data-cfg="lancamentoCombosMenores">no final de novembro</span><span data-autografo="on">, sem autógrafos</span>.</span></p>
     </div>
   </div>
 </section>
@@ -957,6 +979,15 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
   $$("[data-img]").forEach(function(el){ var v = (C.imagens||{})[el.getAttribute("data-img")]; if (v) el.src = v; });
   var fotoAutor = $('img[data-img="autor"]'); if (fotoAutor && C.imagens && C.imagens.autorAlt) fotoAutor.alt = C.imagens.autorAlt;
 
+  /* aviso dos combos menores: some se lancamentoCombosMenores estiver vazio */
+  if (!C.lancamentoCombosMenores) $$("[data-opcional-combos]").forEach(function(el){ el.remove(); });
+
+  /* preço de cada livro, fora e dentro da coleção */
+  function precoLivro(l){
+    if (!(l && l.precoAvulso > 0)) return "";
+    return '<p class="pc-livro">Fora da coleção <s>' + brl.format(l.precoAvulso) + "</s>" + (l.precoColecao > 0 ? ' · na coleção <b>' + brl.format(l.precoColecao) + "</b>" : "") + "</p>";
+  }
+
   /* campos opcionais: só aparecem se preenchidos */
   $$("[data-opcional]").forEach(function(el){ var v = C[el.getAttribute("data-opcional")]; if (v) el.textContent = v; else el.remove(); });
 
@@ -977,15 +1008,18 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
     if (!lista.length) { var cx = $("#comparativo"); if (cx) cx.remove(); return; }
     var soma = lista.reduce(function(s, l){ return s + l.precoAvulso; }, 0);
     var alvo = Math.round((C.precoPreVenda || 0) * 100);
-    /* divide o preço da coleção na proporção de cada livro, em centavos, sem sobrar nem faltar */
+    /* usa o precoColecao de cada livro; se faltar em algum, divide o preço da coleção na proporção */
+    var temTodos = lista.every(function(l){ return l.precoColecao > 0; });
     var partes = lista.map(function(l, i){ var bruto = l.precoAvulso * alvo / soma; return { i: i, c: Math.floor(bruto), resto: bruto - Math.floor(bruto) }; });
     var falta = alvo - partes.reduce(function(s, p){ return s + p.c; }, 0);
     partes.slice().sort(function(a, b){ return b.resto - a.resto; }).slice(0, falta).forEach(function(p){ partes[p.i].c += 1; });
+    if (temTodos) partes = lista.map(function(l, i){ return { i: i, c: Math.round(l.precoColecao * 100) }; });
     corpo.innerHTML = lista.map(function(l, i){
       var col = partes[i].c / 100;
       return "<tr><td>" + esc(l.titulo) + (l.sub && l.grupo !== "fundamentos" ? "<small>" + esc(l.sub.replace(/ · .*$/, "")) + "</small>" : "") + '</td><td class="sep"><s>' + brl.format(l.precoAvulso) + '</s></td><td class="col">' + brl.format(col) + '</td><td class="eco">' + brl.format(l.precoAvulso - col) + "</td></tr>";
     }).join("");
-    total.innerHTML = "<tr><td>Total dos " + lista.length + ' livros</td><td class="sep"><s>' + brl.format(soma) + '</s></td><td class="col">' + brl.format(alvo / 100) + '</td><td class="eco">' + brl.format(soma - alvo / 100) + "</td></tr>";
+    var somaCol = partes.reduce(function(s, p){ return s + p.c; }, 0) / 100;
+    total.innerHTML = "<tr><td>Total dos " + lista.length + ' livros</td><td class="sep"><s>' + brl.format(soma) + '</s></td><td class="col">' + brl.format(somaCol) + '</td><td class="eco">' + brl.format(soma - somaCol) + "</td></tr>";
   })();
 
   /* ---------- capas ---------- */
@@ -1041,26 +1075,26 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
     if (g[0]) {
       var a = noGrupo(g[0].id);
       html += '<div class="grupo">' + cab(0, g[0].nome, a.length) + '<div class="g-fund">' + a.map(function(l){
-        return '<article class="livro-h rev">' + capa(l) + '<div><p class="fi">' + esc(l.ficha) + '</p><h4>' + esc(l.titulo) + "</h4>" + (l.sub ? '<p class="fi" style="text-transform:none;letter-spacing:0;font-style:italic;font-size:14px">' + esc(l.sub) + "</p>" : "") + "<p>" + esc(l.texto) + "</p></div></article>";
+        return '<article class="livro-h rev">' + capa(l) + '<div><p class="fi">' + esc(l.ficha) + '</p><h4>' + esc(l.titulo) + "</h4>" + (l.sub ? '<p class="fi" style="text-transform:none;letter-spacing:0;font-style:italic;font-size:14px">' + esc(l.sub) + "</p>" : "") + "<p>" + esc(l.texto) + "</p>" + precoLivro(l) + "</div></article>";
       }).join("") + "</div></div>";
     }
     if (g[1]) {
       var b = noGrupo(g[1].id);
       html += '<div class="grupo">' + cab(1, g[1].nome, b.length) + '<div class="g-pens rev"><p class="intro">Três pensamentos complementares: sobre o trabalho, sobre a cultura e sobre a educação.</p><div class="tres">' + b.map(function(l){
-        return "<article>" + capa(l) + '<p class="eixo">' + esc(l.ficha) + "</p><h4>" + esc(l.titulo) + "</h4><p>" + esc(l.texto) + "</p></article>";
+        return "<article>" + capa(l) + '<p class="eixo">' + esc(l.ficha) + "</p><h4>" + esc(l.titulo) + "</h4><p>" + esc(l.texto) + "</p>" + precoLivro(l) + "</article>";
       }).join("") + "</div></div></div>";
     }
     if (g[2]) {
       var c = noGrupo(g[2].id);
       html += '<div class="grupo">' + cab(2, g[2].nome, c.length) + '<div class="g-soc">' + c.map(function(l){
         var dest = l.id === "sistemas";
-        return '<article class="livro-l rev' + (dest ? " destaque" : "") + '">' + capa(l) + '<div><p class="fi">' + esc(l.ficha) + "</p><h4>" + tit(l) + "</h4><p>" + esc(l.texto) + (dest ? " É um dos principais livros para quem atua em empresas, RH, saúde, consultoria, liderança e gestão institucional." : "") + "</p></div></article>";
+        return '<article class="livro-l rev' + (dest ? " destaque" : "") + '">' + capa(l) + '<div><p class="fi">' + esc(l.ficha) + "</p><h4>" + tit(l) + "</h4><p>" + esc(l.texto) + (dest ? " É um dos principais livros para quem atua em empresas, RH, saúde, consultoria, liderança e gestão institucional." : "") + "</p>" + precoLivro(l) + "</div></article>";
       }).join("") + "</div></div>";
     }
     if (g[3]) {
       var d = noGrupo(g[3].id);
       html += '<div class="grupo">' + cab(3, g[3].nome, d.length) + '<div class="g-edu rev"><div class="quatro">' + d.map(function(l){
-        return "<figure>" + capa(l) + "<figcaption>" + esc(l.sub) + "</figcaption></figure>";
+        return "<figure>" + capa(l) + "<figcaption>" + esc(l.sub) + precoLivro(l) + "</figcaption></figure>";
       }).join("") + '</div><div><p class="kicker" style="margin-bottom:14px">Um conjunto editorial</p><h4>Guia das Virtudes</h4><p>Quatro obras dedicadas à aplicação educacional das virtudes, com propostas e atividades para diferentes etapas do desenvolvimento de crianças e adolescentes, e um volume dedicado à atuação dos educadores.</p></div></div></div>';
     }
     gal.innerHTML = html;
@@ -1072,7 +1106,7 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
 
   /* lista dos livros na caixa do pedido */
   var ll = document.getElementById("lista-livros");
-  if (ll) ll.innerHTML = livros.map(function(l){ return "<li>" + capa(l) + "<span>" + esc(l.titulo) + (l.sub && l.grupo !== "fundamentos" ? "<small>" + esc(l.sub.split(" · ")[0]) + "</small>" : "") + "</span></li>"; }).join("");
+  if (ll) ll.innerHTML = livros.map(function(l){ return "<li>" + capa(l) + "<span>" + esc(l.titulo) + (l.sub && l.grupo !== "fundamentos" ? "<small>" + esc(l.sub.split(" · ")[0]) + "</small>" : "") + (l.precoAvulso > 0 ? '<em class="pc">fora da coleção <s>' + brl.format(l.precoAvulso) + "</s>" + (l.precoColecao > 0 ? " · na coleção <b>" + brl.format(l.precoColecao) + "</b>" : "") + "</em>" : "") + "</span></li>"; }).join("");
 
   /* ---------- estado dos autógrafos ---------- */
   if (C.statusAutografos === "encerrado") document.body.classList.add("aut-off");
