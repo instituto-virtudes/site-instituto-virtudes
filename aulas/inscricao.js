@@ -309,7 +309,7 @@
       if (novaAba) {
         try {
           janela = window.open("", "_blank");
-          if (janela) { janela.opener = null; janela.document.title = "Finalizando sua inscrição"; janela.document.body.innerHTML = '<p style="font:16px/1.5 'Avenir Next',Avenir,'Segoe UI',Arial,sans-serif;padding:32px;color:#333">Finalizando sua inscrição...</p>'; }
+          if (janela) { janela.opener = null; janela.document.title = "Finalizando sua inscrição"; janela.document.body.innerHTML = '<p style="font:16px/1.5 Avenir Next,Avenir,Segoe UI,Arial,sans-serif;padding:32px;color:#333">Finalizando sua inscrição...</p>'; }
         } catch (x) { janela = null; }
       }
 
