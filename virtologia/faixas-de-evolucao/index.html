@@ -21,15 +21,12 @@
 <meta name="twitter:description" content="As sete faixas da Virtologia, explicadas.">
 <meta name="twitter:image" content="https://institutovirtudes.com.br/img/og-padrao.jpg">
 <link rel="icon" href="../../img/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../css/estilo.css">
 <style>
 .migalha{font-size:13.5px;color:var(--apoio);margin:0 0 14px}
 .migalha a{color:var(--apoio)}
 .citacao{margin:26px 0 30px;padding:4px 0 4px 22px;border-left:3px solid var(--azul)}
-.citacao p{font-family:'Lora',Georgia,serif;font-style:italic;font-size:20px;line-height:1.5;margin:0 0 8px;color:var(--texto)}
+.citacao p{font-family:var(--fonte);font-style:italic;font-size:20px;line-height:1.5;margin:0 0 8px;color:var(--texto)}
 .citacao cite{font-style:normal;font-size:14px;color:var(--apoio)}
 .fundo-claro{background:var(--claro)}
 .destaque-faixa{background:var(--pastel-azul);border-radius:var(--raio-card);padding:26px 26px 12px;margin:28px 0 0}
@@ -37,15 +34,15 @@
 .destaque-faixa p{font-size:16px}
 
 .escala{margin:30px 0 10px;display:flex;flex-direction:column;gap:10px}
-.escala-grupo{font-family:'Inter',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--apoio);margin:14px 0 2px}
+.escala-grupo{font-family:var(--fonte);font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--apoio);margin:14px 0 2px}
 .escala-grupo:first-child{margin-top:0}
 .escala-grupo.limiar{color:var(--azul)}
 .faixa-linha{display:grid;grid-template-columns:44px minmax(0,190px) minmax(0,1fr);gap:18px;align-items:center;background:#fff;border:1px solid var(--borda);border-left:6px solid var(--cor);border-radius:var(--raio-card);padding:16px 20px}
-.faixa-linha .fn{width:40px;height:40px;border-radius:50%;background:var(--cor);color:#fff;font-family:'Lora',Georgia,serif;font-weight:700;font-size:19px;display:flex;align-items:center;justify-content:center}
+.faixa-linha .fn{width:40px;height:40px;border-radius:50%;background:var(--cor);color:#fff;font-family:var(--fonte);font-weight:700;font-size:19px;display:flex;align-items:center;justify-content:center}
 .faixa-linha h3{font-size:19px;line-height:1.25;margin:0}
-.faixa-linha .horizonte{display:inline-block;margin-top:6px;font-family:'Inter',sans-serif;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--apoio);border:1px solid var(--borda);border-radius:3px;padding:3px 6px}
+.faixa-linha .horizonte{display:inline-block;margin-top:6px;font-family:var(--fonte);font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--apoio);border:1px solid var(--borda);border-radius:3px;padding:3px 6px}
 .faixa-linha dl{margin:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-.faixa-linha dt{font-family:'Inter',sans-serif;font-size:11.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--apoio);margin:0 0 3px}
+.faixa-linha dt{font-family:var(--fonte);font-size:11.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--apoio);margin:0 0 3px}
 .faixa-linha dd{margin:0;font-size:14.5px;line-height:1.45}
 .f1{--cor:#5B6B82}.f2{--cor:#4F6E98}.f3{--cor:#3F6FB0}.f4{--cor:#2C63C0}.f5{--cor:#2777A8}.f6{--cor:#2A8C8A}.f7{--cor:#3A9A6E}
 .f4{background:#F3F7FE}
@@ -57,7 +54,7 @@
 .figura-livro figcaption{font-size:13.5px;line-height:1.5;color:var(--apoio);margin-top:12px}
 
 .faixa-det{background:#fff;border:1px solid var(--borda);border-radius:var(--raio-card);padding:24px 26px 10px;margin:0 0 16px}
-.faixa-det .fd-num{font-family:'Inter',sans-serif;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--azul);margin:0 0 4px}
+.faixa-det .fd-num{font-family:var(--fonte);font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--azul);margin:0 0 4px}
 .faixa-det h3{font-size:22px;margin:0 0 6px}
 .faixa-det .fd-chave{font-size:14px;color:var(--apoio);font-style:italic;margin:0 0 14px}
 .faixa-det p{font-size:16px}
@@ -66,7 +63,7 @@
 .mapa-ex{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:26px 0}
 .mapa-ex div{border:1px solid var(--borda);border-radius:var(--raio-card);padding:16px;background:#fff}
 .mapa-ex span{display:block;font-size:13px;color:var(--apoio);margin-bottom:6px}
-.mapa-ex b{display:inline-block;font-family:'Inter',sans-serif;font-size:13.5px;font-weight:600;color:#fff;border-radius:3px;padding:5px 8px;line-height:1.2}
+.mapa-ex b{display:inline-block;font-family:var(--fonte);font-size:13.5px;font-weight:600;color:#fff;border-radius:3px;padding:5px 8px;line-height:1.2}
 .mapa-ex .t2{background:#4F6E98}.mapa-ex .t3{background:#3F6FB0}.mapa-ex .t4{background:#2C63C0}.mapa-ex .t5{background:#2777A8}
 
 .duas-col{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:28px 0 0}
@@ -85,9 +82,9 @@
 .caixa h3{font-size:19px;margin-bottom:10px}
 .caixa p{font-size:15.5px}
 .objecao{border-left:3px solid var(--azul);padding:4px 0 4px 22px;margin:30px 0}
-.objecao h3{font-family:'Lora',Georgia,serif;font-size:20px;font-weight:600;color:var(--azul);margin-bottom:10px}
+.objecao h3{font-family:var(--fonte);font-size:20px;font-weight:600;color:var(--azul);margin-bottom:10px}
 .objecao p{font-size:16px;margin:0}
-.frase-final{font-family:'Lora',Georgia,serif;font-size:21px;line-height:1.5;font-weight:600;margin-top:26px}
+.frase-final{font-family:var(--fonte);font-size:21px;line-height:1.5;font-weight:600;margin-top:26px}
 
 .livro-fonte{display:grid;grid-template-columns:180px minmax(0,1fr);gap:34px;align-items:center}
 .livro-fonte img{width:100%;height:auto;display:block;box-shadow:0 18px 30px -16px rgba(5,13,20,.5)}
@@ -142,7 +139,8 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
 <header class="topo">
   <div class="topo-int">
     <a href="../../" class="marca"><img src="../../img/logo-instituto-virtudes.png" alt="Instituto Virtudes - Humanização e Virtologia" width="439" height="120"></a>
-    <button class="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Menu">&#8801;</button>
+    <div class="topo-lado"><span class="grupo-nota">Instituto Virtudes · Grupo Virtudes</span><a class="btn-topo" href="../../contato/">Fale conosco</a></div>
+    <button class="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Abrir o menu">Menu <span aria-hidden="true">&#8801;</span></button>
     <nav>
       <ul class="menu" id="menu">
         <li class="tem-sub">

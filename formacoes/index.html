@@ -21,14 +21,11 @@
 <meta name="twitter:description" content="Formação em Virtologia, Pós-graduação em Sistemas Humanizados e os cursos de introdução que vêm com os livros.">
 <meta name="twitter:image" content="https://institutovirtudes.com.br/img/og-padrao.jpg">
 <link rel="icon" href="../img/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/estilo.css">
 <style>
 .curso{border:1px solid var(--borda);border-radius:var(--raio-card);
   padding:32px 30px;margin:24px 0;background:var(--branco)}
-.curso .tag{display:inline-block;font-family:'Inter',sans-serif;font-size:11px;font-weight:600;
+.curso .tag{display:inline-block;font-family:var(--fonte);font-size:11px;font-weight:600;
   letter-spacing:.07em;text-transform:uppercase;border-radius:3px;padding:5px 9px;
   line-height:1;margin-bottom:14px}
 .curso .tag-mec{color:#fff;background:var(--azul)}
@@ -52,7 +49,7 @@
 .curso .dados{display:flex;flex-wrap:wrap;gap:8px 26px;margin:18px 0;
   padding:16px 0;border-top:1px solid var(--claro);border-bottom:1px solid var(--claro)}
 .curso .dados div{font-size:14.5px;color:var(--apoio)}
-.curso .dados strong{display:block;font-family:'Lora',Georgia,serif;font-size:19px;
+.curso .dados strong{display:block;font-family:var(--fonte);font-size:19px;
   font-weight:600;color:var(--texto);line-height:1.2;margin-bottom:2px}
 .curso .btn{margin:8px 0 0}
 
@@ -63,7 +60,7 @@
 .escolher p{font-size:15px;line-height:1.6;margin:0}
 
 .objecao{border-left:3px solid var(--azul);padding:4px 0 4px 22px;margin:34px 0}
-.objecao h3{font-family:'Lora',Georgia,serif;font-size:20px;font-weight:600;color:var(--azul);margin-bottom:12px}
+.objecao h3{font-family:var(--fonte);font-size:20px;font-weight:600;color:var(--azul);margin-bottom:12px}
 .objecao p{font-size:16px;margin-bottom:14px}
 .objecao p:last-child{margin-bottom:0}
 
@@ -107,7 +104,8 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
 <header class="topo">
   <div class="topo-int">
     <a href="../" class="marca"><img src="../img/logo-instituto-virtudes.png" alt="Instituto Virtudes - Humanização e Virtologia" width="439" height="120"></a>
-    <button class="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Menu">&#8801;</button>
+    <div class="topo-lado"><span class="grupo-nota">Instituto Virtudes · Grupo Virtudes</span><a class="btn-topo" href="../contato/">Fale conosco</a></div>
+    <button class="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Abrir o menu">Menu <span aria-hidden="true">&#8801;</span></button>
     <nav>
       <ul class="menu" id="menu">
         <li class="tem-sub">

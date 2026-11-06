@@ -21,7 +21,7 @@
 .iv-form .barra-prog i{display:block;height:100%;width:33.34%;background:var(--azul);border-radius:5px;transition:width .3s}
 .iv-form .etapa{border:0;margin:0;padding:0;min-width:0}
 .iv-form .etapa legend{padding:0;margin:0 0 6px}
-.iv-form .et-tit{display:block;font-family:'Lora',Georgia,serif;font-size:24px;font-weight:600;line-height:1.25;color:var(--texto);outline:none}
+.iv-form .et-tit{display:block;font-family:var(--fonte);font-size:24px;font-weight:600;line-height:1.25;color:var(--texto);outline:none}
 .iv-form .destaque-tit{color:var(--azul-escuro);font-size:26px}
 .iv-form .et-txt{font-size:15.5px;color:var(--apoio);margin:0 0 18px}
 .iv-form .campo{margin:0 0 16px}
@@ -66,13 +66,13 @@
 .cv-texto{display:flex;flex-direction:column;align-items:flex-start}
 .cv-selo{display:inline-flex;align-items:center;font-size:12.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#fff;
   border:1px solid color-mix(in srgb,var(--ev-cor) 60%,transparent);border-radius:6px;padding:5px 11px;margin:0 0 14px !important}
-.cv-tit{font-family:'Lora',Georgia,serif;font-size:25px;line-height:1.22;font-weight:600;color:#fff;margin:0 0 10px}
+.cv-tit{font-family:var(--fonte);font-size:25px;line-height:1.22;font-weight:600;color:#fff;margin:0 0 10px}
 .cv-tema{font-size:15.5px;line-height:1.45;color:#D9DEE6;margin:0 0 12px !important}
 .cv-tema span{color:var(--ev-cor);font-weight:600}
 .cv-data{font-size:15px;color:#C7D0DA;margin:0 0 12px !important}
-.cv-data strong{display:inline-block;margin-right:6px;font-family:'Lora',Georgia,serif;font-size:26px;line-height:1.15;color:var(--ev-cor);font-weight:700;letter-spacing:-.01em}
+.cv-data strong{display:inline-block;margin-right:6px;font-family:var(--fonte);font-size:26px;line-height:1.15;color:var(--ev-cor);font-weight:700;letter-spacing:-.01em}
 .cv-txt{font-size:15px;line-height:1.55;color:#D9DEE6;margin:0 0 16px !important}
-.cv-btn{appearance:none;border:0;cursor:pointer;font:600 16.5px/1.25 'Inter',system-ui,sans-serif;background:var(--ev-cor);color:var(--ev-fundo);
+.cv-btn{appearance:none;border:0;cursor:pointer;font:600 16.5px/1.25 var(--fonte);background:var(--ev-cor);color:var(--ev-fundo);
   padding:15px 24px;border-radius:6px;min-height:50px;text-align:center}
 .cv-btn:hover{filter:brightness(1.06)}
 .cv-btn:focus-visible{outline:3px solid #fff;outline-offset:3px}

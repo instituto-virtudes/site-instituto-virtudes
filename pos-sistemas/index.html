@@ -25,9 +25,6 @@
 <meta name="twitter:image" content="https://institutovirtudes.com.br/img/og-padrao.jpg">
 
 <link rel="icon" href="../img/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/estilo.css">
 
 
@@ -44,17 +41,17 @@ p.mtr-apoio-wa a{color:var(--azul);text-decoration:underline;text-underline-offs
 
 /* 1. HERO */
 .pos-hero{padding:68px 0 56px}
-.pos-nome{font-family:'Lora',Georgia,serif;font-size:21px;font-weight:600;color:var(--azul);margin-bottom:6px;line-height:1.3}
+.pos-nome{font-family:var(--fonte);font-size:21px;font-weight:600;color:var(--azul);margin-bottom:6px;line-height:1.3}
 .pos-meta{font-size:13.5px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--apoio);margin-bottom:26px}
 .pos-hero h1{font-size:46px;line-height:1.15;max-width:20ch;margin-bottom:26px}
 .pos-hero .lead{max-width:60ch}
 .hero-para{font-size:20px;line-height:1.55;font-weight:600;max-width:56ch;margin-bottom:14px}
-.hero-publico{font-family:'Lora',Georgia,serif;font-style:italic;font-size:20px;color:var(--azul-escuro);margin-bottom:0}
+.hero-publico{font-family:var(--fonte);font-style:italic;font-size:20px;color:var(--azul-escuro);margin-bottom:0}
 .ficha{display:flex;flex-wrap:wrap;border:1px solid var(--borda);border-radius:var(--raio-card);margin:34px 0 30px;overflow:hidden;max-width:820px}
 .ficha div{flex:1 1 160px;padding:16px 20px;border-right:1px solid var(--borda)}
 .ficha div:last-child{border-right:0}
 .ficha dt{font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--apoio);margin-bottom:4px}
-.ficha dd{font-family:'Lora',Georgia,serif;font-size:19px;font-weight:600;margin:0;line-height:1.3}
+.ficha dd{font-family:var(--fonte);font-size:19px;font-weight:600;margin:0;line-height:1.3}
 .hero-acoes{display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px}
 
 /* 2. FOTOS */
@@ -74,13 +71,13 @@ section.fotos{padding:44px 0}
 .forcas{display:grid;grid-template-columns:1.25fr 1fr;gap:24px;align-items:start}
 .forcas-col{display:grid;gap:24px}
 .forca{border:1px solid var(--borda);border-radius:var(--raio-card);padding:26px 26px 10px;background:#fff}
-.forca h3{font-family:'Inter',sans-serif;font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--azul);margin-bottom:16px}
+.forca h3{font-family:var(--fonte);font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--azul);margin-bottom:16px}
 .marco{display:grid;grid-template-columns:62px 1fr;gap:4px 14px;padding:0 0 18px;margin-bottom:18px;border-bottom:1px solid var(--claro)}
 .marco:last-child{border-bottom:0;margin-bottom:0}
-.marco b{font-family:'Lora',Georgia,serif;font-size:20px;color:var(--azul-escuro);line-height:1.35}
+.marco b{font-family:var(--fonte);font-size:20px;color:var(--azul-escuro);line-height:1.35}
 .marco p{font-size:15.5px;line-height:1.6;margin:0}
 .marco p strong{display:block;font-size:16.5px;margin-bottom:2px}
-.fecho{font-family:'Lora',Georgia,serif;font-size:27px;font-weight:600;line-height:1.35;color:var(--texto);
+.fecho{font-family:var(--fonte);font-size:27px;font-weight:600;line-height:1.35;color:var(--texto);
   border-left:4px solid var(--azul);padding:4px 0 4px 24px;margin:42px 0 0;max-width:34ch}
 
 /* 4. PROBLEMA (faixa escura) */
@@ -92,7 +89,7 @@ section.problema + section{border-top:0}
 .prob-grade > *,.blocos > *,.cards4 > *,.naoe > *,.lados > *,.forcas > *{min-width:0}
 .prob-card{background:#16283F;border:1px solid #24395A;border-radius:10px;padding:30px 28px}
 .prob-card.largo{grid-column:1/-1}
-.prob-card .conclusao{font-family:'Lora',Georgia,serif;font-size:23px;font-weight:600;line-height:1.35;color:#fff;margin:22px 0 10px}
+.prob-card .conclusao{font-family:var(--fonte);font-size:23px;font-weight:600;line-height:1.35;color:#fff;margin:22px 0 10px}
 .prob-card p{font-size:15.5px;line-height:1.6;color:#C9D4E2;margin:0 0 8px}
 .prob-card .fonte{font-size:12.5px;color:#8FA2B9;margin:12px 0 0;font-style:italic}
 .pessoas{display:grid;gap:7px}
@@ -109,8 +106,8 @@ section.problema + section{border-top:0}
 .legenda .l-des::before{background:#E8665C}
 .pessoas.poucos{grid-template-columns:repeat(6,54px);gap:12px}
 .pessoas.dois{grid-template-columns:repeat(2,54px);gap:14px}
-.numero-gigante{font-family:'Lora',Georgia,serif;font-size:64px;font-weight:700;line-height:1;color:#F2B544;letter-spacing:-.02em}
-.numero-gigante small{display:block;font-family:'Inter',sans-serif;font-size:16px;font-weight:500;color:#C9D4E2;letter-spacing:0;margin-top:10px}
+.numero-gigante{font-family:var(--fonte);font-size:64px;font-weight:700;line-height:1;color:#F2B544;letter-spacing:-.02em}
+.numero-gigante small{display:block;font-family:var(--fonte);font-size:16px;font-weight:500;color:#C9D4E2;letter-spacing:0;margin-top:10px}
 .barra-pib{height:30px;border-radius:6px;background:#3A4D66;position:relative;overflow:hidden;margin-top:6px}
 .barra-pib span{position:absolute;left:0;top:0;bottom:0;width:9%;background:#E8665C}
 .barra-pib-leg{display:flex;justify-content:space-between;font-size:13px;color:#8FA2B9;margin-top:8px}
@@ -118,11 +115,11 @@ section.problema + section{border-top:0}
 .risco div{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;width:120px}
 .risco i{display:block;width:100%;border-radius:6px 6px 0 0;background:#3A4D66}
 .risco div:last-child i{background:#E8665C}
-.risco b{font-family:'Lora',Georgia,serif;font-size:24px;color:#fff;margin-bottom:8px}
+.risco b{font-family:var(--fonte);font-size:24px;color:#fff;margin-bottom:8px}
 .risco em{font-style:normal;font-size:13px;color:#C9D4E2;text-align:center;line-height:1.35;margin-top:10px;min-height:36px}
 .risco-card{display:grid;grid-template-columns:300px 1fr;gap:40px;align-items:center}
 .risco-card .conclusao{margin-top:0}
-.prob-fecho{font-family:'Lora',Georgia,serif;font-size:30px;font-weight:600;line-height:1.35;color:#fff;text-align:center;max-width:30ch;margin:54px auto 0}
+.prob-fecho{font-family:var(--fonte);font-size:30px;font-weight:600;line-height:1.35;color:#fff;text-align:center;max-width:30ch;margin:54px auto 0}
 .prob-fecho span{color:#F2B544}
 .problema .fontes,.problema .fontes a{color:#8FA2B9}
 
@@ -132,7 +129,7 @@ section.problema + section{border-top:0}
 .card{border:1px solid var(--borda);border-radius:var(--raio-card);padding:26px 24px;background:#fff}
 .card h3{font-size:21px;color:var(--azul);margin-bottom:8px}
 .card p{font-size:16px;line-height:1.6;margin:0}
-.frase-para{font-family:'Lora',Georgia,serif;font-size:27px;font-weight:600;line-height:1.35;text-align:center;max-width:32ch;margin:0 auto 28px}
+.frase-para{font-family:var(--fonte);font-size:27px;font-weight:600;line-height:1.35;text-align:center;max-width:32ch;margin:0 auto 28px}
 
 /* 6. PARA QUEM */
 .lados{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:8px 0 30px}
@@ -141,11 +138,11 @@ section.problema + section{border-top:0}
 .lado p{font-size:16.5px;line-height:1.65;margin:0}
 
 /* 7. HUMANIZAÇÃO */
-.definicao{font-family:'Lora',Georgia,serif;font-size:25px;font-weight:500;line-height:1.5;color:var(--azul-escuro);
+.definicao{font-family:var(--fonte);font-size:25px;font-weight:500;line-height:1.5;color:var(--azul-escuro);
   background:var(--pastel-azul);border-radius:10px;padding:30px 34px;margin:6px 0 30px}
 .naoe{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:30px 0 36px}
 .naoe > div{border:1px solid var(--borda);border-radius:var(--raio-card);padding:24px}
-.naoe h3{font-family:'Inter',sans-serif;font-size:16px;font-weight:600;color:var(--apoio);text-decoration:line-through;text-decoration-color:#C0392B;margin-bottom:10px}
+.naoe h3{font-family:var(--fonte);font-size:16px;font-weight:600;color:var(--apoio);text-decoration:line-through;text-decoration-color:#C0392B;margin-bottom:10px}
 .naoe p{font-size:16px;line-height:1.6;margin:0}
 .naoe p strong{color:var(--azul-escuro)}
 
@@ -153,13 +150,13 @@ section.problema + section{border-top:0}
 .faixa-num{display:grid;grid-template-columns:repeat(6,1fr);border:1px solid var(--borda);border-radius:var(--raio-card);overflow:hidden;margin:6px 0 40px}
 .faixa-num div{padding:18px 14px;border-right:1px solid var(--borda);text-align:center}
 .faixa-num div:last-child{border-right:0}
-.faixa-num b{display:block;font-family:'Lora',Georgia,serif;font-size:34px;color:var(--azul);line-height:1.1}
+.faixa-num b{display:block;font-family:var(--fonte);font-size:34px;color:var(--azul);line-height:1.1}
 .faixa-num span{display:block;font-size:13px;line-height:1.35;color:var(--apoio);margin-top:6px}
 .blocos{display:grid;grid-template-columns:1fr 1fr;gap:22px}
 .bloco{border:1px solid var(--borda);border-radius:var(--raio-card);padding:26px 26px 22px}
 .bloco.largo{grid-column:1/-1}
 .bloco h3{font-size:20px;margin-bottom:12px}
-.bloco h3 span{font-family:'Inter',sans-serif;font-size:13px;font-weight:600;color:var(--azul);letter-spacing:.08em;display:block;margin-bottom:4px}
+.bloco h3 span{font-family:var(--fonte);font-size:13px;font-weight:600;color:var(--azul);letter-spacing:.08em;display:block;margin-bottom:4px}
 .bloco ul{list-style:none;margin:0;padding:0}
 .bloco li{font-size:15.5px;line-height:1.5;padding:7px 0 7px 20px;position:relative;border-bottom:1px solid var(--claro)}
 .bloco li:last-child{border-bottom:0}
@@ -188,7 +185,7 @@ section.problema + section{border-top:0}
 
 /* 10. MATRÍCULA */
 .investimento{background:var(--pastel-azul);border-radius:var(--raio-card);padding:34px 30px;margin:34px 0 0;text-align:center}
-.investimento p.chamada{font-family:'Lora',Georgia,serif;font-size:22px;font-weight:600;color:var(--azul-escuro);margin:0 0 20px}
+.investimento p.chamada{font-family:var(--fonte);font-size:22px;font-weight:600;color:var(--azul-escuro);margin:0 0 20px}
 table.tabela th{width:34%}
 
 @media (max-width:900px){
@@ -268,7 +265,8 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
 <header class="topo">
   <div class="topo-int">
     <a href="../" class="marca"><img src="../img/logo-instituto-virtudes.png" alt="Instituto Virtudes - Humanização e Virtologia" width="439" height="120"></a>
-    <button class="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Menu">&#8801;</button>
+    <div class="topo-lado"><span class="grupo-nota">Instituto Virtudes · Grupo Virtudes</span><a class="btn-topo" href="../contato/">Fale conosco</a></div>
+    <button class="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Abrir o menu">Menu <span aria-hidden="true">&#8801;</span></button>
     <nav>
       <ul class="menu" id="menu">
         <li class="tem-sub">

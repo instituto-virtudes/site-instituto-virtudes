@@ -6,7 +6,8 @@ document.addEventListener('DOMContentLoaded', function () {
     btn.addEventListener('click', function () {
       var aberto = menu.classList.toggle('aberto');
       btn.setAttribute('aria-expanded', aberto);
-      btn.textContent = aberto ? '\u00d7' : '\u2261';
+      btn.innerHTML = aberto ? 'Fechar <span aria-hidden="true">\u00d7</span>' : 'Menu <span aria-hidden="true">\u2261</span>';
+      btn.setAttribute('aria-label', aberto ? 'Fechar o menu' : 'Abrir o menu');
     });
   }
 });

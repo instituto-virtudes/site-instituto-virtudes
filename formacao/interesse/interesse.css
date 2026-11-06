@@ -5,7 +5,7 @@
   --marinho:#0B2341;--marinho-2:#16325A;--papel:#F7F5F0;--branco:#FFFFFF;
   --cinza:#5E6B7D;--borda:#D8DEE6;--suave:#EEF1F5;--ouro:#B8914F;--ouro-claro:#F1E6D1;
   --erro:#B3261E;--ok:#2E6B4F;
-  --f-tit:'Lora',Georgia,serif;--f-txt:'Inter',system-ui,-apple-system,sans-serif;
+  --f-tit:'Avenir Next',Avenir,'Segoe UI',Arial,sans-serif;--f-txt:'Avenir Next',Avenir,'Segoe UI',Arial,sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%}

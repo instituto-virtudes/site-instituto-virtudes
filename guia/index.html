@@ -25,9 +25,6 @@
 <meta name="twitter:image" content="https://institutovirtudes.com.br/img/og-padrao.jpg">
 
 <link rel="icon" href="../img/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/estilo.css">
 <style>
 .ficha{display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--borda);border-radius:var(--raio-card);
@@ -36,13 +33,13 @@
 .ficha div:last-child{border-right:0}
 .ficha dt{font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;
   color:var(--apoio);margin-bottom:6px}
-.ficha dd{font-family:'Lora',Georgia,serif;font-size:19px;font-weight:600;margin:auto 0 0;line-height:1.3}
+.ficha dd{font-family:var(--fonte);font-size:19px;font-weight:600;margin:auto 0 0;line-height:1.3}
 
 .precos{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:28px 0}
 .precos > div{border:1px solid var(--borda);border-radius:var(--raio-card);padding:26px 24px}
-.precos .rot{font-family:'Inter',sans-serif;font-size:12px;font-weight:600;letter-spacing:.08em;
+.precos .rot{font-family:var(--fonte);font-size:12px;font-weight:600;letter-spacing:.08em;
   text-transform:uppercase;color:var(--apoio);margin:0 0 10px}
-.precos .valor{font-family:'Lora',Georgia,serif;font-size:34px;font-weight:700;
+.precos .valor{font-family:var(--fonte);font-size:34px;font-weight:700;
   color:var(--texto);margin:0 0 4px;line-height:1}
 .precos .obs{font-size:14px;color:var(--apoio);margin:0 0 18px}
 .precos .btn{margin:0;width:100%;text-align:center}
@@ -68,7 +65,7 @@
 .hero-txt .ficha{margin:26px 0 0}
 
 .inclui{border:1px solid var(--borda);border-radius:var(--raio-card);padding:26px 24px;margin:28px 0}
-.inclui-rot{font-family:'Inter',sans-serif;font-size:12px;font-weight:600;letter-spacing:.08em;
+.inclui-rot{font-family:var(--fonte);font-size:12px;font-weight:600;letter-spacing:.08em;
   text-transform:uppercase;color:var(--azul);margin:0 0 18px}
 .inclui > div{display:grid;grid-template-columns:1fr 1fr;gap:24px}
 .inclui .tres{grid-template-columns:repeat(3,1fr);gap:26px}
@@ -78,9 +75,9 @@
 .capitulos{margin:32px 0}
 .capitulos > div{padding:22px 0;border-bottom:1px solid var(--claro)}
 .capitulos > div:first-child{border-top:1px solid var(--claro)}
-.capitulos .cap-n{font-family:'Inter',sans-serif;font-size:12px;font-weight:600;
+.capitulos .cap-n{font-family:var(--fonte);font-size:12px;font-weight:600;
   color:var(--apoio);display:inline-block;min-width:26px}
-.capitulos h4{display:inline;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:600;
+.capitulos h4{display:inline;font-family:var(--fonte);font-size:18px;font-weight:600;
   color:var(--azul);line-height:1.35}
 .capitulos p{font-size:15.5px;line-height:1.65;margin:8px 0 0 26px;color:var(--texto);max-width:70ch}
 
@@ -88,7 +85,7 @@
 .cadeia li{display:flex;align-items:flex-start;gap:18px;margin:0;padding:22px 0;border-bottom:1px solid var(--borda)}
 .cadeia li:first-child{border-top:1px solid var(--borda)}
 .cadeia .num{flex:0 0 34px;width:34px;height:34px;border-radius:50%;background:var(--azul);color:#fff;
-  font-family:'Inter',sans-serif;font-size:15px;font-weight:600;display:flex;align-items:center;justify-content:center;line-height:1}
+  font-family:var(--fonte);font-size:15px;font-weight:600;display:flex;align-items:center;justify-content:center;line-height:1}
 .cadeia .conteudo{flex:1;min-width:0}
 .cadeia h4{font-size:18px;margin:0 0 8px;line-height:1.3}
 .cadeia p{font-size:16px;line-height:1.6;margin:0 0 10px}
@@ -96,8 +93,8 @@
 .cadeia .ex{font-size:14.5px;color:var(--apoio);background:var(--claro);border-radius:var(--raio);padding:12px 14px}
 
 .objecao{border-left:3px solid var(--azul);padding:4px 0 4px 22px;margin:34px 0}
-#virtude h3,#metodo h3{font-family:'Lora',Georgia,serif;font-size:22px;font-weight:600;margin:38px 0 14px}
-.objecao h3{font-family:'Lora',Georgia,serif;font-size:20px;font-weight:600;color:var(--azul);margin-bottom:12px}
+#virtude h3,#metodo h3{font-family:var(--fonte);font-size:22px;font-weight:600;margin:38px 0 14px}
+.objecao h3{font-family:var(--fonte);font-size:20px;font-weight:600;color:var(--azul);margin-bottom:12px}
 .objecao p{font-size:16px;margin-bottom:14px}
 .objecao p:last-child{margin-bottom:0}
 
@@ -122,7 +119,7 @@
 <style>
 .sublead{font-size:17px;line-height:1.65;color:var(--apoio);margin:14px 0 0}
 .contraste{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:34px 0}
-.contraste h3{font-family:'Lora',Georgia,serif;font-size:20px;font-weight:600;margin:0 0 14px}
+.contraste h3{font-family:var(--fonte);font-size:20px;font-weight:600;margin:0 0 14px}
 .contraste ul{list-style:none;margin:0;padding:0}
 .contraste li{padding:10px 0;font-size:16.5px;line-height:1.5;border-bottom:1px solid rgba(20,30,55,.08)}
 .contraste li:last-child{border-bottom:0}
@@ -132,14 +129,14 @@
 .lado-com h3{color:var(--azul-escuro)}
 .pacote{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:34px 0}
 .pacote > div{border:1px solid var(--borda);border-radius:var(--raio-card);padding:28px 24px}
-.pacote h3{font-family:'Lora',Georgia,serif;font-size:19px;font-weight:600;margin:10px 0 10px}
+.pacote h3{font-family:var(--fonte);font-size:19px;font-weight:600;margin:10px 0 10px}
 .pacote p{font-size:15.5px;line-height:1.65;margin:0}
-.pac-n{font-family:'Lora',Georgia,serif;font-size:15px;font-weight:600;color:#fff;background:var(--azul);
+.pac-n{font-family:var(--fonte);font-size:15px;font-weight:600;color:#fff;background:var(--azul);
   width:30px;height:30px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center}
 .aulas{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:34px 0}
 .aulas > div{border:1px solid var(--borda);border-radius:var(--raio-card);padding:26px 24px}
 .aula-n{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--azul)}
-.aulas h3{font-family:'Lora',Georgia,serif;font-size:20px;font-weight:600;margin:8px 0 10px}
+.aulas h3{font-family:var(--fonte);font-size:20px;font-weight:600;margin:8px 0 10px}
 .aulas p{font-size:15.5px;line-height:1.65;margin:0}
 .lista-check{list-style:none;margin:30px 0;padding:0;max-width:72ch}
 .lista-check li{position:relative;padding:11px 0 11px 36px;font-size:17px;line-height:1.55;border-bottom:1px solid var(--claro)}
@@ -151,12 +148,12 @@
 .seq{display:flex;align-items:stretch;margin:34px 0}
 .seq .passo{flex:1;border:1px solid var(--borda);border-radius:var(--raio-card);padding:24px 20px;background:#fff}
 .seq .passo .p-n{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--azul)}
-.seq .passo h3{font-family:'Lora',Georgia,serif;font-size:18px;font-weight:600;margin:8px 0 8px}
+.seq .passo h3{font-family:var(--fonte);font-size:18px;font-weight:600;margin:8px 0 8px}
 .seq .passo p{font-size:14.5px;line-height:1.6;margin:0}
 .seq .seta{display:flex;align-items:center;justify-content:center;padding:0 8px;color:var(--azul);font-size:24px;font-weight:700}
 .cert{display:grid;grid-template-columns:1fr 340px;gap:30px;align-items:center;border:1px solid var(--borda);border-radius:var(--raio-card);padding:32px 30px;margin:38px 0 0}
 .cert img{width:100%;height:auto;display:block;border-radius:8px;border:1px solid var(--borda)}
-.cert h3{font-family:'Lora',Georgia,serif;font-size:21px;font-weight:600;margin:0 0 12px}
+.cert h3{font-family:var(--fonte);font-size:21px;font-weight:600;margin:0 0 12px}
 .cert p{font-size:15.5px;line-height:1.65;margin:0 0 10px}
 .hero-livro.hero-guia{grid-template-columns:1fr;gap:0}
 .hero-foto{margin:30px auto 8px;max-width:720px}
@@ -172,7 +169,7 @@
 .depo .depo-nome{font-size:13.5px;font-weight:600;color:var(--apoio);margin:0}
 .experiencias{display:grid;grid-template-columns:1fr 1fr;gap:0 40px;margin:30px 0;max-width:760px}
 .experiencias p{margin:0;padding:11px 0;font-size:17px;border-bottom:1px solid var(--claro)}
-.frases-soltas{font-family:'Lora',Georgia,serif;font-size:20px;font-style:italic;color:var(--apoio);margin:26px 0}
+.frases-soltas{font-family:var(--fonte);font-size:20px;font-style:italic;color:var(--apoio);margin:26px 0}
 @media (max-width:760px){
   .experiencias,.depo{grid-template-columns:1fr}
   .seq{flex-direction:column}
@@ -213,7 +210,8 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
 <header class="topo">
   <div class="topo-int">
     <a href="../" class="marca"><img src="../img/logo-instituto-virtudes.png" alt="Instituto Virtudes - Humanização e Virtologia" width="439" height="120"></a>
-    <button class="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Menu">&#8801;</button>
+    <div class="topo-lado"><span class="grupo-nota">Instituto Virtudes · Grupo Virtudes</span><a class="btn-topo" href="../contato/">Fale conosco</a></div>
+    <button class="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Abrir o menu">Menu <span aria-hidden="true">&#8801;</span></button>
     <nav>
       <ul class="menu" id="menu">
         <li class="tem-sub">

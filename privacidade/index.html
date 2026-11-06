@@ -25,14 +25,11 @@
 <meta name="twitter:image" content="https://institutovirtudes.com.br/img/og-padrao.jpg">
 
 <link rel="icon" href="../img/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/estilo.css">
 <style>
 .kicker{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--azul);margin:0 0 14px}
 .lead{font-size:20px;line-height:1.6;margin:18px 0 22px;max-width:62ch}
-h3{font-family:'Lora',Georgia,serif;font-size:20px;font-weight:600;margin:34px 0 10px}
+h3{font-family:var(--fonte);font-size:20px;font-weight:600;margin:34px 0 10px}
 .lista-simples{margin:20px 0;padding-left:22px;max-width:72ch}
 .lista-simples li{font-size:16.5px;line-height:1.7;margin:9px 0}
 .lista-links{list-style:none;margin:22px 0;padding:0;max-width:60ch}
@@ -44,12 +41,12 @@ h3{font-family:'Lora',Georgia,serif;font-size:20px;font-weight:600;margin:34px 0
 .canal:hover{border-color:var(--azul)}
 .canal img{width:22px;height:22px;margin-bottom:8px}
 .canal-rot{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--apoio)}
-.canal-val{font-family:'Lora',Georgia,serif;font-size:18px;font-weight:600;color:var(--azul-escuro)}
+.canal-val{font-family:var(--fonte);font-size:18px;font-weight:600;color:var(--azul-escuro)}
 .horario{font-size:16.5px;line-height:1.65;max-width:66ch}
 .capitulos > div{padding:20px 0;border-bottom:1px solid var(--claro)}
 .capitulos > div:last-child{border-bottom:0}
 .cap-n{font-size:12px;font-weight:600;color:var(--azul);margin-right:10px}
-.capitulos h4{display:inline;font-family:'Lora',Georgia,serif;font-size:18px;font-weight:600}
+.capitulos h4{display:inline;font-family:var(--fonte);font-size:18px;font-weight:600}
 .capitulos p{font-size:15.5px;line-height:1.65;margin:8px 0 0 30px;color:var(--texto);max-width:70ch}
 .ponte .btn{margin-right:12px;margin-top:10px}
 @media (max-width:640px){.canal{min-width:0;width:100%}}
@@ -85,7 +82,8 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
 <header class="topo">
   <div class="topo-int">
     <a href="../" class="marca"><img src="../img/logo-instituto-virtudes.png" alt="Instituto Virtudes - Humanização e Virtologia" width="439" height="120"></a>
-    <button class="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Menu">&#8801;</button>
+    <div class="topo-lado"><span class="grupo-nota">Instituto Virtudes · Grupo Virtudes</span><a class="btn-topo" href="../contato/">Fale conosco</a></div>
+    <button class="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Abrir o menu">Menu <span aria-hidden="true">&#8801;</span></button>
     <nav>
       <ul class="menu" id="menu">
         <li class="tem-sub">
