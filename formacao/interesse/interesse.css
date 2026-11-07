@@ -247,3 +247,7 @@ blockquote{font-family:var(--f-tit);font-size:16px;line-height:1.38;font-weight:
 .mosaico{gap:5px}
 .mosaico li{padding:6px 9px}
 .mosaico strong{font-size:18px}
+
+/* aberto como pop-up na página da Formação: espaço para o botão de fechar */
+.embed .barra{padding-right:52px}
+.embed body{background:var(--papel)}

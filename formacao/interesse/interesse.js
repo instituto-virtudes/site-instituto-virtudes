@@ -12,6 +12,16 @@
   function $$(s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); }
   function esc(t) { return String(t == null ? "" : t).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
 
+  /* aberto como pop-up dentro da página da Formação (?embed=1) */
+  var EMBED = /[?&]embed=1/.test(location.search);
+  if (EMBED) {
+    document.documentElement.classList.add("embed");
+    var mc = document.querySelector(".marca"); if (mc) mc.removeAttribute("href");
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") { try { parent.postMessage({ tipo: "fechar-preinscricao" }, location.origin); } catch (x) {} }
+    });
+  }
+
   var palco = $("#palco"), acao = $("#acao"), voltar = $("#voltar"), barra = $("#progresso-barra"), prog = $("#progresso");
 
   /* ---------- opções (o "valor" é o que vai para o banco) ---------- */
@@ -257,7 +267,7 @@
     n = permitida(Math.max(0, Math.min(TELAS.length - 1, n)));
     var dir = n >= st.etapa ? 1 : -1;
     st.etapa = n; salvar();
-    if (empilhar) { try { history.pushState({ fi: n }, ""); empilhados++; } catch (e) {} }
+    if (empilhar && !EMBED) { try { history.pushState({ fi: n }, ""); empilhados++; } catch (e) {} }
     desenhar(dir);
     if (n > 0 && n < I("fim")) ga("quiz_etapa", { etapa: TELAS[n] });
   }
@@ -281,12 +291,15 @@
 
     /* rodapé com a ação principal (fica sempre visível) */
     if (t.whatsapp) {
-      acao.innerHTML = '<a class="btn-principal btn-wa" href="' + esc(CFG.linkWhatsapp) + '" target="_blank" rel="noopener" id="btn-principal">Ir para o WhatsApp</a>' +
-        '<a class="link-sec" href="' + esc(CFG.linkConhecerMais || "../../aulas/virtologia/") + '">Quero conhecer mais antes de decidir</a>';
+      var wpp = CFG.linkWhatsapp;
+      if (CFG.origemNaMensagem !== false && window.IVOrigem && IVOrigem.comOrigem) wpp = IVOrigem.comOrigem(wpp, st.codigo ? "código " + st.codigo : "");
+      acao.innerHTML = '<a class="btn-principal btn-wa" href="' + esc(wpp) + '" target="_blank" rel="noopener" id="btn-principal">Ir para o WhatsApp</a>' +
+        '<a class="link-sec" href="' + esc(CFG.linkConhecerMais || "../../aulas/virtologia/") + '"' + (EMBED ? ' target="_top"' : "") + '>Quero conhecer mais antes de decidir</a>';
       acao.hidden = false;
       $("#btn-principal").addEventListener("click", function () {
-        fbCustom("WhatsAppClick", { content_name: "Formação em Virtologia" });
-        ga("whatsapp_click", { pagina: "formacao_interesse" });
+        var canal = window.IVOrigem && IVOrigem.canalAtual ? IVOrigem.canalAtual() : "";
+        fbCustom("WhatsAppClick", { content_name: "Formação em Virtologia", canal: canal });
+        ga("whatsapp_click", { pagina: "formacao_interesse", canal: canal, popup: EMBED ? "sim" : "nao" });
       });
     } else if (t.pergunta) {
       var resp = st.r[t.pergunta];
@@ -394,6 +407,15 @@
       site: ""
     };
     ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term", "utm_id", "campaign_id", "adset_id", "ad_id", "fbclid"].forEach(function (k) { corpo[k] = origem[k] || null; });
+    /* canal guardado por 90 dias: primeiro e último contato e pontos importantes */
+    if (window.IVOrigem && IVOrigem.toques) {
+      var tq = IVOrigem.toques();
+      corpo.canal_origem = IVOrigem.resumoCanal();
+      corpo.primeiro_contato = tq.primeiro || null;
+      corpo.ultimo_contato = tq.ultimo || null;
+      corpo.pontos_contato = tq.pontos || null;
+    }
+    corpo.via_popup = EMBED;
 
     enviando = true;
     var btn = $("#btn-principal"), rot = btn.textContent;
