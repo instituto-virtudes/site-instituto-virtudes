@@ -291,7 +291,7 @@
 
     /* rodapé com a ação principal (fica sempre visível) */
     if (t.whatsapp) {
-      var wpp = CFG.linkWhatsapp;
+      var wpp = (EMBED && CFG.linkWhatsappPaginaFormacao) || CFG.linkWhatsapp;
       if (CFG.origemNaMensagem !== false && window.IVOrigem && IVOrigem.comOrigem) wpp = IVOrigem.comOrigem(wpp, st.codigo ? "código " + st.codigo : "");
       acao.innerHTML = '<a class="btn-principal btn-wa" href="' + esc(wpp) + '" target="_blank" rel="noopener" id="btn-principal">Ir para o WhatsApp</a>' +
         '<a class="link-sec" href="' + esc(CFG.linkConhecerMais || "../../aulas/virtologia/") + '"' + (EMBED ? ' target="_top"' : "") + '>Quero conhecer mais antes de decidir</a>';
