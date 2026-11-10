@@ -3,68 +3,190 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Apostilas e materiais | Formação em Virtologia</title>
-<meta name="description" content="Materiais de apoio da Formação em Virtologia: apostilas, guias e capítulos em PDF.">
-<meta name="robots" content="noindex, nofollow">
-<link rel="icon" href="../img/favicon.png">
-<link rel="stylesheet" href="../css/estilo.css">
+
+<title>Instituto Virtudes | Virtologia e Sistemas Humanizados</title>
+<meta name="description" content="Conheça a Virtologia e os Sistemas Humanizados: conhecimento sobre o funcionamento humano e a transformação de organizações centradas nas pessoas.">
+<link rel="canonical" href="https://institutovirtudes.com.br/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Instituto Virtudes">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:url" content="https://institutovirtudes.com.br/">
+<meta property="og:title" content="Instituto Virtudes | Virtologia e Sistemas Humanizados">
+<meta property="og:description" content="O Instituto Virtudes estuda o ser humano e como transformar os sistemas em que ele vive. Trazemos o futuro.">
+<meta property="og:image" content="https://institutovirtudes.com.br/img/og-padrao.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Instituto Virtudes">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Instituto Virtudes | Virtologia e Sistemas Humanizados">
+<meta name="twitter:description" content="O Instituto Virtudes estuda o ser humano e como transformar os sistemas em que ele vive. Trazemos o futuro.">
+<meta name="twitter:image" content="https://institutovirtudes.com.br/img/og-padrao.jpg">
+
+<link rel="icon" href="img/favicon.png">
+<link rel="stylesheet" href="css/estilo.css">
+
 <style>
-.apostilas-topo{padding:56px 0 8px}
-.apostilas-topo h1{font-size:clamp(30px,4vw,42px);line-height:1.15;margin-bottom:16px}
-.apostilas-topo .lead{max-width:62ch}
+/* ---------- HOME · linguagem editorial do grupo ---------- */
+.home main > section{border-top:0}
+.home section{padding:104px 0}
 
-.mat-grupo{padding:40px 0 0;border-top:0}
-.mat-grupo h2{font-size:clamp(21px,2vw,25px);margin-bottom:18px}
-.materiais{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.materiais a{display:grid;grid-template-columns:34px 1fr;column-gap:14px;row-gap:3px;align-content:center;
-  border:1px solid var(--borda);border-radius:var(--raio-card);
-  padding:18px 20px;background:#fff;color:var(--texto);height:100%;
-  transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease}
-.materiais a::before{grid-column:1;grid-row:1/3;align-self:center}
-.materiais .mat-nome{grid-column:2;grid-row:1}
-.materiais .mat-meta{grid-column:2;grid-row:2}
-.materiais a::before{content:'';flex:0 0 34px;height:34px;border-radius:9px;background:var(--pastel-azul) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232C63C0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z'/%3E%3Cpolyline points='14 2 14 8 20 8'/%3E%3C/svg%3E") center/18px no-repeat}
-.materiais .mat-nome{font-family:var(--fonte);font-size:17.5px;font-weight:600;line-height:1.3}
-.materiais .mat-meta{font-size:13px;color:var(--apoio);letter-spacing:.02em}
-@media (hover:hover){.materiais a:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(20,45,90,.08);border-color:var(--azul)}}
-@media (max-width:760px){.materiais{grid-template-columns:1fr}}
+/* notícias em carrossel: slide grande, como era antes */
+.noticias{padding:0 !important;border:0}
+.carrossel{position:relative;max-width:1100px;margin:0 auto;padding:28px 24px 0}
+.slides{position:relative;overflow:hidden;border-radius:var(--raio-card)}
+.slide{display:none}
+.slide.ativo{display:block;animation:aparece .5s ease}
+@keyframes aparece{from{opacity:.4}to{opacity:1}}
+.slide a,.slide-conteudo{display:block;border:0;color:inherit}
+.slide img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block;
+  border-radius:var(--raio-card);border:1px solid var(--borda)}
+.slide-txt{padding:18px 2px 0}
+.slide-txt h2{font-size:24px;line-height:1.3;margin-bottom:10px;color:var(--texto)}
+.slide-txt p{font-size:15.5px;color:var(--apoio);line-height:1.6;margin:0}
 
-.livros-alunos{background:var(--pastel-azul);border-radius:var(--raio-card);padding:34px 30px;margin:28px 0 8px}
-.livros-alunos h2{margin-bottom:8px}
-.livros-alunos p{color:var(--azul-escuro);max-width:62ch}
-.livros-alunos p strong{color:var(--azul-escuro)}
-.livros-lista{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:12px}
-.livros-lista a{display:flex;justify-content:space-between;align-items:center;gap:16px;background:#fff;
-  border-radius:12px;padding:18px 22px;color:var(--texto);font-weight:500}
-.livros-lista a span.seta{color:var(--azul);font-weight:600;white-space:nowrap}
-@media (hover:hover){.livros-lista a:hover{color:var(--azul-escuro)}}
-@media (prefers-reduced-motion:reduce){.materiais a{transition:none}.materiais a:hover{transform:none}}
-.livros-pdf{padding:28px 0 0}
-.livros-pdf h2{font-size:clamp(21px,2vw,25px);margin-bottom:18px}
-.livros-pdf-lista{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
-.livros-pdf-lista > li{min-width:0}
-.livros-pdf-lista a{display:grid;grid-template-columns:74px 1fr;column-gap:18px;align-items:center;
-  border:1px solid var(--borda);border-radius:var(--raio-card);padding:18px 20px;background:#fff;color:var(--texto);height:100%;
-  transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease}
-.livros-pdf-lista img{width:74px;height:auto;display:block;border-radius:4px;box-shadow:0 6px 16px rgba(20,45,90,.18)}
-.livros-pdf-lista .lp-txt{display:grid;row-gap:4px}
-.livros-pdf-lista .mat-nome{font-family:var(--fonte);font-size:18.5px;font-weight:600;line-height:1.3}
-.livros-pdf-lista .mat-meta{font-size:13px;color:var(--apoio);letter-spacing:.02em}
-.livros-pdf-lista .lp-abrir{font-size:14.5px;font-weight:600;color:var(--azul);margin-top:4px}
-@media (hover:hover){.livros-pdf-lista a:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(20,45,90,.08);border-color:var(--azul)}
-.livros-pdf-lista a:hover .lp-abrir{color:var(--azul-escuro)}}
-@media (max-width:760px){.livros-pdf-lista{grid-template-columns:1fr}}
-@media (prefers-reduced-motion:reduce){.livros-pdf-lista a{transition:none}.livros-pdf-lista a:hover{transform:none}}
+.seta{position:absolute;top:calc(50% - 60px);transform:translateY(-50%);
+  width:40px;height:40px;border-radius:50%;border:1px solid var(--borda);
+  background:rgba(255,255,255,.92);color:var(--texto);font-size:17px;line-height:1;
+  cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:3}
+.seta:hover{border-color:var(--azul);color:var(--azul)}
+.seta.ant{left:36px}
+.seta.prox{right:36px}
+
+.pontos{display:flex;gap:7px;justify-content:center;margin-top:20px}
+.ponto{width:7px;height:7px;border-radius:50%;background:var(--borda);border:0;padding:0;cursor:pointer}
+.ponto.ativo{background:var(--azul)}
+
+/* abertura em texto */
+.h-intro-sec{padding:84px 0 96px !important}
+.h-intro-sec h1{max-width:900px;font-size:clamp(36px,4.2vw,58px);margin-bottom:26px}
+.h-intro{max-width:760px;font-size:19px;line-height:1.75;color:var(--texto);margin:0}
+
+/* faixa de destaque: os dois eixos */
+.h-eixos{background:var(--azul);color:#fff;padding:84px 0 !important;scroll-margin-top:0}
+.h-eixos-grade{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.h-eixos-grade > div{padding:0 56px 0 0;display:flex;flex-direction:column}
+.h-eixos-grade > div + div{padding:0 0 0 56px;border-left:1px solid rgba(255,255,255,.35)}
+.h-eixo-rot{font-size:12px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#DCE8FA;margin-bottom:14px}
+.h-eixos h2{color:#fff;font-size:clamp(26px,2.6vw,36px);margin-bottom:16px}
+.h-eixos p{color:#fff;font-size:16.5px;line-height:1.7;flex:1}
+.h-eixos .acoes{margin:26px 0 0;gap:14px 26px}
+.h-eixos .btn{background:#fff;color:var(--azul-escuro);border-color:#fff}
+.h-eixos .btn:hover{background:var(--azul-claro);border-color:var(--azul-claro);color:var(--azul-escuro)}
+.h-eixos .link-seta{color:#fff;border-bottom-color:rgba(255,255,255,.7)}
+.h-eixos .link-seta::after{color:#fff}
+.h-eixos .link-seta:hover{color:#fff;border-bottom-color:#fff}
+.h-eixos :focus-visible{outline-color:#fff}
+
+/* cabeçalhos de seção */
+.h-cab{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:30px}
+.h-cab .kicker{margin:0}
+.h-cab-texto{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 88px;align-items:start;margin-bottom:56px}
+.h-cab-texto h2{margin:0}
+.h-cab-texto p{margin-bottom:14px}
+.h-cab-texto p:last-of-type{margin-bottom:22px}
+.h-estatuto .h-cab-texto,.h-final .h-cab-texto{margin:0}
+
+/* blocos de imagem e texto lado a lado (alternados) */
+.h-dupla{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:88px;align-items:start}
+.h-dupla.h-centro{align-items:center}
+.h-dupla-img{margin:0}
+.h-dupla-img img{width:100%;height:auto;display:block;border-radius:var(--raio)}
+.h-fixa{position:sticky;top:40px}
+.h-dupla-txt > p:not(.kicker):not(.destaque){max-width:600px}
+.h-dupla-txt .destaque{margin:34px 0}
+.h-dupla-txt .acoes{gap:14px 30px}
+
+/* onde o trabalho acontece */
+.h-trabalho{background:#fff}
+.trabalho{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;align-items:start;margin:0}
+.trabalho figure{margin:0}
+.trabalho img{width:100%;height:auto;display:block;border-radius:var(--raio)}
+.trabalho h3{font-size:22px;margin:24px 0 10px}
+.trabalho p{font-size:15.5px;color:var(--apoio);line-height:1.7;margin:0}
+
+/* depoimentos */
+.h-citacao{background:var(--azul-claro)}
+.h-citacao-grade{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:88px;align-items:start}
+.h-citacao .kicker{color:#1B3F7D}
+.h-citacao blockquote{font-size:clamp(22px,2.3vw,30px);line-height:1.4;letter-spacing:-.025em;font-weight:500;border-left:0;padding:0;margin:0 0 44px}
+.h-citacao blockquote{border-top:2px solid var(--azul);padding-top:22px}
+.h-citacao blockquote:last-child{margin-bottom:0}
+.h-citacao cite{font-size:13.5px;font-weight:500;letter-spacing:0;margin-top:16px;color:#3E4D5F}
+
+/* livros */
+.h-livros{background:var(--neutro)}
+.h-livros .livros{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:34px;align-items:end;margin:0;padding:48px 40px 40px;background:#fff;border:1px solid #E1E6EC;border-radius:var(--raio-card)}
+.h-livros .livros a{border:0;display:block;transition:transform .2s}
+.h-livros .livros a:hover{transform:translateY(-4px)}
+.h-livros .livros img{width:100%;height:auto;display:block;filter:drop-shadow(10px 14px 16px rgba(5,13,20,.18))}
+
+/* debate internacional: grade numerada */
+.h-debate .evid-cards{grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid var(--borda);counter-reset:ev;margin:0 0 30px}
+.h-debate .evid-cards > div{counter-increment:ev;background:none;border:0;border-radius:0;padding:32px 32px 18px 0;display:flex;flex-direction:column}
+.h-debate .evid-cards > div + div{padding-left:32px;border-left:1px solid var(--borda)}
+.h-debate .evid-cards > div::before{content:counter(ev,decimal-leading-zero);font-size:12px;letter-spacing:.15em;color:var(--azul-escuro);font-weight:700;margin-bottom:28px}
+.h-debate .ev-sigla{font-size:24px !important;letter-spacing:-.02em}
+
+/* encerramento */
+.h-final{background:#050D14;color:#fff;padding:88px 0 !important}
+.h-final .kicker{color:#A9C6F2}
+.h-final .kicker::before{background:#A9C6F2}
+.h-final h2{color:#fff;margin:0}
+.h-final-grade{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:30px 60px;align-items:end}
+.h-final-acoes{display:flex;flex-wrap:wrap;align-items:center;gap:18px 32px;justify-content:flex-end}
+.h-final .btn{background:#fff;color:var(--texto);border-color:#fff}
+.h-final .btn:hover{background:var(--azul-claro);border-color:var(--azul-claro)}
+.h-final .link-seta{color:#fff;border-bottom-color:rgba(255,255,255,.6)}
+.h-final .link-seta::after{color:#A9C6F2}
+.h-final :focus-visible{outline-color:#fff}
+.home .rodape{border-top:0}
+
+@media (max-width:640px){
+  .carrossel{padding:20px 20px 0}
+  .seta{width:34px;height:34px;top:calc(50% - 80px)}
+  .seta.ant{left:26px}
+  .seta.prox{right:26px}
+  .slide-txt h2{font-size:20px}
+  .slide-txt p{font-size:14.5px}
+}
+@media (max-width:1060px){
+  .h-dupla{gap:56px}
+  .h-cab-texto{gap:20px 48px}
+  .h-livros .livros{grid-template-columns:repeat(3,minmax(0,1fr));gap:30px 34px}
+}
+@media (max-width:820px){
+  .home section{padding:72px 0}
+  .h-eixos-grade{grid-template-columns:1fr}
+  .h-eixos-grade > div{padding:0 0 40px}
+  .h-eixos-grade > div + div{padding:40px 0 0;border-left:0;border-top:1px solid rgba(255,255,255,.35)}
+  .h-dupla,.h-citacao-grade,.h-cab-texto,.h-final-grade{grid-template-columns:1fr}
+  .h-dupla{gap:34px}
+  .h-cab-texto{gap:8px}
+  .h-fixa{position:static}
+  .h-img-dir .h-dupla-img{order:-1}
+  .trabalho{grid-template-columns:1fr;gap:48px}
+  .h-final-acoes{justify-content:flex-start}
+  .h-debate .evid-cards{grid-template-columns:1fr}
+  .h-debate .evid-cards > div,.h-debate .evid-cards > div + div{padding:28px 0 22px;border-left:0}
+  .h-debate .evid-cards > div + div{border-top:1px solid var(--borda)}
+}
+@media (max-width:640px){
+  .home section{padding:60px 0}
+  .h-intro-sec{padding:52px 0 60px !important}
+  .h-intro-sec h1{font-size:32px}
+  .h-intro{font-size:17px}
+  .h-eixos{padding:64px 0 !important}
+  .h-eixos .acoes{flex-direction:column;align-items:stretch}
+  .h-eixos .link-seta,.h-dupla-txt .link-seta{align-self:flex-start}
+  .h-livros .livros{grid-template-columns:repeat(2,minmax(0,1fr));padding:30px 24px;gap:28px 24px}
+  .h-citacao blockquote{font-size:22px}
+  .h-final-acoes{flex-direction:column;align-items:stretch}
+  .h-final-acoes .link-seta{align-self:flex-start}
+}
+@media (prefers-reduced-motion:reduce){.slide.ativo{animation:none}}
 </style>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3XCMQHKG5N"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-3XCMQHKG5N');
-</script>
 <!-- Meta Pixel -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -81,69 +203,79 @@ fbq('track', 'PageView');
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
 /></noscript>
+<!-- Fim Meta Pixel -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3XCMQHKG5N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3XCMQHKG5N');
+</script>
 </head>
-<body>
+<body class="home">
 
 <header class="topo">
   <div class="topo-int">
-    <a href="../" class="marca"><img src="../img/logo-instituto-virtudes.png" alt="Instituto Virtudes - Humanização e Virtologia" width="439" height="120"></a>
-    <div class="topo-lado"><span class="grupo-nota">Instituto Virtudes · Grupo Virtudes</span><a class="btn-topo" href="../contato/">Fale conosco</a></div>
+    <a href="./" class="marca"><img src="img/logo-instituto-virtudes.png" alt="Instituto Virtudes - Humanização e Virtologia" width="439" height="120"></a>
+    <div class="topo-lado"><span class="grupo-nota">Instituto Virtudes · Grupo Virtudes</span><a class="btn-topo" href="contato/">Fale conosco</a></div>
     <button class="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Abrir o menu">Menu <span aria-hidden="true">&#8801;</span></button>
     <nav>
       <ul class="menu" id="menu">
         <li class="tem-sub">
           <button class="menu-sub-btn" aria-expanded="false" aria-haspopup="true">Virtologia <span class="seta-sub" aria-hidden="true">&#9662;</span></button>
           <ul class="submenu">
-            <li><a href="../virtologia/">O que é a Virtologia</a></li>
-            <li><a href="../formacao/">Formação em Virtologia</a></li>
-            <li><a href="../terapeutas/">Terapia gratuita</a></li>
-            <li><a href="../teorias/">Diante de outras grandes teorias</a></li>
-            <li><a href="../depoimentos/">Depoimentos</a></li>
-            <li><a href="../aula1/">Aula aberta</a></li>
-            <li><a href="../aulas/virtologia/">Aula ao vivo gratuita</a></li>
+            <li><a href="virtologia/">O que é a Virtologia</a></li>
+            <li><a href="formacao/">Formação em Virtologia</a></li>
+            <li><a href="terapeutas/">Terapia gratuita</a></li>
+            <li><a href="teorias/">Diante de outras grandes teorias</a></li>
+            <li><a href="depoimentos/">Depoimentos</a></li>
+            <li><a href="aula1/">Aula aberta</a></li>
+            <li><a href="aulas/virtologia/">Aula ao vivo gratuita</a></li>
           </ul>
         </li>
         <li class="tem-sub">
           <button class="menu-sub-btn" aria-expanded="false" aria-haspopup="true">Humanização 2.0 <span class="seta-sub" aria-hidden="true">&#9662;</span></button>
           <ul class="submenu">
-            <li><a href="../sistemas/">Entenda a transformação</a></li>
-            <li><a href="../sistemas/#evidencias">Evidências internacionais</a></li>
-            <li><a href="../pos-sistemas/">Pós-graduação em Sistemas Humanizados</a></li>
-            <li><a href="../sistemas-humanizados/">O livro Sistemas Humanizados</a></li>
-            <li><a href="../aula2/">Aula aberta sobre a NR-1</a></li>
-            <li><a href="../aularh/">Aula aberta para RH</a></li>
-            <li><a href="../aulas/humanizacao/">Aula ao vivo gratuita</a></li>
-            <li><a href="../ondas/">As Três Ondas do Trabalho</a></li>
+            <li><a href="sistemas/">Entenda a transformação</a></li>
+            <li><a href="sistemas/#evidencias">Evidências internacionais</a></li>
+            <li><a href="pos-sistemas/">Pós-graduação em Sistemas Humanizados</a></li>
+            <li><a href="sistemas-humanizados/">O livro Sistemas Humanizados</a></li>
+            <li><a href="aula2/">Aula aberta sobre a NR-1</a></li>
+            <li><a href="aularh/">Aula aberta para RH</a></li>
+            <li><a href="aulas/humanizacao/">Aula ao vivo gratuita</a></li>
+            <li><a href="ondas/">As Três Ondas do Trabalho</a></li>
           </ul>
         </li>
         <li class="tem-sub">
           <button class="menu-sub-btn" aria-expanded="false" aria-haspopup="true">Formações e cursos <span class="seta-sub" aria-hidden="true">&#9662;</span></button>
           <ul class="submenu">
-            <li><a href="../formacao/">Formação em Virtologia</a></li>
-            <li><a href="../pos-sistemas/">Pós-graduação em Sistemas Humanizados</a></li>
-            <li><a href="../formacoes/#intro-virtologia">Curso de Introdução à Virtologia</a></li>
-            <li><a href="../formacoes/#intro-sistemas">Curso de Introdução aos Sistemas Humanizados</a></li>
-            <li><a href="../formacoes/">Todas as formações e cursos</a></li>
+            <li><a href="formacao/">Formação em Virtologia</a></li>
+            <li><a href="pos-sistemas/">Pós-graduação em Sistemas Humanizados</a></li>
+            <li><a href="formacoes/#intro-virtologia">Curso de Introdução à Virtologia</a></li>
+            <li><a href="formacoes/#intro-sistemas">Curso de Introdução aos Sistemas Humanizados</a></li>
+            <li><a href="formacoes/">Todas as formações e cursos</a></li>
           </ul>
         </li>
         <li class="tem-sub">
           <button class="menu-sub-btn" aria-expanded="false" aria-haspopup="true">Livros <span class="seta-sub" aria-hidden="true">&#9662;</span></button>
           <ul class="submenu">
-            <li><a href="../14-obras/">Coleção Especial · 14 obras</a></li>
-            <li><a href="../fundamentos/">Fundamentos da Virtologia</a></li>
-            <li><a href="../manual/">Manual de Desenvolvimento Humano em Virtudes</a></li>
-            <li><a href="../sistemas-humanizados/">Sistemas Humanizados · Humanização 2.0</a></li>
-            <li><a href="../guia/">Guia das Virtudes</a></li>
-            <li><a href="../teimosia/">Teimosia de Viver</a></li>
-            <li><a href="../envelheci/">Envelheci, e Daí?</a></li>
-            <li><a href="../livros/">Todos os livros</a></li>
+            <li><a href="14-obras/">Coleção Especial · 14 obras</a></li>
+            <li><a href="fundamentos/">Fundamentos da Virtologia</a></li>
+            <li><a href="manual/">Manual de Desenvolvimento Humano em Virtudes</a></li>
+            <li><a href="sistemas-humanizados/">Sistemas Humanizados · Humanização 2.0</a></li>
+            <li><a href="guia/">Guia das Virtudes</a></li>
+            <li><a href="teimosia/">Teimosia de Viver</a></li>
+            <li><a href="envelheci/">Envelheci, e Daí?</a></li>
+            <li><a href="livros/">Todos os livros</a></li>
           </ul>
         </li>
-        <li><a href="../palestras/">Palestras</a></li>
-        <li><a href="../futuro/">Trazemos o Futuro</a></li>
-        <li><a href="../inteiras/" target="_blank" rel="noopener">Inteiras</a></li>
+        <li><a href="palestras/">Palestras</a></li>
+        <li><a href="futuro/">Trazemos o Futuro</a></li>
+        <li><a href="inteiras/" target="_blank" rel="noopener">Inteiras</a></li>
         <li><a href="https://humanizacao.com" target="_blank" rel="noopener">Nossa ONG</a></li>
-        <li><a href="../contato/">Contato</a></li>
+        <li><a href="contato/">Contato</a></li>
       </ul>
     </nav>
   </div>
@@ -151,146 +283,380 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
 
 <main>
 
-<section class="apostilas-topo">
-  <div class="wrap">
-    <p class="kicker">Formação em Virtologia</p>
-    <h1>Apostilas e materiais</h1>
-    <p class="lead">Material de apoio da Formação. Todos os arquivos abrem em PDF, para leitura na tela ou download.</p>
+<!-- ============ NOTÍCIAS (carrossel) ============ -->
+<!-- ============ NOTÍCIAS ============ -->
+<section class="noticias" aria-label="Notícias do Instituto">
+  <div class="carrossel" id="carrossel">
+    <button class="seta ant" aria-label="Notícia anterior">&#10094;</button>
+    <button class="seta prox" aria-label="Próxima notícia">&#10095;</button>
+
+    <div class="slides" aria-live="polite">
+
+      <article class="slide ativo">
+        <a class="slide-conteudo" href="14-obras/">
+          <img src="img/noticias/colecao-14-obras.jpg" alt="Estante com os 14 livros da Coleção Especial Eduardo Casarotto, com a frase Um novo pensamento para um novo mundo e o selo Black Friday." width="1920" height="1080">
+          <div class="slide-txt">
+            <h2>Novos pensamentos, para um novo mundo</h2>
+            <p>Black Friday: as novas 14 obras do Dr. Eduardo Casarotto são lançadas em uma Coleção Exclusiva, com condições especiais.</p>
+          </div>
+        </a>
+      </article>
+
+      <article class="slide">
+        <div class="slide-conteudo">
+          <img src="img/noticias/senado.jpg" alt="Eduardo Casarotto discursando na tribuna do Senado Federal." loading="lazy" width="1600" height="900">
+          <div class="slide-txt">
+            <h2>Virtologia e Humanização 2.0 são apresentadas no Plenário do Senado Federal</h2>
+            <p>No Dia Internacional dos Direitos Humanos, Eduardo Casarotto palestrou, em Brasília, sobre as bases da Virtologia e da Humanização 2.0 para uma sociedade mais consciente e em defesa da dignidade humana.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="slide">
+        <div class="slide-conteudo">
+          <img src="img/noticias/secretario-seguranca-rj.jpg" alt="Eduardo Casarotto ao lado do Secretário de Segurança do Rio de Janeiro, ambos com os livros Fundamentos da Virtologia e Sistemas Humanizados." loading="lazy" width="1600" height="900">
+          <div class="slide-txt">
+            <h2>Humanização 2.0 e Virtologia entram no debate sobre segurança pública no Rio de Janeiro</h2>
+            <p>Eduardo Casarotto discute segurança pública e humanização de sistemas com o Secretário de Segurança do Rio de Janeiro, Victor Cesar Carvalho dos Santos.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- SLIDE DESATIVADO: falta a imagem franco-da-rocha.jpg. Para reativar, remova este comentário.
+      <article class="slide">
+        <div class="slide-conteudo">
+          <img src="img/noticias/franco-da-rocha.jpg" alt="Eduardo Casarotto durante apresentação no Hospital de Custódia e Tratamento Psiquiátrico de Franco da Rocha." loading="lazy" width="1600" height="900">
+          <div class="slide-txt">
+            <h2>Programa de neuroplasticidade em Virtudes será implementado no Hospital de Custódia de Franco da Rocha</h2>
+            <p>Eduardo Casarotto apresentou a Virtologia às 84 mulheres da unidade feminina durante o início da aplicação do Programa Novo Eu, que vai levar exercícios de desenvolvimento de virtudes a todas as pacientes, além de formação e cuidado para os servidores.</p>
+          </div>
+        </div>
+      </article>
+      -->
+
+      <!-- SLIDE DESATIVADO: falta a imagem rondonopolis-penitenciaria.jpg. Para reativar, remova este comentário.
+      <article class="slide">
+        <div class="slide-conteudo">
+          <img src="img/noticias/rondonopolis-penitenciaria.jpg" alt="Eduardo Casarotto na Cadeia Pública Feminina de Rondonópolis." loading="lazy" width="1600" height="900">
+          <div class="slide-txt">
+            <h2>Cadeia Pública Feminina de Rondonópolis fecha acordo e 100% das reeducandas iniciarão a neuroplasticidade da Virtologia</h2>
+            <p>A aplicação do programa da Virtologia envolverá todas as reeducandas e também os policiais penais da unidade, unindo exercícios de virtudes e Humanização 2.0 em um projeto que vai documentar os resultados para servir de referência a outras unidades.</p>
+          </div>
+        </div>
+      </article>
+      -->
+
+      <!-- SLIDE DESATIVADO: falta a imagem jp-news.jpg. Para reativar, remova este comentário.
+      <article class="slide">
+        <div class="slide-conteudo">
+          <img src="img/noticias/jp-news.jpg" alt="Eduardo Casarotto durante entrevista ao vivo na rádio JP News." loading="lazy" width="1600" height="900">
+          <div class="slide-txt">
+            <h2>Virtologia e Humanização 2.0 ganham espaço na JP News</h2>
+            <p>Eduardo Casarotto deu entrevista na rádio JP News sobre as bases da Virtologia e da Humanização 2.0, ampliando o debate sobre desenvolvimento humano e mudança nas instituições.</p>
+          </div>
+        </div>
+      </article>
+      -->
+
+      <!-- SLIDE DESATIVADO: falta a imagem policia-penal-londrina.jpg. Para reativar, remova este comentário.
+      <article class="slide">
+        <div class="slide-conteudo">
+          <img src="img/noticias/policia-penal-londrina.jpg" alt="Eduardo Casarotto com integrantes da Polícia Penal de Londrina." loading="lazy" width="1600" height="900">
+          <div class="slide-txt">
+            <h2>Virtologia fecha aplicação junto à Polícia Penal de Londrina</h2>
+            <p>O Instituto Virtudes fechou com a Polícia Penal de Londrina a aplicação de um programa de desenvolvimento de virtudes, saúde mental e preparo para a volta à sociedade nas penitenciárias da região.</p>
+          </div>
+        </div>
+      </article>
+      -->
+
+      <article class="slide">
+        <div class="slide-conteudo">
+          <img src="img/noticias/instituto-dr-arnaldo.jpg" alt="Eduardo Casarotto em visita ao Instituto de Câncer Dr. Arnaldo, em São Paulo." loading="lazy" width="1600" height="900">
+          <div class="slide-txt">
+            <h2>Projeto de Virtologia e PNEI desperta interesse no Instituto Dr. Arnaldo</h2>
+            <p>Em São Paulo, o Instituto Virtudes apresentou uma proposta de cuidado complementar no tratamento de câncer, que junta Humanização 2.0, desenvolvimento de virtudes e o estudo de como mente, hormônios e sistema de defesa do corpo funcionam juntos.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- SLIDE DESATIVADO: falta a imagem socioeducativo-rondonopolis.jpg. Para reativar, remova este comentário.
+      <article class="slide">
+        <div class="slide-conteudo">
+          <img src="img/noticias/socioeducativo-rondonopolis.jpg" alt="Encontro no Centro de Atendimento Socioeducativo de Rondonópolis." loading="lazy" width="1600" height="900">
+          <div class="slide-txt">
+            <h2>Virtologia avança no sistema socioeducativo de Rondonópolis</h2>
+            <p>O Instituto Virtudes participou do planejamento de aplicação do Programa Novo Eu no Centro de Atendimento Socioeducativo de Rondonópolis, envolvendo jovens e agentes num trabalho de desenvolvimento de virtudes, segurança e Humanização 2.0.</p>
+          </div>
+        </div>
+      </article>
+      -->
+
+      <article class="slide">
+        <div class="slide-conteudo">
+          <img src="img/noticias/ministra-das-mulheres.jpg" alt="Eduardo Casarotto ao lado da Ministra das Mulheres, Márcia Lopes." loading="lazy" width="1600" height="900">
+          <div class="slide-txt">
+            <h2>Virtologia é apresentada à Ministra das Mulheres, Márcia Lopes</h2>
+            <p>Eduardo Casarotto apresentou à ministra Márcia Lopes a aplicação da Virtologia no sistema penitenciário e o Guia das Virtudes para crianças e adolescentes, ampliando a conversa entre desenvolvimento humano e políticas públicas.</p>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="pontos" id="pontos" role="tablist" aria-label="Selecionar notícia"></div>
   </div>
 </section>
 
-<div class="wrap">
-  <section class="livros-pdf">
-    <h2>Os livros da Formação</h2>
-    <ul class="livros-pdf-lista">
-      <li>
-        <a href="arquivos/livro-fundamentos-da-virtologia-3a-edicao-beta.pdf" target="_blank" rel="noopener">
-          <img src="../img/livros/fundamentos-da-virtologia-3a-edicao.jpg" alt="Capa do livro Fundamentos da Virtologia, 3ª edição." width="420" height="594" loading="lazy">
-          <span class="lp-txt">
-            <span class="mat-nome">Fundamentos da Virtologia (3ª edição)</span>
-            <span class="mat-meta">PDF · 7.7 MB · 1.194 páginas</span>
-            <span class="lp-abrir">Abrir o livro &rarr;</span>
-          </span>
-        </a>
-      </li>
-      <li>
-        <a href="arquivos/livro-manual-de-desenvolvimento-humano-em-virtudes.pdf" target="_blank" rel="noopener">
-          <img src="../img/livros/manual-desenvolvimento-humano.png" alt="Capa do Manual de Desenvolvimento Humano em Virtudes." width="623" height="1080" loading="lazy">
-          <span class="lp-txt">
-            <span class="mat-nome">Manual de Desenvolvimento Humano em Virtudes</span>
-            <span class="mat-meta">PDF · 22.1 MB · 452 páginas</span>
-            <span class="lp-abrir">Abrir o livro &rarr;</span>
-          </span>
-        </a>
-      </li>
-      <li>
-        <a href="arquivos/livro-supervisao-manejos-e-tecnicas.pdf" target="_blank" rel="noopener">
-          <img src="../img/livros/manejos-tecnicas-supervisao.jpg" alt="Capa do livro Manejos, Técnicas e Supervisão, do Dr. Eduardo Casarotto." width="420" height="597" loading="lazy">
-          <span class="lp-txt">
-            <span class="mat-nome">Manejos, Técnicas e Supervisão</span>
-            <span class="mat-meta">PDF · 2.9 MB · 623 páginas</span>
-            <span class="lp-abrir">Abrir o livro &rarr;</span>
-          </span>
-        </a>
-      </li>
-    </ul>
-  </section>
+<!-- ============ INSTITUTO ============ -->
+<section class="h-intro-sec">
+  <div class="wrap">
+    <p class="kicker">Instituto Virtudes</p>
+    <h1 id="h-titulo">O Instituto Virtudes estuda o ser humano e como transformar os sistemas em que ele vive.</h1>
+    <p class="h-intro">Da Virtologia, dedicada ao funcionamento humano, aos Sistemas Humanizados - Humanização 2.0, voltados à construção de organizações compatíveis com as pessoas. Duas frentes de conhecimento, uma direção: transformar as condições que influenciam a vida humana.</p>
+  </div>
+</section>
 
-  <section class="livros-alunos">
-    <h2>Versões físicas dos livros</h2>
-    <p>Os links abaixo já vêm com o <strong>desconto para alunos</strong> aplicado.</p>
-    <ul class="livros-lista">
-      <li><a href="https://payfast.greenn.com.br/redirect/300371" target="_blank" rel="noopener">Fundamentos da Virtologia (2ª edição) <span class="seta">Adquirir &rarr;</span></a></li>
-      <li><a href="https://payfast.greenn.com.br/125361/offer/sIAMVx?cupom=TRAZEMOSOFUTURO" target="_blank" rel="noopener">Manual de Desenvolvimento Humano em Virtudes <span class="seta">Adquirir &rarr;</span></a></li>
-      <li><a href="https://payfast.greenn.com.br/redirect/300375" target="_blank" rel="noopener">Os dois livros juntos, com desconto maior e economia no frete <span class="seta">Adquirir &rarr;</span></a></li>
-    </ul>
-  </section>
-
-    <section class="mat-grupo">
-      <h2>Fundamentos e personalidade</h2>
-      <ul class="materiais">
-        <li><a href="arquivos/posicionamento-da-virtologia.pdf" target="_blank" rel="noopener"><span class="mat-nome">Posicionamento da Virtologia</span><span class="mat-meta">PDF · 82 KB</span></a></li>
-        <li><a href="arquivos/personalidade-na-virtologia.pdf" target="_blank" rel="noopener"><span class="mat-nome">Personalidade na Virtologia</span><span class="mat-meta">PDF · 252 KB</span></a></li>
-        <li><a href="arquivos/personalidade-em-perspectiva.pdf" target="_blank" rel="noopener"><span class="mat-nome">Personalidade em Perspectiva</span><span class="mat-meta">PDF · 575 KB</span></a></li>
-        <li><a href="arquivos/fases-do-desenvolvimento-da-personalidade.pdf" target="_blank" rel="noopener"><span class="mat-nome">Fases do Desenvolvimento da Personalidade</span><span class="mat-meta">PDF · 999 KB</span></a></li>
-        <li><a href="arquivos/transtornos-de-personalidade-dsm-5.pdf" target="_blank" rel="noopener"><span class="mat-nome">Transtornos de Personalidade (DSM-5)</span><span class="mat-meta">PDF · 236 KB</span></a></li>
-        <li><a href="arquivos/individuo-funcional-e-disfuncional.pdf" target="_blank" rel="noopener"><span class="mat-nome">Indivíduo Funcional e Disfuncional</span><span class="mat-meta">PDF · 143 KB</span></a></li>
-        <li><a href="arquivos/funcoes-do-ego.pdf" target="_blank" rel="noopener"><span class="mat-nome">Funções do Ego</span><span class="mat-meta">PDF · 46 KB</span></a></li>
-      </ul>
-    </section>
-
-    <section class="mat-grupo">
-      <h2>Necessidades humanas</h2>
-      <ul class="materiais">
-        <li><a href="arquivos/necessidades-humanas.pdf" target="_blank" rel="noopener"><span class="mat-nome">Necessidades Humanas</span><span class="mat-meta">PDF · 1.3 MB</span></a></li>
-        <li><a href="arquivos/grupos-de-necessidades.pdf" target="_blank" rel="noopener"><span class="mat-nome">Grupos de Necessidades</span><span class="mat-meta">PDF · 2.0 MB</span></a></li>
-        <li><a href="arquivos/as-nove-grandes-areas-da-vida.pdf" target="_blank" rel="noopener"><span class="mat-nome">As Nove Grandes Áreas da Vida</span><span class="mat-meta">PDF · 518 KB</span></a></li>
-      </ul>
-    </section>
-
-    <section class="mat-grupo">
-      <h2>Virtudes</h2>
-      <ul class="materiais">
-        <li><a href="arquivos/livro-virtudes-vs-faixas-de-evolucao.pdf" target="_blank" rel="noopener"><span class="mat-nome">Livro "Virtudes VS Faixas de evolução"</span><span class="mat-meta">PDF · 852 KB</span></a></li>
-        <li><a href="arquivos/virtudes-como-estruturas-neurais.pdf" target="_blank" rel="noopener"><span class="mat-nome">Virtudes como Estruturas Neurais</span><span class="mat-meta">PDF · 143 KB</span></a></li>
-        <li><a href="arquivos/afirmacoes-mentais-e-as-33-virtudes.pdf" target="_blank" rel="noopener"><span class="mat-nome">Afirmações Mentais e as 33 Virtudes</span><span class="mat-meta">PDF · 181 KB</span></a></li>
-        <li><a href="arquivos/virtudes-x-faixas-de-evolucao-x-comportamento.pdf" target="_blank" rel="noopener"><span class="mat-nome">Virtudes x Faixas de Evolução neurológica x comportamento</span><span class="mat-meta">PDF · 143 KB</span></a></li>
-        <li><a href="arquivos/humildade-como-estrutura-neural.pdf" target="_blank" rel="noopener"><span class="mat-nome">Humildade (como estrutura neural)</span><span class="mat-meta">PDF · 284 KB</span></a></li>
-        <li><a href="arquivos/arquitetura-neural-da-humildade.pdf" target="_blank" rel="noopener"><span class="mat-nome">Arquitetura Neural da Humildade</span><span class="mat-meta">PDF · 15.0 MB</span></a></li>
-        <li><a href="arquivos/perdao-como-estrutura-neural.pdf" target="_blank" rel="noopener"><span class="mat-nome">Perdão (como estrutura neural)</span><span class="mat-meta">PDF · 278 KB</span></a></li>
-        <li><a href="arquivos/brandura-como-estrutura-neural.pdf" target="_blank" rel="noopener"><span class="mat-nome">Brandura (como estrutura neural)</span><span class="mat-meta">PDF · 261 KB</span></a></li>
-        <li><a href="arquivos/arquitetura-do-orgulho-e-do-egoismo.pdf" target="_blank" rel="noopener"><span class="mat-nome">Arquitetura do Orgulho e do Egoísmo</span><span class="mat-meta">PDF · 1.6 MB</span></a></li>
-      </ul>
-    </section>
-
-    <section class="mat-grupo">
-      <h2>Cérebro e neuroplasticidade</h2>
-      <ul class="materiais">
-        <li><a href="arquivos/sara-na-virtologia.pdf" target="_blank" rel="noopener"><span class="mat-nome">SARA na Virtologia</span><span class="mat-meta">PDF · 97 KB</span></a></li>
-        <li><a href="arquivos/sara-e-exercicios-de-neuroplasticidade.pdf" target="_blank" rel="noopener"><span class="mat-nome">Sara e Exercícios de Neuroplasticidade</span><span class="mat-meta">PDF · 56 KB</span></a></li>
-        <li><a href="arquivos/sno-e-sne-os-dois-motores-da-primitividade.pdf" target="_blank" rel="noopener"><span class="mat-nome">SNO e SNE - Os Dois Motores da Primitividade</span><span class="mat-meta">PDF · 1.2 MB</span></a></li>
-        <li><a href="arquivos/apagao-sno-e-sne-na-virtologia.pdf" target="_blank" rel="noopener"><span class="mat-nome">Apagão, SNO e SNE na Virtologia</span><span class="mat-meta">PDF · 277 KB</span></a></li>
-        <li><a href="arquivos/glias-na-virtologia.pdf" target="_blank" rel="noopener"><span class="mat-nome">Glias na Virtologia</span><span class="mat-meta">PDF · 196 KB</span></a></li>
-        <li><a href="arquivos/ideias-que-moldam-o-cerebro.pdf" target="_blank" rel="noopener"><span class="mat-nome">Ideias que moldam o cérebro</span><span class="mat-meta">PDF · 245 KB</span></a></li>
-        <li><a href="arquivos/arquitetura-das-afirmacoes-mentais.pdf" target="_blank" rel="noopener"><span class="mat-nome">Arquitetura das Afirmações Mentais</span><span class="mat-meta">PDF · 196 KB</span></a></li>
-        <li><a href="arquivos/afirmacoes-mentais-guia-para-alunos.pdf" target="_blank" rel="noopener"><span class="mat-nome">Afirmações Mentais (guia para alunos)</span><span class="mat-meta">PDF · 35 KB</span></a></li>
-        <li><a href="arquivos/tedio-e-introspeccao-na-virtologia.pdf" target="_blank" rel="noopener"><span class="mat-nome">Tédio e Introspecção na Virtologia</span><span class="mat-meta">PDF · 249 KB</span></a></li>
-      </ul>
-    </section>
-
-    <section class="mat-grupo">
-      <h2>Leis e princípios</h2>
-      <ul class="materiais">
-        <li><a href="arquivos/22-leis-da-vida.pdf" target="_blank" rel="noopener"><span class="mat-nome">22 Leis da Vida</span><span class="mat-meta">PDF · 547 KB</span></a></li>
-        <li><a href="arquivos/leis-do-universo-lei-do-fluxo-e-ressonancia-schumann.pdf" target="_blank" rel="noopener"><span class="mat-nome">Leis do Universo, Lei do Fluxo e Ressonância Schumann</span><span class="mat-meta">PDF · 11 KB</span></a></li>
-      </ul>
-    </section>
-
-    <section class="mat-grupo">
-      <h2>Sociedade, trabalho e as ondas</h2>
-      <ul class="materiais">
-        <li><a href="arquivos/quem-e-essa-tal-sociedade.pdf" target="_blank" rel="noopener"><span class="mat-nome">Quem é essa tal Sociedade?</span><span class="mat-meta">PDF · 65 KB</span></a></li>
-        <li><a href="arquivos/por-que-nao-nos-dobramos-ao-manual.pdf" target="_blank" rel="noopener"><span class="mat-nome">Por que não nos dobramos ao manual?</span><span class="mat-meta">PDF · 283 KB</span></a></li>
-        <li><a href="arquivos/liturgia-da-segunda-onda.pdf" target="_blank" rel="noopener"><span class="mat-nome">Liturgia da Segunda Onda</span><span class="mat-meta">PDF · 153 KB</span></a></li>
-        <li><a href="arquivos/terceira-onda-do-trabalho.pdf" target="_blank" rel="noopener"><span class="mat-nome">Terceira Onda do Trabalho</span><span class="mat-meta">PDF · 1.5 MB</span></a></li>
-        <li><a href="arquivos/livro-a-terceira-onda-do-trabalho.pdf" target="_blank" rel="noopener"><span class="mat-nome">A Terceira Onda do Trabalho (livro)</span><span class="mat-meta">PDF · 8.1 MB · 190 páginas</span></a></li>
-        <li><a href="arquivos/livro-deus-abencoe-a-america.pdf" target="_blank" rel="noopener"><span class="mat-nome">Deus Abençoe a América (livro)</span><span class="mat-meta">PDF · 3.1 MB · 322 páginas</span></a></li>
-        <li><a href="arquivos/livro-pedagogia-da-inscricao.pdf" target="_blank" rel="noopener"><span class="mat-nome">Pedagogia da Inscrição (livro)</span><span class="mat-meta">PDF · 4.0 MB · 337 páginas</span></a></li>
-      </ul>
-    </section>
-
-    <section class="mat-grupo">
-      <h2>Apostilas e palestras</h2>
-      <ul class="materiais">
-        <li><a href="arquivos/virtologia-clinica-apostila.pdf" target="_blank" rel="noopener"><span class="mat-nome">Virtologia Clínica (apostila)</span><span class="mat-meta">PDF · 658 KB</span></a></li>
-        <li><a href="arquivos/humanizacao-2-0-nr-1-e-saude-mental-corporativa-apostila.pdf" target="_blank" rel="noopener"><span class="mat-nome">Humanização 2.0, NR-1 e Saúde Mental Corporativa (apostila)</span><span class="mat-meta">PDF · 1.2 MB</span></a></li>
-        <li><a href="arquivos/virtologia-pnei-e-cancer-apostila-da-palestra.pdf" target="_blank" rel="noopener"><span class="mat-nome">Virtologia, PNEI e Câncer (apostila da palestra)</span><span class="mat-meta">PDF · 628 KB</span></a></li>
-        <li><a href="arquivos/virtologia-pnei-e-cancer-slides-da-palestra.pdf" target="_blank" rel="noopener"><span class="mat-nome">Virtologia, PNEI e Câncer (slides da palestra)</span><span class="mat-meta">PDF · 638 KB</span></a></li>
-      </ul>
-    </section>
+<!-- ============ AS DUAS ESCOLAS (faixa de destaque) ============ -->
+<section class="h-eixos" id="eixos" aria-label="As duas frentes do Instituto">
+  <div class="wrap">
+    <div class="h-eixos-grade">
+      <div>
+        <p class="h-eixo-rot">Escola clínico-filosófica</p>
+        <h2>Virtologia</h2>
+        <p>A maior parte do sofrimento psíquico vem de uma parte primitiva do cérebro dando as ordens. E ela tem duas bases: o orgulho e o egoísmo. A Virtologia trata saúde mental desenvolvendo virtudes que tiram o poder das duas.</p>
+        <div class="acoes">
+          <a class="btn" href="aulas/virtologia/">Assistir aula ao vivo</a>
+          <a class="link-seta" href="formacoes/#virtologia">Conhecer cursos e livros</a>
+        </div>
+      </div>
+      <div>
+        <p class="h-eixo-rot">Humanização 2.0</p>
+        <h2>Sistemas Humanizados · Humanização 2.0</h2>
+        <p>Parte do sofrimento no trabalho nasce das condições que as organizações criam. Sistemas Humanizados estuda e transforma estruturas, processos e gestão para que as organizações sejam compatíveis com as pessoas.</p>
+        <div class="acoes">
+          <a class="btn" href="aulas/humanizacao/">Assistir aula ao vivo</a>
+          <a class="link-seta" href="formacoes/#sistemas">Conhecer cursos e livros</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
-</div>
+<!-- ============ O QUE É A VIRTOLOGIA (imagem à esquerda) ============ -->
+<section class="h-bloco" id="virtologia">
+  <div class="wrap h-dupla h-img-esq">
+    <figure class="h-dupla-img h-fixa">
+      <img src="img/cerebro-duas-camadas.jpg" alt="Esquema do cérebro: o lobo frontal, onde a virtude se constrói, e as estruturas primitivas de defesa e sobrevivência, onde operam o orgulho (SNO) e o egoísmo (SNE)." width="1600" height="1102" loading="lazy">
+    </figure>
+    <div class="h-dupla-txt">
+      <p class="kicker">Virtologia</p>
+      <h2>O que é a Virtologia</h2>
+
+      <p>Quando alguém faz o que não gostaria de fazer, é porque naquela hora não estava consciente. Quem estava no comando era uma parte primitiva do cérebro. Ela existe em todo mundo e serve para uma coisa só: sobreviver.</p>
+
+      <p>E o ser humano sobrevive de dois jeitos. <strong>Pelo egoísmo, que coloca a própria vida acima das outras, e pelo orgulho, que busca aceitação, aprovação e importância,</strong> porque quem tem lugar no grupo é protegido. São as duas bases do primitivismo humano, e delas vem a maior parte do sofrimento psíquico.</p>
+
+      <p>Quando essa parte manda, a pessoa se defende. A defesa se repete, endurece e vira uma casca permanente.</p>
+
+      <p><strong>Vista de fora, essa casca é o que os manuais chamam de transtorno de personalidade.</strong></p>
+
+      <p>A Virtologia trata isso construindo no cérebro aquilo que tira o poder dos dois. E virtude, aqui, não é valor moral: <strong>é um grupo de ideias que, treinado com exercícios certos, constrói um caminho novo dentro do cérebro</strong> e passa a funcionar sozinho, sem esforço.</p>
+
+      <p class="destaque">Por isso a Virtologia atua em duas frentes: a saúde mental de cada pessoa e o futuro da sociedade.</p>
+
+      <p>O mesmo trabalho que trata alguém torna essa pessoa menos presa ao próprio status e mais voltada ao bem comum. <strong>Um mundo com menos gente se colocando acima dos outros é um mundo com menos guerra, menos fome e menos desigualdade.</strong></p>
+
+      <a class="btn" href="virtologia/">Entender mais a Virtologia</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SISTEMAS HUMANIZADOS (imagem à direita) ============ -->
+<section class="h-bloco faixa-suave" id="sistemas-humanizados">
+  <div class="wrap h-dupla h-img-dir">
+    <div class="h-dupla-txt">
+      <p class="kicker">Sistemas Humanizados · Humanização 2.0</p>
+      <h2>O futuro é construir organizações compatíveis com o ser humano.</h2>
+
+      <p>Parte do sofrimento no trabalho <strong>não nasce apenas das pessoas, mas também das condições que as organizações criam</strong>. E ainda tentamos adaptar indivíduos a essas condições.</p>
+      <div class="ruptura">
+        <p class="ruptura-de">Temos que parar de tentar fazer os seres humanos se adaptarem melhor às empresas.</p>
+        <p class="ruptura-para">E começar a fazer as empresas serem compatíveis com os seres humanos.</p>
+        <p class="ruptura-autor">Eduardo Casarotto</p>
+      </div>
+      <p><strong>Normas internacionais como a ISO 27500 e a ISO 27501 já tratam das organizações centradas no ser humano.</strong> Sistemas Humanizados - Humanização 2.0 é a proposta de Eduardo Casarotto para estudar e transformar estruturas, processos e gestão nessa direção.</p>
+
+      <div class="acoes">
+        <a class="btn" href="aula2/">Assistir a uma aula aberta</a>
+        <a class="link-seta" href="sistemas/">Conhecer a proposta</a>
+      </div>
+    </div>
+    <figure class="h-dupla-img h-fixa">
+      <img src="img/eduardo-palestra.webp" alt="Eduardo Casarotto durante palestra." width="853" height="1067" loading="lazy">
+    </figure>
+  </div>
+</section>
+
+<!-- ============ ONDE O TRABALHO ACONTECE (fileira) ============ -->
+<section class="h-trabalho">
+  <div class="wrap">
+    <div class="h-cab-texto">
+      <div>
+        <h2>Onde o trabalho acontece</h2>
+      </div>
+      <div>
+        <p>O trabalho do Instituto acontece onde o sofrimento é mais concreto: unidades prisionais, comunidades terapêuticas, hospitais, escolas e organizações.</p>
+        <p><strong>A maior parte dos projetos do Instituto é gratuita, e o método é aberto a quem quiser aplicá-lo.</strong></p>
+      </div>
+    </div>
+
+    <div class="trabalho">
+      <figure>
+        <img src="img/trabalho/novo-eu.jpg" alt="Eduardo Casarotto conduzindo aula para reeducandos em unidade prisional." width="1280" height="960" loading="lazy">
+        <h3><a href="novoeu-penitenciarias/">Programa “O Novo Eu”</a></h3>
+        <p>Exercícios de virtudes aplicados em grupo, sem precisar de um virtólogo conduzindo. Foi feito para a própria instituição aplicar sozinha, e é o que acontece hoje em presídios, comunidades terapêuticas e organizações que trabalham com recuperação de pessoas.</p>
+        <a class="link-seta" href="novoeu-penitenciarias/">Conheça o programa</a>
+      </figure>
+      <figure>
+        <img src="img/trabalho/guia-das-virtudes.jpg" alt="Criança segurando um exemplar do Guia das Virtudes." width="567" height="552" loading="lazy">
+        <h3>Livro “Guia das Virtudes” para escolas</h3>
+        <p>Material para Educação Infantil e Anos Iniciais, com roteiro pronto para o professor e um livro que vai para casa com a criança. Trabalha autocontrole e convivência justamente na idade em que o cérebro mais muda com o que se repete.</p>
+      </figure>
+      <figure>
+        <img src="img/trabalho/humanizacao-carceraria.jpg" alt="Eduardo Casarotto durante palestra no Ministério Público de Mato Grosso." width="1600" height="1066" loading="lazy">
+        <h3><a href="projetos/#acoes">Humanização Carcerária</a></h3>
+        <p>A Humanização 2.0 aplicada na estrutura das unidades: regras, rotinas e formação das equipes. O trabalho alcança tanto quem cumpre pena quanto quem trabalha ali dentro.</p>
+      </figure>
+    </div>
+
+    <a class="btn" href="projetos/">Conhecer os projetos</a>
+  </div>
+</section>
+
+<!-- ============ DEPOIMENTOS (faixa de citação) ============ -->
+<section class="h-citacao">
+  <div class="wrap h-citacao-grade">
+    <div>
+      <p class="kicker">Depoimentos</p>
+      <h2>Profissionais de outras escolas</h2>
+      <p>Psicólogos, psicanalistas e terapeutas formados em outras linhas estudaram a Virtologia e passaram a trabalhar com ela:</p>
+      <a class="btn" href="formacao/">Conhecer a Formação em Virtologia</a>
+    </div>
+    <div>
+      <blockquote>“Não tem como não falar que é revolucionário. Depois que você conhece, não tem como não trabalhar com isso.”
+        <cite>Carina · Neuropsicopedagoga, psicanalista e terapeuta ABA</cite></blockquote>
+
+      <blockquote>“É libertador. Para consultório, foi uma revolução e tanto.”
+        <cite>Fernanda · Psicóloga clínica (TCC)</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LIVROS ============ -->
+<section class="h-livros">
+  <div class="wrap">
+    <div class="h-cab-texto">
+      <div>
+        <h2>Livros</h2>
+      </div>
+      <div>
+        <p>Diversos livros publicados sobre funcionamento humano, personalidade e desenvolvimento.</p>
+        <a class="link-seta" href="livros/">Ver os livros</a>
+      </div>
+    </div>
+
+    <div class="livros">
+      <a href="fundamentos/"><img src="img/livros/fundamentos-da-virtologia.png" alt="Fundamentos da Virtologia" loading="lazy"></a>
+      <a href="manual/"><img src="img/livros/manual-desenvolvimento-humano.png" alt="Manual de Desenvolvimento Humano em Virtudes" loading="lazy"></a>
+      <a href="sistemas-humanizados/"><img src="img/livros/sistemas-humanizados.avif" alt="Sistemas Humanizados · Humanização 2.0" loading="lazy"></a>
+      <a href="guia/"><img src="img/livros/guia-das-virtudes.png" alt="Guia das Virtudes" loading="lazy"></a>
+      <a href="envelheci/"><img src="img/livros/envelheci-e-dai.png" alt="Envelheci, e Daí?" loading="lazy"></a>
+      <a href="teimosia/"><img src="img/livros/teimosia-de-viver.png" alt="Teimosia de Viver" loading="lazy"></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ESTATUTO ============ -->
+<section class="h-estatuto faixa-suave">
+  <div class="wrap h-cab-texto">
+    <div>
+      <p class="kicker">Base científica</p>
+      <h2>Sobre o que a Virtologia afirma</h2>
+    </div>
+    <div>
+      <p>A Virtologia é uma escola clínico-filosófica com base científica. Ela escreve o que afirma de um jeito que pode ser testado, dizendo o que confirmaria e o que derrubaria cada ideia, conversa com a neurociência e publica artigos científicos.</p>
+      <p>Ela passou pelas mesmas seis perguntas que um manual internacional usa para julgar as dezoito maiores teorias da personalidade, de Freud até hoje.</p>
+      <a class="link-seta" href="teorias/">A Virtologia diante de outras grandes teorias</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PALESTRAS (imagem à esquerda) ============ -->
+<section class="h-bloco" id="palestras">
+  <div class="wrap h-dupla h-img-esq h-centro">
+    <figure class="h-dupla-img">
+      <img src="img/palestra.jpg" alt="Eduardo Casarotto durante palestra em evento, com os livros Sistemas Humanizados e Fundamentos da Virtologia na mesa." width="1600" height="1067" loading="lazy">
+    </figure>
+    <div class="h-dupla-txt">
+      <h2>Palestras e eventos</h2>
+      <p>Eduardo Casarotto conduz palestras e formações em instituições, empresas, universidades e eventos.</p>
+      <a class="btn" href="palestras/">Conhecer palestras</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEBATE INTERNACIONAL ============ -->
+<section id="debate" class="h-debate">
+  <div class="wrap">
+    <div class="h-cab-texto">
+      <div>
+        <p class="kicker">Referências internacionais</p>
+        <h2>Um debate que vai além do Instituto</h2>
+      </div>
+      <div>
+        <p>Referências internacionais independentes sobre centralidade humana, futuro do trabalho e saúde mental nas organizações:</p>
+      </div>
+    </div>
+    <div class="evid-cards">
+      <div>
+        <p class="ev-sigla">ISO 27500 e ISO 27501</p>
+        <p class="ev-ano">2016 e 2019, Organização Internacional de Normalização</p>
+        <p>Princípios para organizações centradas no ser humano e orientações para que gestores os levem à estratégia e aos processos.</p>
+        <p class="ev-links"><a href="https://www.iso.org/standard/64239.html" target="_blank" rel="noopener">ISO 27500</a> e <a href="https://www.iso.org/standard/64241.html" target="_blank" rel="noopener">ISO 27501</a></p>
+      </div>
+      <div>
+        <p class="ev-sigla">OIT</p>
+        <p class="ev-ano">2019, Declaração do Centenário para o Futuro do Trabalho</p>
+        <p>Defende uma abordagem do futuro do trabalho centrada no ser humano.</p>
+        <p class="ev-links"><a href="https://www.ilo.org/about-ilo/mission-and-impact-ilo/ilo-centenary-declaration-future-work-2019" target="_blank" rel="noopener">Documento oficial</a></p>
+      </div>
+      <div>
+        <p class="ev-sigla">OMS</p>
+        <p class="ev-ano">2022, Diretrizes sobre saúde mental no trabalho</p>
+        <p>Recomendações que incluem intervenções na organização do trabalho, além de ações com gestores e trabalhadores.</p>
+        <p class="ev-links"><a href="https://www.who.int/publications/i/item/9789240053052" target="_blank" rel="noopener">Documento oficial</a></p>
+      </div>
+    </div>
+    <p class="apoio">Referências independentes, cada uma com o seu escopo. Nenhuma delas valida ou certifica os Sistemas Humanizados. <a href="sistemas/#evidencias">Veja o que cada documento propõe.</a></p>
+  </div>
+</section>
+
+<!-- ============ ENCERRAMENTO ============ -->
+<section class="h-final">
+  <div class="wrap h-final-grade">
+    <div>
+      <p class="kicker">Trazemos o Futuro</p>
+      <h2>Formações, cursos e livros</h2>
+    </div>
+    <div class="h-final-acoes">
+      <a class="btn" href="formacoes/">Todas as formações e cursos</a>
+      <a class="link-seta" href="livros/">Todos os livros</a>
+      <a class="link-seta" href="contato/">Fale conosco</a>
+    </div>
+  </div>
+</section>
 
 </main>
 
@@ -298,65 +664,65 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
   <div class="wrap-largo">
     <div class="rodape-cols">
       <div>
-        <h4><a href="../virtologia/">Virtologia</a></h4>
+        <h4><a href="virtologia/">Virtologia</a></h4>
         <ul>
-          <li><a href="../terapeutas/">Terapia gratuita</a></li>
-          <li><a href="../teorias/">Diante de outras grandes teorias</a></li>
-          <li><a href="../depoimentos/">Depoimentos</a></li>
-          <li><a href="../projetos/">Projetos sociais</a></li>
-          <li><a href="../imprensa/">Na imprensa</a></li>
-          <li><a href="../aula1/">Aula aberta</a></li>
-          <li><a href="../aulas/virtologia/">Aula ao vivo gratuita</a></li>
+          <li><a href="terapeutas/">Terapia gratuita</a></li>
+          <li><a href="teorias/">Diante de outras grandes teorias</a></li>
+          <li><a href="depoimentos/">Depoimentos</a></li>
+          <li><a href="projetos/">Projetos sociais</a></li>
+          <li><a href="imprensa/">Na imprensa</a></li>
+          <li><a href="aula1/">Aula aberta</a></li>
+          <li><a href="aulas/virtologia/">Aula ao vivo gratuita</a></li>
         </ul>
       </div>
       <div>
-        <h4><a href="../sistemas/">Humanização 2.0</a></h4>
+        <h4><a href="sistemas/">Humanização 2.0</a></h4>
         <ul>
-          <li><a href="../sistemas/#evidencias">Evidências internacionais</a></li>
-          <li><a href="../aula2/">Aula aberta sobre a NR-1</a></li>
-          <li><a href="../aularh/">Aula aberta para RH</a></li>
-          <li><a href="../aulas/humanizacao/">Aula ao vivo gratuita</a></li>
-          <li><a href="../sistemas-humanizados/">O livro</a></li>
-          <li><a href="../pos-sistemas/">Pós-graduação</a></li>
-          <li><a href="../ondas/">As Três Ondas do Trabalho</a></li>
+          <li><a href="sistemas/#evidencias">Evidências internacionais</a></li>
+          <li><a href="aula2/">Aula aberta sobre a NR-1</a></li>
+          <li><a href="aularh/">Aula aberta para RH</a></li>
+          <li><a href="aulas/humanizacao/">Aula ao vivo gratuita</a></li>
+          <li><a href="sistemas-humanizados/">O livro</a></li>
+          <li><a href="pos-sistemas/">Pós-graduação</a></li>
+          <li><a href="ondas/">As Três Ondas do Trabalho</a></li>
         </ul>
       </div>
       <div>
-        <h4><a href="../formacoes/">Formações e cursos</a></h4>
+        <h4><a href="formacoes/">Formações e cursos</a></h4>
         <ul>
-          <li><a href="../formacao/">Formação em Virtologia</a></li>
-          <li><a href="../pos-sistemas/">Pós-graduação em Sistemas Humanizados</a></li>
-          <li><a href="../formacoes/#intro-virtologia">Introdução à Virtologia</a></li>
-          <li><a href="../formacoes/#intro-sistemas">Introdução aos Sistemas Humanizados</a></li>
+          <li><a href="formacao/">Formação em Virtologia</a></li>
+          <li><a href="pos-sistemas/">Pós-graduação em Sistemas Humanizados</a></li>
+          <li><a href="formacoes/#intro-virtologia">Introdução à Virtologia</a></li>
+          <li><a href="formacoes/#intro-sistemas">Introdução aos Sistemas Humanizados</a></li>
         </ul>
       </div>
       <div>
-        <h4><a href="../livros/">Livros</a></h4>
+        <h4><a href="livros/">Livros</a></h4>
         <ul>
-          <li><a href="../fundamentos/">Fundamentos da Virtologia</a></li>
-          <li><a href="../manual/">Manual de Desenvolvimento Humano em Virtudes</a></li>
-          <li><a href="../sistemas-humanizados/">Sistemas Humanizados</a></li>
-          <li><a href="../guia/">Guia das Virtudes</a></li>
-          <li><a href="../teimosia/">Teimosia de Viver</a></li>
-          <li><a href="../envelheci/">Envelheci, e Daí?</a></li>
+          <li><a href="fundamentos/">Fundamentos da Virtologia</a></li>
+          <li><a href="manual/">Manual de Desenvolvimento Humano em Virtudes</a></li>
+          <li><a href="sistemas-humanizados/">Sistemas Humanizados</a></li>
+          <li><a href="guia/">Guia das Virtudes</a></li>
+          <li><a href="teimosia/">Teimosia de Viver</a></li>
+          <li><a href="envelheci/">Envelheci, e Daí?</a></li>
         </ul>
       </div>
       <div>
-        <h4><a href="../futuro/">Trazemos o Futuro</a></h4>
+        <h4><a href="futuro/">Trazemos o Futuro</a></h4>
         <div class="redes">
-          <a href="https://www.instagram.com/eduardocasarottooficial/" target="_blank" rel="noopener" aria-label="Instagram"><img src="../img/icone-instagram.svg" alt=""></a>
-          <a href="https://linktw.in/qrGGUW" target="_blank" rel="noopener" aria-label="YouTube"><img src="../img/icone-youtube.svg" alt=""></a>
-          <a href="https://www.tiktok.com/@eduardocasarottooficial" target="_blank" rel="noopener" aria-label="TikTok"><img src="../img/icone-tiktok.svg" alt=""></a>
+          <a href="https://www.instagram.com/eduardocasarottooficial/" target="_blank" rel="noopener" aria-label="Instagram"><img src="img/icone-instagram.svg" alt=""></a>
+          <a href="https://linktw.in/qrGGUW" target="_blank" rel="noopener" aria-label="YouTube"><img src="img/icone-youtube.svg" alt=""></a>
+          <a href="https://www.tiktok.com/@eduardocasarottooficial" target="_blank" rel="noopener" aria-label="TikTok"><img src="img/icone-tiktok.svg" alt=""></a>
         </div>
       </div>
     </div>
     <div class="ressalva">
       <p>Nos quadros com determinação biológica, a Virtologia soma-se ao tratamento médico e não o substitui.</p>
       <div class="contatos">
-        <a href="mailto:grupo@institutovirtudes.com.br"><img src="../img/icone-email.svg" alt="" width="18" height="18">grupo@institutovirtudes.com.br</a>
-        <a href="https://wa.me/5564996428026" target="_blank" rel="noopener"><img src="../img/icone-whatsapp.svg" alt="" width="18" height="18">+55 64 99642-8026</a>
+        <a href="mailto:grupo@institutovirtudes.com.br"><img src="img/icone-email.svg" alt="" width="18" height="18">grupo@institutovirtudes.com.br</a>
+        <a href="https://wa.me/5564996428026" target="_blank" rel="noopener"><img src="img/icone-whatsapp.svg" alt="" width="18" height="18">+55 64 99642-8026</a>
       </div>
-      <p class="legais"><a href="../contato/">Fale conosco</a> · <a href="../trocas/">Trocas, devolução e reembolso</a> · <a href="../frete/">Política de Frete</a> · <a href="../privacidade/">Política de Privacidade</a></p>
+      <p class="legais"><a href="contato/">Fale conosco</a> · <a href="trocas/">Trocas, devolução e reembolso</a> · <a href="frete/">Política de Frete</a> · <a href="privacidade/">Política de Privacidade</a></p>
       <p class="copyright">&copy; 2026 Instituto Virtudes. Todos os direitos reservados.<br>
         DCM Instituto Virtudes de Treinamento LTDA · CNPJ 33.247.144/0001-04<br>
         Instituto Virtudes · Editora Virtudes</p>
@@ -364,7 +730,54 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
   </div>
 </footer>
 
-<script src="../js/origem.js"></script>
-<script src="../js/site.js"></script>
+<script src="js/origem.js"></script>
+<script src="js/site.js"></script>
+<script>
+(function(){
+  var caixa = document.getElementById('carrossel');
+  if(!caixa) return;
+  var slides = caixa.querySelectorAll('.slide');
+  var pontos = document.getElementById('pontos');
+  var i = 0, timer = null, total = slides.length;
+  var parado = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  slides.forEach(function(_, n){
+    var b = document.createElement('button');
+    b.className = 'ponto' + (n===0 ? ' ativo' : '');
+    b.setAttribute('aria-label', 'Notícia ' + (n+1) + ' de ' + total);
+    b.addEventListener('click', function(){ mostrar(n); reiniciar(); });
+    pontos.appendChild(b);
+  });
+  var bolinhas = pontos.querySelectorAll('.ponto');
+
+  function mostrar(n){
+    i = (n + total) % total;
+    slides.forEach(function(s,k){ s.classList.toggle('ativo', k===i); });
+    bolinhas.forEach(function(b,k){ b.classList.toggle('ativo', k===i); });
+  }
+  function anda(){ mostrar(i+1); }
+  function comeca(){ clearInterval(timer); if(!parado) timer = setInterval(anda, 6000); }
+  function para(){ clearInterval(timer); }
+  function reiniciar(){ para(); comeca(); }
+
+  caixa.querySelector('.ant').addEventListener('click', function(){ mostrar(i-1); reiniciar(); });
+  caixa.querySelector('.prox').addEventListener('click', function(){ mostrar(i+1); reiniciar(); });
+  caixa.addEventListener('mouseenter', para);
+  caixa.addEventListener('mouseleave', comeca);
+  caixa.addEventListener('focusin', para);
+  caixa.addEventListener('focusout', comeca);
+
+  var x0 = null;
+  caixa.addEventListener('touchstart', function(e){ x0 = e.touches[0].clientX; para(); }, {passive:true});
+  caixa.addEventListener('touchend', function(e){
+    if(x0 === null) return;
+    var d = e.changedTouches[0].clientX - x0;
+    if(Math.abs(d) > 45) mostrar(d < 0 ? i+1 : i-1);
+    x0 = null; comeca();
+  }, {passive:true});
+
+  comeca();
+})();
+</script>
 </body>
 </html>
