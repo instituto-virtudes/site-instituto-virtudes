@@ -15,6 +15,15 @@
   var encerrada = sit.estado === "encerrada", acontecendo = sit.estado === "acontecendo";
   var foto = IV.url(A.foto || A.capa);
   var CTA = "Quero participar da aula ao vivo";
+  /* destaca em cor os trechos de A.destaques (opcional) no título e no subtítulo */
+  function destacar(t) {
+    var h = esc(t);
+    (A.destaques || []).slice().sort(function (x, y) { return y.length - x.length; }).forEach(function (d) {
+      var e = esc(d).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      h = h.replace(new RegExp("(^|[^\\wÀ-ú>])(" + e + ")(?![\\wÀ-ú])(?![^<]*<\\/span>)"), "$1<span class=\"ev-dest\">$2</span>");
+    });
+    return h;
+  }
 
   var ico = {
     vivo: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="6" width="13" height="12" rx="2.5"/><path d="M15.5 10.2 21 7v10l-5.5-3.2z"/></svg>',
@@ -36,8 +45,8 @@
         '<div class="ev-painel">' +
           '<p class="ev-selo"><span class="ev-ponto' + (acontecendo ? " ev-ponto-ativo" : "") + '" aria-hidden="true"></span>Gratuita • ao vivo</p>' +
           '<p class="ev-trilha"><span>' + esc(T.rotulo) + '</span></p>' +
-          '<h1>' + esc(A.titulo) + '</h1>' +
-          '<p class="ev-sub">' + esc(A.subtitulo) + '</p>' +
+          '<h1>' + destacar(A.titulo) + '</h1>' +
+          '<p class="ev-sub">' + destacar(A.subtitulo) + '</p>' +
           '<p class="ev-data">' + dataHero + '</p>' +
           (encerrada
             ? (T.aulaGravada ? '<a class="ev-cta" href="' + esc(IV.url(T.aulaGravada)) + '">Assistir a uma aula gravada</a>' : "")

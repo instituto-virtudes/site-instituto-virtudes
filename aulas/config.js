@@ -99,6 +99,32 @@ window.AULAS_CONFIG = {
           foto: "img/aulas/virtologia-2026-11-09-v2-foto.webp",   /* só o Eduardo, recortado da capa */
           capaAlt: "Capa da aula: Por que o mesmo manejo funciona com um paciente e não com outro? Gratuita e ao vivo, 9 de novembro, 19h.",
           grupoUrl: "https://chat.whatsapp.com/EsvtD5YU9XOGSMClks7e5B?mode=gi_t"
+        },
+        {
+          id: "virtologia-20261119-1900",
+          inicio: "2026-11-19T19:00:00-03:00",
+          duracaoMinutos: 150,
+          titulo: "Quando a terapia começa a apagar a personalidade do paciente?",
+          subtitulo: "Como distinguir o que é fixo e o que é mutável na personalidade humana",
+          /* trechos destacados em cor no título e no subtítulo da página */
+          destaques: ["apagar a personalidade", "fixo", "mutável", "personalidade humana"],
+          apresentacao: [
+            "Sim, muitos psicoterapeutas violentam seus pacientes sem saber. Não por maldade: por propor mudanças que não cabem na personalidade daquela pessoa, ou que chegam brutas demais. Nesta aula aberta, o Dr. Eduardo Casarotto mostra onde está essa linha e como não atravessá-la.",
+            "Há um risco menos visível: incentivar um comportamento novo sem que a memória de longo prazo mude no cérebro. A pessoa, sem perceber, cria uma máscara para agir daquele jeito. Ela não alterou a personalidade, só o comportamento, e passa a esconder quem é de verdade. Se isso continua e cresce, pode contribuir lá na frente para um transtorno de personalidade.",
+            "E existe o próprio lugar do terapeuta. É comum o paciente ver no terapeuta alguém que o julga, e começar a esconder coisas, buscar aprovação e fingir ser quem não é, também sem perceber. A aula trata da diferença entre o terapeuta julgador e aquele que permite que as mudanças aconteçam de forma leve e natural."
+          ],
+          temas: [
+            "O que, na personalidade e na identidade, é fixo e o que é mutável.",
+            "Como a terapia pode violentar o paciente sem que o terapeuta perceba.",
+            "Mudar o comportamento sem mudar a memória de longo prazo: o nascimento da máscara.",
+            "O terapeuta julgador e o paciente que passa a esconder e a fingir.",
+            "Como conduzir a análise para que a mudança seja leve e natural."
+          ],
+          capa: "img/aulas/virtologia-2026-11-19.webp",
+          foto: "img/aulas/virtologia-2026-11-09-v2-foto.webp",   /* só o Eduardo, sem texto (a mesma da aula anterior) */
+          capaAlt: "Capa da aula: Quando a terapia começa a apagar a personalidade do paciente? Gratuita e ao vivo, 19 de novembro, 19h.",
+          /* CONFIRMAR: é o mesmo grupo da aula de 09/11. Se houver grupo novo, troque aqui e no Supabase. */
+          grupoUrl: "https://chat.whatsapp.com/EsvtD5YU9XOGSMClks7e5B?mode=gi_t"
         }
       ]
     },
