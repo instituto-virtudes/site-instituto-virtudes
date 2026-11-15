@@ -132,6 +132,7 @@ window.AULAS_CONFIG = {
     humanizacao: {
       rotulo: "Humanização 2.0",
       cor: "#67D3C6",              /* destaque da capa (verde-água) */
+      corDestaque: "#67D3C6",      /* cor dos trechos destacados no título */
       fundo: "#081F38",
       paginaInscricao: "aulas/humanizacao/",
       perguntaAluno: "Você já é aluno(a) da Formação em Sistemas Humanizados?",
@@ -143,17 +144,20 @@ window.AULAS_CONFIG = {
           id: "humanizacao-20261112-1900",
           inicio: "2026-11-12T19:00:00-03:00",
           duracaoMinutos: 150,
-          titulo: "A limitação de programas de saúde corporativa",
-          subtitulo: "Como transformar bem-estar em regras e processos?",
-          apresentacao: "Nesta aula aberta, o Dr. Eduardo Casarotto discute o alcance e os limites do acolhimento e a integração das iniciativas de bem-estar ao cotidiano das organizações.",
+          titulo: "Indo muito além das Soft Skills: A Arquitetura das Competências Humanas",
+          subtitulo: "Decodificando as 47 competências da personalidade para contratar, liderar e desenvolver talentos sem gerar máscaras e burnout.",
+          destaques: ["A Arquitetura das Competências Humanas"],
+          apresentacao: "Nesta aula aberta, o Dr. Eduardo Casarotto vai além das soft skills e apresenta a arquitetura das competências humanas: as 47 competências da personalidade, decodificadas para contratar, liderar e desenvolver talentos sem gerar máscaras e burnout.",
           temas: [
-            "O que uma ação de acolhimento consegue mudar.",
-            "Onde estão os limites de uma iniciativa pontual.",
-            "Como transformar bem-estar em regras e processos da rotina."
+            "Além das soft skills: a arquitetura das competências humanas.",
+            "As 47 competências da personalidade.",
+            "Como usar as competências para contratar, liderar e desenvolver talentos.",
+            "Como desenvolver pessoas sem gerar máscaras e burnout."
           ],
-          capa: "img/aulas/humanizacao-2026-11-12.webp",
+          materiaisBonus: false,   /* esta aula não tem material bônus em PDF */
+          capa: "img/aulas/humanizacao-2026-11-12-v2.webp",
           foto: "img/aulas/humanizacao-2026-11-12-foto.webp",
-          capaAlt: "Capa da aula: A limitação de programas de saúde corporativa. Gratuita e ao vivo, 12 de novembro, 19h.",
+          capaAlt: "Capa da aula: Indo muito além das Soft Skills, a Arquitetura das Competências Humanas. Gratuita e ao vivo, 12 de novembro, 19h.",
           grupoUrl: "https://chat.whatsapp.com/CoOr4I3SjBgKJy6GLEMwzZ?mode=gi_t"
         }
       ]

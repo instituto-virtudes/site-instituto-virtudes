@@ -1,0 +1,74 @@
+/* Página do caderno de exercícios (/caderno/) */
+.cad-topo{padding:56px 0 72px}
+.cad-grade{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);grid-template-areas:"intro form" "det form";column-gap:56px;row-gap:0;align-items:start}
+.cad-intro{grid-area:intro}.cad-det{grid-area:det}.cad-caixa{grid-area:form}
+.cad-topo h1{font-size:clamp(32px,4vw,48px);line-height:1.08;margin:0 0 14px}
+.cad-topo .lead{font-size:19px;max-width:32em}
+.cad-mock{display:block;width:100%;max-width:520px;height:auto;margin:22px 0 10px}
+.cad-tem{list-style:none;margin:0 0 22px;padding:0}
+.cad-tem li{position:relative;padding:0 0 10px 30px;margin:0;font-size:16.5px}
+.cad-tem li::before{content:"";position:absolute;left:0;top:7px;width:16px;height:9px;border-left:2.5px solid var(--azul,#2C63C0);border-bottom:2.5px solid var(--azul,#2C63C0);transform:rotate(-45deg)}
+.cad-rot{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--apoio,#6B7A8C);margin:0 0 10px}
+.cad-virtudes{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none;counter-reset:v}
+.cad-virtudes li{counter-increment:v;display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--borda,#C7D0DA);border-radius:999px;padding:6px 14px 6px 6px;font-size:14.5px;font-weight:600;margin:0}
+.cad-virtudes li::before{content:counter(v);display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:var(--azul-claro,#DCE8FA);color:var(--azul-escuro,#234E99);font-size:12px;font-weight:700}
+
+/* formulário */
+.cad-caixa{background:#fff;border:1px solid var(--borda,#C7D0DA);border-top:4px solid var(--azul,#2C63C0);border-radius:var(--raio-card,4px);padding:30px 30px 26px;box-shadow:0 18px 50px rgba(5,13,20,.08);position:sticky;top:96px}
+.cad-caixa h2{font-size:23px;line-height:1.25;margin:0 0 6px}
+.cad-caixa > p, .cad-sub{font-size:15px;color:var(--apoio,#6B7A8C);margin:0 0 20px}
+.cad-campo{margin:0 0 16px}
+.cad-campo > label,.cad-campo legend{display:block;font-size:15px;font-weight:600;margin:0 0 6px;padding:0}
+.cad-campo fieldset{border:0;margin:0;padding:0;min-width:0}
+.cad-campo input[type=text],.cad-campo input[type=email],.cad-campo input[type=tel],.cad-campo select{width:100%;box-sizing:border-box;font:inherit;font-size:16px;padding:12px 14px;border:1px solid var(--borda,#C7D0DA);border-radius:4px;background:#fff;color:var(--texto,#050D14)}
+.cad-campo input:focus,.cad-campo select:focus{outline:2px solid var(--azul,#2C63C0);outline-offset:1px;border-color:var(--azul,#2C63C0)}
+.cad-opcoes{display:grid;gap:8px}
+.cad-opcoes label{display:flex;align-items:center;gap:10px;border:1px solid var(--borda,#C7D0DA);border-radius:4px;padding:11px 14px;font-size:15.5px;cursor:pointer;margin:0}
+.cad-opcoes label:has(input:checked){border-color:var(--azul,#2C63C0);background:#F2F7FE}
+.cad-opcoes input{width:18px;height:18px;margin:0;accent-color:var(--azul,#2C63C0)}
+.cad-check{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;margin:4px 0 18px;cursor:pointer}
+.cad-check input{width:18px;height:18px;margin:2px 0 0;flex:0 0 18px;accent-color:var(--azul,#2C63C0)}
+.cad-msg{display:block;font-size:13.5px;color:#B3261E;margin-top:5px;min-height:0}
+.cad-campo.erro input,.cad-campo.erro select,.cad-campo.erro .cad-opcoes label{border-color:#B3261E}
+.cad-erro{background:#FDECEA;color:#8C1D18;border-radius:4px;padding:10px 12px;font-size:14.5px;margin:0 0 14px}
+#cad-enviar{width:100%;justify-content:center;font-size:17px;padding:15px 18px}
+#cad-enviar:disabled{opacity:.7;cursor:progress}
+.cad-priv{font-size:12.5px;line-height:1.5;color:var(--apoio,#6B7A8C);margin:14px 0 0}
+.cad-oculto{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.cad-pronto{outline:0;text-align:left}
+.cad-ok{font-size:14px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#2E6B4F;margin:0 0 6px}
+.cad-baixar{width:100%;justify-content:center;margin:6px 0 18px}
+.cad-wpp{border-top:1px solid #E1E6EC;padding-top:16px}
+.cad-wpp p{font-size:15.5px;margin:0 0 10px}
+.cad-dica{font-size:14.5px;color:var(--apoio,#6B7A8C);margin:0}
+
+/* Formação */
+.cad-formacao{background:var(--azul-escuro,#234E99);color:#fff;padding:72px 0}
+.cad-formacao h2,.cad-formacao p,.cad-formacao .kicker{color:#fff}
+.cad-formacao .kicker::before{background:#fff}
+.cad-formacao .lead{opacity:.92;max-width:40em}
+.cad-itens{list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin:30px 0 30px;padding:0}
+.cad-itens li{border-top:2px solid rgba(255,255,255,.5);padding-top:14px;margin:0}
+.cad-itens b{display:block;font-size:22px;margin-bottom:4px}
+.cad-itens span{font-size:15px;opacity:.9}
+.cad-formacao .btn{background:#fff;color:var(--azul-escuro,#234E99);border-color:#fff}
+.cad-depo{padding:64px 0}
+.cad-livros{background:var(--neutro,#F4F6F8);padding:72px 0}
+.cad-livros .livros{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:30px;align-items:end;margin:28px 0 0;padding:44px 36px 36px;background:#fff;border:1px solid #E1E6EC;border-radius:var(--raio-card,4px)}
+.cad-livros .livros a{border:0;display:block;transition:transform .2s}
+.cad-livros .livros a:hover{transform:translateY(-4px)}
+.cad-livros .livros img{width:100%;height:auto;display:block;filter:drop-shadow(10px 14px 16px rgba(5,13,20,.18))}
+.cad-cab{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap}
+
+@media (max-width:980px){
+  .cad-grade{grid-template-columns:1fr;grid-template-areas:"intro" "form" "det";row-gap:32px}
+  .cad-caixa{position:static}
+  .cad-itens{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cad-livros .livros{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media (max-width:560px){
+  .cad-topo{padding:36px 0 52px}
+  .cad-caixa{padding:24px 18px 20px}
+  .cad-itens{grid-template-columns:1fr}
+  .cad-livros .livros{padding:28px 18px;gap:18px}
+}

@@ -40,7 +40,7 @@
 
   /* topo: o texto é da página; da capa vem só a foto do Eduardo (sem texto) */
   var hero =
-    '<section class="ev-hero" style="--ev-cor:' + esc(T.cor) + ';--ev-fundo:' + esc(T.fundo) + '">' +
+    '<section class="ev-hero" style="--ev-cor:' + esc(T.cor) + ';--ev-fundo:' + esc(T.fundo) + (T.corDestaque ? ';--ev-dest:' + esc(T.corDestaque) : "") + '">' +
       '<div class="ev-int">' +
         '<div class="ev-painel">' +
           '<p class="ev-selo"><span class="ev-ponto' + (acontecendo ? " ev-ponto-ativo" : "") + '" aria-hidden="true"></span>Gratuita • ao vivo</p>' +
@@ -61,11 +61,11 @@
   var beneficios =
     '<section class="ev-recebe"><div class="wrap">' +
       '<h2>O que você recebe ao se inscrever</h2>' +
-      '<ul class="ev-ben">' +
+      '<ul class="ev-ben' + (A.materiaisBonus === false ? " tres" : "") + '">' +
         '<li>' + ico.vivo + '<div><strong>Aula ao vivo pelo Zoom</strong><span>' + esc(D.semanaCurta) + ", " + esc(D.dia) + ", às " + D.hora + ". Duração de " + D.duracao + '.</span></div></li>' +
         '<li>' + ico.perg + '<div><strong>Perguntas ao vivo</strong><span>Durante a aula, você pode enviar suas perguntas diretamente ao Eduardo.</span></div></li>' +
         '<li>' + ico.replay + '<div><strong>Replay por 7 dias</strong><span>Se não puder acompanhar tudo ao vivo, a gravação fica disponível por uma semana.</span></div></li>' +
-        '<li>' + ico.pdf + '<div><strong>Materiais bônus em PDF</strong><span>Enviados no grupo da aula.</span></div></li>' +
+        (A.materiaisBonus === false ? "" : '<li>' + ico.pdf + '<div><strong>Materiais bônus em PDF</strong><span>Enviados no grupo da aula.</span></div></li>') +
       '</ul>' +
       '<p class="ev-acesso"><strong>Como você recebe o acesso:</strong> ao concluir a inscrição, você segue para o grupo da aula no WhatsApp. O link do Zoom é enviado lá no dia da aula.</p>' +
     '</div></section>';
@@ -95,10 +95,11 @@
     ["Quanto tempo dura?", "A duração prevista é de " + D.duracao + "."],
     ["Vou poder fazer perguntas?", "Sim. Durante a aula ao vivo, você pode enviar suas perguntas diretamente ao Eduardo."],
     ["Se eu não conseguir acompanhar ao vivo, haverá replay?", "Sim. O replay ficará disponível por uma semana."],
-    ["Como recebo os materiais?", "Os materiais bônus em PDF serão enviados no grupo da aula."],
+
+    A.materiaisBonus === false ? null : ["Como recebo os materiais?", "Os materiais bônus em PDF serão enviados no grupo da aula."],
     ["Preciso ter formação na área para participar?", "Não. A aula é aberta ao público e não exige matrícula em uma formação do Instituto."],
     ["A aula oferece certificado?", "Não. Esta aula aberta não oferece certificado."]
-  ].map(function (q) { return "<details><summary>" + q[0] + "</summary><p>" + q[1] + "</p></details>"; }).join("");
+  ].filter(Boolean).map(function (q) { return "<details><summary>" + q[0] + "</summary><p>" + q[1] + "</p></details>"; }).join("");
 
   var inscricao =
     '<section id="inscricao" class="inscricao"><div class="wrap estreito">' +
