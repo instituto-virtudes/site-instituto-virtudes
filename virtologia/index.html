@@ -23,6 +23,7 @@
 <link rel="icon" href="../img/favicon.png">
 <link rel="stylesheet" href="../css/estilo.css">
 <link rel="stylesheet" href="../css/depoimentos-carrossel.css">
+<link rel="stylesheet" href="../aulas/inscricao.css">
 <style>
 .duas{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:32px 0}
 .duas > div{background:var(--claro);border:1px solid var(--borda);border-radius:var(--raio-card);padding:26px 24px}
@@ -314,6 +315,44 @@ i.r-dois{background:linear-gradient(135deg,var(--sno) 50%,var(--sne) 50%)}
 .conv-link::after{content:" ↗"}
 .conv-caixa.dest .conv-link{color:#fff}
 @media (max-width:900px){.conv-grade{grid-template-columns:1fr}}
+
+/* Em que a Virtologia se apoia */
+#bases{background:var(--claro)}
+.bases-duas{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:28px 0 34px}
+.bases-duas > div{border:1px solid var(--borda);border-radius:var(--raio-card);padding:22px 24px;background:#fff}
+.bases-duas > .bd-v{background:var(--pastel-azul);border-color:#C3D6F3}
+.bases-duas h3{font-size:18px;margin-bottom:12px}
+.bases-duas ul{margin:0 0 0 18px}
+.bases-duas li{font-size:15px;line-height:1.5;margin-bottom:6px}
+.bases-bloco{font-size:22px;margin:46px 0 16px;padding-top:18px;border-top:1px solid var(--borda)}
+.bases-grade{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.base{border:1px solid var(--borda);border-radius:var(--raio-card);padding:20px 22px 18px;background:#fff;display:flex;flex-direction:column}
+.base p{margin:0}
+.base .rot{display:block;font-size:11.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--azul);margin-bottom:4px}
+.base-v{font-size:16.5px;font-weight:600;line-height:1.45;margin-bottom:14px !important}
+.base-c{font-size:15px;line-height:1.6;margin-bottom:14px !important}
+.base-c .rot{color:var(--apoio)}
+.base-r{font-size:13px;line-height:1.5;color:var(--apoio);margin-top:auto !important;padding-top:12px;border-top:1px solid var(--claro)}
+details.refs{margin-top:40px;border:1px solid var(--borda);border-radius:var(--raio-card);background:#fff}
+details.refs summary{cursor:pointer;padding:16px 22px;font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
+details.refs summary::-webkit-details-marker{display:none}
+details.refs summary::after{content:"+";color:var(--azul);font-size:22px;line-height:1;font-weight:400}
+details.refs[open] summary::after{content:"\2212"}
+.refs-nota{font-size:14px;color:var(--apoio);padding:0 22px;margin-bottom:14px}
+details.refs ul{list-style:none;margin:0;padding:0 22px 22px}
+details.refs li{font-size:13.5px;line-height:1.55;color:var(--apoio);margin:0;padding:7px 0;border-top:1px solid var(--claro);overflow-wrap:anywhere}
+.bases-fecho{margin-top:22px;font-size:15px;color:var(--apoio)}
+.na-lit{font-size:14.5px;line-height:1.6;color:var(--apoio);border-left:3px solid var(--pastel-azul);padding:2px 0 2px 16px;margin:-6px 0 26px}
+.na-lit .rot{display:block;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--azul);font-weight:600;margin-bottom:2px}
+.na-lit a{white-space:nowrap}
+@media (max-width:640px){
+  .bases-duas,.bases-grade{grid-template-columns:1fr;gap:14px}
+  .bases-bloco{font-size:20px;margin-top:38px}
+  .base{padding:18px 18px 16px}
+  details.refs summary{padding:14px 18px}
+  details.refs ul{padding:0 18px 18px}
+  .refs-nota{padding:0 18px}
+}
 </style>
 <!-- Meta Pixel -->
 <script>
@@ -417,7 +456,9 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
     <nav class="indice" aria-label="Conteúdo desta página">
       <p class="indice-titulo">Nesta página</p>
       <ol>
+        <li><a href="#aula-completa">Aula completa para assistir agora</a></li>
         <li><a href="#outras">A Virtologia diante de outras linhas</a></li>
+        <li><a href="#bases">Em que a Virtologia se apoia</a></li>
         <li><a href="#virtude">O que é uma virtude</a></li>
         <li><a href="#funcional">Funcionar de maneira saudável</a></li>
         <li><a href="#adoece">O que adoece uma pessoa</a></li>
@@ -437,6 +478,17 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
         <li><a href="#continuar">Para continuar</a></li>
       </ol>
     </nav>
+  </div>
+</section>
+
+<section id="aula-completa">
+  <div class="wrap">
+    <p class="kicker">Aula completa · Virtologia · A Lei do Fluxo</p>
+    <h2>Como a neuroplasticidade de virtudes muda fisicamente o cérebro e estrutura a saúde mental</h2>
+    <p class="lead">A fórmula PRF = (I × E) × FA × PO × PS × LV mostra como cada pessoa enxerga o que acontece e como reage. Com ela dá para descobrir o que está travado na pessoa e como tratar aquilo.</p>
+    <p>Nesta aula tirada da Formação em Virtologia, uma entre mais de 60, o Dr. Eduardo Casarotto apresenta a base do método: o que constrói o jeito de uma pessoa enxergar e reagir, e por que <strong>mudar isso não é questão de entender, e sim de mudar a estrutura do cérebro</strong>. E, principalmente, qual estrutura precisa ser construída.</p>
+    <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/T9WzaKo6gmc?rel=0" title="Aula aberta 1 do Instituto Virtudes" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+    <div class="convite-vivo" data-trilha="virtologia" data-pagina="virtologia"></div>
   </div>
 </section>
 
@@ -465,7 +517,254 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
       </div>
     </div>
 
+    <p>E cada mecanismo que ela usa tem fonte. <a href="#bases">Veja em que a Virtologia se apoia</a>, autor por autor.</p>
+
     <p>Se quiser ver a comparação completa, a Virtologia foi julgada pelas mesmas seis perguntas que um manual internacional usa para julgar as dezoito maiores teorias da personalidade. <a href="../teorias/">Clique aqui</a>.</p>
+  </div>
+</section>
+
+<section id="bases">
+  <div class="wrap">
+    <p class="kicker">Base científica</p>
+    <h2>Em que a Virtologia se apoia</h2>
+
+    <p class="lead">A Virtologia propõe uma arquitetura própria. Mas cada mecanismo que ela usa foi confrontado com o que a ciência já estabeleceu, e o livro <em>Fundamentos da Virtologia</em> dá crédito a cada autor no ponto exato em que o usa.</p>
+
+    <p>A própria obra separa, logo na introdução, o que veio da tradição e o que é contribuição dela. Essa separação é mantida do começo ao fim, para que a Virtologia possa ser discutida ponto a ponto, e não em bloco.</p>
+
+    <div class="bases-duas">
+      <div>
+        <h3>O que vem da tradição</h3>
+        <ul>
+          <li>A plasticidade do cérebro que depende da experiência</li>
+          <li>A regra de Hebb</li>
+          <li>A cascata molecular que consolida a memória</li>
+          <li>A diferença entre memória declarativa e procedimental</li>
+          <li>O efeito da repetição espaçada e da recuperação sobre a memória</li>
+          <li>A integração entre emoção e decisão</li>
+          <li>A organização do cérebro em grandes redes</li>
+          <li>O desligamento do córtex pré-frontal sob estresse agudo</li>
+        </ul>
+      </div>
+      <div class="bd-v">
+        <h3>O que é da Virtologia</h3>
+        <ul>
+          <li>A articulação desses achados numa descrição única do funcionamento psíquico</li>
+          <li>Os dois sistemas neurofuncionais, do orgulho e do egoísmo</li>
+          <li>A leitura das virtudes como memórias procedimentais, cada uma com assinatura própria</li>
+          <li>As Faixas de Evolução neurológica</li>
+          <li>O mapa das necessidades</li>
+          <li>A Lei do Fluxo</li>
+          <li>Os protocolos que derivam de tudo isso</li>
+        </ul>
+      </div>
+    </div>
+
+    <p>Abaixo, cada tese da Virtologia aparece primeiro, nas palavras dela. Em seguida, quem já tinha chegado ao mesmo ponto, por outro caminho.</p>
+
+    <h3 class="bases-bloco">A virtude é uma estrutura física</h3>
+    <div class="bases-grade">
+      <article class="base">
+        <p class="base-v"><span class="rot">A Virtologia afirma</span>Virtude gravada é tecido cerebral novo, não força de vontade.</p>
+        <p class="base-c"><span class="rot">Quem também mostrou</span><strong>Eric Kandel</strong>, Nobel de Medicina em 2000, demonstrou que a memória de longo prazo exige a fabricação de proteínas novas, por uma via comandada pelo fator CREB, e cria e elimina conexões entre neurônios. A memória de curto prazo só muda a força de uma conexão que já existe. Há ainda um freio molecular, a CREB-2, e é a repetição que vence esse freio.</p>
+        <p class="base-r">Kandel, <em>Em busca da memória</em> (2006) · Kandel, <em>Science</em> (2001)</p>
+      </article>
+      <article class="base">
+        <p class="base-v"><span class="rot">A Virtologia afirma</span>O que se repete junto, se liga. Por isso a virtude se constrói por repetição, e não por uma única experiência forte.</p>
+        <p class="base-c"><span class="rot">Quem também mostrou</span><strong>Donald Hebb</strong> formulou, em 1949, o princípio de que, quando um neurônio participa repetidamente da ativação de outro, a conexão entre eles fica mais eficiente. Em 1973, <strong>Bliss e Lømo</strong> mostraram isso no hipocampo: a estimulação repetida fortalece a sinapse de forma duradoura, a chamada potenciação de longo prazo.</p>
+        <p class="base-r">Hebb, <em>The organization of behavior</em> (1949) · Bliss e Lømo, <em>The Journal of Physiology</em> (1973)</p>
+      </article>
+      <article class="base">
+        <p class="base-v"><span class="rot">A Virtologia afirma</span>Entender o próprio padrão não muda a reação, porque entender e executar ficam em memórias diferentes.</p>
+        <p class="base-c"><span class="rot">Quem também mostrou</span><strong>Larry Squire</strong> consolidou a distinção entre a memória declarativa, a dos fatos que a pessoa consegue pôr em palavras, e a não declarativa, a das habilidades e reações que acontecem sem passar pela consciência. São sistemas que dependem de estruturas diferentes do cérebro.</p>
+        <p class="base-r">Squire, <em>Memory and brain</em> (1987) · Squire, <em>Neurobiology of Learning and Memory</em> (2004)</p>
+      </article>
+      <article class="base">
+        <p class="base-v"><span class="rot">A Virtologia afirma</span>A virtude se instala fazendo, e não ouvindo falar dela.</p>
+        <p class="base-c"><span class="rot">Quem também mostrou</span><strong>Albert Bandura</strong> estabeleceu que a fonte mais forte da autoeficácia é a experiência de domínio, ter feito e dado certo, e não a persuasão verbal. Entre as grandes teorias da personalidade, o livro aponta Bandura como a que mais corrobora a Virtologia.</p>
+        <p class="base-r">Bandura, <em>Social foundations of thought and action</em> (1986)</p>
+      </article>
+      <article class="base">
+        <p class="base-v"><span class="rot">A Virtologia afirma</span>A emoção decide antes do argumento. Por isso a conduta não se corrige só com explicação dirigida ao raciocínio.</p>
+        <p class="base-c"><span class="rot">Quem também mostrou</span><strong>António Damásio</strong> acompanhou pacientes com lesão no córtex pré-frontal ventromedial: o raciocínio estava intacto, mas sem o sinal emocional eles decidiam mal, de forma persistente e contra o próprio interesse. Daí a hipótese do marcador somático. Com <strong>Bechara</strong> e colegas, mostrou pessoas escolhendo a opção vantajosa antes de saber explicar por quê.</p>
+        <p class="base-r">Damásio, <em>O erro de Descartes</em> (1994) · Bechara e colegas, <em>Science</em> (1997)</p>
+      </article>
+    </div>
+
+    <h3 class="bases-bloco">Como uma virtude se grava</h3>
+    <div class="bases-grade">
+      <article class="base">
+        <p class="base-v"><span class="rot">A Virtologia afirma</span>Uma virtude não se grava numa sessão. O protocolo distribui a repetição ao longo dos dias.</p>
+        <p class="base-c"><span class="rot">Quem também mostrou</span><strong>Hermann Ebbinghaus</strong> foi quem transformou memória em medida, em 1885: a retenção cai rápido nas primeiras horas e dias, e o mesmo tempo de treino, distribuído, retém muito mais do que concentrado. <strong>Karpicke e Roediger</strong> mostraram que, no longo prazo, pesa muito não fazer a primeira revisão cedo demais.</p>
+        <p class="base-r">Ebbinghaus, <em>Über das Gedächtnis</em> (1885) · Karpicke e Roediger (2007)</p>
+      </article>
+      <article class="base">
+        <p class="base-v"><span class="rot">A Virtologia afirma</span>Quem sabe o que deveria fazer e não faz não desaprendeu: perdeu o acesso sob pressão. Por isso o protocolo treina lembrar sem consultar.</p>
+        <p class="base-c"><span class="rot">Quem também mostrou</span><strong>Robert Bjork</strong> separa a força de armazenamento, que é estável, da força de recuperação, que é frágil e cai rápido, e chama de dificuldades desejáveis o esforço que torna a prática mais difícil agora e mais duradoura depois. <strong>Roediger e Karpicke</strong> mostraram que recuperar de memória grava mais do que reler.</p>
+        <p class="base-r">Bjork e Bjork (1992) · Roediger e Karpicke, <em>Psychological Science</em> (2006)</p>
+      </article>
+      <article class="base">
+        <p class="base-v"><span class="rot">A Virtologia afirma</span>Repetir no automático, sem atenção e sem sentido, não grava.</p>
+        <p class="base-c"><span class="rot">Quem também mostrou</span><strong>Craik e Lockhart</strong> descreveram a codificação profunda: a memória fica mais forte quando a informação é processada pelo sentido e ligada ao que a pessoa já sabe. <strong>Stanislas Dehaene</strong> reuniu o que o cérebro precisa para aprender em quatro pilares: atenção, engajamento ativo, retorno do erro e consolidação.</p>
+        <p class="base-r">Craik e Lockhart (1972) · Dehaene, <em>É assim que aprendemos</em> (2018)</p>
+      </article>
+      <article class="base">
+        <p class="base-v"><span class="rot">A Virtologia afirma</span>Sem emoção, a informação entra e não fica. A carga afetiva é uma das condições da inscrição.</p>
+        <p class="base-c"><span class="rot">Quem também mostrou</span><strong>James McGaugh</strong> estabeleceu que a ativação emocional modula a consolidação: experiências com carga afetiva são gravadas com prioridade, pela ação de neuromoduladores sobre a amígdala e as vias da memória. <strong>Immordino-Yang e Damásio</strong> tiraram a consequência para a educação: não existe aprendizagem significativa sem emoção.</p>
+        <p class="base-r">McGaugh, <em>Annual Review of Neuroscience</em> (2004) · Immordino-Yang e Damásio (2007)</p>
+      </article>
+      <article class="base">
+        <p class="base-v"><span class="rot">A Virtologia afirma</span>Virtude é um par gatilho-resposta, disponível sob pressão sem precisar de deliberação. Por isso o protocolo pede uma frase do tipo "se acontecer isso, eu faço aquilo".</p>
+        <p class="base-c"><span class="rot">Quem também mostrou</span><strong>Peter Gollwitzer</strong> demonstrou que planos formulados como "se acontecer X, eu farei Y" mudam a conduta muito mais do que a intenção genérica de fazer melhor. Uma metanálise com <strong>Sheeran</strong> confirmou o efeito numa grande variedade de comportamentos.</p>
+        <p class="base-r">Gollwitzer, <em>American Psychologist</em> (1999) · Gollwitzer e Sheeran (2006)</p>
+      </article>
+      <article class="base">
+        <p class="base-v"><span class="rot">A Virtologia afirma</span>Catorze dias instalam a prática, mas não automatizam uma conduta. A automaticidade vem com os ciclos seguintes.</p>
+        <p class="base-c"><span class="rot">Quem também mostrou</span><strong>Lally e colegas</strong> mediram a formação de hábitos na vida real: a mediana ficou em torno de 66 dias, variando de 18 a mais de 200, conforme a complexidade do comportamento. A ideia de que um hábito se forma em 21 dias não tem base.</p>
+        <p class="base-r">Lally e colegas, <em>European Journal of Social Psychology</em> (2010)</p>
+      </article>
+    </div>
+
+    <h3 class="bases-bloco">O apagão e as redes do cérebro</h3>
+    <div class="bases-grade">
+      <article class="base">
+        <p class="base-v"><span class="rot">A Virtologia afirma</span>No apagão, a pessoa não perde uma luta de vontade. O córtex que avalia e freia sai do comando, e o automatismo já gravado assume.</p>
+        <p class="base-c"><span class="rot">Quem também mostrou</span><strong>Amy Arnsten</strong>, de Yale, descreveu como, sob estresse incontrolável, noradrenalina e dopamina em excesso desconectam o córtex pré-frontal em segundos, enquanto fortalecem as respostas da amígdala e os hábitos do estriado. <strong>Robert Sapolsky</strong> mostrou o peso do estresse crônico sobre o corpo e o cérebro.</p>
+        <p class="base-r">Arnsten, <em>Nature Reviews Neuroscience</em> (2009) · Sapolsky, <em>Por que as zebras não têm úlceras</em> (1994)</p>
+      </article>
+      <article class="base">
+        <p class="base-v"><span class="rot">A Virtologia afirma</span>Cada virtude tem uma assinatura: um arranjo próprio entre as grandes redes do cérebro.</p>
+        <p class="base-c"><span class="rot">Quem também mostrou</span><strong>Marcus Raichle</strong> e colegas descreveram, em 2001, a rede de modo padrão. <strong>Vinod Menon</strong> propôs que três grandes redes estão no centro da cognição e da psicopatologia, a de modo padrão, a executiva central e a de saliência, e mostrou, com <strong>Sridharan e Levitin</strong>, que a ínsula anterior direita funciona como o interruptor entre elas.</p>
+        <p class="base-r">Raichle e colegas, <em>PNAS</em> (2001) · Sridharan, Levitin e Menon, <em>PNAS</em> (2008) · Menon (2011)</p>
+      </article>
+    </div>
+
+    <h3 class="bases-bloco">Orgulho e egoísmo têm circuito</h3>
+    <div class="bases-grade">
+      <article class="base">
+        <p class="base-v"><span class="rot">A Virtologia afirma</span>O cérebro mede o tempo todo o lugar da pessoa em relação aos outros. É o Sistema Neurofuncional do Orgulho.</p>
+        <p class="base-c"><span class="rot">Quem também mostrou</span><strong>Zink e colegas</strong> mostraram o cérebro processando hierarquia social, com a amígdala recrutada quando a hierarquia fica instável. <strong>Izuma e colegas</strong> mostraram que ganhar boa reputação ativa o estriado pelas mesmas vias de ganhar dinheiro. E <strong>Eisenberger e colegas</strong>, que a exclusão social ativa parte das regiões da dor física.</p>
+        <p class="base-r">Zink e colegas, <em>Neuron</em> (2008) · Izuma e colegas, <em>Neuron</em> (2008) · Eisenberger e colegas, <em>Science</em> (2003)</p>
+      </article>
+      <article class="base">
+        <p class="base-v"><span class="rot">A Virtologia afirma</span>Toda decisão social é uma conta entre o que eu ganho e o que o outro ganha, e existe um freio que aumenta o peso do outro. É o Sistema Neurofuncional do Egoísmo.</p>
+        <p class="base-c"><span class="rot">Quem também mostrou</span><strong>Soutschek e colegas</strong> interromperam a junção temporoparietal com estimulação magnética, e o comportamento egoísta aumentou. Em 2025, <strong>Soutschek e Mattes</strong> reuniram 94 estudos de estimulação dessa região, com 4.073 participantes: ela sustenta os comportamentos que exigem separar a própria perspectiva da do outro.</p>
+        <p class="base-r">Soutschek e colegas, <em>Science Advances</em> (2016) · Soutschek e Mattes, <em>Brain Stimulation</em> (2025)</p>
+      </article>
+      <article class="base">
+        <p class="base-v"><span class="rot">A Virtologia afirma</span>Ficar menos egoísta não é conquista moral, é o cérebro se desenvolvendo: o bem feito ao outro passa a contar como recompensa.</p>
+        <p class="base-c"><span class="rot">Quem também mostrou</span>O neurocientista brasileiro <strong>Jorge Moll</strong> e colegas mostraram que doar ativa os circuitos de recompensa do cérebro. <strong>Harbaugh, Mayr e Burghart</strong> mostraram que essa ativação é maior quando a doação é voluntária, e não imposta.</p>
+        <p class="base-r">Moll e colegas, <em>PNAS</em> (2006) · Harbaugh, Mayr e Burghart, <em>Science</em> (2007)</p>
+      </article>
+    </div>
+
+    <h3 class="bases-bloco">Personalidade, história e transtorno</h3>
+    <div class="bases-grade">
+      <article class="base">
+        <p class="base-v"><span class="rot">A Virtologia afirma</span>Parte da personalidade é herdada, o temperamento, e parte se constrói ao longo da vida. Distinguir o fixo do mutável é o que impede a terapia de apagar quem a pessoa é.</p>
+        <p class="base-c"><span class="rot">Quem também mostrou</span><strong>Cloninger e colegas</strong> propuseram um modelo psicobiológico que separa temperamento, mais herdado e estável, de caráter, que amadurece com a experiência. <strong>Kagan, Reznick e Snidman</strong> mostraram que a timidez infantil tem base biológica, com uma amígdala mais reativa ao novo.</p>
+        <p class="base-r">Cloninger e colegas, <em>Archives of General Psychiatry</em> (1993) · Kagan e colegas, <em>Science</em> (1988)</p>
+      </article>
+      <article class="base">
+        <p class="base-v"><span class="rot">A Virtologia afirma</span>O que não foi vivido na fase certa não virou estrutura. Não é ferida, é construção que faltou, e ela pode ser feita depois.</p>
+        <p class="base-c"><span class="rot">Quem também mostrou</span><strong>Kandel</strong> descreve os períodos críticos: certas experiências precisam acontecer dentro de uma janela para o comportamento se desenvolver, e alguns desses períodos podem ser prolongados e até reabertos na vida adulta. <strong>René Spitz</strong> mostrou o que a falta de vínculo produz em bebês de orfanato, e <strong>John Bowlby</strong> estabeleceu o vínculo como necessidade primária.</p>
+        <p class="base-r">Kandel e colegas, <em>Princípios de neurociências</em> · Spitz (1945) · Bowlby, <em>Apego e perda</em> (1969)</p>
+      </article>
+      <article class="base">
+        <p class="base-v"><span class="rot">A Virtologia afirma</span>O passado não se apaga, e não se troca o fato por uma versão inventada. O que se transforma é a resposta ao que aconteceu.</p>
+        <p class="base-c"><span class="rot">Quem também mostrou</span><strong>Nader, Schafe e LeDoux</strong> mostraram que uma memória já consolidada, quando é reativada, fica instável por um tempo e precisa ser fixada de novo, e que nessa janela ela pode ser modificada. <strong>Kandel</strong> descreve a extinção do mesmo jeito: não se apaga a memória antiga, aprende-se algo novo sobre ela.</p>
+        <p class="base-r">Nader, Schafe e LeDoux, <em>Nature</em> (2000) · Kandel, <em>Em busca da memória</em> (2006)</p>
+      </article>
+      <article class="base">
+        <p class="base-v"><span class="rot">A Virtologia afirma</span>Transtorno de personalidade é defesa que endureceu, um excesso de couraça, e não uma doença separada da personalidade comum.</p>
+        <p class="base-c"><span class="rot">Quem também mostrou</span><strong>Freud</strong> e <strong>Anna Freud</strong> descreveram os mecanismos de defesa, e <strong>Wilhelm Reich</strong>, a couraça de caráter. A <strong>CID-11</strong>, da Organização Mundial da Saúde, em vigor desde 2022, abandonou as caixas fechadas e passou a ler os traços disfuncionais como extremos da personalidade comum. A Virtologia concorda com essa lógica, mas não usa os cinco domínios que a CID-11 tirou do Big Five.</p>
+        <p class="base-r">A. Freud (1936) · Reich, <em>Análise do caráter</em> (1933) · OMS, CID-11 (2019) · Widiger e Simonsen (2005)</p>
+      </article>
+    </div>
+
+    <h3 class="bases-bloco">Necessidades, desenvolvimento e sociedade</h3>
+    <div class="bases-grade">
+      <article class="base">
+        <p class="base-v"><span class="rot">A Virtologia afirma</span>As necessidades se organizam em grupos, da sobrevivência à transcendência, e não são abandonadas quando a pessoa sobe de faixa: mudam de intensidade.</p>
+        <p class="base-c"><span class="rot">Quem também mostrou</span><strong>Abraham Maslow</strong> propôs que as necessidades humanas se organizam por níveis, e <strong>Viktor Frankl</strong> mostrou o peso do sentido na vida humana. A Virtologia herda a intuição dos níveis e corrige a escada: nenhum degrau é deixado para trás.</p>
+        <p class="base-r">Maslow, <em>Psychological Review</em> (1943) · Frankl, <em>Em busca de sentido</em> (1946)</p>
+      </article>
+      <article class="base">
+        <p class="base-v"><span class="rot">A Virtologia afirma</span>As Faixas de Evolução neurológica são estruturais, não cronológicas: um adulto pode operar numa faixa primitiva, e a subida vem do trabalho, não da idade.</p>
+        <p class="base-c"><span class="rot">Quem também mostrou</span><strong>Piaget</strong>, <strong>Kohlberg</strong> e <strong>Erikson</strong> também leram o desenvolvimento como progressão por patamares, e Kohlberg, junto com a neurociência da moral, liga a evolução moral a um controle maior do córtex pré-frontal sobre o sistema límbico. A diferença é que os estágios clássicos andam presos à idade.</p>
+        <p class="base-r">Piaget, <em>Seis estudos de psicologia</em> (1964) · Kohlberg (1981) · Erikson, <em>Infância e sociedade</em> (1950)</p>
+      </article>
+      <article class="base">
+        <p class="base-v"><span class="rot">A Virtologia afirma</span>Consciente e inconsciente não são lugares da mente, são estados do mesmo ego. O aparelho psíquico é um campo de forças cujo comando se desloca.</p>
+        <p class="base-c"><span class="rot">Quem também mostrou</span>Da segunda tópica de <strong>Freud</strong>, id, eu e supereu, a Virtologia conserva a intuição estrutural. Da psicologia analítica de <strong>Jung</strong>, conserva a persona, a sombra, o complexo e o inconsciente coletivo. E reorganiza tudo sob uma tese própria.</p>
+        <p class="base-r">Freud, <em>O eu e o id</em> (1923) · Jung, <em>O eu e o inconsciente</em> (1928)</p>
+      </article>
+      <article class="base">
+        <p class="base-v"><span class="rot">A Virtologia afirma</span>A sociedade avança quando o autocontrole deixa de vir da repressão e passa a vir de uma estrutura interna que não precisa ser vigiada.</p>
+        <p class="base-c"><span class="rot">Quem também mostrou</span><strong>Norbert Elias</strong> mostrou que, ao longo dos séculos, as sociedades passaram a exigir cada vez mais autocontrole dos indivíduos, que foram internalizando as regras. A Virtologia reconhece esse processo e propõe o passo seguinte.</p>
+        <p class="base-r">Elias, <em>O processo civilizador</em> (1939)</p>
+      </article>
+    </div>
+
+    <details class="refs">
+      <summary>Referências completas desta página</summary>
+      <p class="refs-nota">Todas retiradas da bibliografia do livro <em>Fundamentos da Virtologia</em>, 3ª edição (2026), que reúne as obras citadas capítulo por capítulo. Esta é uma seleção.</p>
+      <ul>
+        <li>ARNSTEN, A. F. T. Stress signalling pathways that impair prefrontal cortex structure and function. <em>Nature Reviews Neuroscience</em>, v. 10, n. 6, p. 410-422, 2009.</li>
+        <li>BANDURA, A. <em>Social foundations of thought and action</em>: a social cognitive theory. Englewood Cliffs: Prentice-Hall, 1986.</li>
+        <li>BECHARA, A.; DAMASIO, H.; TRANEL, D.; DAMASIO, A. R. Deciding advantageously before knowing the advantageous strategy. <em>Science</em>, v. 275, p. 1293-1295, 1997.</li>
+        <li>BJORK, R. A.; BJORK, E. L. A new theory of disuse and an old theory of stimulus fluctuation. In: HEALY, A. F.; KOSSLYN, S. M.; SHIFFRIN, R. M. (ed.). <em>From learning processes to cognitive processes</em>: essays in honor of William K. Estes. Hillsdale: Erlbaum, 1992. v. 2, p. 35-67.</li>
+        <li>BLISS, T. V. P.; LØMO, T. Long-lasting potentiation of synaptic transmission in the dentate area of the anaesthetized rabbit following stimulation of the perforant path. <em>The Journal of Physiology</em>, v. 232, n. 2, p. 331-356, 1973.</li>
+        <li>BOWLBY, J. <em>Apego e perda</em>, v. 1: Apego. São Paulo: Martins Fontes, 2002 [ed. orig. 1969].</li>
+        <li>BREWER, J. A.; WORHUNSKY, P. D.; GRAY, J. R.; TANG, Y.-Y.; WEBER, J.; KOBER, H. Meditation experience is associated with differences in default mode network activity and connectivity. <em>Proceedings of the National Academy of Sciences</em>, v. 108, n. 50, p. 20254-20259, 2011.</li>
+        <li>CLONINGER, C. R.; SVRAKIC, D. M.; PRZYBECK, T. R. A psychobiological model of temperament and character. <em>Archives of General Psychiatry</em>, v. 50, n. 12, p. 975-990, 1993.</li>
+        <li>CRAIK, F. I. M.; LOCKHART, R. S. Levels of processing: a framework for memory research. <em>Journal of Verbal Learning and Verbal Behavior</em>, v. 11, n. 6, p. 671-684, 1972.</li>
+        <li>DAMÁSIO, A. R. <em>O erro de Descartes</em>: emoção, razão e o cérebro humano. São Paulo: Companhia das Letras, 1996 [ed. orig. 1994].</li>
+        <li>DEHAENE, S. <em>É assim que aprendemos</em>: por que o cérebro funciona melhor do que qualquer máquina (ainda...). São Paulo: Contexto, 2022 [ed. orig. 2018].</li>
+        <li>EBBINGHAUS, H. <em>Über das Gedächtnis</em>: Untersuchungen zur experimentellen Psychologie. Leipzig: Duncker &amp; Humblot, 1885.</li>
+        <li>EISENBERGER, N. I.; LIEBERMAN, M. D.; WILLIAMS, K. D. Does rejection hurt? An fMRI study of social exclusion. <em>Science</em>, v. 302, n. 5643, p. 290-292, 2003.</li>
+        <li>ELIAS, N. <em>O processo civilizador</em>. 2 v. Rio de Janeiro: Zahar, 1994 [ed. orig. 1939].</li>
+        <li>ERIKSON, E. H. <em>Infância e sociedade</em>. Rio de Janeiro: Zahar, 1976 [ed. orig. 1950].</li>
+        <li>FRANKL, V. E. <em>Em busca de sentido</em>: um psicólogo no campo de concentração. São Leopoldo: Sinodal; Petrópolis: Vozes, 2008 [ed. orig. 1946].</li>
+        <li>FREUD, A. <em>O ego e os mecanismos de defesa</em>. Porto Alegre: Artmed, 2006 [ed. orig. 1936].</li>
+        <li>FREUD, S. O eu e o id (1923). In: <em>Obras completas</em>, v. 16. São Paulo: Companhia das Letras, 2011.</li>
+        <li>GOLLWITZER, P. M. Implementation intentions: strong effects of simple plans. <em>American Psychologist</em>, v. 54, n. 7, p. 493-503, 1999.</li>
+        <li>GOLLWITZER, P. M.; SHEERAN, P. Implementation intentions and goal achievement: a meta-analysis of effects and processes. <em>Advances in Experimental Social Psychology</em>, v. 38, p. 69-119, 2006.</li>
+        <li>HARBAUGH, W. T.; MAYR, U.; BURGHART, D. R. Neural responses to taxation and voluntary giving reveal motives for charitable donations. <em>Science</em>, v. 316, n. 5831, p. 1622-1625, 2007.</li>
+        <li>HEBB, D. O. <em>The organization of behavior</em>. New York: Wiley, 1949.</li>
+        <li>IMMORDINO-YANG, M. H.; DAMASIO, A. R. We feel, therefore we learn: the relevance of affective and social neuroscience to education. <em>Mind, Brain, and Education</em>, v. 1, n. 1, p. 3-10, 2007.</li>
+        <li>IZUMA, K.; SAITO, D. N.; SADATO, N. Processing of social and monetary rewards in the human striatum. <em>Neuron</em>, v. 58, n. 2, p. 284-294, 2008.</li>
+        <li>JUNG, C. G. <em>O eu e o inconsciente</em>. Petrópolis: Vozes, 2008 [ed. orig. 1928].</li>
+        <li>KAGAN, J.; REZNICK, J. S.; SNIDMAN, N. Biological bases of childhood shyness. <em>Science</em>, v. 240, n. 4849, p. 167-171, 1988.</li>
+        <li>KANDEL, E. R. <em>Em busca da memória</em>: o nascimento de uma nova ciência da mente. São Paulo: Companhia das Letras, 2009 [ed. orig. 2006].</li>
+        <li>KANDEL, E. R. The molecular biology of memory storage: a dialogue between genes and synapses. <em>Science</em>, v. 294, p. 1030-1038, 2001.</li>
+        <li>KANDEL, E. R.; SCHWARTZ, J. H.; JESSELL, T. M.; SIEGELBAUM, S. A.; HUDSPETH, A. J. <em>Princípios de neurociências</em>. 5. ed. Porto Alegre: AMGH, 2014.</li>
+        <li>KARPICKE, J. D.; ROEDIGER, H. L. Expanding retrieval practice promotes short-term retention, but equally spaced retrieval enhances long-term retention. <em>Journal of Experimental Psychology: Learning, Memory, and Cognition</em>, v. 33, n. 4, p. 704-719, 2007.</li>
+        <li>KOHLBERG, L. <em>The philosophy of moral development</em>. São Francisco: Harper &amp; Row, 1981.</li>
+        <li>LALLY, P. et al. How are habits formed: modelling habit formation in the real world. <em>European Journal of Social Psychology</em>, v. 40, n. 6, p. 998-1009, 2010.</li>
+        <li>MASLOW, A. H. A theory of human motivation. <em>Psychological Review</em>, v. 50, n. 4, p. 370-396, 1943.</li>
+        <li>MCGAUGH, J. L. The amygdala modulates the consolidation of memories of emotionally arousing experiences. <em>Annual Review of Neuroscience</em>, v. 27, p. 1-28, 2004.</li>
+        <li>MENON, V. Large-scale brain networks and psychopathology: a unifying triple network model. <em>Trends in Cognitive Sciences</em>, v. 15, n. 10, p. 483-506, 2011.</li>
+        <li>MOLL, J.; KRUEGER, F.; ZAHN, R.; PARDINI, M.; OLIVEIRA-SOUZA, R. de; GRAFMAN, J. Human fronto-mesolimbic networks guide decisions about charitable donation. <em>Proceedings of the National Academy of Sciences</em>, v. 103, n. 42, p. 15623-15628, 2006.</li>
+        <li>NADER, K.; SCHAFE, G. E.; LEDOUX, J. E. Fear memories require protein synthesis in the amygdala for reconsolidation after retrieval. <em>Nature</em>, v. 406, n. 6797, p. 722-726, 2000.</li>
+        <li>PIAGET, J. <em>Seis estudos de psicologia</em>. 24. ed. Rio de Janeiro: Forense Universitária, 1999 [ed. orig. 1964].</li>
+        <li>RAICHLE, M. E.; MACLEOD, A. M.; SNYDER, A. Z.; POWERS, W. J.; GUSNARD, D. A.; SHULMAN, G. L. A default mode of brain function. <em>Proceedings of the National Academy of Sciences</em>, v. 98, n. 2, p. 676-682, 2001.</li>
+        <li>REICH, W. <em>Análise do caráter</em>. São Paulo: Martins Fontes, 1998 [ed. orig. 1933].</li>
+        <li>ROEDIGER, H. L.; KARPICKE, J. D. Test-enhanced learning: taking memory tests improves long-term retention. <em>Psychological Science</em>, v. 17, n. 3, p. 249-255, 2006.</li>
+        <li>SAPOLSKY, R. M. <em>Por que as zebras não têm úlceras</em>. São Paulo: Francis, 2007 [ed. orig. 1994].</li>
+        <li>SOUTSCHEK, A.; MATTES, R. S. Causal role of temporo-parietal junction for social behavior: a meta-analysis. <em>Brain Stimulation</em>, v. 18, n. 6, p. 2028-2039, 2025.</li>
+        <li>SOUTSCHEK, A.; RUFF, C. C.; STROMBACH, T.; KALENSCHER, T.; TOBLER, P. N. Brain stimulation reveals crucial role of overcoming self-centeredness in self-control. <em>Science Advances</em>, v. 2, n. 10, art. e1600992, 2016.</li>
+        <li>SPITZ, R. A. Hospitalism: an inquiry into the genesis of psychiatric conditions in early childhood. <em>The Psychoanalytic Study of the Child</em>, v. 1, p. 53-74, 1945.</li>
+        <li>SQUIRE, L. R. <em>Memory and brain</em>. New York: Oxford University Press, 1987.</li>
+        <li>SQUIRE, L. R. Memory systems of the brain: a brief history and current perspective. <em>Neurobiology of Learning and Memory</em>, v. 82, n. 3, p. 171-177, 2004.</li>
+        <li>SRIDHARAN, D.; LEVITIN, D. J.; MENON, V. A critical role for the right fronto-insular cortex in switching between central-executive and default-mode networks. <em>PNAS</em>, v. 105, n. 34, p. 12569-12574, 2008.</li>
+        <li>WIDIGER, T. A.; SIMONSEN, E. Alternative dimensional models of personality disorder: finding a common ground. <em>Journal of Personality Disorders</em>, v. 19, n. 2, p. 110-130, 2005.</li>
+        <li>WORLD HEALTH ORGANIZATION. <em>International Classification of Diseases for Mortality and Morbidity Statistics (ICD-11)</em>. Genebra: OMS, 2019.</li>
+        <li>ZINK, C. F.; TONG, Y.; CHEN, Q.; BASSETT, D. S.; STEIN, J. L.; MEYER-LINDENBERG, A. Know your place: neural processing of social hierarchy in humans. <em>Neuron</em>, v. 58, n. 2, p. 273-283, 2008.</li>
+      </ul>
+    </details>
+
+    <p class="bases-fecho">A bibliografia completa, capítulo por capítulo, está no livro <a href="../livros/"><em>Fundamentos da Virtologia</em></a>.</p>
   </div>
 </section>
 
@@ -478,6 +777,8 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
     <p>Esqueça isso. <strong>Na Virtologia, virtude é um conjunto de redes neurais trabalhando numa configuração específica.</strong> É isso que faz o cérebro processar a mesma situação de outro jeito.</p>
 
     <p>E esse conjunto não nasce pronto. Ele se constrói com <strong>exercícios de neuroplasticidade</strong>: um treino repetido, ao longo de muitos dias, que grava aquilo como memória de longo prazo.</p>
+
+    <p class="na-lit"><b class="rot">Na literatura</b>Que a memória de longo prazo depende da fabricação de proteínas novas e de conexões novas entre neurônios foi demonstrado por Eric Kandel, Nobel de Medicina em 2000. <a href="#bases">Ver as bases</a></p>
 
     <div class="cards3">
       <div>
@@ -507,6 +808,8 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
     <p>Um paciente pode entender perfeitamente de onde vem a própria ansiedade e continuar ansioso. Pode saber que precisa perdoar e continuar com o ódio fervendo. Pode ter feito anos de terapia, explicar a própria história com precisão, e reagir na segunda-feira exatamente como reagia antes.</p>
 
     <p>Isso acontece porque <strong>entender e funcionar são coisas diferentes, e ficam em lugares diferentes do cérebro.</strong></p>
+
+    <p class="na-lit"><b class="rot">Na literatura</b>A distinção entre a memória do que se sabe dizer, a declarativa, e a do que se executa sem pensar foi consolidada por Larry Squire. E António Damásio descreveu um paciente que, depois de uma lesão no lobo frontal, listava todas as opções certas e ainda assim não conseguia decidir.</p>
 
     <p class="destaque">Quem se controla ainda sente. Quem funciona de maneira saudável já nem sente.</p>
 
@@ -562,6 +865,8 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
     <p>Repare no que isso muda. Não são muitos egoísmos nem muitos orgulhos, cada um com uma explicação diferente. <strong>São dois sistemas, e cada comportamento é uma expressão deles.</strong></p>
 
     <p class="apoio">A Virtologia é explícita sobre o nível dessa proposta: não se afirma que existe uma rede cerebral nova e exclusiva. Afirma-se que essas funções, já descritas separadamente pela neurociência, formam um conjunto que funciona junto. E o artigo diz o que derrubaria a tese: se os comportamentos egoístas não convergissem para o mesmo núcleo de decisão, o SNE estaria refutado.</p>
+
+    <p class="na-lit"><b class="rot">Na literatura</b>Cada peça já foi publicada. O cérebro processando hierarquia social (Zink e colegas, 2008). A boa reputação ativando o estriado como dinheiro (Izuma e colegas, 2008). A rejeição ativando regiões da dor física (Eisenberger e colegas, 2003). E a junção temporoparietal como freio do egoísmo, testada com estimulação magnética (Soutschek e colegas, 2016). O que é da Virtologia é ler essas peças como dois sistemas. <a href="#bases">Ver as bases</a></p>
 
     <p>Sobre a timidez, vale parar um segundo. <strong>Aquele tímido que parece o mais inofensivo de todos costuma ser o mais preso ao orgulho.</strong> Porque de onde vem a vergonha de falar em público? De ser insuportável a ideia de ser criticado. Isso não é humildade. É o contrário dela.</p>
 
@@ -740,6 +1045,7 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
       </table>
     </div>
     <p>E o que impede o apagão? <strong>Não é a ausência do impulso. É a capacidade, só humana, de reprogramar esses sistemas por meio de ideias.</strong> A Humildade reparametriza o SNO; a Abnegação reparametriza o SNE. A virtude não é um freio aparafusado por cima do sistema: é a retêmpera do próprio motor.</p>
+    <p class="na-lit"><b class="rot">Na literatura</b>A química do apagão foi descrita por Amy Arnsten, de Yale: sob estresse incontrolável, noradrenalina e dopamina em excesso tiram o córtex pré-frontal do ar em segundos e fortalecem a amígdala e os hábitos do estriado.</p>
     <p class="esq-fonte">Quadro do <em>Fundamentos da Virtologia</em>, p. 160. Os circuitos se sobrepõem; a atribuição é de ênfase funcional, não de separação anatômica.</p>
 
     <h3 class="sub-cerebro">Como uma virtude vira cérebro</h3>
@@ -755,6 +1061,8 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
       <li><strong>Dendrítico</strong>As espinhas que recebem as conexões crescem, mudam de forma e se multiplicam.</li>
       <li><strong>Sináptico</strong>Nascem sinapses novas, e as que já existem ficam mais fortes ou mais fracas.</li>
     </ol>
+
+    <p class="na-lit"><b class="rot">Na literatura</b>Neurônios que disparam juntos se conectam (Hebb, 1949), a estimulação repetida fortalece a sinapse de forma duradoura (Bliss e Lømo, 1973), e a memória de longo prazo exige síntese de proteínas novas (Kandel). A emoção dá prioridade ao que vai ser consolidado (McGaugh, 2004).</p>
 
     <p>O protocolo de cada virtude foi montado para mobilizar essa cascata inteira. <strong>Cada passo tem uma razão no cérebro:</strong></p>
 
@@ -773,6 +1081,7 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
         </tbody>
       </table>
     </div>
+    <p class="na-lit"><b class="rot">Na literatura</b>Distribuir a repetição no tempo (Ebbinghaus, 1885), lembrar sem consultar (Roediger e Karpicke, 2006), formular o par "se acontecer isso, eu faço aquilo" (Gollwitzer, 1999) e trabalhar com atenção, engajamento, retorno do erro e consolidação (Dehaene) são achados da ciência da aprendizagem. O protocolo é a forma como a Virtologia os põe em uso.</p>
   </div>
 </section>
 
@@ -795,6 +1104,8 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
     <p>Freud e Anna Freud descreveram os mecanismos de defesa há quase cem anos, e a psicologia trabalha com eles desde então. <strong>O que a Virtologia acrescenta é dizer de onde a defesa tira a energia dela</strong>: do sistema antigo, que só sabe se defender por orgulho e por egoísmo.</p>
 
     <p>A defesa se repete a vida inteira, endurece, e vira uma casca permanente. A Virtologia chama isso de couraça.</p>
+
+    <p class="na-lit"><b class="rot">Na literatura</b>A expressão couraça de caráter vem de Wilhelm Reich (1933). E a CID-11, da Organização Mundial da Saúde, em vigor desde 2022, também deixou de tratar os transtornos de personalidade como caixas fechadas e passou a lê-los como extremos da personalidade comum.</p>
 
     <p class="destaque">Vista de fora, essa casca é o que os manuais chamam de transtorno de personalidade.</p>
 
@@ -1260,6 +1571,8 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
 
       <p>Isso não é coincidência. Existe uma rede no cérebro que liga toda vez que a pessoa pensa em si mesma. Quando alguém treina humildade e compaixão de verdade, com exercícios repetidos, os estudos mostram essa rede ficando menos ativa. <strong>Menos cérebro ocupado com você mesmo, mais cérebro sobrando para o mundo.</strong></p>
 
+      <p class="na-lit"><b class="rot">Na literatura</b>Que doar ativa os circuitos de recompensa foi mostrado pelo brasileiro Jorge Moll e colegas (2006), e que essa ativação é maior quando a doação é voluntária, por Harbaugh, Mayr e Burghart (2007). A rede que liga quando a pessoa pensa em si é a rede de modo padrão, e a atividade menor dela em praticantes experientes de meditação, inclusive de compaixão, foi descrita por Brewer e colegas (2011). São estudos com amostras pequenas, e o livro registra essa ressalva.</p>
+
       <p class="destaque">Ficar menos egoísta não é uma conquista moral. É o cérebro se desenvolvendo.</p>
 
       <p>E aqui está o ponto que muda tudo. Se o que adoece a pessoa é o orgulho e o egoísmo, <strong>então tratar alguém e tornar essa pessoa melhor para os outros é exatamente o mesmo trabalho.</strong></p>
@@ -1313,7 +1626,7 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
 
     <p>Ela não se apresenta como algo que nasceu do zero. <strong>Todas as outras escolas ajudaram, e muito.</strong> O que a Virtologia fez foi entender algumas peças que faltavam no meio, e juntar abordagens que não conversavam entre si.</p>
 
-    <p>As partes do cérebro envolvidas e o que cada uma faz já são conhecidas pela neurociência. O que a Virtologia acrescenta é juntar essas funções em dois sistemas, o do orgulho e o do egoísmo. <strong>Essa parte é dela, e foi escrita de um jeito que pode ser testado e conferido em exame de imagem.</strong></p>
+    <p>As partes do cérebro envolvidas e o que cada uma faz já são conhecidas pela neurociência, e as fontes estão reunidas em <a href="#bases">Em que a Virtologia se apoia</a>. O que a Virtologia acrescenta é juntar essas funções em dois sistemas, o do orgulho e o do egoísmo. <strong>Essa parte é dela, e foi escrita de um jeito que pode ser testado e conferido em exame de imagem.</strong></p>
 
     <p>Ela também passou pelas mesmas seis perguntas que um manual internacional usa para julgar as dezoito maiores teorias da personalidade, de Freud até hoje. <strong>O resultado está publicado inteiro, incluindo a pergunta em que a Virtologia sai perdendo:</strong></p>
 
@@ -1427,6 +1740,9 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
 <script src="../js/origem.js"></script>
 <script src="../js/depoimentos-dados.js"></script>
 <script src="../js/depoimentos-carrossel.js"></script>
+<script src="../aulas/config.js"></script>
+<script src="../aulas/inscricao.js"></script>
+<script src="../aulas/convite.js"></script>
 <script src="../js/site.js"></script>
 </body>
 </html>
