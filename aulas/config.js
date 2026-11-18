@@ -55,6 +55,13 @@ window.AULAS_CONFIG = {
       { valor: "conhecer_assunto",         rotulo: "Quero participar da aula e conhecer o assunto." },
       { valor: "formacao_mais_adiante",    rotulo: "Estou avaliando uma formação para mais adiante." },
       { valor: "formacao_em_breve",        rotulo: "Estou buscando uma formação para começar em breve." }
+    ],
+    /* Para quem respondeu "Sim" em "Você já é aluno(a)...?".
+       Estes valores também precisam estar na lista MOMENTOS da função inscricao-aula. */
+    momentoAluno: [
+      { valor: "aluno_aprofundar",         rotulo: "Quero participar da aula para revisar e aprofundar o tema." },
+      { valor: "aluno_aplicar_pratica",    rotulo: "Quero levar este tema para a minha prática profissional." },
+      { valor: "aluno_outros_cursos",      rotulo: "Também tenho interesse em outros cursos do Instituto, como as pós-graduações." }
     ]
   },
 

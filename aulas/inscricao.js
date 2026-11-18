@@ -113,6 +113,9 @@
     var podeEnviar = problemas.length === 0;
     var privacidade = url("privacidade/");
     var novaAba = op.grupo === "nova-aba";
+    var bonus = A.materiaisBonus !== false;
+    var PERGUNTA_MOMENTO = "Hoje, qual opção descreve melhor seu momento de interesse?";
+    var PERGUNTA_MOMENTO_ALUNO = "Como aluno(a), o que você busca nesta aula?";
 
     box.classList.add("iv-form");
     box.innerHTML =
@@ -144,10 +147,10 @@
 
         '<fieldset class="etapa" data-etapa="3" hidden>' +
           '<legend><span class="et-tit destaque-tit">Última pergunta para terminar sua inscrição</span></legend>' +
-          '<div class="grupo-op" role="radiogroup" aria-labelledby="q-mom"><p class="pergunta" id="q-mom">Hoje, qual opção descreve melhor seu momento de interesse?</p>' + radios("momento", CFG.opcoes.momento) + '<p class="erro" id="erro-momento"></p></div>' +
+          '<div class="grupo-op" role="radiogroup" aria-labelledby="q-mom"><p class="pergunta" id="q-mom">' + PERGUNTA_MOMENTO + '</p><div id="ops-momento" data-tipo="geral">' + radios("momento", CFG.opcoes.momento) + '</div><p class="erro" id="erro-momento"></p></div>' +
           '<label class="consent"><input type="checkbox" name="aceite_ofertas" id="f-ofertas"><span>Quero receber também convites para próximas aulas gratuitas e formações do Instituto Virtudes. (Opcional)</span></label>' +
           '<p class="uso-dados">Usaremos seus dados para a sua inscrição e para os avisos desta aula, conforme a <a href="' + esc(privacidade) + '" target="_blank" rel="noopener">Política de Privacidade</a>.</p>' +
-          '<p class="antes-btn">Ao clicar no botão abaixo, você será redirecionado para o grupo onde enviaremos o link do Zoom no dia da aula e os materiais bônus em PDF.</p>' +
+          '<p class="antes-btn">Ao clicar no botão abaixo, você será redirecionado para o grupo onde enviaremos o link do Zoom no dia da aula' + (bonus ? " e os materiais bônus em PDF" : "") + '.</p>' +
           '<p class="erro erro-envio" id="erro-envio" role="alert"></p>' +
           '<div class="acoes-form"><button type="button" class="btn-sec" data-voltar>Voltar</button><button type="submit" class="btn btn-final" id="btn-final">Finalizar inscrição e seguir para grupo da aula</button></div>' +
         '</fieldset>' +
@@ -155,7 +158,7 @@
       '</form>' +
       '<div class="sucesso" id="sucesso" hidden tabindex="-1"><h3>Inscrição concluída</h3>' +
         '<p>' + (novaAba ? "O grupo da aula foi aberto em outra aba. Se não abriu, toque no botão abaixo." : "Se o grupo não abriu sozinho, toque no botão abaixo.") +
-        ' É por lá que enviaremos o link do Zoom no dia da aula e os materiais bônus em PDF.</p>' +
+        ' É por lá que enviaremos o link do Zoom no dia da aula' + (bonus ? " e os materiais bônus em PDF" : "") + '.</p>' +
         '<p><a class="btn" id="link-grupo" href="#"' + (novaAba ? ' target="_blank" rel="noopener"' : "") + '>Abrir grupo da aula</a></p></div>';
 
     var form = $("#form-aula", box);
@@ -174,6 +177,18 @@
     function valor(nome) {
       var el = form.querySelector('[name="' + nome + '"]:checked') || form.querySelector('[name="' + nome + '"]:not([type=radio])');
       return el ? (el.type === "checkbox" ? el.checked : el.value) : "";
+    }
+    /* quem já é aluno(a) vê outras opções na última pergunta */
+    function desenharMomento() {
+      var aluno = valor("ja_aluno") === "sim" && CFG.opcoes.momentoAluno && CFG.opcoes.momentoAluno.length;
+      var caixa = $("#ops-momento", form), tipo = aluno ? "aluno" : "geral";
+      if (!caixa || caixa.getAttribute("data-tipo") === tipo) return;
+      var atual = valor("momento");
+      caixa.setAttribute("data-tipo", tipo);
+      caixa.innerHTML = radios("momento", aluno ? CFG.opcoes.momentoAluno : CFG.opcoes.momento);
+      $("#q-mom", form).textContent = aluno ? PERGUNTA_MOMENTO_ALUNO : PERGUNTA_MOMENTO;
+      if (atual) { var r = caixa.querySelector('[value="' + atual + '"]'); if (r) r.checked = true; }
+      erro("momento", "");
     }
     function validar(etapa) {
       var ok = true, primeiro = null;
@@ -203,6 +218,7 @@
     }
     function mostrar(n) {
       etapaAtual = n;
+      if (n === 3) desenharMomento();
       $$(".etapa", form).forEach(function (f) { f.hidden = Number(f.getAttribute("data-etapa")) !== n; });
       $("#progresso", box).textContent = "Etapa " + n + " de 3";
       $("#barra-prog", box).style.width = (n / 3 * 100) + "%";
@@ -226,6 +242,7 @@
       if (d.whatsapp) $("#f-tel").value = d.whatsapp;
       if (d.email) $("#f-email").value = d.email;
       ["area", "objetivo", "ja_aluno", "momento"].forEach(function (k) {
+        if (k === "momento") desenharMomento();
         if (!d[k]) return;
         var r = form.querySelector('[name="' + k + '"][value="' + d[k] + '"]'); if (r) r.checked = true;
       });
@@ -240,6 +257,7 @@
     form.addEventListener("input", function () { marcarInicio(); guardar(); });
     form.addEventListener("change", function (e) {
       if (e.target && e.target.type === "radio") erro(e.target.name, "");  /* escolheu: some o aviso */
+      if (e.target && e.target.name === "ja_aluno") desenharMomento();
       guardar();
     });
     form.addEventListener("focusin", marcarInicio);
@@ -318,8 +336,21 @@
       btn.disabled = true; btn.setAttribute("aria-busy", "true"); btn.textContent = "Finalizando sua inscrição...";
       $("#status-envio", box).textContent = "Finalizando sua inscrição...";
 
-      fetch(CFG.endpoint, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(corpo) })
-        .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok, d: j }; }); })
+      function postar(c) {
+        return fetch(CFG.endpoint, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(c) })
+          .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok, d: j }; }); });
+      }
+      postar(corpo)
+        .then(function (res) {
+          /* rede de segurança: se a função do Supabase ainda não conhece as opções de aluno(a),
+             grava a inscrição mesmo assim (ja_aluno continua true) para não perder ninguém */
+          var campos = res.d && res.d.campos;
+          if (!res.ok && campos && campos.length === 1 && campos[0] === "momento_interesse" && /^aluno_/.test(corpo.momento_interesse)) {
+            var c2 = Object.assign({}, corpo, { momento_interesse: "conhecer_assunto" });
+            return postar(c2);
+          }
+          return res;
+        })
         .then(function (res) {
           var link = res.d && res.d.grupo_url;
           if (!res.ok || !res.d.ok || !/^https:\/\/chat\.whatsapp\.com\//.test(link || "")) throw new Error("falha");
