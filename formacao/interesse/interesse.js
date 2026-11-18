@@ -36,7 +36,7 @@
     objetivo: [
       ["compreender_padroes", "Compreender melhor os padrões que fazem as pessoas repetirem comportamentos que lhes causam sofrimento"],
       ["investigar_atendimentos", "Aprimorar minha capacidade de investigar necessidades, personalidade e mecanismos inconscientes durante os atendimentos"],
-      ["metodologia_virtudes", "Aprender uma metodologia para orientar o desenvolvimento de virtudes e novos recursos de comportamento"],
+      ["metodologia_virtudes", "Aprender a orientar o desenvolvimento de virtudes e de novos recursos de comportamento"],
       ["ampliar_repertorio", "Ampliar meu repertório profissional com uma nova abordagem do funcionamento humano"],
       ["desenvolvimento_pessoal", "Aprofundar meu conhecimento para meu desenvolvimento pessoal"]
     ],
@@ -219,7 +219,7 @@
       case "dados": return {
         html:
           '<p class="kicker">Última etapa</p>' +
-          '<h2 id="tit" tabindex="-1">Quer descobrir como estudar essa metodologia de maneira completa?</h2>' +
+          '<h2 id="tit" tabindex="-1">Quer descobrir como estudar a Virtologia de maneira completa?</h2>' +
           '<p>Nossa equipe apresenta a estrutura da formação, o investimento e as condições de ingresso, e tira suas dúvidas.</p>' +
           '<form id="form" novalidate>' +
             '<p class="rotulo">Informe seus dados para solicitar atendimento:</p>' +
