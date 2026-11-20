@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abrindo o WhatsApp | Formação em Virtologia</title>
+<meta name="robots" content="noindex">
+<script>
+/* Link para mandar no grupo de quem se inscreveu na aula ao vivo.
+   Marca a visita como "aula ao vivo" antes do rastreamento ler o endereço. */
+(function () {
+  try {
+    var q = new URLSearchParams(location.search);
+    if (!q.get("o")) { q.set("o", "aula-ao-vivo"); history.replaceState(null, "", location.pathname + "?" + q.toString() + location.hash); }
+  } catch (e) {}
+})();
+</script>
+<link rel="icon" href="../../img/favicon.png">
+<style>
+body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#F4F6F8;color:#050D14;font:16px/1.5 'Avenir Next',Avenir,'Segoe UI',Arial,sans-serif;padding:24px;box-sizing:border-box;text-align:center}
+.caixa{max-width:420px}
+img{height:34px;width:auto;margin-bottom:22px}
+h1{font-size:21px;margin:0 0 8px}
+p{color:#6B7A8C;margin:0 0 22px}
+a.btn{display:inline-block;background:#1F8F4E;color:#fff;text-decoration:none;font-weight:600;padding:13px 22px;border-radius:4px}
+</style>
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '386437925348155');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
+/></noscript>
+<!-- Fim Meta Pixel -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3XCMQHKG5N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-3XCMQHKG5N');
+</script>
+</head>
+<body>
+<div class="caixa">
+  <img src="../../img/logo-instituto-virtudes.png" alt="Instituto Virtudes" width="439" height="120">
+  <h1>Abrindo o WhatsApp da equipe...</h1>
+  <p>Se o WhatsApp não abrir sozinho, toque no botão abaixo.</p>
+  <a class="btn" id="ir" href="https://wa.me/5511965419449?text=Ol%C3%A1%21%20Quero%20saber%20mais%20sobre%20a%20Forma%C3%A7%C3%A3o%20em%20Virtologia%20(Cheguei%20pela%20aula%20ao%20vivo%20%C2%B7%20grupo%20da%20aula)">Falar com a equipe no WhatsApp</a>
+</div>
+<script src="../../js/origem.js"></script>
+<script>
+/* /formacao/interesse-wpp/ : link fixo para o grupo da aula ao vivo.
+   Abre a conversa com a equipe já com a mensagem:
+   "Olá! Quero saber mais sobre a Formação em Virtologia (Cheguei pela aula ao vivo · grupo da aula)" */
+(function () {
+  var a = document.getElementById("ir"), O = window.IVOrigem;
+  if (O) {
+    a.href = O.comOrigem("https://wa.me/5511965419449?text=" + encodeURIComponent("Olá! Quero saber mais sobre a Formação em Virtologia"), "grupo da aula", "aula_ao_vivo");
+    O.medirWhats("grupo_aula_ao_vivo", "aula_ao_vivo");
+  }
+  setTimeout(function () { location.replace(a.href); }, 450);
+})();
+</script>
+</body>
+</html>
