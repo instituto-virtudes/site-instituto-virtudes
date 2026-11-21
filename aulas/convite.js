@@ -15,6 +15,7 @@
     if (!sit || sit.estado === "encerrada") { el.remove(); return; }
 
     var esc = IV.esc, A = sit.aula, T = sit.trilha, D = IV.datas(A);
+    var semData = sit.estado === "sem-data";
     var pagina = el.getAttribute("data-pagina") || "aula-gravada";
     var foto = IV.url(A.foto || A.capa);
     var quando = sit.estado === "acontecendo"
@@ -29,12 +30,15 @@
       '<div class="cv-int">' +
         '<div class="cv-texto">' +
           '<p class="cv-selo"><span class="ev-ponto' + (sit.estado === "acontecendo" ? " ev-ponto-ativo" : "") + '" aria-hidden="true"></span>Gratuita • ao vivo</p>' +
-          '<h2 class="cv-tit">Participe da próxima aula ao vivo com Eduardo</h2>' +
-          '<p class="cv-tema"><span>' + esc(T.rotulo) + ':</span> ' + esc(A.titulo) + '</p>' +
-          '<p class="cv-data">' + quando + '</p>' +
-          '<p class="cv-txt">Além de acompanhar o conteúdo, você poderá fazer perguntas ao vivo diretamente ao Eduardo. Inscreva-se gratuitamente para participar.</p>' +
+          (semData
+            ? '<h2 class="cv-tit">Participe da próxima aula ao vivo de ' + esc(T.rotulo) + ' com Eduardo</h2>' +
+              '<p class="cv-txt">Inscreva-se gratuitamente e entre no grupo da aula. É por lá que enviamos o link do Zoom e os avisos. Na aula ao vivo, você pode fazer perguntas diretamente ao Eduardo.</p>'
+            : '<h2 class="cv-tit">Participe da próxima aula ao vivo com Eduardo</h2>' +
+              '<p class="cv-tema"><span>' + esc(T.rotulo) + ':</span> ' + esc(A.titulo) + '</p>' +
+              '<p class="cv-data">' + quando + '</p>' +
+              '<p class="cv-txt">Além de acompanhar o conteúdo, você poderá fazer perguntas ao vivo diretamente ao Eduardo. Inscreva-se gratuitamente para participar.</p>') +
           '<button type="button" class="cv-btn" aria-expanded="false">Quero participar da aula ao vivo</button>' +
-          '<p class="cv-apoio">Replay por 7 dias e materiais bônus em PDF.</p>' +
+          (semData ? '' : '<p class="cv-apoio">Replay por 7 dias' + (A.materiaisBonus === false ? '' : ' e materiais bônus em PDF') + '.</p>') +
         '</div>' +
         '<figure class="cv-foto"><img src="' + esc(foto) + '" alt="Dr. Eduardo Casarotto" width="587" height="715" loading="lazy"></figure>' +
       '</div>' +

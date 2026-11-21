@@ -3,6 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="../config.js"></script>
+<script>
+/* Sem aula com data pela frente, esta página leva para as aulas gravadas
+   (aulas/config.js, trilha virtologia: semAulaIrPara). Quando a próxima aula
+   for cadastrada com data, a página volta a abrir normalmente. */
+(function () {
+  try {
+    var T = ((window.AULAS_CONFIG || {}).trilhas || {}).virtologia;
+    if (!T || !T.semAulaIrPara) return;
+    var agora = Date.now();
+    var temAula = (T.aulas || []).some(function (a) {
+      var i = Date.parse(a.inicio);
+      return !a.semData && !isNaN(i) && agora < i + (a.duracaoMinutos || 0) * 60000;
+    });
+    if (!temAula) location.replace("../../" + T.semAulaIrPara + location.search + location.hash);
+  } catch (e) {}
+})();
+</script>
 <title>Aula gratuita ao vivo: quando a terapia começa a apagar a personalidade do paciente? | Virtologia</title>
 <meta name="description" content="Aula gratuita e ao vivo com o Dr. Eduardo Casarotto. Quinta, 19/11, às 19h (Brasília). Faça suas perguntas ao vivo.">
 <link rel="canonical" href="https://institutovirtudes.com.br/aulas/virtologia/">

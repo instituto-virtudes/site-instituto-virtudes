@@ -10,6 +10,9 @@
   if (!IV || !main) return;
   var sit = IV.situacao(document.body.getAttribute("data-aula"));
   if (!sit) return;
+  if (sit.estado === "sem-data" || (sit.estado === "encerrada" && sit.trilha.semAulaIrPara)) {
+    if (sit.trilha.semAulaIrPara) { location.replace(IV.url(sit.trilha.semAulaIrPara) + location.search + location.hash); return; }
+  }
 
   var esc = IV.esc, A = sit.aula, T = sit.trilha, D = IV.datas(A);
   var encerrada = sit.estado === "encerrada", acontecendo = sit.estado === "acontecendo";

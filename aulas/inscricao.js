@@ -33,7 +33,9 @@
     return o;
   }
   function datas(aula) {
-    var ini = new Date(aula.inicio), p = partes(ini);
+    var ini = new Date(aula.inicio);
+    if (isNaN(ini)) return { semana: "", semanaCurta: "", dia: "", ano: "", hora: "", curta: "", selo: "", duracao: "", iso: "" };
+    var p = partes(ini);
     var cap = function (s) { return s.charAt(0).toUpperCase() + s.slice(1); };
     var hora = Number(p.hour) % 24, min = Number(p.minute);
     var horaTxt = hora + "h" + (min ? String(min).padStart(2, "0") : "");
@@ -60,12 +62,17 @@
     if (!T || !T.aulas || !T.aulas.length) return null;
     agora = agora || new Date();
     var lista = T.aulas.slice().sort(function (a, b) { return new Date(a.inicio) - new Date(b.inicio); });
+    var semData = null, ultimaComData = null;
     for (var i = 0; i < lista.length; i++) {
       var a = lista[i];
+      if (a.semData) { if (!semData) semData = a; continue; }
       if (isNaN(new Date(a.inicio))) continue;
+      ultimaComData = a;
       if (agora < fimDe(a)) return { chave: trilhaKey, trilha: T, aula: a, estado: agora >= new Date(a.inicio) ? "acontecendo" : "futura" };
     }
-    return { chave: trilhaKey, trilha: T, aula: lista[lista.length - 1], estado: "encerrada" };
+    /* nenhuma aula com data pela frente: inscrição para a próxima, sem tema e sem data */
+    if (semData) return { chave: trilhaKey, trilha: T, aula: semData, estado: "sem-data" };
+    return { chave: trilhaKey, trilha: T, aula: ultimaComData || lista[lista.length - 1], estado: "encerrada" };
   }
 
   /* ---------- telefone e e-mail ---------- */
@@ -107,7 +114,7 @@
     var problemas = [];
     if (!/^https:\/\/chat\.whatsapp\.com\/[A-Za-z0-9]+/.test(A.grupoUrl || "")) problemas.push("O link do grupo desta aula está ausente ou inválido.");
     if (!A.id) problemas.push("A aula está sem identificador.");
-    if (isNaN(new Date(A.inicio))) problemas.push("A data e o horário da aula estão inválidos.");
+    if (!A.semData && isNaN(new Date(A.inicio))) problemas.push("A data e o horário da aula estão inválidos.");
     if (!CFG.endpoint) problemas.push("O endereço de gravação das inscrições não foi configurado.");
     if (!CFG.envioAtivo) problemas.push("O envio das inscrições está desligado (envioAtivo: false).");
     var podeEnviar = problemas.length === 0;

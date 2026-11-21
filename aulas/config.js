@@ -132,8 +132,25 @@ window.AULAS_CONFIG = {
           capaAlt: "Capa da aula: Quando a terapia começa a apagar a personalidade do paciente? Gratuita e ao vivo, 19 de novembro, 19h.",
           /* CONFIRMAR: é o mesmo grupo da aula de 09/11. Se houver grupo novo, troque aqui e no Supabase. */
           grupoUrl: "https://chat.whatsapp.com/EsvtD5YU9XOGSMClks7e5B?mode=gi_t"
+        },
+        /* PRÓXIMA AULA SEM DATA (lista de espera)
+           Só aparece quando não há nenhuma aula com data pela frente. As páginas
+           não mostram tema nem data: a pessoa se inscreve para "a próxima aula ao
+           vivo de Virtologia" e entra no grupo. Quando a próxima aula for
+           divulgada, é só cadastrá-la acima, com data: ela volta a ser a anunciada
+           e /aulas/virtologia/ volta a abrir normalmente.
+           O mesmo id precisa existir na tabela "aulas" do Supabase. */
+        {
+          id: "virtologia-proxima",
+          semData: true,
+          titulo: "Próxima aula ao vivo de Virtologia",
+          materiaisBonus: false,
+          foto: "img/aulas/virtologia-2026-11-09-v2-foto.webp",
+          grupoUrl: "https://chat.whatsapp.com/EsvtD5YU9XOGSMClks7e5B?mode=gi_t"
         }
-      ]
+      ],
+      /* enquanto não houver aula com data, quem abrir /aulas/virtologia/ vai para cá */
+      semAulaIrPara: "aula1/"
     },
 
     humanizacao: {
