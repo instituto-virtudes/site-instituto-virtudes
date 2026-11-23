@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Suas aulas de Virtologia | Instituto Virtudes</title>
+<meta name="description" content="As duas aulas completas de Virtologia com o Dr. Eduardo Casarotto: a Lei do Fluxo e a neuroplasticidade de virtudes, e o que é fixo e o que muda na personalidade.">
+<link rel="canonical" href="https://institutovirtudes.com.br/aulas/acesso/">
+<meta name="robots" content="noindex, follow">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Instituto Virtudes">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:url" content="https://institutovirtudes.com.br/aulas/acesso/">
+<meta property="og:title" content="Suas aulas de Virtologia">
+<meta property="og:description" content="As duas aulas completas de Virtologia com o Dr. Eduardo Casarotto: a Lei do Fluxo e a neuroplasticidade de virtudes, e o que é fixo e o que muda na personalidade.">
+<meta property="og:image" content="https://institutovirtudes.com.br/img/og-padrao.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Instituto Virtudes">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Suas aulas de Virtologia">
+<meta name="twitter:description" content="As duas aulas completas de Virtologia com o Dr. Eduardo Casarotto: a Lei do Fluxo e a neuroplasticidade de virtudes, e o que é fixo e o que muda na personalidade.">
+<meta name="twitter:image" content="https://institutovirtudes.com.br/img/og-padrao.jpg">
+
+<link rel="icon" href="../../img/favicon.png">
+<link rel="stylesheet" href="../../css/estilo.css">
+<link rel="stylesheet" href="../../aulas/inscricao.css">
+<style>
+.itens{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:30px 0;align-items:start}
+.itens-caixa{border:1px solid var(--borda);border-radius:var(--raio-card);padding:26px 24px;background:#fff}
+.itens-caixa h3{font-size:19px;margin:0 0 10px;color:var(--azul-escuro)}
+.itens-caixa p{font-size:15.5px;line-height:1.65;margin:0}
+.itens-caixa p + p{margin-top:10px}
+@media (max-width:820px){.itens{grid-template-columns:1fr;gap:16px}}
+.depoimentos{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin:32px 0}
+.depoimentos figure{margin:0}
+.depoimentos .video{margin-bottom:14px}
+.depoimentos .dep-fala{font-family:var(--fonte);font-size:17px;line-height:1.45;
+  margin:0 0 10px;color:var(--texto)}
+.depoimentos .dep-nome{font-size:13.5px;color:var(--apoio);margin:0;line-height:1.4}
+@media (max-width:640px){.depoimentos{grid-template-columns:1fr;gap:28px}}
+
+/* várias aulas na mesma página */
+.au-escolha{margin:36px 0 0;line-height:1.25}
+.au-trilha{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:18px 0 4px}
+.au-card{display:flex;flex-direction:column;gap:8px;background:#fff;border:1px solid var(--borda);border-top:4px solid var(--azul);border-radius:var(--raio-card);padding:22px 24px;color:var(--texto);text-decoration:none;transition:box-shadow .2s,transform .2s}
+.au-card:hover{box-shadow:0 10px 26px rgba(5,13,20,.08);transform:translateY(-2px)}
+.au-card-2{border-top-color:#C9A15F}
+.au-selo{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--azul)}
+.au-card-2 .au-selo{color:#9A7434}
+.au-card-tit{font-family:var(--fonte);font-size:20px;font-weight:700;line-height:1.3;color:var(--azul-escuro)}
+.au-card-para{font-size:15px;color:var(--apoio)}
+.au-card-rot{font-size:13.5px;font-weight:600;margin-top:4px}
+.au-card ul{margin:0 0 4px 18px;padding:0}
+.au-card li{font-size:15px;line-height:1.5;margin:0 0 5px}
+.au-card-meta{font-size:13px;color:var(--apoio);margin-top:auto;padding-top:10px;border-top:1px solid var(--claro)}
+.au-card-ir{font-weight:600;color:var(--azul)}
+.au-card-ir::after{content:" \2193"}
+.au-num{display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--apoio);margin:0 0 10px}
+.au-num span{background:var(--azul);color:#fff;border-radius:999px;padding:4px 12px;letter-spacing:.04em}
+.au-aula-2 .au-num span{background:#9A7434}
+.au-aula-2{background:var(--claro)}
+.au-subtit{font-size:19px;color:var(--apoio);margin:-4px 0 16px}
+.au-sub-h{font-size:22px;margin:34px 0 8px}
+.au-seguir{margin-top:22px}
+.au-seguir a{font-weight:600}
+.au-seguir a::after{content:" \2193"}
+.au-proxima .convite-vivo{margin-top:0}
+.au-proxima .cv-btn{display:inline-flex;align-items:center;text-decoration:none}
+.ac-nota{margin:26px 0 0;padding:14px 18px;background:#fff;border-left:4px solid var(--azul);border-radius:var(--raio-card);font-size:16px;line-height:1.6}
+@media (max-width:820px){.au-trilha{grid-template-columns:1fr;gap:14px}}
+</style>
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '386437925348155');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
+/></noscript>
+<!-- Fim Meta Pixel -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3XCMQHKG5N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3XCMQHKG5N');
+</script>
+</head>
+<body>
+
+<header class="topo">
+  <div class="topo-int">
+    <a href="../../" class="marca"><img src="../../img/logo-instituto-virtudes.png" alt="Instituto Virtudes - Humanização e Virtologia" width="439" height="120"></a>
+    <div class="topo-lado"><span class="grupo-nota">Instituto Virtudes · Grupo Virtudes</span><a class="btn-topo" href="../../contato/">Fale conosco</a></div>
+    <button class="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Abrir o menu">Menu <span aria-hidden="true">&#8801;</span></button>
+    <nav>
+      <ul class="menu" id="menu">
+        <li class="tem-sub">
+          <button class="menu-sub-btn" aria-expanded="false" aria-haspopup="true">Virtologia <span class="seta-sub" aria-hidden="true">&#9662;</span></button>
+          <ul class="submenu">
+            <li><a href="../../virtologia/">O que é a Virtologia</a></li>
+            <li><a href="../../formacao/">Formação em Virtologia</a></li>
+            <li><a href="../../terapeutas/">Terapia gratuita</a></li>
+            <li><a href="../../teorias/">Diante de outras grandes teorias</a></li>
+            <li><a href="../../depoimentos/">Depoimentos</a></li>
+            <li><a href="../../aula1/">Aula aberta</a></li>
+            <li><a href="../../aulas/virtologia/">Aula ao vivo gratuita</a></li>
+          </ul>
+        </li>
+        <li class="tem-sub">
+          <button class="menu-sub-btn" aria-expanded="false" aria-haspopup="true">Humanização 2.0 <span class="seta-sub" aria-hidden="true">&#9662;</span></button>
+          <ul class="submenu">
+            <li><a href="../../sistemas/">Entenda a transformação</a></li>
+            <li><a href="../../sistemas/#evidencias">Evidências internacionais</a></li>
+            <li><a href="../../pos-sistemas/">Pós-graduação em Sistemas Humanizados</a></li>
+            <li><a href="../../sistemas-humanizados/">O livro Sistemas Humanizados</a></li>
+            <li><a href="../../aula2/">Aula aberta sobre a NR-1</a></li>
+            <li><a href="../../aularh/">Aula aberta para RH</a></li>
+            <li><a href="../../aulas/humanizacao/">Aula ao vivo gratuita</a></li>
+            <li><a href="../../ondas/">As Três Ondas do Trabalho</a></li>
+          </ul>
+        </li>
+        <li class="tem-sub">
+          <button class="menu-sub-btn" aria-expanded="false" aria-haspopup="true">Formações e cursos <span class="seta-sub" aria-hidden="true">&#9662;</span></button>
+          <ul class="submenu">
+            <li><a href="../../formacao/">Formação em Virtologia</a></li>
+            <li><a href="../../pos-sistemas/">Pós-graduação em Sistemas Humanizados</a></li>
+            <li><a href="../../formacoes/#intro-virtologia">Curso de Introdução à Virtologia</a></li>
+            <li><a href="../../formacoes/#intro-sistemas">Curso de Introdução aos Sistemas Humanizados</a></li>
+            <li><a href="../../formacoes/">Todas as formações e cursos</a></li>
+          </ul>
+        </li>
+        <li class="tem-sub">
+          <button class="menu-sub-btn" aria-expanded="false" aria-haspopup="true">Livros <span class="seta-sub" aria-hidden="true">&#9662;</span></button>
+          <ul class="submenu">
+            <li><a href="../../14-obras/">Coleção Especial · 14 obras</a></li>
+            <li><a href="../../fundamentos/">Fundamentos da Virtologia</a></li>
+            <li><a href="../../manual/">Manual de Desenvolvimento Humano em Virtudes</a></li>
+            <li><a href="../../sistemas-humanizados/">Sistemas Humanizados · Humanização 2.0</a></li>
+            <li><a href="../../guia/">Guia das Virtudes</a></li>
+            <li><a href="../../teimosia/">Teimosia de Viver</a></li>
+            <li><a href="../../envelheci/">Envelheci, e Daí?</a></li>
+            <li><a href="../../livros/">Todos os livros</a></li>
+          </ul>
+        </li>
+        <li><a href="../../palestras/">Palestras</a></li>
+        <li><a href="../../futuro/">Trazemos o Futuro</a></li>
+        <li><a href="../../inteiras/" target="_blank" rel="noopener">Inteiras</a></li>
+        <li><a href="https://humanizacao.com" target="_blank" rel="noopener">Nossa ONG</a></li>
+        <li><a href="../../contato/">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="au-hero">
+  <div class="wrap">
+    <p class="kicker">Virtologia · Suas aulas</p>
+    <h1>Suas duas aulas completas de Virtologia</h1>
+    <p class="lead">Aulas reais com o Dr. Eduardo Casarotto, do jeito que aconteceram. Cada uma mostra uma parte da Virtologia por inteiro, com casos e exemplos de consultório.</p>
+    <p>A primeira é para quem está conhecendo a escola. A segunda aprofunda um tema que muda a forma de avaliar uma pessoa. Veja o que cada uma entrega e escolha por onde começar.</p>
+
+    <p class="ac-nota">Salve esta página nos favoritos para voltar às aulas quando quiser. E, se ainda não entrou, <a data-grupo-aulas href="https://chat.whatsapp.com/EsvtD5YU9XOGSMClks7e5B?mode=gi_t" target="_blank" rel="noopener">entre no grupo das aulas ao vivo de Virtologia</a>.</p>
+
+    <h2 class="au-escolha">Clique na aula que deseja assistir:</h2>
+
+    <div class="au-trilha">
+      <a class="au-card" href="#aula-1">
+        <span class="au-selo">Aula 1 · Comece por aqui</span>
+        <span class="au-card-tit">A Lei do Fluxo e a neuroplasticidade de virtudes</span>
+        <span class="au-card-para">Para quem está conhecendo a Virtologia.</span>
+        <span class="au-card-rot">Você sai entendendo:</span>
+        <ul>
+          <li>como cada pessoa enxerga e reage ao que acontece</li>
+          <li>o que adoece uma pessoa, segundo a Virtologia</li>
+          <li>por que virtudes, e não qualquer neuroplasticidade</li>
+          <li>como se monta um plano de trabalho</li>
+        </ul>
+        <span class="au-card-meta">Aula da Formação em Virtologia</span>
+        <span class="au-card-ir">Assistir à Aula 1</span>
+      </a>
+      <a class="au-card au-card-2" href="#aula-2">
+        <span class="au-selo">Aula 2 · Para aprofundar</span>
+        <span class="au-card-tit">Quando a terapia começa a apagar a personalidade do paciente?</span>
+        <span class="au-card-para">Para quem já viu a Aula 1 ou já conhece a base.</span>
+        <span class="au-card-rot">Você sai entendendo:</span>
+        <ul>
+          <li>as cinco partes da personalidade, e o que é fixo e o que muda</li>
+          <li>os 12 eixos do temperamento, com mapas feitos ao vivo</li>
+          <li>como não confundir temperamento com neurose</li>
+          <li>por que o temperamento se equilibra com virtudes, e não se troca</li>
+        </ul>
+        <span class="au-card-meta">Dada ao vivo em 19/11/2026</span>
+        <span class="au-card-ir">Assistir à Aula 2</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="aula-1" class="au-aula">
+  <div class="wrap">
+    <p class="au-num"><span>Aula 1</span>Comece por aqui</p>
+    <h2>Como a neuroplasticidade de virtudes muda fisicamente o cérebro e estrutura a saúde mental</h2>
+    <p class="lead">A fórmula PRF = (I × E) × FA × PO × PS × LV mostra como cada pessoa enxerga o que acontece e como reage. Com ela dá para descobrir o que está travado na pessoa e como tratar aquilo.</p>
+    <p>Nesta aula tirada da Formação em Virtologia, uma entre mais de 60, o Dr. Eduardo Casarotto apresenta a base da escola: o que constrói o jeito de uma pessoa enxergar e reagir, e por que <strong>mudar isso não é questão de entender, e sim de mudar a estrutura do cérebro</strong>. E, principalmente, qual estrutura precisa ser construída.</p>
+
+    <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/T9WzaKo6gmc?rel=0" title="Aula 1: a Lei do Fluxo e a neuroplasticidade de virtudes" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+
+    <h3 class="au-sub-h">O que esta aula apresenta</h3>
+    <p>Com casos reais de tratamento de automutilação e pensamento suicida usando exercícios de virtudes, a aula percorre a base da Virtologia: de como o ser humano funciona até o plano de trabalho no consultório.</p>
+    <div class="itens">
+      <div class="itens-caixa">
+<h3>Ninguém reage ao mundo. A gente reage à própria memória.</h3>
+      <p>Toda palavra, cena ou lembrança puxa junto um monte de coisas que a pessoa já viveu. A palavra "casamento" não chega sozinha: ela vem com o casamento dos pais, com o que deu errado antes, com o que ela ouviu a vida inteira sobre isso. No cérebro isso são redes neurais: grupos de neurônios que foram se ligando uns aos outros a cada experiência e que hoje disparam juntos. <strong>Por isso duas pessoas ouvem a mesma frase e sentem coisas opostas.</strong> E por isso explicar não muda: a explicação não chega até onde a rede está.</p>
+      </div>
+      <div class="itens-caixa">
+<h3>O que a Virtologia altera, e o que não tenta alterar</h3>
+      <p>A memória não se reescreve. O que muda é como a pessoa a percebe e reage a ela. A aula mostra por que tentar dar um novo significado ao passado do paciente é, para a Virtologia, o erro mais comum do consultório.</p>
+      </div>
+      <div class="itens-caixa">
+<h3>A diferença entre se controlar e funcionar</h3>
+      <p>Quem se segura por regra continua sentindo a mesma coisa. Só não age. A aula mostra como perceber, na fala do paciente, a diferença entre a virtude construída e a virtude de fachada, e por que <strong>o sintoma denuncia essa diferença mesmo quando a fala não denuncia.</strong></p>
+      </div>
+      <div class="itens-caixa">
+<h3>A Lei do Fluxo: PRF = (I × E) × FA × PO × PS × LV</h3>
+      <p>A fórmula com que a Virtologia lê uma pessoa inteira, letra por letra, e o que cada uma explica.</p>
+      </div>
+      <div class="itens-caixa">
+<h3>As necessidades humanas e o tanque</h3>
+      <p>As <strong>51 necessidades humanas</strong> não são gosto nem cultura, e vão mudando conforme o cérebro da pessoa se desenvolve. Cada uma tem uma reserva, que a Virtologia chama de tanque, e ela não pode secar nem transbordar. Os dois extremos geram sintoma, e é aí que <strong>boa parte da clínica confunde doença com necessidade em falta.</strong></p>
+      </div>
+      <div class="itens-caixa">
+<h3>Aplicação em unidade prisional</h3>
+      <p>O caso de uma interna que chegou ao programa se cortando e com tentativa de suicídio, e <strong>o que mudou depois de três virtudes trabalhadas</strong> com exercícios. Tem registro em vídeo e o relato do professor que conduziu o trabalho.</p>
+      </div>
+      <div class="itens-caixa">
+<h3>Como se monta um plano de trabalho</h3>
+      <p>Três coisas apontando para o mesmo lado: em que ponto o cérebro da pessoa está, qual necessidade alimentar agora, e qual virtude construir junto. <strong>É o ponto em que a aula sai da teoria e entrega método.</strong></p>
+      </div>
+    </div>
+    <p class="nota">A aula é corrida, e um assunto se apoia no outro.</p>
+    <p class="au-seguir"><a href="#aula-2">Depois desta, siga para a Aula 2: o que é fixo e o que muda na personalidade</a></p>
+  </div>
+</section>
+
+<section id="aula-2" class="au-aula au-aula-2">
+  <div class="wrap">
+    <p class="au-num"><span>Aula 2</span>Para aprofundar · Dada ao vivo em 19/11/2026</p>
+    <h2>Quando a terapia começa a apagar a personalidade do paciente?</h2>
+    <p class="au-subtit">Como distinguir o que é fixo e o que é mutável na personalidade humana</p>
+    <p class="lead">Quem não sabe avaliar temperamento pode chamar de neurose o que é só o jeito de a pessoa ser. E, ao tentar corrigir, empurra a pessoa para longe de quem ela é.</p>
+    <p>Nesta aula, dada ao vivo em 19 de novembro de 2026, o Dr. Eduardo Casarotto retoma a formação da personalidade peça por peça, mostra com casos de consultório onde a avaliação costuma errar e monta, ao vivo, o mapa de temperamento de participantes da turma. <strong>É a aula para quem já conhece a base e quer avaliar uma pessoa sem confundir traço com sintoma.</strong></p>
+
+    <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/zbOKITacQ_M?rel=0" title="Aula 2: Quando a terapia começa a apagar a personalidade do paciente? (ao vivo em 19/11/2026)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+
+    <h3 class="au-sub-h">O que esta aula apresenta</h3>
+    <div class="itens">
+      <div class="itens-caixa">
+        <h3>A personalidade tem cinco partes</h3>
+        <p>Identidade, psique, caráter, temperamento e virtudes. A soma das cinco é a personalidade, que é o jeito como a pessoa se movimenta no mundo. Só uma delas vem pronta e não se troca: o temperamento. As outras se constroem e continuam mudando a vida inteira.</p>
+        <p><strong>Saber o que é fixo e o que muda é o que impede a terapia de tentar mudar o que não muda.</strong></p>
+      </div>
+      <div class="itens-caixa">
+        <h3>A identidade muda, e a personalidade muda junto</h3>
+        <p>Nome, corpo, idade, signo e cidade de origem compõem a identidade. A aula mostra o que acontece quando o corpo muda muito, como depois de uma cirurgia bariátrica ou com as canetas de emagrecimento: quem passou anos compensando para ser aceita deixa de compensar, e as relações mudam junto.</p>
+        <p>E, como a comida é o meio de quase toda relação, <strong>o pulo do gato é aprender a manter as relações sem ela.</strong></p>
+      </div>
+      <div class="itens-caixa">
+        <h3>Como o caráter se constrói</h3>
+        <p>Cada atitude da criança é reforçada, modificada ou inibida pelo meio. O cérebro não calcula certo e errado: calcula amor e punição, ganho e perda.</p>
+        <p>O menino que lavou o carro do pai com palha de aço para ajudar, e apanhou, não aprendeu a cuidar do carro. <strong>Aprendeu que ser prestativo dá punição.</strong></p>
+      </div>
+      <div class="itens-caixa">
+        <h3>A mesma dor, temperamentos diferentes, defesas diferentes</h3>
+        <p>São 12 eixos de temperamento, herdados. Duas crianças rebaixadas do mesmo jeito se defendem de formas opostas: a não inibida vai para o palco buscar a atenção que faltou, a inibida se esconde para não ser excluída de novo.</p>
+        <p><strong>A mesma ferida pode virar defesas muito diferentes, conforme o temperamento</strong>, e a aula mostra por quê.</p>
+      </div>
+      <div class="itens-caixa">
+        <h3>Chamar temperamento de neurose</h3>
+        <p>Uma mulher de temperamento masculino, objetiva e voltada a resultado, ouve do terapeuta que precisa ser mais feminina. Uma mulher deslumbrada, que gosta de brilho e de se expressar, é chamada de carente por um terapeuta cético e simples. Nos dois casos, o que se corrige é o temperamento. E não tem nada a ver com sexualidade.</p>
+        <p><strong>O que separa traço de neurose é o quanto o olhar do outro é ameaça para a pessoa</strong>, e é isso que a aula ensina a ler.</p>
+      </div>
+      <div class="itens-caixa">
+        <h3>O mapa de temperamento, feito ao vivo</h3>
+        <p>Participantes respondem ao teste dos 12 eixos durante a aula, e o Dr. Eduardo Casarotto lê os resultados na hora. Entra o quadrante pensador e fazedor, simples e complexo, com o criativo, o prático, o dinâmico e o idealista. E a régua: três a dois é equilíbrio, quatro a um é a beira, cinco a zero é desequilíbrio.</p>
+        <p><strong>Dentro do próprio temperamento a pessoa ganha energia. Fora dele, perde.</strong></p>
+      </div>
+      <div class="itens-caixa">
+        <h3>Nenhuma atitude vem de um lugar só</h3>
+        <p>Uma atitude nasce do temperamento cruzado com valores e crenças, com a Faixa de Evolução neurológica, com as necessidades do momento, com a falta que vira desejo e com a fase de vida. A persona não é outra personalidade: ela está dentro da personalidade. E quanto maior o orgulho, maiores o superego e a persona.</p>
+        <p><strong>Quem olha só uma dessas peças erra a avaliação da pessoa inteira.</strong></p>
+      </div>
+      <div class="itens-caixa">
+        <h3>Temperamento não se troca: equilibra-se com virtudes</h3>
+        <p>Ninguém trabalha temperamento no consultório. Um dominante sem abnegação vira estrela. Com humildade e abnegação, ele continua no comando, mas a serviço dos outros.</p>
+        <p><strong>Quem equilibra o temperamento é a virtude, e é por isso que a escola se chama Virtologia.</strong> A aula fecha com a ordem do trabalho: humildade e abnegação primeiro.</p>
+      </div>
+    </div>
+
+    <p>Até o manejo depende disso. O fazedor elabora com tarefa prática, o pensador elabora pela ideia. <strong>Quem não sabe com que temperamento está falando escolhe a técnica errada.</strong></p>
+    <p class="destaque">O objetivo de tudo é não violentar: não chamar de neurose o que é temperamento, nem chamar de qualidade o que é neurose.</p>
+  </div>
+</section>
+
+<section class="au-proxima">
+  <div class="wrap">
+    <div class="convite-vivo" role="region" aria-label="Grupo das aulas ao vivo de Virtologia">
+      <div class="cv-int">
+        <div class="cv-texto">
+          <p class="cv-selo"><span class="ev-ponto" aria-hidden="true"></span>Aulas ao vivo</p>
+          <h2 class="cv-tit">Participe das próximas aulas ao vivo de Virtologia com Eduardo</h2>
+          <p class="cv-txt">Se ainda não entrou, entre no grupo das aulas ao vivo. É por lá que avisamos as próximas aulas e enviamos o link do Zoom. Na aula ao vivo, você pode fazer perguntas diretamente ao Eduardo.</p>
+          <a class="cv-btn" data-grupo-aulas href="https://chat.whatsapp.com/EsvtD5YU9XOGSMClks7e5B?mode=gi_t" target="_blank" rel="noopener">Entrar no grupo das aulas ao vivo</a>
+        </div>
+        <figure class="cv-foto"><img src="../../img/aulas/virtologia-2026-11-09-v2-foto.webp" alt="Dr. Eduardo Casarotto" width="587" height="715" loading="lazy"></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="depoimentos">
+  <div class="wrap">
+    <h2>O que dizem os profissionais que já estão tratando com a Virtologia?</h2>
+
+    <p>Psicólogos, psicanalistas e terapeutas de outras linhas estudaram a Virtologia e passaram a trabalhar com ela:</p>
+
+    <div class="depoimentos">
+      <figure>
+        <div class="video"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/54-DFhfCKFo?rel=0" title="Depoimento de Dâmaris sobre a Formação em Virtologia" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+        <figcaption>
+          <p class="dep-fala">"Melhorou o pânico e a ansiedade da minha paciente em apenas 14 dias."</p>
+          <p class="dep-nome">Dâmaris · Psicóloga clínica</p>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="video"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/zQtXvSPwbrc?rel=0" title="Depoimento de Carina sobre a Formação em Virtologia" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+        <figcaption>
+          <p class="dep-fala">"Não tem como não falar que é revolucionário. Depois que você conhece, não tem como não trabalhar com isso."</p>
+          <p class="dep-nome">Carina · Neuropsicopedagoga, psicanalista e terapeuta ABA</p>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="video"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/WD7Zjkop8-o?rel=0" title="Depoimento de Fernanda sobre a Formação em Virtologia" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+        <figcaption>
+          <p class="dep-fala">"É libertador. Para consultório, foi uma revolução e tanto."</p>
+          <p class="dep-nome">Fernanda · Psicóloga clínica (TCC)</p>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="video"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/9JgaqzV8Yck?rel=0" title="Depoimento de Grace Campos sobre a Formação em Virtologia" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+        <figcaption>
+          <p class="dep-fala">"A Virtologia é o 'como' de todas as terapias. Linguagem fácil, compreensível, onde qualquer um pode fazer."</p>
+          <p class="dep-nome">Grace Campos · Psicanalista</p>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="video"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/8SwPa8b4eFE?rel=0" title="Depoimento de Dinorá sobre a Formação em Virtologia" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+        <figcaption>
+          <p class="dep-fala">"Quando você vai percebendo, você vê que aquela não é mais a mesma pessoa que comecei a atender."</p>
+          <p class="dep-nome">Dinorá · Psicóloga especialista em autismo</p>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="video"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/3LKJZyZLKN4?rel=0" title="Depoimento de Rosa sobre a Formação em Virtologia" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+        <figcaption>
+          <p class="dep-fala">"Quando você vê, você já está agindo. Muito mais rápido e pontual do que outras terapias."</p>
+          <p class="dep-nome">Rosa · Psicóloga</p>
+        </figcaption>
+      </figure>
+    </div>
+
+    <a class="btn" href="../../formacao/">Conhecer a Formação</a>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>O que adoece uma pessoa</h2>
+
+    <p>O cérebro humano não é uma coisa só. Ele tem camadas que se formaram em momentos diferentes da evolução da espécie.</p>
+
+    <p>As <strong>estruturas primitivas</strong> existem há milhões de anos e são dedicadas à sobrevivência imediata: defender-se, garantir o próprio lugar, reagir antes de pensar. O <strong>lobo frontal</strong>, a parte da frente do cérebro, é a última que apareceu na história da espécie e a última que amadurece em cada pessoa. É ela que permite esperar, considerar o outro e abrir mão de uma vantagem imediata.</p>
+
+    <p>Num cérebro bem desenvolvido, a parte da frente coordena as primitivas. <strong>O adoecimento começa quando o sistema primitivo comanda e o resto passa a servi-lo.</strong></p>
+
+    <p>A Virtologia identificou que esse comando primitivo se organiza em torno de duas coisas, e deu nome às duas: <strong>o sistema do orgulho, o SNO</strong>, que faz a pessoa viver defendendo o lugar dela na frente dos outros, e <strong>o sistema do egoísmo, o SNE</strong>, que faz tudo virar conta de quanto eu ganho com isso.</p>
+
+    <p>Quando eles mandam, a pessoa se defende. A defesa se repete, endurece e vira uma casca permanente, que a Virtologia chama de couraça. <strong>A couraça, vista de fora, é o que os manuais chamam de transtorno de personalidade.</strong></p>
+
+    <p>Por isso o virtólogo não parte do sintoma. Diante de um padrão, ele não pergunta primeiro qual é o transtorno. <strong>Pergunta do que a pessoa se defende, e qual virtude falta para que ela não precise mais daquela defesa.</strong></p>
+
+    <p class="apoio">Condições que têm origem genética, como esquizofrenia, transtorno bipolar e autismo, não vêm daí, e a Virtologia não diz o contrário. Qualquer pessoa, com ou sem essas condições, também pode estar com o cérebro no modo primitivo. E nessa parte o trabalho ajuda igual, sempre junto com o cuidado médico.</p>
+
+    <figure>
+      <img src="../../img/cerebro-duas-camadas.jpg" alt="Corte do cérebro humano visto de perfil. O lobo frontal, destacado em azul, é onde a virtude se constrói. As estruturas primitivas, na base, respondem por defesa e sobrevivência, e é ali que operam o orgulho e o egoísmo." loading="lazy">
+    </figure>
+
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Por que virtudes, e não qualquer neuroplasticidade</h2>
+
+    <p>Neuroplasticidade é a capacidade que o cérebro tem de mudar com o que a pessoa repete. E ela não escolhe lado: constrói tanto o que faz bem quanto o que adoece. O cérebro aprende a desconfiar de todo mundo com a mesma facilidade com que aprende qualquer outra coisa. <strong>Saber que o cérebro muda não diz nada sobre para onde ele deveria mudar.</strong></p>
+
+    <p>Se o que adoece é o comando primitivo, o que precisa ser construído é o que o desmonta. É aí que a Virtologia responde a pergunta que quase ninguém fez: <strong>construir o quê?</strong></p>
+
+    <p>A resposta é o que dá nome à escola. Virtude, aqui, não é valor moral nem discurso bonito. <strong>É um grupo de ideias que, treinado com exercícios específicos, constrói caminho novo no cérebro.</strong> Humildade, aceitação, perdão e abnegação deixam de ser coisas que a pessoa tenta fazer e passam a ser o jeito como ela funciona sem pensar.</p>
+
+    <p>Não é segurar o orgulho e o egoísmo com força. Quem segura continua sentindo a mesma coisa, só não age. É diminuir o peso que o próprio cérebro dá a eles, até que <strong>a resposta orgulhosa ou egoísta simplesmente pare de vir.</strong></p>
+
+    <p class="destaque">Quem se controla ainda sente. Quem construiu a estrutura já não sente.</p>
+
+    <p>Junto com os caminhos, muda a química. A dopamina, que é o mensageiro do prazer e da recompensa, <strong>passa a se ligar mais ao vínculo verdadeiro e menos ao status</strong>. A serotonina, ligada ao controle dos impulsos, sustenta melhor a pausa antes da reação. O cortisol, o hormônio do estresse, deixa de manter o corpo em estado de defesa permanente. E a oxitocina, ligada ao vínculo, sustenta as relações.</p>
+
+    <p>Isso acontece porque mente, sistema nervoso, hormônios e sistema de defesa do corpo não são coisas separadas. Funcionam como uma rede só. <strong>Treinar virtude é, ao mesmo tempo, treinar essa rede inteira.</strong></p>
+
+    <p>Daí vem a ideia central da Virtologia: <strong>a saúde mental é o que se estabelece quando um cérebro deixa de funcionar a serviço do próprio orgulho e egoísmo.</strong> Ansiedade, depressão, compulsão e relações que adoecem não são tratadas apesar disso. São tratadas por causa disso.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Não se pula degrau</h2>
+
+    <p>Falta a peça que impede tudo isso de virar conselho de autoajuda.</p>
+
+    <p>Não se constrói qualquer virtude em qualquer pessoa. <strong>Existe uma sequência, e ela não pode ser pulada.</strong> Cobrar de alguém uma maturidade que o cérebro dele ainda não sustenta não acelera nada. Só gera frustração, e nada fica gravado.</p>
+
+    <p>As faixas de evolução neurológica descrevem em que regime o cérebro está operando, e é a leitura da faixa que diz <strong>qual é o próximo degrau possível</strong> e qual virtude o abre. É isso que separa método de conselho, e é o que a aula mostra no plano de trabalho.</p>
+
+    <p>Faixa não mede o valor de ninguém. Ela descreve como o cérebro está funcionando, muda de área para área, e pode subir e descer.</p>
+
+    <h3>Sobre o que a Virtologia afirma</h3>
+
+    <p>As partes do cérebro envolvidas e o que cada uma faz já são descritas pela neurociência. O que a Virtologia acrescenta é a organização dessas funções em dois sistemas, o do orgulho e o do egoísmo. <strong>É proposta original da escola, formulada de um jeito que pode ser testada e verificada em exame de imagem.</strong></p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Quem conduz as aulas</h2>
+    <figure>
+      <img src="../../img/senado.jpg" alt="Eduardo Casarotto discursando na tribuna do Senado Federal." loading="lazy">
+      <figcaption>Eduardo Casarotto no Senado Federal, durante a celebração pelo Dia Internacional dos Direitos Humanos.</figcaption>
+    </figure>
+    <p>Eduardo Casarotto é pesquisador independente, fundador do Instituto Virtudes e <strong>fundamentador da Virtologia</strong>, escola brasileira dedicada a estudar como o ser humano funciona e a desenvolver virtudes usando a capacidade do cérebro de mudar.</p>
+    <p>Há mais de duas décadas pesquisa personalidade, comportamento e desenvolvimento humano, sendo <strong>autor de mais de 20 livros</strong> e de artigos científicos publicados em revistas científicas.</p>
+    <p>O trabalho dele já chegou a universidades, consultórios, órgãos públicos e instituições, <strong>foi apresentado no Senado Federal</strong> e tem aplicações em consultórios, educação, organizações e unidades prisionais.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Profissionais de outras escolas, e o que as fez ficar</h2>
+
+    <blockquote>“Não tem como não falar que é revolucionário. Depois que você conhece, não tem como não trabalhar com isso.”
+      <cite>Carina · Neuropsicopedagoga, psicanalista e terapeuta ABA</cite></blockquote>
+
+    <blockquote>“É libertador. Para consultório, foi uma revolução e tanto.”
+      <cite>Fernanda · Psicóloga clínica (TCC)</cite></blockquote>
+
+    <blockquote>“A Virtologia é o ‘como’ de todas as terapias. Linguagem fácil, compreensível, onde qualquer um pode fazer.”
+      <cite>Grace Campos · Psicanalista</cite></blockquote>
+
+    <blockquote>“Quando você vai percebendo, você vê que aquela não é mais a mesma pessoa que comecei a atender.”
+      <cite>Dinorá · Psicóloga especialista em autismo</cite></blockquote>
+
+    <blockquote>“Quando você vê, você já está agindo. Muito mais rápido e pontual do que outras terapias.”
+      <cite>Rosa · Psicóloga</cite></blockquote>
+
+    <blockquote>“Melhorou o pânico e a ansiedade da minha paciente em apenas 14 dias.”
+      <cite>Dâmaris · Psicóloga clínica</cite></blockquote>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Como se tornar um especialista em Virtologia</h2>
+
+    <p>Estudar Virtologia você já está fazendo agora. <strong>A Formação é outra coisa: é o caminho de quem vai dominar o método inteiro e aplicar com segurança, no consultório ou dentro de uma instituição.</strong></p>
+
+    <p>São mais de <strong>60 aulas</strong> com a profundidade destas, do fundamento à técnica. E junto com elas, <strong>tira-dúvidas por escrito abaixo de cada aula e um encontro ao vivo por mês com Eduardo Casarotto.</strong> Não é conteúdo para assistir sozinho. É formação conduzida por quem já aplica.</p>
+
+    <p>O programa, o formato e os valores são apresentados em conversa pelo WhatsApp:</p>
+
+    <a class="btn" data-wpp-origem="aulas-acesso" data-wpp-canal="aula_gravada" href="https://wa.me/5511965419449?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20Forma%C3%A7%C3%A3o%20em%20Virtologia" target="_blank" rel="noopener">Saber mais sobre a Formação em Virtologia</a>
+
+    <p class="apoio">Para quem prefere examinar a tese antes, o livro <em>Fundamentos da Virtologia</em> reúne a base inteira da escola. Muitos dos que hoje estudam na Formação chegaram por ele.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>O que costumam perguntar</h2>
+
+    <details>
+      <summary>Em que ordem devo assistir?</summary>
+      <p>Comece pela Aula 1, que apresenta a base da Virtologia: como a pessoa enxerga e reage, o que adoece e por que virtudes. A Aula 2 parte dessa base e aprofunda a formação da personalidade, com o temperamento no centro.</p>
+    </details>
+
+    <details>
+      <summary>Posso participar da próxima aula ao vivo?</summary>
+      <p>Pode. É pelo grupo das aulas ao vivo de Virtologia, no WhatsApp, que avisamos as próximas aulas e enviamos o link do Zoom. Se ainda não entrou, use o botão logo abaixo da Aula 2. Na aula ao vivo, você pode fazer perguntas diretamente ao Dr. Eduardo Casarotto.</p>
+    </details>
+
+    <details>
+      <summary>Isso é uma coisa científica?</summary>
+      <p>A Virtologia se define como escola clínico-filosófica com base científica. Ela formula o que afirma de um jeito que pode ser testado, dizendo o que confirmaria e o que derrubaria cada hipótese, dialoga com a neurociência e publica artigos em revistas científicas. Os casos mostrados na aula são registros de aplicação real, documentados em vídeo, e a escola apresenta eles como sendo isso.</p>
+    </details>
+
+    <details>
+      <summary>As virtudes são uma proposta moral?</summary>
+      <p>Não. Na Virtologia, virtude é uma capacidade construída no cérebro, não um valor para a pessoa adotar. O que se avalia não é se alguém concorda com uma ideia, e sim se o cérebro dele passou a funcionar de outro jeito. E isso aparece no sintoma, não no discurso.</p>
+    </details>
+
+    <details>
+      <summary>A Virtologia substitui acompanhamento médico?</summary>
+      <p>Onde existe determinação biológica, como na psicose, no transtorno bipolar e no autismo, o trabalho é somado ao tratamento médico e nunca fica no lugar dele. Onde o sofrimento vem de defesa construída ao longo da vida, o trabalho virtológico é o próprio tratamento.</p>
+    </details>
+
+    <details>
+      <summary>Como funciona a Formação em Virtologia?</summary>
+      <p>São mais de 60 aulas, do fundamento à técnica, com acompanhamento ao longo de todo o caminho. Programa, formato e valores são apresentados na conversa pelo WhatsApp, sem compromisso.</p>
+    </details>
+  </div>
+</section>
+</main>
+
+<footer class="rodape">
+  <div class="wrap-largo">
+    <div class="rodape-cols">
+      <div>
+        <h4><a href="../../virtologia/">Virtologia</a></h4>
+        <ul>
+          <li><a href="../../terapeutas/">Terapia gratuita</a></li>
+          <li><a href="../../teorias/">Diante de outras grandes teorias</a></li>
+          <li><a href="../../depoimentos/">Depoimentos</a></li>
+          <li><a href="../../projetos/">Projetos sociais</a></li>
+          <li><a href="../../imprensa/">Na imprensa</a></li>
+          <li><a href="../../aula1/">Aula aberta</a></li>
+          <li><a href="../../aulas/virtologia/">Aula ao vivo gratuita</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4><a href="../../sistemas/">Humanização 2.0</a></h4>
+        <ul>
+          <li><a href="../../sistemas/#evidencias">Evidências internacionais</a></li>
+          <li><a href="../../aula2/">Aula aberta sobre a NR-1</a></li>
+          <li><a href="../../aularh/">Aula aberta para RH</a></li>
+          <li><a href="../../aulas/humanizacao/">Aula ao vivo gratuita</a></li>
+          <li><a href="../../sistemas-humanizados/">O livro</a></li>
+          <li><a href="../../pos-sistemas/">Pós-graduação</a></li>
+          <li><a href="../../ondas/">As Três Ondas do Trabalho</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4><a href="../../formacoes/">Formações e cursos</a></h4>
+        <ul>
+          <li><a href="../../formacao/">Formação em Virtologia</a></li>
+          <li><a href="../../pos-sistemas/">Pós-graduação em Sistemas Humanizados</a></li>
+          <li><a href="../../formacoes/#intro-virtologia">Introdução à Virtologia</a></li>
+          <li><a href="../../formacoes/#intro-sistemas">Introdução aos Sistemas Humanizados</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4><a href="../../livros/">Livros</a></h4>
+        <ul>
+          <li><a href="../../fundamentos/">Fundamentos da Virtologia</a></li>
+          <li><a href="../../manual/">Manual de Desenvolvimento Humano em Virtudes</a></li>
+          <li><a href="../../sistemas-humanizados/">Sistemas Humanizados</a></li>
+          <li><a href="../../guia/">Guia das Virtudes</a></li>
+          <li><a href="../../teimosia/">Teimosia de Viver</a></li>
+          <li><a href="../../envelheci/">Envelheci, e Daí?</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4><a href="../../futuro/">Trazemos o Futuro</a></h4>
+        <div class="redes">
+          <a href="https://www.instagram.com/eduardocasarottooficial/" target="_blank" rel="noopener" aria-label="Instagram"><img src="../../img/icone-instagram.svg" alt=""></a>
+          <a href="https://linktw.in/qrGGUW" target="_blank" rel="noopener" aria-label="YouTube"><img src="../../img/icone-youtube.svg" alt=""></a>
+          <a href="https://www.tiktok.com/@eduardocasarottooficial" target="_blank" rel="noopener" aria-label="TikTok"><img src="../../img/icone-tiktok.svg" alt=""></a>
+        </div>
+      </div>
+    </div>
+    <div class="ressalva">
+      <p>Nos quadros com determinação biológica, a Virtologia soma-se ao tratamento médico e não o substitui.</p>
+      <div class="contatos">
+        <a href="mailto:grupo@institutovirtudes.com.br"><img src="../../img/icone-email.svg" alt="" width="18" height="18">grupo@institutovirtudes.com.br</a>
+        <a href="https://wa.me/5564996428026" target="_blank" rel="noopener"><img src="../../img/icone-whatsapp.svg" alt="" width="18" height="18">+55 64 99642-8026</a>
+      </div>
+      <p class="legais"><a href="../../contato/">Fale conosco</a> · <a href="../../trocas/">Trocas, devolução e reembolso</a> · <a href="../../frete/">Política de Frete</a> · <a href="../../privacidade/">Política de Privacidade</a></p>
+      <p class="copyright">&copy; 2026 Instituto Virtudes. Todos os direitos reservados.<br>
+        DCM Instituto Virtudes de Treinamento LTDA · CNPJ 33.247.144/0001-04<br>
+        Instituto Virtudes · Editora Virtudes</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../../js/origem.js"></script>
+<script src="../../aulas/config.js"></script>
+<script src="../../aulas/inscricao.js"></script>
+<script>
+/* link do grupo das aulas ao vivo: o mesmo da aula anunciada em aulas/config.js */
+(function () {
+  var IV = window.IVAulas, sit = IV && IV.situacao("virtologia"), u = sit && sit.aula.grupoUrl;
+  Array.prototype.forEach.call(document.querySelectorAll("a[data-grupo-aulas]"), function (a) {
+    if (/^https:\/\/chat\.whatsapp\.com\//.test(u || "")) a.setAttribute("href", u);
+    a.addEventListener("click", function () { if (IV) IV.evento("entrar_grupo", { pagina: "aulas-acesso" }); });
+  });
+})();
+</script>
+<script src="../../js/site.js"></script>
+</body>
+</html>

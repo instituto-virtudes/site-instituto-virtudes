@@ -105,9 +105,15 @@
      montarFormulario(container, opcoes)
        opcoes.sit       resultado de situacao()
        opcoes.pagina    "inscricao" ou o nome da aula gravada (aula1, aula2, aularh)
-       opcoes.grupo     "redirecionar" (página de inscrição) ou "nova-aba"
-                        (aula gravada: o vídeo continua na página)
+       opcoes.grupo     "redirecionar" (página de inscrição), "nova-aba"
+                        (aula gravada: o vídeo continua na página) ou
+                        "botoes" (não abre o grupo sozinho: a página mostra
+                        os próprios botões, como na /aula1/)
        opcoes.rolarPara elemento que deve aparecer ao trocar de etapa
+       opcoes.textos    (opcional) troca textos do formulário numa página
+                        específica: titulo1, texto1, antesBotao, botaoFinal,
+                        statusOk, sucessoTitulo, sucessoTexto, botaoGrupo.
+                        Sem ele, valem os textos de sempre.
      ===================================================================== */
   function montarFormulario(box, op) {
     var A = op.sit.aula, T = op.sit.trilha;
@@ -120,9 +126,12 @@
     var podeEnviar = problemas.length === 0;
     var privacidade = url("privacidade/");
     var novaAba = op.grupo === "nova-aba";
+    var soBotoes = op.grupo === "botoes";
     var bonus = A.materiaisBonus !== false;
     var PERGUNTA_MOMENTO = "Hoje, qual opção descreve melhor seu momento de interesse?";
     var PERGUNTA_MOMENTO_ALUNO = "Como aluno(a), o que você busca nesta aula?";
+    var TX = op.textos || {};
+    function tx(k, padrao) { return TX[k] != null ? TX[k] : padrao; }
 
     box.classList.add("iv-form");
     box.innerHTML =
@@ -132,8 +141,8 @@
         '<div class="barra-prog" aria-hidden="true"><i id="barra-prog"></i></div>' +
 
         '<fieldset class="etapa" data-etapa="1">' +
-          '<legend><span class="et-tit">Vamos começar sua inscrição</span></legend>' +
-          '<p class="et-txt">São três etapas curtas. Ao concluir, você seguirá para o grupo da aula.</p>' +
+          '<legend><span class="et-tit">' + esc(tx("titulo1", "Vamos começar sua inscrição")) + '</span></legend>' +
+          '<p class="et-txt">' + esc(tx("texto1", "São três etapas curtas. Ao concluir, você seguirá para o grupo da aula.")) + '</p>' +
           '<div class="campo"><label for="f-nome">Nome</label><input id="f-nome" name="nome" type="text" autocomplete="name" autocapitalize="words" maxlength="120" required aria-describedby="erro-nome"><p class="erro" id="erro-nome"></p></div>' +
           '<div class="campo"><label for="f-tel">WhatsApp com DDD</label><input id="f-tel" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="(11) 91234-5678" maxlength="25" required aria-describedby="dica-tel erro-tel"><p class="dica" id="dica-tel">Fora do Brasil? Comece com + e o código do país.</p><p class="erro" id="erro-tel"></p></div>' +
           '<div class="campo"><label for="f-email">E-mail</label><input id="f-email" name="email" type="email" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false" maxlength="160" required aria-describedby="erro-email"><p class="erro" id="erro-email"></p></div>' +
@@ -157,16 +166,16 @@
           '<div class="grupo-op" role="radiogroup" aria-labelledby="q-mom"><p class="pergunta" id="q-mom">' + PERGUNTA_MOMENTO + '</p><div id="ops-momento" data-tipo="geral">' + radios("momento", CFG.opcoes.momento) + '</div><p class="erro" id="erro-momento"></p></div>' +
           '<label class="consent"><input type="checkbox" name="aceite_ofertas" id="f-ofertas"><span>Quero receber também convites para próximas aulas gratuitas e formações do Instituto Virtudes. (Opcional)</span></label>' +
           '<p class="uso-dados">Usaremos seus dados para a sua inscrição e para os avisos desta aula, conforme a <a href="' + esc(privacidade) + '" target="_blank" rel="noopener">Política de Privacidade</a>.</p>' +
-          '<p class="antes-btn">Ao clicar no botão abaixo, você será redirecionado para o grupo onde enviaremos o link do Zoom no dia da aula' + (bonus ? " e os materiais bônus em PDF" : "") + '.</p>' +
+          '<p class="antes-btn">' + esc(tx("antesBotao", "Ao clicar no botão abaixo, você será redirecionado para o grupo onde enviaremos o link do Zoom no dia da aula" + (bonus ? " e os materiais bônus em PDF" : "") + ".")) + '</p>' +
           '<p class="erro erro-envio" id="erro-envio" role="alert"></p>' +
-          '<div class="acoes-form"><button type="button" class="btn-sec" data-voltar>Voltar</button><button type="submit" class="btn btn-final" id="btn-final">Finalizar inscrição e seguir para grupo da aula</button></div>' +
+          '<div class="acoes-form"><button type="button" class="btn-sec" data-voltar>Voltar</button><button type="submit" class="btn btn-final" id="btn-final">' + esc(tx("botaoFinal", "Finalizar inscrição e seguir para grupo da aula")) + '</button></div>' +
         '</fieldset>' +
         '<p class="status-envio" id="status-envio" role="status" aria-live="polite"></p>' +
       '</form>' +
-      '<div class="sucesso" id="sucesso" hidden tabindex="-1"><h3>Inscrição concluída</h3>' +
-        '<p>' + (novaAba ? "O grupo da aula foi aberto em outra aba. Se não abriu, toque no botão abaixo." : "Se o grupo não abriu sozinho, toque no botão abaixo.") +
-        ' É por lá que enviaremos o link do Zoom no dia da aula' + (bonus ? " e os materiais bônus em PDF" : "") + '.</p>' +
-        '<p><a class="btn" id="link-grupo" href="#"' + (novaAba ? ' target="_blank" rel="noopener"' : "") + '>Abrir grupo da aula</a></p></div>';
+      '<div class="sucesso" id="sucesso" hidden tabindex="-1"><h3>' + esc(tx("sucessoTitulo", "Inscrição concluída")) + '</h3>' +
+        '<p>' + esc(tx("sucessoTexto", (novaAba ? "O grupo da aula foi aberto em outra aba. Se não abriu, toque no botão abaixo." : "Se o grupo não abriu sozinho, toque no botão abaixo.") +
+        " É por lá que enviaremos o link do Zoom no dia da aula" + (bonus ? " e os materiais bônus em PDF" : "") + ".")) + '</p>' +
+        '<p><a class="btn" id="link-grupo" href="#"' + (novaAba ? ' target="_blank" rel="noopener"' : "") + '>' + esc(tx("botaoGrupo", "Abrir grupo da aula")) + '</a></p></div>';
 
     var form = $("#form-aula", box);
     var etapaAtual = 1, comecou = false;
@@ -364,10 +373,10 @@
           try { sessionStorage.setItem(FEITO, link); sessionStorage.removeItem(RASCUNHO); } catch (x) {}
           try { if (window.fbq) fbq("track", "Lead", { content_name: "Aula ao vivo " + A.id, content_category: op.sit.chave }); } catch (x) {}
           evento("generate_lead", base);
-          $("#status-envio", box).textContent = "Inscrição concluída. Abrindo o grupo da aula.";
+          $("#status-envio", box).textContent = tx("statusOk", "Inscrição concluída. Abrindo o grupo da aula.");
           mostrarSucesso(link);
           if (novaAba) { if (janela && !janela.closed) { try { janela.location.href = link; } catch (x) {} } }
-          else setTimeout(function () { window.location.href = link; }, 350);
+          else if (!soBotoes) setTimeout(function () { window.location.href = link; }, 350);
           if (op.aoConcluir) op.aoConcluir();
         })
         .catch(function () {

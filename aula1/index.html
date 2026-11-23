@@ -4,25 +4,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Aulas abertas de Virtologia | Instituto Virtudes</title>
-<meta name="description" content="Duas aulas completas de Virtologia com o Dr. Eduardo Casarotto: a Lei do Fluxo e a neuroplasticidade de virtudes, e o que é fixo e o que muda na personalidade.">
+<title>Duas aulas completas de Virtologia, liberadas na hora | Instituto Virtudes</title>
+<meta name="description" content="Deixe seu contato e assista na hora a duas aulas completas de Virtologia com o Dr. Eduardo Casarotto. Você também entra no grupo das aulas ao vivo de Virtologia.">
 <link rel="canonical" href="https://institutovirtudes.com.br/aula1/">
 <meta name="robots" content="noindex, follow">
 
-<meta property="og:type" content="article">
+<meta property="og:type" content="website">
 <meta property="og:site_name" content="Instituto Virtudes">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:url" content="https://institutovirtudes.com.br/aula1/">
-<meta property="og:title" content="Aulas abertas de Virtologia">
-<meta property="og:description" content="Duas aulas completas de Virtologia com o Dr. Eduardo Casarotto: a Lei do Fluxo e a neuroplasticidade de virtudes, e o que é fixo e o que muda na personalidade.">
+<meta property="og:title" content="Assista agora a duas aulas completas de Virtologia">
+<meta property="og:description" content="Deixe seu contato e assista na hora a duas aulas completas de Virtologia com o Dr. Eduardo Casarotto. Você também entra no grupo das aulas ao vivo de Virtologia.">
 <meta property="og:image" content="https://institutovirtudes.com.br/img/og-padrao.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Instituto Virtudes">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Aulas abertas de Virtologia">
-<meta name="twitter:description" content="Duas aulas completas de Virtologia com o Dr. Eduardo Casarotto: a Lei do Fluxo e a neuroplasticidade de virtudes, e o que é fixo e o que muda na personalidade.">
+<meta name="twitter:title" content="Assista agora a duas aulas completas de Virtologia">
+<meta name="twitter:description" content="Deixe seu contato e assista na hora a duas aulas completas de Virtologia com o Dr. Eduardo Casarotto. Você também entra no grupo das aulas ao vivo de Virtologia.">
 <meta name="twitter:image" content="https://institutovirtudes.com.br/img/og-padrao.jpg">
 
 <link rel="icon" href="../img/favicon.png">
@@ -35,13 +35,13 @@
 .itens-caixa p{font-size:15.5px;line-height:1.65;margin:0}
 .itens-caixa p + p{margin-top:10px}
 @media (max-width:820px){.itens{grid-template-columns:1fr;gap:16px}}
-.depoimentos{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin:32px 0}
+.depoimentos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px;margin:32px 0}
 .depoimentos figure{margin:0}
 .depoimentos .video{margin-bottom:14px}
 .depoimentos .dep-fala{font-family:var(--fonte);font-size:17px;line-height:1.45;
   margin:0 0 10px;color:var(--texto)}
 .depoimentos .dep-nome{font-size:13.5px;color:var(--apoio);margin:0;line-height:1.4}
-@media (max-width:640px){.depoimentos{grid-template-columns:1fr;gap:28px}}
+@media (max-width:820px){.depoimentos{grid-template-columns:1fr;gap:28px}}
 
 /* várias aulas na mesma página */
 .au-escolha{margin:36px 0 0;line-height:1.25}
@@ -68,9 +68,146 @@
 .au-seguir{margin-top:22px}
 .au-seguir a{font-weight:600}
 .au-seguir a::after{content:" \2193"}
-.au-proxima .convite-vivo{margin-top:0}
 @media (max-width:820px){.au-trilha{grid-template-columns:1fr;gap:14px}}
+/* ===== landing: o cadastro libera as duas aulas e leva ao grupo das aulas ao vivo ===== */
+html:not(.aulas-liberadas) .lp-quando-liberado{display:none!important}
+html.aulas-liberadas .lp-quando-bloqueado{display:none!important}
+
+.lp-hero{background:#0B2341;color:#D9DEE6;padding:72px 0 84px;position:relative;overflow:hidden}
+.lp-hero::before{content:"";position:absolute;right:-200px;top:-260px;width:680px;height:680px;border:1px solid rgba(229,190,128,.25);border-radius:50%;pointer-events:none}
+.lp-hero + section{border-top:0}
+.lp-hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,450px);grid-template-rows:auto auto 1fr auto;grid-template-areas:"txt form" "lista form" ". form" "deps deps";gap:0 64px;align-items:start;position:relative}
+.lp-hero-txt{grid-area:txt;padding-bottom:12px}
+.lp-hero-lista{grid-area:lista}
+.lp-hero-deps{grid-area:deps;margin-top:44px;padding-top:36px;border-top:1px solid rgba(255,255,255,.14)}
+.lp-deps-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px}
+.lp-deps-grid figure{margin:0}
+.lp-deps-grid .video{margin:0 0 14px;border:0;background:#081A31}
+.lp-dep-fala{font-size:16.5px;line-height:1.45;color:#fff;margin:0 0 8px}
+.lp-dep-nome{font-size:13.5px;line-height:1.4;color:#AEB9C7;margin:0}
+.lp-hero-form{grid-area:form;scroll-margin-top:16px}
+.lp-selo{display:inline-flex;align-items:center;gap:12px;font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#E5BE80;margin:0 0 20px}
+.lp-selo::before{content:"";width:34px;height:2px;background:#E5BE80}
+.lp-hero h1{color:#fff;font-size:clamp(34px,4.2vw,54px);line-height:1.08;margin:0 0 22px;max-width:640px}
+.lp-hero h1 em{font-style:normal;color:#E5BE80}
+.lp-intro{font-size:18.5px;line-height:1.65;color:#F3EEE4;margin:0 0 28px;max-width:620px}
+.lp-intro strong{color:#E5BE80;font-weight:700}
+.lp-dentro-tit{font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#E5BE80;margin:0 0 12px}
+.lp-dentro{list-style:none;margin:0 0 28px;padding:4px 22px;max-width:620px;border:1px solid rgba(229,190,128,.3);border-radius:8px;background:rgba(255,255,255,.035)}
+.lp-dentro li{position:relative;padding:16px 0 16px 26px;font-size:15.5px;line-height:1.55;color:#C3CCD8}
+.lp-dentro li + li{border-top:1px solid rgba(255,255,255,.1)}
+.lp-dentro li::before{content:"";position:absolute;left:2px;top:24px;width:9px;height:9px;transform:rotate(45deg);background:#E5BE80}
+.lp-dentro strong{display:block;color:#fff;font-size:17px;line-height:1.35;margin-bottom:4px}
+.lp-eq{display:block;font-weight:600;color:#E5BE80;letter-spacing:.01em;margin:0 0 4px}
+.lp-so-celular{display:none}
+.lp-lead{font-size:18px;line-height:1.65;color:#F3EEE4;margin:0 0 24px;max-width:620px}
+.lp-lista-tit{font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#fff;margin:0 0 16px}
+.lp-recebe{list-style:none;margin:0 0 26px;padding:0;display:grid;gap:16px;max-width:620px}
+.lp-recebe li{display:flex;gap:14px;align-items:flex-start}
+.lp-recebe p{margin:0;font-size:15.5px;line-height:1.55;color:#C3CCD8}
+.lp-recebe strong{display:block;color:#fff;font-size:16.5px;line-height:1.35;margin-bottom:3px}
+.lp-ico{flex:0 0 auto;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:15px;line-height:1;background:#2C63C0;color:#fff}
+.lp-ico-2{background:#9A7434}
+.lp-ico-grupo{background:transparent;border:1.5px solid #E5BE80;color:#E5BE80}
+.lp-proxima{margin:-6px 0 26px;font-size:14.5px;line-height:1.5;color:#F3EEE4;background:rgba(229,190,128,.1);border:1px solid rgba(229,190,128,.35);border-radius:6px;padding:10px 14px;max-width:620px}
+.lp-proxima strong{color:#E5BE80}
+.lp-quem{display:flex;align-items:center;gap:14px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);max-width:620px}
+.lp-quem img{width:60px;height:60px;border-radius:50%;flex:0 0 auto;border:2px solid #E5BE80}
+.lp-quem p{margin:0;font-size:14px;line-height:1.5;color:#AEB9C7}
+.lp-quem strong{display:block;color:#fff;font-size:15px}
+
+/* caixa do formulário e caixa de acesso liberado */
+.lp-form-card{background:#fff;color:var(--texto);border-radius:8px;border-top:4px solid #E5BE80;padding:28px 28px 24px;box-shadow:0 24px 60px rgba(0,0,0,.3)}
+.lp-form-tit{font-size:25px;font-weight:700;line-height:1.2;letter-spacing:-.02em;color:#0B2341;margin:0 0 6px;outline:none}
+.lp-form-sub{font-size:14.5px;line-height:1.5;color:var(--apoio);margin:0 0 20px}
+.lp-form-card .iv-form #form-aula,.lp-form-card .iv-form .sucesso{border:0;box-shadow:none;padding:0;background:none;border-radius:0}
+.lp-form-card .iv-form .et-tit{font-size:19px}
+.lp-form-card .iv-form .destaque-tit{font-size:20px}
+.lp-form-card .iv-form .acoes-form{flex-direction:column-reverse;align-items:stretch}
+.lp-form-card .iv-form .acoes-form .btn,.lp-form-card .iv-form .acoes-form .btn-sec{width:100%;text-align:center}
+.lp-form-card .iv-form .btn-final{max-width:none}
+.lp-ok-selo{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#1C6B3F;background:#E5F3EA;border-radius:999px;padding:5px 12px;margin:0 0 14px}
+.lp-ok-passos{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:0}
+.lp-ok-passo{display:flex;gap:14px;align-items:flex-start;padding:18px 0}
+.lp-ok-passo + .lp-ok-passo{border-top:1px solid #E1E6EC}
+.lp-ok-n{flex:0 0 auto;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:#0B2341;color:#E5BE80;font-weight:700;font-size:15px;line-height:1}
+.lp-ok-passo.feito .lp-ok-n{background:#1C6B3F;color:#fff;font-size:0}
+.lp-ok-passo.feito .lp-ok-n::after{content:"\2713";font-size:16px}
+.lp-ok-passo > div{flex:1;min-width:0}
+.lp-ok-p-tit{font-size:17px;font-weight:700;line-height:1.3;color:#0B2341;margin:2px 0 4px}
+.lp-ok-p-txt{font-size:14.5px;line-height:1.5;color:var(--apoio);margin:0 0 12px}
+.lp-ok-btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:50px;padding:13px 18px;border-radius:4px;font-family:var(--fonte);font-size:16px;font-weight:700;line-height:1.3;text-align:center;text-decoration:none;border:0;transition:filter .18s}
+.lp-ok-btn:hover{filter:brightness(1.08)}
+.lp-ok-btn-grupo{background:#157347;color:#fff}
+.lp-ok-btn-grupo:hover{color:#fff}
+.lp-ok-btn-aulas{background:#2C63C0;color:#fff}
+.lp-ok-btn-aulas:hover{color:#fff}
+
+/* botão dourado (sobre o azul) */
+.lp-btn-ouro{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:#E5BE80;color:#0B2341;font-family:var(--fonte);font-size:16px;font-weight:700;line-height:1.3;padding:14px 26px;border-radius:4px;border:0;text-decoration:none;transition:filter .18s,transform .18s}
+.lp-btn-ouro:hover{filter:brightness(1.06);transform:translateY(-1px);color:#0B2341}
+.lp-btn-ouro:focus-visible{outline:3px solid #fff;outline-offset:3px}
+
+/* como funciona */
+.lp-passos{background:var(--neutro);padding:72px 0}
+.lp-passos h2{margin-bottom:30px}
+.lp-passos-lista{list-style:none;padding:0;margin:0 0 32px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.lp-passos-lista li{background:#fff;border:1px solid #E1E6EC;border-radius:6px;padding:26px 24px}
+.lp-passo-n{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:#0B2341;color:#E5BE80;font-weight:700;font-size:16px;line-height:1;margin-bottom:16px}
+.lp-passos-lista h3{font-size:20px;margin:0 0 8px}
+.lp-passos-lista p{font-size:15.5px;line-height:1.6;margin:0;color:#4A5868}
+
+/* as aulas */
+.lp-aulas-intro{font-size:18px;line-height:1.65}
+.lp-aulas .au-escolha{margin-top:18px}
+
+/* vídeo bloqueado até o cadastro */
+.lp-player{margin:28px 0 8px}
+.lp-cadeado{position:relative;aspect-ratio:16/9;background:#0B2341;border-radius:6px;overflow:hidden;display:flex;align-items:center}
+.lp-cad-foto{position:absolute;right:0;top:0;height:100%;width:auto;max-width:none;border-radius:0}
+.lp-cadeado::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0B2341 40%,rgba(11,35,65,.6) 62%,rgba(11,35,65,.05) 100%);pointer-events:none}
+.lp-cad-txt{position:relative;z-index:1;padding:0 6%;max-width:64%}
+.lp-cad-selo{display:inline-flex;align-items:center;gap:8px;background:rgba(229,190,128,.12);color:#E5BE80;border:1px solid rgba(229,190,128,.45);border-radius:999px;padding:5px 13px;font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;line-height:1.4;margin:0 0 16px}
+.lp-cad-tit{color:#fff;font-size:clamp(20px,2.3vw,30px);font-weight:600;line-height:1.2;letter-spacing:-.02em;margin:0 0 22px}
+.lp-player .video{margin:0}
+
+/* chamada final */
+section.lp-final{background:#0B2341;color:#D9DEE6;text-align:center;border-top:0;padding:84px 0}
+.lp-final h2{color:#fff;max-width:760px;margin:0 auto 14px}
+.lp-final p{max-width:620px;margin:0 auto 30px;color:#D9DEE6;font-size:18px}
+
+@media (max-width:980px){
+  .lp-hero{padding:46px 0 56px}
+  .lp-hero-grid{grid-template-columns:minmax(0,1fr);grid-template-rows:none;grid-template-areas:"txt" "form" "lista" "deps";gap:0}
+  .lp-lead{margin-bottom:22px}
+  .lp-hero-form{margin:0 0 34px}
+  .lp-hero-form{max-width:560px}
+}
+@media (max-width:820px){
+  .lp-deps-grid{grid-template-columns:1fr;gap:28px}
+  .lp-hero-deps{margin-top:36px;padding-top:30px}
+  .lp-passos-lista{grid-template-columns:1fr;gap:12px}
+  .lp-passos{padding:52px 0}
+}
+@media (max-width:640px){
+  .lp-hero h1{font-size:33px}
+  .lp-lead,.lp-intro{font-size:17px}
+  .lp-so-celular{display:block;margin:-4px 0 26px}
+  .lp-dentro{padding:2px 16px}
+  .lp-dentro li{padding-left:22px;font-size:15px}
+  .lp-form-card{padding:22px 18px 18px}
+  .lp-form-tit{font-size:22px}
+  .lp-cadeado{aspect-ratio:auto;min-height:230px}
+  .lp-cad-txt{max-width:76%;padding:24px 18px}
+  .lp-cadeado::after{background:linear-gradient(90deg,#0B2341 45%,rgba(11,35,65,.75) 70%,rgba(11,35,65,.35) 100%)}
+  .lp-cad-tit{font-size:19px;margin-bottom:16px}
+  .lp-btn-ouro{font-size:15px;padding:13px 20px}
+  .lp-final p{font-size:17px}
+  section.lp-final{padding:56px 0}
+}
 </style>
+<script>try{if(localStorage.getItem("iv_aulas_abertas_virtologia")==="1"&&!/[?&]formulario\b/.test(location.search))document.documentElement.classList.add("aulas-liberadas")}catch(e){}</script>
+<noscript><style>.lp-cadeado,.lp-hero-form,.lp-passos,.lp-final{display:none!important}</style></noscript>
 <!-- Meta Pixel -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -166,14 +303,113 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
 </header>
 
 <main>
-<section class="au-hero">
+<section class="lp-hero sem-faixa">
   <div class="wrap">
-    <p class="kicker">Virtologia · Aulas abertas</p>
-    <h1>Aulas completas de Virtologia para assistir agora</h1>
-    <p class="lead">Aulas reais com o Dr. Eduardo Casarotto, do jeito que aconteceram. Cada uma mostra uma parte da Virtologia por inteiro, com casos e exemplos de consultório.</p>
-    <p>A primeira é para quem está conhecendo a escola. A segunda aprofunda um tema que muda a forma de avaliar uma pessoa. Veja o que cada uma entrega e escolha por onde começar.</p>
+    <div class="lp-hero-grid">
+      <div class="lp-hero-txt">
+        <p class="lp-selo">Virtologia · Acesso gratuito</p>
+        <h1>Assista agora a <em>duas aulas completas</em> de Virtologia</h1>
+        <p class="lp-so-celular"><a class="lp-btn-ouro" href="#liberar" data-ir-form data-origem="topo">Receber as duas aulas agora</a></p>
+        <p class="lp-intro">A Virtologia é uma escola clínico-filosófica brasileira que trata do sofrimento do dia a dia aos <strong>transtornos graves</strong>: ansiedade, depressão, pânico, TOC, compulsões, transtornos de personalidade como o borderline, automutilação e pensamento suicida. Ela vai na causa, e não só no sintoma.</p>
+        <p class="lp-dentro-tit">O que tem dentro da Virtologia</p>
+        <ul class="lp-dentro">
+          <li><strong>Neuroplasticidade de virtudes</strong>Exercícios específicos constroem novas estruturas psíquicas no cérebro até elas virarem o jeito de a pessoa funcionar. Não é se controlar: é mudar a estrutura que sustentava o sintoma.</li>
+          <li><strong>51 necessidades e 12 temperamentos</strong>Mostram o que está faltando para a pessoa e qual é o jeito dela de ser. Assim a terapia não trata como doença uma necessidade em falta, nem tenta corrigir o temperamento.</li>
+          <li><strong>A equação da Lei do Fluxo</strong><span class="lp-eq">PRF = (I × E) × FA × PO × PS × LV</span>A fórmula que lê como cada pessoa enxerga e reage ao que acontece, e aponta onde ela está travada.</li>
+        </ul>
+        <p class="lp-lead">Nas duas aulas, o Dr. Eduardo Casarotto mostra tudo isso funcionando, com casos e exemplos de consultório. Deixe seu contato e receba o acesso às duas na hora.</p>
+      </div>
 
-    <h2 class="au-escolha">Clique na aula que deseja assistir:</h2>
+      <div class="lp-hero-lista">
+        <p class="lp-lista-tit">O que você recebe</p>
+        <ul class="lp-recebe">
+          <li><span class="lp-ico" aria-hidden="true">1</span><p><strong>Aula 1 completa</strong>A Lei do Fluxo e a neuroplasticidade de virtudes. Uma das mais de 60 aulas da Formação em Virtologia.</p></li>
+          <li><span class="lp-ico lp-ico-2" aria-hidden="true">2</span><p><strong>Aula 2 completa</strong>O que é fixo e o que muda na personalidade. Dada ao vivo em 19/11/2026, com mapas de temperamento feitos na hora.</p></li>
+          <li><span class="lp-ico lp-ico-grupo" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.6a9.4 9.4 0 0 0-8.1 14.1L2.6 21.4l4.8-1.25A9.4 9.4 0 1 0 12 2.6z"/><path d="M8.9 8.1c.25-.6.5-.6.75-.6h.6c.2 0 .45 0 .65.5l.75 1.8c.1.25.1.45-.5.7l-.5.6c-.15.2-.2.4-.05.65a7 7 0 0 0 3.3 2.85c.3.1.5.05.65-.15l.6-.75c.2-.25.4-.2.65-.1l1.75.85c.25.15.4.25.45.4s.05.85-.25 1.55c-.3.7-1.4 1.2-2.1 1.25-1.6.1-3.6-1-5.3-2.7-1.7-1.75-2.8-3.8-2.7-5.4.05-.7.45-1.4.85-1.85z"/></svg></span><p><strong>Entrada no grupo das aulas ao vivo de Virtologia</strong>No WhatsApp. É por lá que avisamos as próximas aulas ao vivo, nas quais você pode fazer perguntas diretamente ao Dr. Eduardo Casarotto.</p></li>
+        </ul>
+        <p class="lp-proxima" id="lp-proxima" hidden></p>
+        <div class="lp-quem">
+          <img src="../img/aulas/eduardo-avatar.webp" alt="" width="60" height="60">
+          <p><strong>Dr. Eduardo Casarotto</strong>Fundamentador da Virtologia, autor de mais de 20 livros. Forma terapeutas há 25 anos.</p>
+        </div>
+      </div>
+
+      <div class="lp-hero-deps">
+        <p class="lp-lista-tit">Profissionais que já tratam com a Virtologia</p>
+        <div class="lp-deps-grid">
+        <figure>
+          <div class="video"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/WD7Zjkop8-o?rel=0" title="Depoimento de Fernanda sobre a Formação em Virtologia" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+          <figcaption>
+            <p class="lp-dep-fala">"É libertador. Para consultório, foi uma revolução e tanto."</p>
+            <p class="lp-dep-nome">Fernanda · Psicóloga clínica (TCC)</p>
+          </figcaption>
+        </figure>
+        <figure>
+          <div class="video"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/8SwPa8b4eFE?rel=0" title="Depoimento de Dinorá sobre a Formação em Virtologia" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+          <figcaption>
+            <p class="lp-dep-fala">"Quando você vai percebendo, você vê que aquela não é mais a mesma pessoa que comecei a atender."</p>
+            <p class="lp-dep-nome">Dinorá · Psicóloga especialista em autismo</p>
+          </figcaption>
+        </figure>
+        <figure>
+          <div class="video"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/zQtXvSPwbrc?rel=0" title="Depoimento de Carina sobre a Formação em Virtologia" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+          <figcaption>
+            <p class="lp-dep-fala">"Não tem como não falar que é revolucionário. Depois que você conhece, não tem como não trabalhar com isso."</p>
+            <p class="lp-dep-nome">Carina · Neuropsicopedagoga, psicanalista e terapeuta ABA</p>
+          </figcaption>
+        </figure>
+        </div>
+      </div>
+
+      <div class="lp-hero-form" id="liberar">
+        <div class="lp-form-card lp-quando-bloqueado">
+          <p class="lp-form-tit">Receba suas duas aulas</p>
+          <p class="lp-form-sub">Gratuito. Ao concluir, você recebe o link do grupo das aulas ao vivo de Virtologia e o acesso às duas aulas.</p>
+          <div id="lp-form"></div>
+        </div>
+        <div class="lp-form-card lp-liberado lp-quando-liberado">
+          <p class="lp-ok-selo"><span aria-hidden="true">&#10003;</span> Cadastro concluído</p>
+          <p class="lp-form-tit" id="lp-ok-tit" tabindex="-1">Agora, leia esses dois passos:</p>
+          <ol class="lp-ok-passos">
+            <li class="lp-ok-passo" id="lp-passo-grupo">
+              <span class="lp-ok-n" aria-hidden="true">1</span>
+              <div>
+                <p class="lp-ok-p-tit">Entre no grupo para ter acesso às aulas ao vivo</p>
+                <p class="lp-ok-p-txt">É por lá que enviamos novas aulas ao vivo pra você participar e fazer perguntas diretamente ao prof. Eduardo Casarotto, no Zoom.</p>
+                <a class="lp-ok-btn lp-ok-btn-grupo" id="lp-link-grupo" href="https://chat.whatsapp.com/EsvtD5YU9XOGSMClks7e5B?mode=gi_t" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.6a9.4 9.4 0 0 0-8.1 14.1L2.6 21.4l4.8-1.25A9.4 9.4 0 1 0 12 2.6z"/><path d="M8.9 8.1c.25-.6.5-.6.75-.6h.6c.2 0 .45 0 .65.5l.75 1.8c.1.25.1.45-.5.7l-.5.6c-.15.2-.2.4-.05.65a7 7 0 0 0 3.3 2.85c.3.1.5.05.65-.15l.6-.75c.2-.25.4-.2.65-.1l1.75.85c.25.15.4.25.45.4s.05.85-.25 1.55c-.3.7-1.4 1.2-2.1 1.25-1.6.1-3.6-1-5.3-2.7-1.7-1.75-2.8-3.8-2.7-5.4.05-.7.45-1.4.85-1.85z"/></svg> Entrar no grupo do WhatsApp</a>
+              </div>
+            </li>
+            <li class="lp-ok-passo">
+              <span class="lp-ok-n" aria-hidden="true">2</span>
+              <div>
+                <p class="lp-ok-p-tit">Assista às duas aulas já liberadas imediatamente</p>
+                <p class="lp-ok-p-txt">Salve a página das aulas nos favoritos para voltar quando quiser.</p>
+                <a class="lp-ok-btn lp-ok-btn-aulas" id="lp-link-aulas" href="../aulas/acesso/">Acessar as aulas</a>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="lp-passos lp-quando-bloqueado">
+  <div class="wrap">
+    <h2>Como funciona</h2>
+    <ol class="lp-passos-lista">
+      <li><span class="lp-passo-n" aria-hidden="true">1</span><h3>Deixe seu contato</h3><p>Nome, WhatsApp e e-mail, e quatro perguntas rápidas sobre você.</p></li>
+      <li><span class="lp-passo-n" aria-hidden="true">2</span><h3>Entre no grupo das aulas ao vivo</h3><p>Ao concluir, aparece o botão do grupo de WhatsApp das aulas ao vivo de Virtologia. É por lá que avisamos as próximas aulas e enviamos o link do Zoom.</p></li>
+      <li><span class="lp-passo-n" aria-hidden="true">3</span><h3>Assista às duas aulas</h3><p>Logo abaixo, o botão "Acessar as aulas" leva à página com as duas aulas completas. Comece pela Aula 1 e siga para a Aula 2.</p></li>
+    </ol>
+    <a class="btn" href="#liberar" data-ir-form>Quero assistir às duas aulas</a>
+  </div>
+</section>
+
+<section class="lp-aulas" id="aulas">
+  <div class="wrap">
+    <p class="lp-aulas-intro">A primeira é para quem está conhecendo a escola. A segunda aprofunda um tema que muda a forma de avaliar uma pessoa. Veja o que cada uma entrega e escolha por onde começar.</p>
+    <h2 class="au-escolha"><span class="lp-quando-bloqueado">O que você vai assistir</span><span class="lp-quando-liberado">Clique na aula que deseja assistir:</span></h2>
 
     <div class="au-trilha">
       <a class="au-card" href="#aula-1">
@@ -188,7 +424,7 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
           <li>como se monta um plano de trabalho</li>
         </ul>
         <span class="au-card-meta">Aula da Formação em Virtologia</span>
-        <span class="au-card-ir">Assistir à Aula 1</span>
+        <span class="au-card-ir"><span class="lp-quando-bloqueado">Ver o que a Aula 1 apresenta</span><span class="lp-quando-liberado">Assistir à Aula 1</span></span>
       </a>
       <a class="au-card au-card-2" href="#aula-2">
         <span class="au-selo">Aula 2 · Para aprofundar</span>
@@ -202,7 +438,7 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
           <li>por que o temperamento se equilibra com virtudes, e não se troca</li>
         </ul>
         <span class="au-card-meta">Dada ao vivo em 19/11/2026</span>
-        <span class="au-card-ir">Assistir à Aula 2</span>
+        <span class="au-card-ir"><span class="lp-quando-bloqueado">Ver o que a Aula 2 apresenta</span><span class="lp-quando-liberado">Assistir à Aula 2</span></span>
       </a>
     </div>
   </div>
@@ -215,7 +451,19 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
     <p class="lead">A fórmula PRF = (I × E) × FA × PO × PS × LV mostra como cada pessoa enxerga o que acontece e como reage. Com ela dá para descobrir o que está travado na pessoa e como tratar aquilo.</p>
     <p>Nesta aula tirada da Formação em Virtologia, uma entre mais de 60, o Dr. Eduardo Casarotto apresenta a base da escola: o que constrói o jeito de uma pessoa enxergar e reagir, e por que <strong>mudar isso não é questão de entender, e sim de mudar a estrutura do cérebro</strong>. E, principalmente, qual estrutura precisa ser construída.</p>
 
-    <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/T9WzaKo6gmc?rel=0" title="Aula 1: a Lei do Fluxo e a neuroplasticidade de virtudes" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+    <div class="lp-player" data-video="T9WzaKo6gmc" data-titulo="Aula 1: a Lei do Fluxo e a neuroplasticidade de virtudes">
+      <div class="lp-cadeado">
+        <img class="lp-cad-foto" src="../img/aulas/virtologia-2026-11-09-v2-foto.webp" alt="" width="587" height="715" loading="lazy">
+        <div class="lp-cad-txt">
+          <p class="lp-cad-selo"><svg class="lp-quando-bloqueado" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg> Aula 1 completa</p>
+          <p class="lp-cad-tit lp-quando-bloqueado">Liberada assim que você deixar seu contato</p>
+          <a class="lp-btn-ouro lp-quando-bloqueado" href="#liberar" data-ir-form>Receber as duas aulas</a>
+          <p class="lp-cad-tit lp-quando-liberado">Você já tem acesso a esta aula</p>
+          <a class="lp-btn-ouro lp-quando-liberado" href="../aulas/acesso/#aula-1">Assistir à Aula 1</a>
+        </div>
+      </div>
+      <noscript><div class="video"><iframe src="https://www.youtube-nocookie.com/embed/T9WzaKo6gmc?rel=0" title="Aula 1: a Lei do Fluxo e a neuroplasticidade de virtudes" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div></noscript>
+    </div>
 
     <h3 class="au-sub-h">O que esta aula apresenta</h3>
     <p>Com casos reais de tratamento de automutilação e pensamento suicida usando exercícios de virtudes, a aula percorre a base da Virtologia: de como o ser humano funciona até o plano de trabalho no consultório.</p>
@@ -262,7 +510,19 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
     <p class="lead">Quem não sabe avaliar temperamento pode chamar de neurose o que é só o jeito de a pessoa ser. E, ao tentar corrigir, empurra a pessoa para longe de quem ela é.</p>
     <p>Nesta aula, dada ao vivo em 19 de novembro de 2026, o Dr. Eduardo Casarotto retoma a formação da personalidade peça por peça, mostra com casos de consultório onde a avaliação costuma errar e monta, ao vivo, o mapa de temperamento de participantes da turma. <strong>É a aula para quem já conhece a base e quer avaliar uma pessoa sem confundir traço com sintoma.</strong></p>
 
-    <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/zbOKITacQ_M?rel=0" title="Aula 2: Quando a terapia começa a apagar a personalidade do paciente? (ao vivo em 19/11/2026)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+    <div class="lp-player lp-player-2" data-video="zbOKITacQ_M" data-titulo="Aula 2: Quando a terapia começa a apagar a personalidade do paciente? (ao vivo em 19/11/2026)">
+      <div class="lp-cadeado">
+        <img class="lp-cad-foto" src="../img/aulas/virtologia-2026-11-09-v2-foto.webp" alt="" width="587" height="715" loading="lazy">
+        <div class="lp-cad-txt">
+          <p class="lp-cad-selo"><svg class="lp-quando-bloqueado" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg> Aula 2 completa</p>
+          <p class="lp-cad-tit lp-quando-bloqueado">Liberada assim que você deixar seu contato</p>
+          <a class="lp-btn-ouro lp-quando-bloqueado" href="#liberar" data-ir-form>Receber as duas aulas</a>
+          <p class="lp-cad-tit lp-quando-liberado">Você já tem acesso a esta aula</p>
+          <a class="lp-btn-ouro lp-quando-liberado" href="../aulas/acesso/#aula-2">Assistir à Aula 2</a>
+        </div>
+      </div>
+      <noscript><div class="video"><iframe src="https://www.youtube-nocookie.com/embed/zbOKITacQ_M?rel=0" title="Aula 2: Quando a terapia começa a apagar a personalidade do paciente? (ao vivo em 19/11/2026)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div></noscript>
+    </div>
 
     <h3 class="au-sub-h">O que esta aula apresenta</h3>
     <div class="itens">
@@ -313,12 +573,6 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
   </div>
 </section>
 
-<section class="au-proxima">
-  <div class="wrap">
-    <div class="convite-vivo" data-trilha="virtologia" data-pagina="aula1"></div>
-  </div>
-</section>
-
 <section id="depoimentos">
   <div class="wrap">
     <h2>O que dizem os profissionais que já estão tratando com a Virtologia?</h2>
@@ -334,31 +588,10 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
         </figcaption>
       </figure>
       <figure>
-        <div class="video"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/zQtXvSPwbrc?rel=0" title="Depoimento de Carina sobre a Formação em Virtologia" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
-        <figcaption>
-          <p class="dep-fala">"Não tem como não falar que é revolucionário. Depois que você conhece, não tem como não trabalhar com isso."</p>
-          <p class="dep-nome">Carina · Neuropsicopedagoga, psicanalista e terapeuta ABA</p>
-        </figcaption>
-      </figure>
-      <figure>
-        <div class="video"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/WD7Zjkop8-o?rel=0" title="Depoimento de Fernanda sobre a Formação em Virtologia" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
-        <figcaption>
-          <p class="dep-fala">"É libertador. Para consultório, foi uma revolução e tanto."</p>
-          <p class="dep-nome">Fernanda · Psicóloga clínica (TCC)</p>
-        </figcaption>
-      </figure>
-      <figure>
         <div class="video"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/9JgaqzV8Yck?rel=0" title="Depoimento de Grace Campos sobre a Formação em Virtologia" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
         <figcaption>
           <p class="dep-fala">"A Virtologia é o 'como' de todas as terapias. Linguagem fácil, compreensível, onde qualquer um pode fazer."</p>
           <p class="dep-nome">Grace Campos · Psicanalista</p>
-        </figcaption>
-      </figure>
-      <figure>
-        <div class="video"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/8SwPa8b4eFE?rel=0" title="Depoimento de Dinorá sobre a Formação em Virtologia" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
-        <figcaption>
-          <p class="dep-fala">"Quando você vai percebendo, você vê que aquela não é mais a mesma pessoa que comecei a atender."</p>
-          <p class="dep-nome">Dinorá · Psicóloga especialista em autismo</p>
         </figcaption>
       </figure>
       <figure>
@@ -497,13 +730,28 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
     <h2>O que costumam perguntar</h2>
 
     <details>
+      <summary>Como recebo as aulas?</summary>
+      <p>Assim que você conclui o cadastro, aparecem dois botões: um para entrar no grupo das aulas ao vivo de Virtologia, no WhatsApp, e outro para acessar a página com as duas aulas completas. Não é preciso esperar nenhum e-mail.</p>
+    </details>
+
+    <details>
+      <summary>Preciso pagar alguma coisa?</summary>
+      <p>Não. As duas aulas e a entrada no grupo das aulas ao vivo são gratuitas.</p>
+    </details>
+
+    <details>
       <summary>Em que ordem devo assistir?</summary>
       <p>Comece pela Aula 1, que apresenta a base da Virtologia: como a pessoa enxerga e reage, o que adoece e por que virtudes. A Aula 2 parte dessa base e aprofunda a formação da personalidade, com o temperamento no centro.</p>
     </details>
 
     <details>
-      <summary>Posso participar da próxima aula ao vivo?</summary>
-      <p>Pode. A inscrição é gratuita e fica logo abaixo da Aula 2. Depois de se inscrever, você entra no grupo da aula, onde enviamos o link do Zoom e os avisos. Na aula ao vivo, você pode fazer perguntas diretamente ao Dr. Eduardo Casarotto.</p>
+      <summary>O que acontece no grupo das aulas ao vivo?</summary>
+      <p>É por lá que avisamos as próximas aulas ao vivo de Virtologia e enviamos o link do Zoom no dia de cada uma. Na aula ao vivo, você pode fazer perguntas diretamente ao Dr. Eduardo Casarotto. Você pode sair do grupo quando quiser.</p>
+    </details>
+
+    <details>
+      <summary>Já me cadastrei, mas as aulas aparecem bloqueadas</summary>
+      <p>O acesso fica guardado no navegador em que você fez o cadastro. Se abriu esta página em outro celular, computador ou navegador, é só preencher o cadastro de novo, ou abrir a página das aulas, se você a salvou nos favoritos.</p>
     </details>
 
     <details>
@@ -525,6 +773,13 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
       <summary>Como funciona a Formação em Virtologia?</summary>
       <p>São mais de 60 aulas, do fundamento à técnica, com acompanhamento ao longo de todo o caminho. Programa, formato e valores são apresentados na conversa pelo WhatsApp, sem compromisso.</p>
     </details>
+  </div>
+</section>
+<section class="lp-final lp-quando-bloqueado">
+  <div class="wrap">
+    <h2>Suas duas aulas estão a um cadastro de distância</h2>
+    <p>Gratuito. Você recebe na hora o acesso às duas aulas e o link do grupo das aulas ao vivo de Virtologia.</p>
+    <a class="lp-btn-ouro" href="#liberar" data-ir-form>Quero assistir às aulas agora</a>
   </div>
 </section>
 </main>
@@ -602,7 +857,7 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
 <script src="../js/origem.js"></script>
 <script src="../aulas/config.js"></script>
 <script src="../aulas/inscricao.js"></script>
-<script src="../aulas/convite.js"></script>
+<script src="landing.js"></script>
 <script src="../js/site.js"></script>
 </body>
 </html>
