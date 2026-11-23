@@ -28,6 +28,7 @@
 <link rel="icon" href="../../img/favicon.png">
 <link rel="stylesheet" href="../../css/estilo.css">
 <link rel="stylesheet" href="../../aulas/inscricao.css">
+<link rel="stylesheet" href="../../aulas/aulas-abertas.css">
 <style>
 .itens{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:30px 0;align-items:start}
 .itens-caixa{border:1px solid var(--borda);border-radius:var(--raio-card);padding:26px 24px;background:#fff}
@@ -35,13 +36,13 @@
 .itens-caixa p{font-size:15.5px;line-height:1.65;margin:0}
 .itens-caixa p + p{margin-top:10px}
 @media (max-width:820px){.itens{grid-template-columns:1fr;gap:16px}}
-.depoimentos{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin:32px 0}
+.depoimentos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px;margin:32px 0}
 .depoimentos figure{margin:0}
 .depoimentos .video{margin-bottom:14px}
 .depoimentos .dep-fala{font-family:var(--fonte);font-size:17px;line-height:1.45;
   margin:0 0 10px;color:var(--texto)}
 .depoimentos .dep-nome{font-size:13.5px;color:var(--apoio);margin:0;line-height:1.4}
-@media (max-width:640px){.depoimentos{grid-template-columns:1fr;gap:28px}}
+@media (max-width:820px){.depoimentos{grid-template-columns:1fr;gap:28px}}
 
 /* várias aulas na mesma página */
 .au-escolha{margin:36px 0 0;line-height:1.25}
@@ -70,7 +71,14 @@
 .au-seguir a::after{content:" \2193"}
 .au-proxima .convite-vivo{margin-top:0}
 .au-proxima .cv-btn{display:inline-flex;align-items:center;text-decoration:none}
-.ac-nota{margin:26px 0 0;padding:14px 18px;background:#fff;border-left:4px solid var(--azul);border-radius:var(--raio-card);font-size:16px;line-height:1.6}
+.lp-hero-grid.ac-grid{grid-template-rows:auto;grid-template-areas:"txt form"}
+.ac-acoes{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 32px}
+.ac-btn-linha{display:inline-flex;align-items:center;justify-content:center;padding:13px 24px;border:1.5px solid rgba(229,190,128,.7);border-radius:4px;color:#E5BE80;font-family:var(--fonte);font-size:16px;font-weight:700;line-height:1.3;text-decoration:none;transition:background .18s}
+.ac-btn-linha:hover{background:rgba(229,190,128,.1);color:#E5BE80}
+.ac-btn-linha:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.ac-fav{font-size:14px;line-height:1.5;color:var(--apoio);margin:16px 0 0;padding-top:14px;border-top:1px solid #E1E6EC}
+@media (max-width:980px){.lp-hero-grid.ac-grid{grid-template-columns:minmax(0,1fr);grid-template-areas:"txt" "form"}.ac-grid .lp-hero-form{margin:30px 0 0}}
+@media (max-width:640px){.ac-acoes a{flex:1 1 100%}}
 @media (max-width:820px){.au-trilha{grid-template-columns:1fr;gap:14px}}
 </style>
 <!-- Meta Pixel -->
@@ -168,15 +176,43 @@ src="https://www.facebook.com/tr?id=386437925348155&ev=PageView&noscript=1"
 </header>
 
 <main>
-<section class="au-hero">
+<section class="lp-hero sem-faixa">
   <div class="wrap">
-    <p class="kicker">Virtologia · Suas aulas</p>
-    <h1>Suas duas aulas completas de Virtologia</h1>
-    <p class="lead">Aulas reais com o Dr. Eduardo Casarotto, do jeito que aconteceram. Cada uma mostra uma parte da Virtologia por inteiro, com casos e exemplos de consultório.</p>
-    <p>A primeira é para quem está conhecendo a escola. A segunda aprofunda um tema que muda a forma de avaliar uma pessoa. Veja o que cada uma entrega e escolha por onde começar.</p>
+    <div class="lp-hero-grid ac-grid">
+      <div class="lp-hero-txt">
+        <p class="lp-selo">Virtologia · Suas aulas</p>
+        <h1>Suas <em>duas aulas completas</em> de Virtologia</h1>
+        <p class="lp-intro">Aulas reais com o Dr. Eduardo Casarotto, do jeito que aconteceram, com casos e exemplos de consultório. Comece pela Aula 1 e, depois, siga para a Aula 2.</p>
+        <ul class="lp-recebe">
+          <li><span class="lp-ico" aria-hidden="true">1</span><p><strong>Aula 1 completa: 1 hora de aula</strong>A Lei do Fluxo e a neuroplasticidade de virtudes. Uma das mais de 60 aulas da Formação em Virtologia.</p></li>
+          <li><span class="lp-ico lp-ico-2" aria-hidden="true">2</span><p><strong>Aula 2 completa: 2 horas de aula</strong>O que é fixo e o que muda na personalidade. Dada ao vivo em 19/11/2026, com mapas de temperamento feitos na hora.</p></li>
+        </ul>
+        <div class="ac-acoes">
+          <a class="lp-btn-ouro" href="#aula-1">Assistir à Aula 1</a>
+          <a class="ac-btn-linha" href="#aula-2">Assistir à Aula 2</a>
+        </div>
+        <div class="lp-quem">
+          <img src="../../img/aulas/eduardo-avatar.webp" alt="" width="60" height="60">
+          <p><strong>Dr. Eduardo Casarotto</strong>Fundamentador da Virtologia, autor de mais de 20 livros. Forma terapeutas há 25 anos.</p>
+        </div>
+      </div>
 
-    <p class="ac-nota">Salve esta página nos favoritos para voltar às aulas quando quiser. E, se ainda não entrou, <a data-grupo-aulas href="https://chat.whatsapp.com/EsvtD5YU9XOGSMClks7e5B?mode=gi_t" target="_blank" rel="noopener">entre no grupo das aulas ao vivo de Virtologia</a>.</p>
+      <div class="lp-hero-form">
+        <div class="lp-form-card">
+          <p class="lp-ok-selo"><span aria-hidden="true">&#10003;</span> Acesso liberado</p>
+          <p class="lp-form-tit">Entre no grupo para ter acesso às aulas ao vivo</p>
+          <p class="lp-form-sub">É por lá que enviamos novas aulas ao vivo pra você participar e fazer perguntas diretamente ao prof. Eduardo Casarotto, no Zoom.</p>
+          <a class="lp-ok-btn lp-ok-btn-grupo" data-grupo-aulas href="https://chat.whatsapp.com/EsvtD5YU9XOGSMClks7e5B?mode=gi_t" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.6a9.4 9.4 0 0 0-8.1 14.1L2.6 21.4l4.8-1.25A9.4 9.4 0 1 0 12 2.6z"/><path d="M8.9 8.1c.25-.6.5-.6.75-.6h.6c.2 0 .45 0 .65.5l.75 1.8c.1.25.1.45-.5.7l-.5.6c-.15.2-.2.4-.05.65a7 7 0 0 0 3.3 2.85c.3.1.5.05.65-.15l.6-.75c.2-.25.4-.2.65-.1l1.75.85c.25.15.4.25.45.4s.05.85-.25 1.55c-.3.7-1.4 1.2-2.1 1.25-1.6.1-3.6-1-5.3-2.7-1.7-1.75-2.8-3.8-2.7-5.4.05-.7.45-1.4.85-1.85z"/></svg> Entrar no grupo do WhatsApp</a>
+          <p class="ac-fav">Salve esta página nos favoritos para voltar às aulas quando quiser.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<section class="lp-aulas" id="aulas">
+  <div class="wrap">
+    <p class="lp-aulas-intro">A primeira é para quem está conhecendo a escola. A segunda aprofunda um tema que muda a forma de avaliar uma pessoa. Veja o que cada uma entrega e escolha por onde começar.</p>
     <h2 class="au-escolha">Clique na aula que deseja assistir:</h2>
 
     <div class="au-trilha">
