@@ -108,7 +108,7 @@
       textos: {
         titulo1: "Seus dados de contato",
         texto1: "São três etapas curtas.",
-        antesBotao: "Ao clicar no botão abaixo, você recebe o link do grupo das aulas ao vivo de Virtologia e o acesso às duas aulas. É pelo grupo que avisamos as próximas aulas ao vivo e enviamos o link do Zoom.",
+        antesBotao: "Ao clicar no botão abaixo, você recebe o acesso às duas aulas completas, mais de 3 horas de aulas, e o link do grupo das aulas ao vivo de Virtologia. É pelo grupo que avisamos as próximas aulas ao vivo e enviamos o link do Zoom.",
         botaoFinal: "Concluir e receber as aulas",
         statusOk: "Inscrição concluída. Siga os dois passos para entrar no grupo e assistir às aulas.",
         sucessoTitulo: "Cadastro concluído",
