@@ -79,7 +79,7 @@ window.COLECAO = {
 
   livros: [
     { id: "fundamentos", precoAvulso: 686.00, precoColecao: 458.00, grupo: "fundamentos", titulo: "Fundamentos da Virtologia", sub: "3ª edição, 2026",
-      capa: "img/fundamentos-da-virtologia.webp", ficha: "Cerca de 1.194 páginas · formato A4",
+      capa: "img/fundamentos-da-virtologia.webp", ficha: "1.253 páginas · formato A4",
       texto: "A arquitetura teórica da Virtologia: funcionamento humano, personalidade, necessidades, Faixas de Evolução neurológica, aparelho psíquico, Lei do Fluxo, Leis da Vida, Inconsciente Operacional, substrato biológico, neuroplasticidade e as 33 virtudes, com mais de 400 páginas dedicadas a elas." },
 
     { id: "manejos", precoAvulso: 416.00, precoColecao: 288.00, grupo: "fundamentos", titulo: "Manejos, Técnicas e Supervisão", sub: "",
