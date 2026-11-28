@@ -22,6 +22,17 @@ window.INTERESSE_CONFIG = {
      Se a IA do WhatsApp deixar de reconhecer a mensagem, troque para false. */
   origemNaMensagem: true,
 
+  /* Depois de enviar o formulário, o WhatsApp abre sozinho, com a mensagem pronta.
+     O botão "Ir para o WhatsApp" continua na tela, para quem fechar sem querer.
+     Com false, volta ao jeito antigo: o WhatsApp só abre pelo botão. */
+  abrirWhatsappSozinho: true,
+
+  /* Black Friday: quem chegou por anúncio (ou por link com "black" no utm_campaign)
+     leva a marca no fim da mensagem do WhatsApp:
+     "(Cheguei por um anúncio · Black Friday · código VF-ABC123)".
+     "ate" é o fim do dia 30/11 no horário de Brasília; depois disso a marca some sozinha. */
+  blackFriday: { marca: "Black Friday", ate: "2026-12-01T00:00:00-03:00" },
+
   /* Link secundário da última tela. */
   linkConhecerMais: "../../aulas/virtologia/",
 

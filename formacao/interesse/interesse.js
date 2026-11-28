@@ -61,6 +61,40 @@
   function fbCustom(nome, p) { try { if (window.fbq) fbq("trackCustom", nome, p || {}); } catch (e) {} }
   function umaVez(chave) { try { if (sessionStorage.getItem(chave)) return false; sessionStorage.setItem(chave, "1"); } catch (e) {} return true; }
 
+  /* ---------- link do WhatsApp (o mesmo no botão e na abertura automática) ---------- */
+  /* "Black Friday" no fim da mensagem: só para quem veio de anúncio (ou com "black"
+     no utm_campaign) e só até a data de config.js */
+  function marcaBlack() {
+    var bf = CFG.blackFriday, O = window.IVOrigem;
+    if (!bf || !bf.ate || !(Date.now() < Date.parse(bf.ate)) || !O || !O.toques) return "";
+    var t = O.toques(), u = t.ultimo || t.primeiro || {};
+    var camp = String(u.campanha || (O.ler ? O.ler().utm_campaign : "") || "");
+    var canal = O.canalAtual ? O.canalAtual() : u.canal;
+    return (canal === "anuncio" || /black/i.test(camp)) ? (bf.marca || "Black Friday") : "";
+  }
+  function linkWhats() {
+    var wpp = (EMBED && CFG.linkWhatsappPaginaFormacao) || CFG.linkWhatsapp;
+    if (CFG.origemNaMensagem !== false && window.IVOrigem && IVOrigem.comOrigem) {
+      var extra = [marcaBlack(), st.codigo ? "código " + st.codigo : ""].filter(Boolean).join(" · ");
+      wpp = IVOrigem.comOrigem(wpp, extra);
+    }
+    return wpp;
+  }
+
+  /* logo depois do envio, o WhatsApp abre sozinho (na mesma aba; no pop-up da
+     página da Formação, na página inteira). A espera curta deixa a pessoa ver a
+     tela final e dá tempo de o Pixel e o GA4 registrarem o cadastro. */
+  var abrindoWhats = false;
+  function abrirWhatsSozinho() {
+    var wpp = linkWhats();
+    var canal = window.IVOrigem && IVOrigem.canalAtual ? IVOrigem.canalAtual() : "";
+    fbCustom("WhatsAppClick", { content_name: "Formação em Virtologia", canal: canal, automatico: "sim" });
+    ga("whatsapp_click", { pagina: "formacao_interesse", canal: canal, popup: EMBED ? "sim" : "nao", automatico: "sim" });
+    setTimeout(function () {
+      try { (EMBED ? window.top : window).location.href = wpp; } catch (e) { location.href = wpp; }
+    }, 1200);
+  }
+
   /* ---------- telas ---------- */
   var TELAS = ["intro", "p_area", "v_cerebro", "p_objetivo", "v_personalidade", "v_aparelho", "p_conhecimento", "v_mandatos", "v_mais", "dados", "fim"];
   var I = function (nome) { return TELAS.indexOf(nome); };
@@ -241,8 +275,11 @@
           '<h2 id="tit" tabindex="-1">Seu interesse na Formação em Virtologia está quase registrado.</h2>' +
           '<p>Agora faltam dois passos simples:</p>' +
           '<ol class="passos">' +
-            '<li><strong>Passo 1</strong>Clique no botão abaixo, que vai te direcionar para o nosso WhatsApp.</li>' +
-            '<li><strong>Passo 2</strong>Na conversa que vai abrir automaticamente, nos envie a mensagem. Nossa equipe de matrículas entrará em contato com você.</li>' +
+            (abrindoWhats
+              ? '<li><strong>Passo 1</strong>O nosso WhatsApp vai abrir sozinho em instantes. Se não abrir, clique no botão abaixo.</li>' +
+                '<li><strong>Passo 2</strong>Na conversa que abrir, envie a mensagem que já vem escrita. Nossa equipe de matrículas entrará em contato com você.</li>'
+              : '<li><strong>Passo 1</strong>Clique no botão abaixo, que vai te direcionar para o nosso WhatsApp.</li>' +
+                '<li><strong>Passo 2</strong>Na conversa que vai abrir automaticamente, nos envie a mensagem. Nossa equipe de matrículas entrará em contato com você.</li>') +
           '</ol>',
         whatsapp: true
       };
@@ -291,8 +328,7 @@
 
     /* rodapé com a ação principal (fica sempre visível) */
     if (t.whatsapp) {
-      var wpp = (EMBED && CFG.linkWhatsappPaginaFormacao) || CFG.linkWhatsapp;
-      if (CFG.origemNaMensagem !== false && window.IVOrigem && IVOrigem.comOrigem) wpp = IVOrigem.comOrigem(wpp, st.codigo ? "código " + st.codigo : "");
+      var wpp = linkWhats();
       acao.innerHTML = '<a class="btn-principal btn-wa" href="' + esc(wpp) + '" target="_blank" rel="noopener" id="btn-principal">Ir para o WhatsApp</a>' +
         '<a class="link-sec" href="' + esc(CFG.linkConhecerMais || "../../aulas/virtologia/") + '"' + (EMBED ? ' target="_top"' : "") + '>Quero conhecer mais antes de decidir</a>';
       acao.hidden = false;
@@ -431,8 +467,10 @@
           ga("generate_lead", { pagina: "formacao_interesse", trilha: "virtologia" });
         }
         enviando = false;
+        abrindoWhats = CFG.abrirWhatsappSozinho !== false;
         try { history.replaceState({ fi: I("fim") }, ""); } catch (e) {}
         st.etapa = I("fim"); salvar(); desenhar(1);
+        if (abrindoWhats) abrirWhatsSozinho();
       })
       .catch(function () {
         enviando = false;

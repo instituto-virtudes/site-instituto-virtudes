@@ -14,8 +14,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 // Meta Pixel: registra o clique nos botoes de checkout (InitiateCheckout)
+// (botões com data-pixel-proprio já mandam o evento pela própria página, com o valor)
 document.addEventListener('click', function (e) {
   var a = e.target.closest ? e.target.closest('a[href*="payfast.greenn"]') : null;
+  if (a && a.hasAttribute('data-pixel-proprio')) return;
   if (a && typeof fbq === 'function') {
     fbq('track', 'InitiateCheckout', { content_name: document.title });
   }
